@@ -35,7 +35,7 @@ gulp.task('sass', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('css', ['sass'], function() {
+gulp.task('dist-css', ['sass'], function() {
 	gulp.src('./src/css/main.css')
 		.pipe(gulp.dest('./dist'));
 });
