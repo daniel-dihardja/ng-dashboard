@@ -1,0 +1,23 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
+    "configFile": "jspm.config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.8",
+      "restangular": "github:mgonto/restangular@^1.5.2"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "jspm": "^0.16.39"
+  }
+}
