@@ -12,14 +12,17 @@ gulp.task('serve', ['sass'], function() {
 	browserSync.init({
 		server: {
 			baseDir: "./src",
-			// serve our jspm dependencies with the client folder
+			// serve our jspm dependencies with the src folder
 			routes: {
-				'/jspm.config.js': './jspm.config.js'
+				'/jspm.config.js': './jspm.config.js',
+				'/jspm_packages': './jspm_packages'
 			}
 		}
 	});
 
 	gulp.watch("src/**/*.scss", ['sass']);
+	gulp.watch("src/components/**/*.scss", ['sass']);
+	gulp.watch("src/common/**/*.scss", ['sass']);
 	gulp.watch("src/*.html").on('change', browserSync.reload);
 	gulp.watch("src/**/*.js").on('change', browserSync.reload);
 });
@@ -28,7 +31,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
 	return gulp.src("src/sass/main.scss")
 		.pipe(sass())
-		.pipe(gulp.dest("src/css"))
+		.pipe(gulp.dest("src"))
 		.pipe(browserSync.stream());
 });
 
