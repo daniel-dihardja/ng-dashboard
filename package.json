@@ -3,6 +3,7 @@
     "configFile": "jspm.config.js",
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.8",
+      "angular-material": "github:angular/bower-material@^1.0.9",
       "restangular": "github:mgonto/restangular@^1.5.2"
     },
     "devDependencies": {
