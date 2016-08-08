@@ -21,24 +21,23 @@ gulp.task('serve', ['sass'], function() {
 	});
 
 	gulp.watch("src/**/*.scss", ['sass']);
-	gulp.watch("src/components/**/*.scss", ['sass']);
-	gulp.watch("src/common/**/*.scss", ['sass']);
-	gulp.watch("src/**/**/.html").on('change', browserSync.reload);
-	gulp.watch("src/**/**/*.js").on('change', browserSync.reload);
+	gulp.watch("src/app/components/**/*.scss", ['sass']);
+	gulp.watch("src/app/common/**/*.scss", ['sass']);
+	gulp.watch("src/**/**/**/*.html").on('change', browserSync.reload);
+	gulp.watch("src/app/**/**/*.js").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
 	return gulp.src("src/sass/main.scss")
 		.pipe(sass())
-		.pipe(gulp.dest("src"))
+		.pipe(gulp.dest("src/app/assets"))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('dist-css', ['sass'], function() {
-	gulp.src('./src/css/main.css')
+	gulp.src('./src/assets/css/main.css')
 		.pipe(gulp.dest('./dist'));
 });
-
 
 gulp.task('default', ['serve']);

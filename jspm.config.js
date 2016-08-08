@@ -10,27 +10,26 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "bower:*": "jspm_packages/bower/*"
   },
 
   map: {
     "angular": "github:angular/bower-angular@1.5.8",
+    "angular-animate": "github:angular/bower-angular-animate@1.5.8",
+    "angular-aria": "github:angular/bower-angular-aria@1.5.8",
     "angular-material": "github:angular/bower-material@1.0.9",
+    "angular-ui-router": "github:angular-ui/angular-ui-router-bower@0.3.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
+    "css": "github:systemjs/plugin-css@0.1.26",
+    "html": "github:Hypercubed/systemjs-plugin-html@0.0.8",
+    "material-design-icons": "github:google/material-design-icons@2.2.3",
     "restangular": "github:mgonto/restangular@1.5.2",
-    "github:angular/bower-angular-animate@1.5.8": {
-      "angular": "github:angular/bower-angular@1.5.8"
-    },
-    "github:angular/bower-angular-aria@1.5.8": {
-      "angular": "github:angular/bower-angular@1.5.8"
-    },
-    "github:angular/bower-material@1.0.9": {
-      "angular": "github:angular/bower-angular@1.5.8",
-      "angular-animate": "github:angular/bower-angular-animate@1.5.8",
-      "angular-aria": "github:angular/bower-angular-aria@1.5.8",
-      "css": "github:systemjs/plugin-css@0.1.23"
+    "text": "github:systemjs/plugin-text@0.0.8",
+    "github:Hypercubed/systemjs-plugin-html@0.0.8": {
+      "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.22"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
