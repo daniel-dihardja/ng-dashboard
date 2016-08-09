@@ -3,19 +3,29 @@
  */
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+
+import crud from '../../common/crud/crud';
+
 import controller from './dashboard.controller';
 import template from './dashboard.html!text';
 
-let dashboardModule = angular.module('admin.dashboard', [uiRouter])
+let dashboardModule = angular.module('admin.dashboard', [
+	uiRouter,
+	crud.name])
+
 	.config(($stateProvider) => {
 		"ngInject";
 
 		$stateProvider
 			.state('dashboard', {
-				controller,
 				template,
+				controller,
 				url: '/dashboard'
 			});
+	})
+
+	.config(($crudProvider) => {
+		"ngInject";
 
 	});
 

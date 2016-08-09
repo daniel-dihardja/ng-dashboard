@@ -13,14 +13,18 @@ import 'angular-aria';
 import 'angular-material';
 
 import appComponent from './app.component';
+
+
 import dashboard from './components/dashboard/dashboard';
-import profile from './components/profile/profile';
+import profil from './components/profil/profil';
+import crud from './common/crud/crud';
 
 angular.module('admin', [
 		uiRouter,
 		"ngMaterial",
 		dashboard.name,
-		profile.name
+		profil.name,
+		crud.name
 	])
 	.config(($locationProvider, $urlRouterProvider)=> {
 		"ngInject";
@@ -29,7 +33,7 @@ angular.module('admin', [
 		// #how-to-configure-your-server-to-work-with-html5mode
 		//$locationProvider.html5Mode(true).hashPrefix('!');
 
-		$urlRouterProvider.otherwise('/profile');
+		$urlRouterProvider.otherwise('/dashboard');
 	})
 	.component('app', appComponent);
 
