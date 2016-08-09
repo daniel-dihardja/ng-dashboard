@@ -3,5 +3,5 @@
  */
 import angular from 'angular';
 
-let commonModule = angular.module('app.commons', []).name;
+let commonModule = angular.module('app.commons', []);
 export default commonModule;

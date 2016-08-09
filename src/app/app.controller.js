@@ -9,10 +9,13 @@ class AppController {
 	};
 
 	toggleLeft() {
-		console.log('toggle left ', this.countLeft);
 		this.countLeft ++;
-	}
-}
+		console.log('toggle left ', this.countLeft);
+	};
 
+	menuClick(state) {
+		console.log('menu click', state);
+	};
+}
 
 export default AppController;
