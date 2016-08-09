@@ -17,17 +17,17 @@ let crudModule = angular.module('crud', [])
 				controller: ListViewController,
 				template: ListViewTemplate
 			})
-			.state('create', {
-				url: 'crud-create/:entity'
+			.state('entity-create', {
+				url: 'entity-create/:entity'
 			})
-			.state('edit', {
-				url: 'crud-edit/:entity/:entry'
+			.state('entity-edit', {
+				url: 'entity-edit/:entity/:entry'
 			})
-			.state('show', {
-				url: 'crud-show/:entity/:entry'
+			.state('entity-show', {
+				url: 'entity-show/:entity/:entry'
 			})
-			.state('delete', {
-				url: 'crud-delete/:entity/:entry'
+			.state('entity-delete', {
+				url: 'entity-delete/:entity/:entry'
 			})
 	})
 	.provider('$crud', CrudService)

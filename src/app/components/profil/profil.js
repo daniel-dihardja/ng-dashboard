@@ -49,8 +49,6 @@ let profilModule = angular.module('admin.profil', [
 		userCrud.set('name', 'joe');
 		userCrud.save();
 
-
-
 	});
 
 export default profilModule;
