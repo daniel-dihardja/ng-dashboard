@@ -1,0 +1,18 @@
+<div class="files" layout="column">
+    <div class="row">
+        <h1>Files / List</h1>
+    </div>
+
+    <div class="row">
+        <div layout="column">
+            <div layout="row" ng-repeat="file in vm.files">
+                <div>{{file.name}}</div>
+                <md-button class="md-raised md-warn" ng-click="vm.deleteFile(file)">Delete</md-button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <md-button class="md-raised md-primary" ng-click="vm.gotoState('fileupload')">New</md-button>
+    </div>
+</div>

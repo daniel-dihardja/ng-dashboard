@@ -1,0 +1,17 @@
+<div class="files" layout="column">
+
+    <div class="row">
+        <h1>Files / Delete</h1>
+    </div>
+
+    <div class="row" layout="row">
+        Delete&nbsp;<b>{{vm.fileName}}</b>&nbsp;?
+    </div>
+
+    <div class="row" layout="row">
+        <md-button class="md-raised" ng-click="vm.gotoState('filelist')">List</md-button>
+        <md-button class="md-raised md-warn" ng-click="vm.deleteFile()">Yes</md-button>
+    </div>
+
+
+</div>

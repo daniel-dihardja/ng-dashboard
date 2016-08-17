@@ -1,0 +1,11 @@
+<div class="files" layout="column">
+    <h1>Files / Upload</h1>
+    <!--div class="row">
+        <md-progress-circular md-mode="determinate" value="50"></md-progress-circular>
+    </div-->
+    <div class="row"><input type="file" file-model="myFile"/></div>
+    <div class="row" layout="row">
+        <md-button class="md-raised" ng-click="vm.gotoState('filelist')">List</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.upload()">Upload</md-button>
+    </div>
+</div>

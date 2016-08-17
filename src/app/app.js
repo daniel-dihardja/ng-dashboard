@@ -17,14 +17,14 @@ import appComponent from './app.component';
 
 import dashboard from './components/dashboard/dashboard';
 import profil from './components/profil/profil';
-import upload from './components/upload/upload';
+import files from './components/files/files';
 
 angular.module('admin', [
 		uiRouter,
 		"ngMaterial",
 		dashboard.name,
 		profil.name,
-		upload.name
+		files.name
 	])
 	.config(($locationProvider, $urlRouterProvider)=> {
 		"ngInject";
@@ -33,7 +33,7 @@ angular.module('admin', [
 		// #how-to-configure-your-server-to-work-with-html5mode
 		//$locationProvider.html5Mode(true).hashPrefix('!');
 
-		$urlRouterProvider.otherwise('/upload');
+		$urlRouterProvider.otherwise('/file-upload');
 	})
 	.component('app', appComponent);
 
