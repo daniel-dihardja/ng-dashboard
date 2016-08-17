@@ -4,3 +4,8 @@
   bottom: 0;
   left: 0;
   right: 0; }
+  .app .content {
+    padding: 20px; }
+
+.upload .row {
+  padding-bottom: 20px; }
