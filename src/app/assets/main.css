@@ -5,7 +5,9 @@
   left: 0;
   right: 0; }
   .app .content {
-    padding: 20px; }
+    padding: 20px;
+    overflow: scroll;
+    width: 100%; }
 
 .files .row {
   padding-bottom: 20px; }

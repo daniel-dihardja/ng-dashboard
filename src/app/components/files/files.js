@@ -3,6 +3,7 @@
  */
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import dataTable from 'angular-material-data-table';
 
 import controllerList from './file-list.controller';
 import templateList from './file-list.html!text';
@@ -16,7 +17,7 @@ import templateDelete from './file-delete.html!text';
 import directiveUpload from './file-upload.directive';
 import fileService from './files.service';
 
-let fileModule = angular.module('app.upload', [uiRouter])
+let fileModule = angular.module('app.files', [uiRouter, dataTable])
 
 	.config(($stateProvider) => {
 		'ngInject';

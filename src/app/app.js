@@ -12,8 +12,10 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
 
-import appComponent from './app.component';
+import 'angular-material-data-table/dist/md-data-table.css!';
+import dataTable from 'angular-material-data-table';
 
+import appComponent from './app.component';
 
 import dashboard from './components/dashboard/dashboard';
 import profil from './components/profil/profil';
@@ -22,6 +24,7 @@ import files from './components/files/files';
 angular.module('admin', [
 		uiRouter,
 		"ngMaterial",
+		dataTable,
 		dashboard.name,
 		profil.name,
 		files.name

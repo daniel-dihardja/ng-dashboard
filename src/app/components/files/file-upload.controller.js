@@ -8,6 +8,8 @@ class UploadController {
 		this.$scope = $scope;
 		this.$file = $files;
 		this.$state = $state;
+		this.file = 2;
+
 	}
 
 	upload() {

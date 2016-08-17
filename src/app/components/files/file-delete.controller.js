@@ -20,9 +20,11 @@ class FileDeleteController {
 	deleteFile() {
 		console.log('delete file ...');
 		var url = 'http://192.168.99.100:3000/api/containers/etc/files/' + this.file;
+		var _this = this;
 		this.$files.delete(url)
 			.then(function(res) {
 				console.log('file deleted', res);
+				_this.$state.go('filelist');
 			})
 			.catch(function(err) {
 			    throw err;
