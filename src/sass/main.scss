@@ -1,5 +1,6 @@
 @import "variables";
 @import "body";
-@import "../app/app.scss";
+@import "utils";
+@import "../app/app";
 @import "../app/components/dashboard/dashboard";
 @import "../app/components/files/files";

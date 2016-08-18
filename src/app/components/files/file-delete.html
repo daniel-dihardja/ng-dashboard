@@ -1,15 +1,15 @@
 <div class="files" layout="column">
 
-    <div class="row">
-        <h1>Files / Delete</h1>
-    </div>
 
-    <div class="row" layout="row">
-        Delete&nbsp;<b>{{vm.file}}</b>&nbsp;?
-    </div>
+        <md-toolbar class="md-table-toolbar alternate">
+            <div class="md-toolbar-tools"><span>Files / Delete</span></div>
+        </md-toolbar>
+        <div class="pd-50">Delete&nbsp;<b>{{vm.file}}</b>&nbsp;?</div>
 
-    <div class="row" layout="row">
-        <md-button class="md-raised" ng-click="vm.gotoState('filelist')">List</md-button>
+
+
+    <div layout="row">
+        <md-button class="md-raised" ng-click="vm.gotoList()">No</md-button>
         <md-button class="md-raised md-warn" ng-click="vm.deleteFile()">Yes</md-button>
     </div>
 

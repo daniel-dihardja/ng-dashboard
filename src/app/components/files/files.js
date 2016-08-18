@@ -24,25 +24,25 @@ let fileModule = angular.module('app.files', [uiRouter, dataTable])
 
 		$stateProvider
 
-			.state('fileupload', {
-				controller: controllerUpload,
-				controllerAs: 'vm',
-				template: templateUpload,
-				url: '/file-upload'
-			})
-
 			.state('filelist', {
 				controller: controllerList,
 				controllerAs: 'vm',
 				template: templateList,
-				url: '/file-list'
+				url: '/file-list/:container'
+			})
+
+			.state('fileupload', {
+				controller: controllerUpload,
+				controllerAs: 'vm',
+				template: templateUpload,
+				url: '/file-upload/:container'
 			})
 
 			.state('filedelete', {
 				controller: controllerDelete,
 				controllerAs: 'vm',
 				template: templateDelete,
-				url: '/file-delete/:file'
+				url: '/file-delete/:container/:file'
 			})
 	})
 

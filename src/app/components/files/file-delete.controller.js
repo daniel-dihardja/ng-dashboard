@@ -13,18 +13,21 @@ class FileDeleteController {
 		console.log($stateParams);
 	}
 
-	gotoState(name) {
-		this.$state.go(name);
+	gotoList() {
+		var con = this.$stateParams.container;
+		this.$state.go('filelist', {container: con});
 	}
 
 	deleteFile() {
 		console.log('delete file ...');
-		var url = 'http://192.168.99.100:3000/api/containers/etc/files/' + this.file;
+		var container = this.$stateParams.container || 'etc';
+		var url = 'http://192.168.99.100:3000/api/containers/'+ container +'/files/' + this.file;
 		var _this = this;
 		this.$files.delete(url)
 			.then(function(res) {
 				console.log('file deleted', res);
-				_this.$state.go('filelist');
+				var con = _this.$stateParams.container;
+				_this.$state.go('filelist', {container: con});
 			})
 			.catch(function(err) {
 			    throw err;

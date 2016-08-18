@@ -4,21 +4,29 @@
 
 class FileListController {
 
-	constructor($state, $files, $scope) {
+	static customData() {}
+
+	constructor($state, $files, $scope, $stateParams) {
 
 		this.$state = $state;
 		this.$files = $files;
 		this.$scope = $scope;
+		this.$stateParams = $stateParams;
+
 		this.files = {};
 		this.selectedFiles = [];
+
 		this.query = {
 			order: 'name',
-			limit: 5,
+			limit: 10,
 			page: 1
 		};
 
+		var container = this.$stateParams.container || 'etc';
+		var url = 'http://192.168.99.100:3000/api/containers/'+ container +'/files';
 		var _this = this;
-		$files.getList('http://192.168.99.100:3000/api/containers/etc/files')
+
+		this.$files.getList(url)
 			.then(function(res) {
 				_this.files = {
 					count: res.data.length,
@@ -26,23 +34,25 @@ class FileListController {
 				}
 			})
 			.catch(function(err) {
-			    throw err;
+				throw err;
 			});
+
 	}
 
 	getFiles() {
-		console.log('reorder');
+		console.log(FileListController.customData)
 	}
 
 	deleteFile(file) {
 		console.log('delete', file);
-		this.$state.go('filedelete', {file: file.name});
-
+		var con = this.$stateParams.container;
+		this.$state.go('filedelete', {container: con, file: file.name});
 	}
 
-	gotoState(name) {
-		this.$state.go(name);
+	gotoUpload() {
+		var con = this.$stateParams.container || 'etc';
+		this.$state.go('fileupload', {container: con});
 	}
 }
-FileListController.$inject = ['$state', '$files', '$scope'];
+FileListController.$inject = ['$state', '$files', '$scope', '$stateParams'];
 export default FileListController;
