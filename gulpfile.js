@@ -12,10 +12,12 @@ gulp.task('serve', ['sass'], function() {
 	browserSync.init({
 		server: {
 			baseDir: "./src",
+
 			// serve our jspm dependencies with the src folder
 			routes: {
-				'/jspm.config.js': './jspm.config.js',
-				'/jspm_packages': './jspm_packages'
+				'/jspm.config.js': 	'./jspm.config.js',
+				'/jspm_packages': 	'./jspm_packages',
+				'/assets': 			'./src/app/assets'
 			}
 		}
 	});
@@ -33,11 +35,6 @@ gulp.task('sass', function() {
 		.pipe(sass())
 		.pipe(gulp.dest("src/app/assets"))
 		.pipe(browserSync.stream());
-});
-
-gulp.task('dist-css', ['sass'], function() {
-	gulp.src('./src/assets/css/main.css')
-		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('default', ['serve']);

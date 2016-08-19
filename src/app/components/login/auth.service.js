@@ -41,17 +41,8 @@ class AuthService {
 	ping() {
 		//return this.$q.resolve();
 
-		var defer = this.$q.defer();
 		var url = appSettings.baseApiUrl + '/AppUsers/ping';
-		this.$http.get(url)
-			.success(function(data, status, headers, response) {
-				defer.resolve();
-			})
-			.error(function(data, status) {
-				console.log(status);
-			});
-
-		return defer.promise;
+		return this.$http.get(url)
 	}
 }
 AuthService.$inject = ['$q', '$http'];
