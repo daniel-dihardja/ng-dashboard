@@ -17,32 +17,32 @@ import templateDelete from './file-delete.html!text';
 import directiveUpload from './file-upload.directive';
 import fileService from './files.service';
 
-let fileModule = angular.module('app.files', [uiRouter, dataTable])
+let fileModule = angular.module('admin.files', [uiRouter, dataTable])
 
 	.config(($stateProvider) => {
 		'ngInject';
 
 		$stateProvider
 
-			.state('filelist', {
+			.state('admin.filelist', {
 				controller: controllerList,
 				controllerAs: 'vm',
 				template: templateList,
-				url: '/file-list/:container'
+				url: '/files/:container'
 			})
 
-			.state('fileupload', {
+			.state('admin.fileupload', {
 				controller: controllerUpload,
 				controllerAs: 'vm',
 				template: templateUpload,
-				url: '/file-upload/:container'
+				url: '/files/:container/upload'
 			})
 
-			.state('filedelete', {
+			.state('admin.filedelete', {
 				controller: controllerDelete,
 				controllerAs: 'vm',
 				template: templateDelete,
-				url: '/file-delete/:container/:file'
+				url: '/files/:container/delete/:file'
 			})
 	})
 

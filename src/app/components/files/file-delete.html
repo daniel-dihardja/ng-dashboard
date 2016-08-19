@@ -1,17 +1,15 @@
 <div class="files" layout="column">
 
-
         <md-toolbar class="md-table-toolbar alternate">
-            <div class="md-toolbar-tools"><span>Files / Delete</span></div>
+            <div class="md-toolbar-tools"><span>/ {{'files.title' | translate}} / {{'files.delete' | translate}}</span></div>
         </md-toolbar>
         <div class="pd-50">Delete&nbsp;<b>{{vm.file}}</b>&nbsp;?</div>
 
-
-
-    <div layout="row">
-        <md-button class="md-raised" ng-click="vm.gotoList()">No</md-button>
-        <md-button class="md-raised md-warn" ng-click="vm.deleteFile()">Yes</md-button>
-    </div>
+    <md-card-actions layout="row">
+        <span flex></span>
+        <md-button class="md-raised" ng-click="vm.gotoList()">{{'app.no' |translate}}</md-button>
+        <md-button class="md-raised md-warn" ng-click="vm.deleteFile()">{{'app.yes' | translate}}</md-button>
+    </md-card-actions>
 
 
 </div>

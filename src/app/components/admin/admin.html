@@ -8,7 +8,7 @@
                 <md-icon md-svg-icon="app/assets/svg/menu.svg"></md-icon>
             </md-button>
             <h2>
-                <span>ZF Admin</span>
+                <span>{{'app.title' | translate}}</span>
             </h2>
             <span flex></span>
             <md-button class="md-icon-button" aria-label="Favorite">
@@ -25,13 +25,13 @@
         <md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1">
             <md-menu-content>
                 <md-menu-item>
-                    <md-button ng-click="$ctrl.menuClick('profile')">Profil</md-button>
+                    <md-button ng-click="vm.gotoImages()">{{ 'files.images' | translate }}</md-button>
                 </md-menu-item>
                 <md-menu-item>
-                    <md-button ng-click="$ctrl.menuClick('file')">Upload</md-button>
+                    <md-button ng-click="vm.gotoVideos()">{{ 'files.videos' | translate }}</md-button>
                 </md-menu-item>
                 <md-menu-item>
-                    <md-button ng-click="$ctrl.menuClick('file')">Crud</md-button>
+                    <md-button ng-click="vm.menuClick('file')">{{ 'profile.title' | translate }}</md-button>
                 </md-menu-item>
             </md-menu-content>
         </md-sidenav>

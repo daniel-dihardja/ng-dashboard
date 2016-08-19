@@ -23,7 +23,7 @@ class UploadController {
 			.then(function(res) {
 				console.log('done ...');
 				var con = _this.$stateParams.container;
-				_this.$state.go('filelist', {container: con});
+				_this.$state.go('admin.filelist', {container: con});
 			})
 			.catch(function(err) {
 			    throw err
@@ -32,7 +32,7 @@ class UploadController {
 
 	gotoList() {
 		var con = this.$stateParams.container;
-		this.$state.go('filelist', {container: con});
+		this.$state.go('admin.filelist', {container: con});
 	}
 }
 

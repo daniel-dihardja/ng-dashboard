@@ -4,6 +4,16 @@
 .gr-50 {
   background-color: #eee; }
 
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00bcd4; }
+  .login .login-card {
+    width: 600px; }
+
 .app {
   position: absolute;
   top: 0;

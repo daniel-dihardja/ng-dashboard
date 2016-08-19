@@ -15,7 +15,7 @@ class FileDeleteController {
 
 	gotoList() {
 		var con = this.$stateParams.container;
-		this.$state.go('filelist', {container: con});
+		this.$state.go('admin.filelist', {container: con});
 	}
 
 	deleteFile() {
@@ -27,7 +27,7 @@ class FileDeleteController {
 			.then(function(res) {
 				console.log('file deleted', res);
 				var con = _this.$stateParams.container;
-				_this.$state.go('filelist', {container: con});
+				_this.$state.go('admin.filelist', {container: con});
 			})
 			.catch(function(err) {
 			    throw err;

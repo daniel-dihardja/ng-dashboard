@@ -2,6 +2,8 @@
  * Created by danieldihardja on 17/08/16.
  */
 
+import appSettings from '../app.settings';
+
 class FileListController {
 
 	static customData() {}
@@ -23,7 +25,7 @@ class FileListController {
 		};
 
 		var container = this.$stateParams.container || 'etc';
-		var url = 'http://192.168.99.100:3000/api/containers/'+ container +'/files';
+		var url = appSettings.baseApiUrl + '/containers/'+ container +'/files';
 		var _this = this;
 
 		this.$files.getList(url)
@@ -46,12 +48,12 @@ class FileListController {
 	deleteFile(file) {
 		console.log('delete', file);
 		var con = this.$stateParams.container;
-		this.$state.go('filedelete', {container: con, file: file.name});
+		this.$state.go('admin.filedelete', {container: con, file: file.name});
 	}
 
 	gotoUpload() {
 		var con = this.$stateParams.container || 'etc';
-		this.$state.go('fileupload', {container: con});
+		this.$state.go('admin.fileupload', {container: con});
 	}
 }
 FileListController.$inject = ['$state', '$files', '$scope', '$stateParams'];

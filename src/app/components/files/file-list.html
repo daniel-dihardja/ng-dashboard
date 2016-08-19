@@ -1,9 +1,7 @@
 <div class="files" layout="column">
 
-
-
         <md-toolbar class="md-table-toolbar">
-            <div class="md-toolbar-tools md-hue-10"><span>Files / List</span></div>
+            <div class="md-toolbar-tools md-hue-10"><span>{{'files.title' | translate}}</span></div>
         </md-toolbar>
         <md-table-container>
             <table md-table md-row-select multiple="false" ng-model="vm.selectedFiles">
@@ -17,7 +15,7 @@
                     <tr md-row ng-repeat="file in vm.files.data | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page -1)*vm.query.limit" md-select="file" md-auto-select="true" md-select-id="name">
                         <td md-cell >{{file.name}}</td>
                         <td md-cell layout="row">
-                            <md-button class="md-raised md-warn" ng-click="vm.deleteFile(file)">Delete</md-button>
+                            <md-button class="md-warn" ng-click="vm.deleteFile(file)">{{'app.delete' | translate}}</md-button>
                         </td>
                     </tr>
                 </trbody>
@@ -26,13 +24,9 @@
         </md-table-container>
         <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15]" md-page="vm.query.page" md-total="{{vm.files.count}}" md-on-paginate="getFiles" md-page-select></md-table-pagination>
 
-        <div class="row">
-            <md-button class="md-raised md-primary" ng-click="vm.gotoUpload()">New</md-button>
-        </div>
-
-
-
-
-
+        <md-card-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised md-primary" ng-click="vm.gotoUpload()">{{'files.new' | translate}}</md-button>
+        </md-card-actions>
 
 </div>

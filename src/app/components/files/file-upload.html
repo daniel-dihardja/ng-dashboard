@@ -2,13 +2,15 @@
 
 
         <md-toolbar class="md-table-toolbar alternate">
-            <div class="md-toolbar-tools"><span>Files / Upload</span></div>
+            <div class="md-toolbar-tools"><span>{{'files.title' | translate}} / {{'files.upload' | translate}}</span></div>
         </md-toolbar>
         <div class="pd-50"><input type="file" file-model="myFile" /></div>
-        <div class="row" layout="row">
-            <md-button class="md-raised" ng-click="vm.gotoList()">List</md-button>
-            <md-button class="md-raised md-primary" ng-click="vm.upload()" >Upload</md-button>
-        </div>
+
+        <md-card-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised" ng-click="vm.gotoList()">{{'files.list' |translate}}</md-button>
+            <md-button class="md-raised md-primary" ng-click="vm.upload()" >{{'files.upload' | translate}}</md-button>
+        </md-card-actions>
 
 
     <!--div class="row">
