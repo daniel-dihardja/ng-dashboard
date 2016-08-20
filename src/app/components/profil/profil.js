@@ -4,18 +4,14 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import crud from '../../common/crud/crud';
-
 import controller from './profil.controller';
 import template from './profil.html!text';
 
 
 let profilModule = angular.module('admin.profil', [
-	uiRouter,
-	crud.name])
+	uiRouter])
 
 	.config(['$stateProvider', ($stateProvider) => {
-		"ngInject";
 
 		$stateProvider
 			.state('profil', {
