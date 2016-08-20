@@ -9,8 +9,8 @@ import ListViewController from './_list/list-view.controller';
 import ListViewTemplate from './_list/list-view.html!text';
 
 let crudModule = angular.module('crud', [])
-	.config(($stateProvider) => {
-		'ngInject';
+	.config(['$stateProvider', ($stateProvider) => {
+
 		$stateProvider
 			.state('list', {
 				url: 'crud-list/:entity',
@@ -29,7 +29,7 @@ let crudModule = angular.module('crud', [])
 			.state('entity-delete', {
 				url: 'entity-delete/:entity/:entry'
 			})
-	})
+	}])
 	.provider('$crud', CrudService)
 	.directive('text', TextDirective);
 

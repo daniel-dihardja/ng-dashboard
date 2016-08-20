@@ -13,20 +13,13 @@ let dashboardModule = angular.module('admin.dashboard', [
 	uiRouter,
 	crud.name])
 
-	.config(($stateProvider) => {
-		"ngInject";
-
+	.config(['$stateProvider', ($stateProvider) => {
 		$stateProvider
 			.state('dashboard', {
 				template,
 				controller,
 				url: '/dashboard'
 			});
-	})
-
-	.config(($crudProvider) => {
-		"ngInject";
-
-	});
+	}]);
 
 export default dashboardModule;

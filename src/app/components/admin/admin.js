@@ -22,8 +22,7 @@ let adminModule = angular.module('admin', [
 		profil.name,
 		files.name
 	])
-	.config(($stateProvider)=> {
-		"ngInject";
+	.config(['$stateProvider', ($stateProvider)=> {
 
 		// @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
 		// #how-to-configure-your-server-to-work-with-html5mode
@@ -36,12 +35,10 @@ let adminModule = angular.module('admin', [
 				template: adminView,
 				url: '/admin',
 				resolve: {
-					auth: function($auth) {
-						return $auth.ping()
-					}
+					auth: function(AppUser) {return AppUser.ping()}
 				}
 			});
-	});
+	}]);
 
 export default adminModule;
 

@@ -3,8 +3,9 @@
  */
 class AppController {
 
-	constructor($state) {
+	constructor($state, AppUser) {
 		this.$state = $state;
+		this.AppUser = AppUser;
 	};
 
 	gotoImages() {
@@ -14,7 +15,12 @@ class AppController {
 	gotoVideos() {
 		this.$state.go('admin.filelist', {container: 'videos'});
 	}
+
+	logout() {
+		this.AppUser.logout();
+		this.$state.go('login');
+	}
 }
 
-AppController.$inject = ['$state'];
+AppController.$inject = ['$state', 'AppUser'];
 export default AppController;

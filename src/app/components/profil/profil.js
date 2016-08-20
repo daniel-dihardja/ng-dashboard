@@ -14,7 +14,7 @@ let profilModule = angular.module('admin.profil', [
 	uiRouter,
 	crud.name])
 
-	.config(($stateProvider) => {
+	.config(['$stateProvider', ($stateProvider) => {
 		"ngInject";
 
 		$stateProvider
@@ -23,32 +23,6 @@ let profilModule = angular.module('admin.profil', [
 				template,
 				url: '/profil'
 			});
-	})
-
-	.config(($crudProvider) => {
-		"ngInject";
-
-		var userCrud = $crudProvider.addEntity('Users');
-
-		userCrud.relation({
-			language: {
-				type: 'belongsTo',
-				foreignKey: 'languageId',
-				apiEndPoint: 'Languages'
-			}
-		})
-
-		.listView()
-			.fields([
-				userCrud.field('name'),
-				userCrud.field('language.name')
-			]);
-
-		userCrud.create();
-		userCrud.save();
-		userCrud.set('name', 'joe');
-		userCrud.save();
-
-	});
+	}]);
 
 export default profilModule;

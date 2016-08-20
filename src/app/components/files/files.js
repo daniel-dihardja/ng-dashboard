@@ -19,8 +19,7 @@ import fileService from './files.service';
 
 let fileModule = angular.module('admin.files', [uiRouter, dataTable])
 
-	.config(($stateProvider) => {
-		'ngInject';
+	.config(['$stateProvider', ($stateProvider) => {
 
 		$stateProvider
 
@@ -44,7 +43,7 @@ let fileModule = angular.module('admin.files', [uiRouter, dataTable])
 				template: templateDelete,
 				url: '/files/:container/delete/:file'
 			})
-	})
+	}])
 
 	.service('$files', fileService)
 	.directive('fileModel', directiveUpload);

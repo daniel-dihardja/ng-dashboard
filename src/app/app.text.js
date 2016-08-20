@@ -9,7 +9,8 @@ function appText($translateProvider) {
 			title:	'ZF Admin',
 			yes:	'Ja',
 			no:		'Nein',
-			delete:	'Löschen'
+			delete:	'Löschen',
+			logout: 'Logout'
 		},
 
 		login: {
@@ -36,4 +37,5 @@ function appText($translateProvider) {
 
 	$translateProvider.preferredLanguage('de');
 }
+appText.$inject = ['$translateProvider'];
 export default appText;

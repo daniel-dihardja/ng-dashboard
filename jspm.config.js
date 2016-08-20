@@ -20,6 +20,7 @@ System.config({
     "angular-aria": "github:angular/bower-angular-aria@1.5.8",
     "angular-material": "github:angular/bower-material@1.0.9",
     "angular-material-data-table": "npm:angular-material-data-table@0.10.9",
+    "angular-resource": "github:angular/bower-angular-resource@1.5.8",
     "angular-translate": "github:angular-translate/bower-angular-translate@2.11.1",
     "angular-ui-router": "github:angular-ui/angular-ui-router-bower@0.3.1",
     "babel": "npm:babel-core@5.8.38",
@@ -43,6 +44,9 @@ System.config({
       "angular": "github:angular/bower-angular@1.5.8"
     },
     "github:angular/bower-angular-messages@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
+    },
+    "github:angular/bower-angular-resource@1.5.8": {
       "angular": "github:angular/bower-angular@1.5.8"
     },
     "github:jspm/nodelibs-assert@0.1.0": {

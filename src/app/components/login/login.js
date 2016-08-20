@@ -9,8 +9,7 @@ import template from './login.html!text';
 import authService from './auth.service';
 
 let loginModule = angular.module('login', [uiRouter])
-	.config(($stateProvider) => {
-		'ngInject';
+	.config(['$stateProvider',($stateProvider) => {
 		$stateProvider
 			.state('login', {
 				controller,
@@ -18,6 +17,6 @@ let loginModule = angular.module('login', [uiRouter])
 				template,
 				url: '/login'
 			})
-		})
+		}])
 	.service('$auth', authService);
 export default loginModule;

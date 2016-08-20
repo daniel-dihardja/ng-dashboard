@@ -9,29 +9,34 @@ import './assets/main.css!'
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
+import 'angular-resource';
 import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
 import 'angular-translate';
 
+import './components/loopback/lb-services';
+
 import dataTable from 'angular-material-data-table';
+
 
 import zfLogin from './components/login/login';
 import zfAdmin from './components/admin/admin';
 
 import appText from './app.text';
 
-angular.module('app', [
+let appModule = angular.module('app', [
 	uiRouter,
 	'pascalprecht.translate',
-	"ngMaterial",
+	'ngMaterial',
+	'ngResource',
+	'lbServices',
 	dataTable,
-
 	zfLogin.name,
 	zfAdmin.name
 ])
 
-.config(($urlRouterProvider, $httpProvider) => {
+.config(['$urlRouterProvider', '$httpProvider', ($urlRouterProvider, $httpProvider) => {
 
 	function authInterceptor($injector) {
 		return  {
@@ -48,6 +53,8 @@ angular.module('app', [
 	$httpProvider.interceptors.push(authInterceptor);
 
 	$urlRouterProvider.otherwise('/login');
-})
+}])
 
 .config(appText);
+
+export default appModule;
