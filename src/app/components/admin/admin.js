@@ -9,6 +9,7 @@ import uiRouter from 'angular-ui-router';
 import adminController from './admin.controller';
 import adminView from './admin.html!text';
 
+import sideMenu from '../sidemenu/sidemenu';
 import login from '../login/login';
 import dashboard from '../dashboard/dashboard';
 import profil from '../profil/profil';
@@ -17,6 +18,7 @@ import files from '../files/files';
 
 let adminModule = angular.module('admin', [
 		uiRouter,
+		sideMenu.name,
 		login.name,
 		dashboard.name,
 		profil.name,

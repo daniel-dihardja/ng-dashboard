@@ -2,11 +2,11 @@
 <div class="app" flex layout="column">
 
     <!-- admin toolbar -->
-    <md-toolbar class="md-hue-2">
+    <md-toolbar class="md-table-toolbar md-whiteframe-3dp header">
         <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings" ng-click="$ctrl.toggleLeft()">
+            <!--md-button class="md-icon-button" aria-label="Settings" ng-click="">
                 <md-icon md-svg-icon="assets/svg/menu.svg"></md-icon>
-            </md-button>
+            </md-button-->
             <h2>
                 <span>{{'app.title' | translate}}</span>
             </h2>
@@ -22,18 +22,22 @@
 
     <!-- admin menu -->
     <div layout="row" flex>
-        <md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1">
-            <md-menu-content>
-                <md-menu-item>
-                    <md-button ng-click="vm.gotoImages()">{{ 'files.images' | translate }}</md-button>
-                </md-menu-item>
-                <md-menu-item>
-                    <md-button ng-click="vm.gotoVideos()">{{ 'files.videos' | translate }}</md-button>
-                </md-menu-item>
-                <md-menu-item>
-                    <md-button ng-click="vm.logout()">{{ 'app.logout' | translate }}</md-button>
-                </md-menu-item>
-            </md-menu-content>
+
+        <md-sidenav  md-is-locked-open="true" class="md-whiteframe-z1" layout="column">
+            <md-content md-scroll-y flex layout="column">
+                <md-sidemenu md-locked="true">
+                    <md-sidemenu-group>
+                        <md-subheader class="md-no-sticky">Caption</md-subheader>
+                        <md-sidemenu-content md-icon="folder_open" md-heading="Dateien" md-arrow="true" >
+                            <md-sidemenu-button md-icon="collections" md-heading="{{ 'files.images' | translate }}" ui-sref="admin.filelist({container: 'images'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="video_library" md-heading="{{ 'files.videos' | translate }}" ui-sref="admin.filelist({container: 'videos'})"></md-sidemenu-button>
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
+                   <md-sidemenu-group>
+                       <md-sidemenu-button md-icon="person" md-heading="Logout" ng-click="vm.logout()"></md-sidemenu-button>
+                   </md-sidemenu-group>
+                </md-sidemenu>
+            </md-content>
         </md-sidenav>
 
         <!-- admin content-->

@@ -19,7 +19,6 @@ import './components/loopback/lb-services';
 
 import dataTable from 'angular-material-data-table';
 
-
 import zfLogin from './components/login/login';
 import zfAdmin from './components/admin/admin';
 
