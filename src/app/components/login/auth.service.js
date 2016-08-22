@@ -2,7 +2,7 @@
  * Created by danieldihardja on 18/08/16.
  */
 
-import appSettings from '../app.settings';
+import appSettings from '../../app.settings';
 
 class AuthService {
 

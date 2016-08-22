@@ -4,7 +4,9 @@
 
 import 'angular-material/angular-material.css!'
 import 'angular-material-data-table/dist/md-data-table.css!';
-import './assets/main.css!'
+
+import '../assets/iconfont/material-icons.css!'
+import '../assets/main.css!'
 
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
