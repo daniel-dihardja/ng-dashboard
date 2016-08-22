@@ -97,9 +97,10 @@ md-sidemenu-button {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: #00bcd4; }
+  background-color: #ddd; }
   .login .login-card {
-    width: 600px; }
+    width: 50%;
+    margin: 0 auto; }
 
 .app {
   position: absolute;
