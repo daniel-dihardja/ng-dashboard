@@ -17,12 +17,12 @@ import 'angular-aria';
 import 'angular-material';
 import 'angular-translate';
 
-import './components/loopback/lb-services';
+import './lib/lb-services/lb-services';
 
 import dataTable from 'angular-material-data-table';
 
-import zfLogin from './components/login/login';
-import zfAdmin from './components/admin/admin';
+import zfLogin from './login/login';
+import zfAdmin from './admin/admin';
 
 import appText from './app.text';
 

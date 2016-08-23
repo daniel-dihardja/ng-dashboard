@@ -26,16 +26,32 @@
         <md-sidenav  md-is-locked-open="true" class="md-whiteframe-z1" layout="column">
             <md-content md-scroll-y flex layout="column">
                 <md-sidemenu md-locked="true">
+
                     <md-sidemenu-group>
-                        <md-subheader class="md-no-sticky">Caption</md-subheader>
+
+                        <md-subheader class="md-no-sticky">ZF Lebensforum</md-subheader>
+                        <md-sidemenu-content md-icon="people_outline" md-heading="Soz. Verantwortung" md-arrow="true" >
+                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="ZF Hilft" ui-sref="admin.filelist({container: 'images'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Kunststiftung" ui-sref="admin.filelist({container: 'videos'})"></md-sidemenu-button>
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
+
+                    <md-sidemenu-group>
                         <md-sidemenu-content md-icon="folder_open" md-heading="Dateien" md-arrow="true" >
                             <md-sidemenu-button md-icon="collections" md-heading="{{ 'files.images' | translate }}" ui-sref="admin.filelist({container: 'images'})"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="video_library" md-heading="{{ 'files.videos' | translate }}" ui-sref="admin.filelist({container: 'videos'})"></md-sidemenu-button>
                         </md-sidemenu-content>
                     </md-sidemenu-group>
+
+                    <md-sidemenu-group>
+                        <md-sidemenu-button md-icon="person_outline" md-heading="Profil" ng-click=""></md-sidemenu-button>
+                    </md-sidemenu-group>
+
                    <md-sidemenu-group>
-                       <md-sidemenu-button md-icon="person_outline" md-heading="Logout" ng-click="vm.logout()"></md-sidemenu-button>
+                       <md-sidemenu-button md-icon="backspace" md-heading="Logout" ng-click="vm.logout()"></md-sidemenu-button>
                    </md-sidemenu-group>
+
+
                 </md-sidemenu>
             </md-content>
         </md-sidenav>

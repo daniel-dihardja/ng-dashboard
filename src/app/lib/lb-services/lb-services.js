@@ -6,7 +6,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
   //   import lbServices from './lb-services';
   //   angular.module('app', [lbServices]);
   //
-  module.exports = "lbservices";
+  module.exports = "lbServices";
 }
 
 (function(window, angular, undefined) {'use strict';
@@ -23,11 +23,11 @@ var urlBaseHost = getHost(urlBase) || location.host;
 
 /**
  * @ngdoc overview
- * @name lbservices
+ * @name lbServices
  * @module
  * @description
  *
- * The `lbservices` module provides services for interacting with
+ * The `lbServices` module provides services for interacting with
  * the models exposed by the LoopBack server via the REST API.
  *
  */
@@ -35,8 +35,8 @@ var module = angular.module("lbServices", ['ngResource']);
 
 /**
  * @ngdoc object
- * @name lbservices.SozialeVerantwortung
- * @header lbservices.SozialeVerantwortung
+ * @name lbServices.SozialeVerantwortung
+ * @header lbServices.SozialeVerantwortung
  * @object
  *
  * @description
@@ -112,8 +112,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#create
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#create
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -150,8 +150,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#createMany
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#createMany
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -189,8 +189,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#upsert
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#upsert
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -227,8 +227,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#exists
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#exists
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -259,8 +259,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#findById
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#findById
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -294,8 +294,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#find
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#find
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -328,8 +328,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#findOne
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#findOne
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -361,8 +361,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#updateAll
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#updateAll
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -395,8 +395,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#deleteById
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#deleteById
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -428,8 +428,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#count
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#count
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -460,8 +460,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#prototype$updateAttributes
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#prototype$updateAttributes
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -497,8 +497,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#createChangeStream
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#createChangeStream
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -534,8 +534,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#getContentData
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#getContentData
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -570,8 +570,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#getZFHilftData
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#getZFHilftData
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -610,8 +610,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#updateOrCreate
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#updateOrCreate
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -645,8 +645,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#update
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#update
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -676,8 +676,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#destroyById
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#destroyById
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -706,8 +706,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#removeById
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#removeById
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -737,8 +737,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SozialeVerantwortung#modelName
-    * @propertyOf lbservices.SozialeVerantwortung
+    * @name lbServices.SozialeVerantwortung#modelName
+    * @propertyOf lbServices.SozialeVerantwortung
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SozialeVerantwortung`.
@@ -747,23 +747,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.SozialeVerantwortung.translations
-     * @header lbservices.SozialeVerantwortung.translations
+     * @name lbServices.SozialeVerantwortung.translations
+     * @header lbServices.SozialeVerantwortung.translations
      * @object
      * @description
      *
      * The object `SozialeVerantwortung.translations` groups methods
      * manipulating `SozialeVerantwortungTranslation` instances related to `SozialeVerantwortung`.
      *
-     * Call {@link lbservices.SozialeVerantwortung#translations SozialeVerantwortung.translations()}
+     * Call {@link lbServices.SozialeVerantwortung#translations SozialeVerantwortung.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung#translations
-         * @methodOf lbservices.SozialeVerantwortung
+         * @name lbServices.SozialeVerantwortung#translations
+         * @methodOf lbServices.SozialeVerantwortung
          *
          * @description
          *
@@ -798,8 +798,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#count
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#count
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -833,8 +833,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#create
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#create
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -871,8 +871,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#createMany
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#createMany
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -909,8 +909,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#destroyAll
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#destroyAll
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -940,8 +940,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#destroyById
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#destroyById
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -973,8 +973,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#findById
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#findById
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -1009,8 +1009,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortung.translations#updateById
-         * @methodOf lbservices.SozialeVerantwortung.translations
+         * @name lbServices.SozialeVerantwortung.translations#updateById
+         * @methodOf lbServices.SozialeVerantwortung.translations
          *
          * @description
          *
@@ -1052,8 +1052,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SozialeVerantwortungTranslation
- * @header lbservices.SozialeVerantwortungTranslation
+ * @name lbServices.SozialeVerantwortungTranslation
+ * @header lbServices.SozialeVerantwortungTranslation
  * @object
  *
  * @description
@@ -1077,8 +1077,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#create
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#create
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1115,8 +1115,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#createMany
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#createMany
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1154,8 +1154,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#upsert
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#upsert
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1192,8 +1192,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#exists
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#exists
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1224,8 +1224,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#findById
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#findById
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1259,8 +1259,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#find
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#find
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1293,8 +1293,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#findOne
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#findOne
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1326,8 +1326,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#updateAll
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#updateAll
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1360,8 +1360,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#deleteById
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#deleteById
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1393,8 +1393,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#count
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#count
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1425,8 +1425,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1462,8 +1462,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#createChangeStream
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#createChangeStream
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1562,8 +1562,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#updateOrCreate
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#updateOrCreate
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1597,8 +1597,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#update
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#update
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1628,8 +1628,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#destroyById
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#destroyById
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1658,8 +1658,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SozialeVerantwortungTranslation#removeById
-         * @methodOf lbservices.SozialeVerantwortungTranslation
+         * @name lbServices.SozialeVerantwortungTranslation#removeById
+         * @methodOf lbServices.SozialeVerantwortungTranslation
          *
          * @description
          *
@@ -1689,8 +1689,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SozialeVerantwortungTranslation#modelName
-    * @propertyOf lbservices.SozialeVerantwortungTranslation
+    * @name lbServices.SozialeVerantwortungTranslation#modelName
+    * @propertyOf lbServices.SozialeVerantwortungTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SozialeVerantwortungTranslation`.
@@ -1703,8 +1703,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojekt
- * @header lbservices.SvHilfsprojekt
+ * @name lbServices.SvHilfsprojekt
+ * @header lbServices.SvHilfsprojekt
  * @object
  *
  * @description
@@ -1780,8 +1780,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#create
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#create
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -1818,8 +1818,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#createMany
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#createMany
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -1857,8 +1857,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#upsert
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#upsert
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -1895,8 +1895,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#exists
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#exists
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -1927,8 +1927,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#findById
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#findById
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -1962,8 +1962,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#find
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#find
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -1996,8 +1996,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#findOne
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#findOne
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2029,8 +2029,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#updateAll
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#updateAll
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2063,8 +2063,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#deleteById
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#deleteById
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2096,8 +2096,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#count
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#count
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2128,8 +2128,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2165,8 +2165,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#createChangeStream
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#createChangeStream
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2265,8 +2265,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2300,8 +2300,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#update
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#update
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2331,8 +2331,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#destroyById
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#destroyById
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2361,8 +2361,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#removeById
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#removeById
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2392,8 +2392,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojekt#modelName
-    * @propertyOf lbservices.SvHilfsprojekt
+    * @name lbServices.SvHilfsprojekt#modelName
+    * @propertyOf lbServices.SvHilfsprojekt
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojekt`.
@@ -2402,23 +2402,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.SvHilfsprojekt.items
-     * @header lbservices.SvHilfsprojekt.items
+     * @name lbServices.SvHilfsprojekt.items
+     * @header lbServices.SvHilfsprojekt.items
      * @object
      * @description
      *
      * The object `SvHilfsprojekt.items` groups methods
      * manipulating `SvHilfsprojektItem` instances related to `SvHilfsprojekt`.
      *
-     * Call {@link lbservices.SvHilfsprojekt#items SvHilfsprojekt.items()}
+     * Call {@link lbServices.SvHilfsprojekt#items SvHilfsprojekt.items()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt#items
-         * @methodOf lbservices.SvHilfsprojekt
+         * @name lbServices.SvHilfsprojekt#items
+         * @methodOf lbServices.SvHilfsprojekt
          *
          * @description
          *
@@ -2453,8 +2453,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#count
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#count
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2488,8 +2488,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#create
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#create
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2526,8 +2526,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#createMany
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#createMany
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2564,8 +2564,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#destroyAll
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#destroyAll
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2595,8 +2595,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#destroyById
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#destroyById
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2628,8 +2628,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#findById
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#findById
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2664,8 +2664,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojekt.items#updateById
-         * @methodOf lbservices.SvHilfsprojekt.items
+         * @name lbServices.SvHilfsprojekt.items#updateById
+         * @methodOf lbServices.SvHilfsprojekt.items
          *
          * @description
          *
@@ -2707,8 +2707,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektTranslation
- * @header lbservices.SvHilfsprojektTranslation
+ * @name lbServices.SvHilfsprojektTranslation
+ * @header lbServices.SvHilfsprojektTranslation
  * @object
  *
  * @description
@@ -2732,8 +2732,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#create
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#create
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2770,8 +2770,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#createMany
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#createMany
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2809,8 +2809,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#upsert
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#upsert
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2847,8 +2847,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#exists
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#exists
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2879,8 +2879,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#findById
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#findById
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2914,8 +2914,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#find
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#find
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2948,8 +2948,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#findOne
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#findOne
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -2981,8 +2981,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#updateAll
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#updateAll
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3015,8 +3015,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#deleteById
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#deleteById
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3048,8 +3048,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#count
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#count
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3080,8 +3080,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3117,8 +3117,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3158,8 +3158,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3193,8 +3193,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#update
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#update
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3224,8 +3224,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#destroyById
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#destroyById
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3254,8 +3254,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektTranslation#removeById
-         * @methodOf lbservices.SvHilfsprojektTranslation
+         * @name lbServices.SvHilfsprojektTranslation#removeById
+         * @methodOf lbServices.SvHilfsprojektTranslation
          *
          * @description
          *
@@ -3285,8 +3285,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektTranslation#modelName
-    * @propertyOf lbservices.SvHilfsprojektTranslation
+    * @name lbServices.SvHilfsprojektTranslation#modelName
+    * @propertyOf lbServices.SvHilfsprojektTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektTranslation`.
@@ -3299,8 +3299,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItem
- * @header lbservices.SvHilfsprojektItem
+ * @name lbServices.SvHilfsprojektItem
+ * @header lbServices.SvHilfsprojektItem
  * @object
  *
  * @description
@@ -3480,8 +3480,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#create
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#create
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3518,8 +3518,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#createMany
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#createMany
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3557,8 +3557,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#upsert
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#upsert
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3595,8 +3595,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#exists
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#exists
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3627,8 +3627,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#findById
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#findById
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3662,8 +3662,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#find
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#find
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3696,8 +3696,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#findOne
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#findOne
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3729,8 +3729,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#updateAll
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#updateAll
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3763,8 +3763,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#deleteById
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#deleteById
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3796,8 +3796,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#count
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#count
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3828,8 +3828,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3865,8 +3865,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -3965,8 +3965,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4000,8 +4000,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#update
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#update
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4031,8 +4031,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#destroyById
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#destroyById
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4061,8 +4061,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#removeById
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#removeById
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4092,8 +4092,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItem#modelName
-    * @propertyOf lbservices.SvHilfsprojektItem
+    * @name lbServices.SvHilfsprojektItem#modelName
+    * @propertyOf lbServices.SvHilfsprojektItem
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItem`.
@@ -4102,23 +4102,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.SvHilfsprojektItem.texts
-     * @header lbservices.SvHilfsprojektItem.texts
+     * @name lbServices.SvHilfsprojektItem.texts
+     * @header lbServices.SvHilfsprojektItem.texts
      * @object
      * @description
      *
      * The object `SvHilfsprojektItem.texts` groups methods
      * manipulating `SvHilfsprojektItemText` instances related to `SvHilfsprojektItem`.
      *
-     * Call {@link lbservices.SvHilfsprojektItem#texts SvHilfsprojektItem.texts()}
+     * Call {@link lbServices.SvHilfsprojektItem#texts SvHilfsprojektItem.texts()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#texts
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#texts
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4153,8 +4153,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#count
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#count
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4188,8 +4188,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#create
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#create
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4226,8 +4226,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#createMany
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#createMany
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4264,8 +4264,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#destroyAll
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#destroyAll
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4295,8 +4295,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#destroyById
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#destroyById
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4328,8 +4328,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#findById
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#findById
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4364,8 +4364,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.texts#updateById
-         * @methodOf lbservices.SvHilfsprojektItem.texts
+         * @name lbServices.SvHilfsprojektItem.texts#updateById
+         * @methodOf lbServices.SvHilfsprojektItem.texts
          *
          * @description
          *
@@ -4403,23 +4403,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.SvHilfsprojektItem.images
-     * @header lbservices.SvHilfsprojektItem.images
+     * @name lbServices.SvHilfsprojektItem.images
+     * @header lbServices.SvHilfsprojektItem.images
      * @object
      * @description
      *
      * The object `SvHilfsprojektItem.images` groups methods
      * manipulating `SvHilfsprojektItemImage` instances related to `SvHilfsprojektItem`.
      *
-     * Call {@link lbservices.SvHilfsprojektItem#images SvHilfsprojektItem.images()}
+     * Call {@link lbServices.SvHilfsprojektItem#images SvHilfsprojektItem.images()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#images
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#images
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4454,8 +4454,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#count
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#count
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4489,8 +4489,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#create
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#create
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4527,8 +4527,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#createMany
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#createMany
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4565,8 +4565,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#destroyAll
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#destroyAll
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4596,8 +4596,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#destroyById
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#destroyById
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4629,8 +4629,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#findById
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#findById
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4665,8 +4665,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.images#updateById
-         * @methodOf lbservices.SvHilfsprojektItem.images
+         * @name lbServices.SvHilfsprojektItem.images#updateById
+         * @methodOf lbServices.SvHilfsprojektItem.images
          *
          * @description
          *
@@ -4704,23 +4704,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.SvHilfsprojektItem.videos
-     * @header lbservices.SvHilfsprojektItem.videos
+     * @name lbServices.SvHilfsprojektItem.videos
+     * @header lbServices.SvHilfsprojektItem.videos
      * @object
      * @description
      *
      * The object `SvHilfsprojektItem.videos` groups methods
      * manipulating `SvHilfsprojektItemVideo` instances related to `SvHilfsprojektItem`.
      *
-     * Call {@link lbservices.SvHilfsprojektItem#videos SvHilfsprojektItem.videos()}
+     * Call {@link lbServices.SvHilfsprojektItem#videos SvHilfsprojektItem.videos()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem#videos
-         * @methodOf lbservices.SvHilfsprojektItem
+         * @name lbServices.SvHilfsprojektItem#videos
+         * @methodOf lbServices.SvHilfsprojektItem
          *
          * @description
          *
@@ -4755,8 +4755,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#count
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#count
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -4790,8 +4790,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#create
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#create
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -4828,8 +4828,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#createMany
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#createMany
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -4866,8 +4866,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#destroyAll
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#destroyAll
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -4897,8 +4897,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#destroyById
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#destroyById
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -4930,8 +4930,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#findById
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#findById
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -4966,8 +4966,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItem.videos#updateById
-         * @methodOf lbservices.SvHilfsprojektItem.videos
+         * @name lbServices.SvHilfsprojektItem.videos#updateById
+         * @methodOf lbServices.SvHilfsprojektItem.videos
          *
          * @description
          *
@@ -5009,8 +5009,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItemText
- * @header lbservices.SvHilfsprojektItemText
+ * @name lbServices.SvHilfsprojektItemText
+ * @header lbServices.SvHilfsprojektItemText
  * @object
  *
  * @description
@@ -5034,8 +5034,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#create
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#create
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5072,8 +5072,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#createMany
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#createMany
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5111,8 +5111,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#upsert
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#upsert
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5149,8 +5149,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#exists
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#exists
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5181,8 +5181,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#findById
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#findById
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5216,8 +5216,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#find
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#find
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5250,8 +5250,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#findOne
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#findOne
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5283,8 +5283,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#updateAll
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#updateAll
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5317,8 +5317,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#deleteById
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#deleteById
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5350,8 +5350,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#count
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#count
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5382,8 +5382,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5419,8 +5419,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5519,8 +5519,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5554,8 +5554,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#update
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#update
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5585,8 +5585,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#destroyById
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#destroyById
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5615,8 +5615,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemText#removeById
-         * @methodOf lbservices.SvHilfsprojektItemText
+         * @name lbServices.SvHilfsprojektItemText#removeById
+         * @methodOf lbServices.SvHilfsprojektItemText
          *
          * @description
          *
@@ -5646,8 +5646,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItemText#modelName
-    * @propertyOf lbservices.SvHilfsprojektItemText
+    * @name lbServices.SvHilfsprojektItemText#modelName
+    * @propertyOf lbServices.SvHilfsprojektItemText
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItemText`.
@@ -5660,8 +5660,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItemTextTranslation
- * @header lbservices.SvHilfsprojektItemTextTranslation
+ * @name lbServices.SvHilfsprojektItemTextTranslation
+ * @header lbServices.SvHilfsprojektItemTextTranslation
  * @object
  *
  * @description
@@ -5685,8 +5685,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#create
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#create
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5723,8 +5723,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#createMany
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#createMany
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5762,8 +5762,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#upsert
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#upsert
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5800,8 +5800,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#exists
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#exists
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5832,8 +5832,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#findById
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#findById
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5867,8 +5867,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#find
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#find
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5901,8 +5901,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#findOne
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#findOne
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5934,8 +5934,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#updateAll
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#updateAll
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -5968,8 +5968,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#deleteById
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#deleteById
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6001,8 +6001,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#count
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#count
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6033,8 +6033,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6070,8 +6070,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6111,8 +6111,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6146,8 +6146,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#update
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#update
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6177,8 +6177,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#destroyById
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#destroyById
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6207,8 +6207,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemTextTranslation#removeById
-         * @methodOf lbservices.SvHilfsprojektItemTextTranslation
+         * @name lbServices.SvHilfsprojektItemTextTranslation#removeById
+         * @methodOf lbServices.SvHilfsprojektItemTextTranslation
          *
          * @description
          *
@@ -6238,8 +6238,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItemTextTranslation#modelName
-    * @propertyOf lbservices.SvHilfsprojektItemTextTranslation
+    * @name lbServices.SvHilfsprojektItemTextTranslation#modelName
+    * @propertyOf lbServices.SvHilfsprojektItemTextTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItemTextTranslation`.
@@ -6252,8 +6252,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItemImage
- * @header lbservices.SvHilfsprojektItemImage
+ * @name lbServices.SvHilfsprojektItemImage
+ * @header lbServices.SvHilfsprojektItemImage
  * @object
  *
  * @description
@@ -6277,8 +6277,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#create
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#create
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6315,8 +6315,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#createMany
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#createMany
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6354,8 +6354,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#upsert
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#upsert
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6392,8 +6392,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#exists
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#exists
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6424,8 +6424,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#findById
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#findById
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6459,8 +6459,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#find
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#find
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6493,8 +6493,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#findOne
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#findOne
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6526,8 +6526,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#updateAll
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#updateAll
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6560,8 +6560,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#deleteById
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#deleteById
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6593,8 +6593,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#count
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#count
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6625,8 +6625,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6662,8 +6662,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6762,8 +6762,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6797,8 +6797,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#update
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#update
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6828,8 +6828,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#destroyById
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#destroyById
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6858,8 +6858,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImage#removeById
-         * @methodOf lbservices.SvHilfsprojektItemImage
+         * @name lbServices.SvHilfsprojektItemImage#removeById
+         * @methodOf lbServices.SvHilfsprojektItemImage
          *
          * @description
          *
@@ -6889,8 +6889,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItemImage#modelName
-    * @propertyOf lbservices.SvHilfsprojektItemImage
+    * @name lbServices.SvHilfsprojektItemImage#modelName
+    * @propertyOf lbServices.SvHilfsprojektItemImage
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItemImage`.
@@ -6903,8 +6903,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItemImageTranslation
- * @header lbservices.SvHilfsprojektItemImageTranslation
+ * @name lbServices.SvHilfsprojektItemImageTranslation
+ * @header lbServices.SvHilfsprojektItemImageTranslation
  * @object
  *
  * @description
@@ -6928,8 +6928,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#create
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#create
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -6966,8 +6966,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#createMany
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#createMany
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7005,8 +7005,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#upsert
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#upsert
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7043,8 +7043,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#exists
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#exists
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7075,8 +7075,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#findById
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#findById
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7110,8 +7110,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#find
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#find
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7144,8 +7144,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#findOne
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#findOne
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7177,8 +7177,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#updateAll
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#updateAll
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7211,8 +7211,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#deleteById
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#deleteById
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7244,8 +7244,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#count
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#count
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7276,8 +7276,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7313,8 +7313,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7354,8 +7354,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7389,8 +7389,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#update
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#update
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7420,8 +7420,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#destroyById
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#destroyById
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7450,8 +7450,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemImageTranslation#removeById
-         * @methodOf lbservices.SvHilfsprojektItemImageTranslation
+         * @name lbServices.SvHilfsprojektItemImageTranslation#removeById
+         * @methodOf lbServices.SvHilfsprojektItemImageTranslation
          *
          * @description
          *
@@ -7481,8 +7481,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItemImageTranslation#modelName
-    * @propertyOf lbservices.SvHilfsprojektItemImageTranslation
+    * @name lbServices.SvHilfsprojektItemImageTranslation#modelName
+    * @propertyOf lbServices.SvHilfsprojektItemImageTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItemImageTranslation`.
@@ -7495,8 +7495,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvKunststiftung
- * @header lbservices.SvKunststiftung
+ * @name lbServices.SvKunststiftung
+ * @header lbServices.SvKunststiftung
  * @object
  *
  * @description
@@ -7572,8 +7572,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#create
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#create
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7610,8 +7610,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#createMany
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#createMany
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7649,8 +7649,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#upsert
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#upsert
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7687,8 +7687,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#exists
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#exists
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7719,8 +7719,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#findById
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#findById
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7754,8 +7754,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#find
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#find
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7788,8 +7788,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#findOne
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#findOne
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7821,8 +7821,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#updateAll
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#updateAll
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7855,8 +7855,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#deleteById
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#deleteById
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7888,8 +7888,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#count
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#count
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7920,8 +7920,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#prototype$updateAttributes
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#prototype$updateAttributes
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7957,8 +7957,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#createChangeStream
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#createChangeStream
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -7994,8 +7994,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#getContentData
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#getContentData
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -8034,8 +8034,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#updateOrCreate
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#updateOrCreate
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -8069,8 +8069,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#update
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#update
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -8100,8 +8100,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#destroyById
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#destroyById
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -8130,8 +8130,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#removeById
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#removeById
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -8161,8 +8161,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvKunststiftung#modelName
-    * @propertyOf lbservices.SvKunststiftung
+    * @name lbServices.SvKunststiftung#modelName
+    * @propertyOf lbServices.SvKunststiftung
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvKunststiftung`.
@@ -8171,23 +8171,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.SvKunststiftung.translations
-     * @header lbservices.SvKunststiftung.translations
+     * @name lbServices.SvKunststiftung.translations
+     * @header lbServices.SvKunststiftung.translations
      * @object
      * @description
      *
      * The object `SvKunststiftung.translations` groups methods
      * manipulating `SvKunststiftungTranslation` instances related to `SvKunststiftung`.
      *
-     * Call {@link lbservices.SvKunststiftung#translations SvKunststiftung.translations()}
+     * Call {@link lbServices.SvKunststiftung#translations SvKunststiftung.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung#translations
-         * @methodOf lbservices.SvKunststiftung
+         * @name lbServices.SvKunststiftung#translations
+         * @methodOf lbServices.SvKunststiftung
          *
          * @description
          *
@@ -8222,8 +8222,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#count
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#count
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8257,8 +8257,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#create
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#create
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8295,8 +8295,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#createMany
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#createMany
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8333,8 +8333,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#destroyAll
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#destroyAll
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8364,8 +8364,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#destroyById
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#destroyById
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8397,8 +8397,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#findById
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#findById
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8433,8 +8433,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftung.translations#updateById
-         * @methodOf lbservices.SvKunststiftung.translations
+         * @name lbServices.SvKunststiftung.translations#updateById
+         * @methodOf lbServices.SvKunststiftung.translations
          *
          * @description
          *
@@ -8476,8 +8476,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvKunststiftungTranslation
- * @header lbservices.SvKunststiftungTranslation
+ * @name lbServices.SvKunststiftungTranslation
+ * @header lbServices.SvKunststiftungTranslation
  * @object
  *
  * @description
@@ -8501,8 +8501,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#create
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#create
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8539,8 +8539,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#createMany
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#createMany
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8578,8 +8578,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#upsert
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#upsert
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8616,8 +8616,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#exists
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#exists
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8648,8 +8648,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#findById
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#findById
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8683,8 +8683,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#find
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#find
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8717,8 +8717,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#findOne
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#findOne
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8750,8 +8750,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#updateAll
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#updateAll
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8784,8 +8784,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#deleteById
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#deleteById
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8817,8 +8817,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#count
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#count
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8849,8 +8849,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8886,8 +8886,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#createChangeStream
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#createChangeStream
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -8986,8 +8986,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#updateOrCreate
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#updateOrCreate
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -9021,8 +9021,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#update
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#update
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -9052,8 +9052,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#destroyById
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#destroyById
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -9082,8 +9082,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvKunststiftungTranslation#removeById
-         * @methodOf lbservices.SvKunststiftungTranslation
+         * @name lbServices.SvKunststiftungTranslation#removeById
+         * @methodOf lbServices.SvKunststiftungTranslation
          *
          * @description
          *
@@ -9113,8 +9113,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvKunststiftungTranslation#modelName
-    * @propertyOf lbservices.SvKunststiftungTranslation
+    * @name lbServices.SvKunststiftungTranslation#modelName
+    * @propertyOf lbServices.SvKunststiftungTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvKunststiftungTranslation`.
@@ -9127,8 +9127,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStiftungTranslation
- * @header lbservices.KsStiftungTranslation
+ * @name lbServices.KsStiftungTranslation
+ * @header lbServices.KsStiftungTranslation
  * @object
  *
  * @description
@@ -9152,8 +9152,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#create
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#create
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9190,8 +9190,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#createMany
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#createMany
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9229,8 +9229,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#upsert
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#upsert
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9267,8 +9267,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#exists
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#exists
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9299,8 +9299,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#findById
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#findById
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9334,8 +9334,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#find
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#find
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9368,8 +9368,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#findOne
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#findOne
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9401,8 +9401,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#updateAll
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#updateAll
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9435,8 +9435,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#deleteById
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#deleteById
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9468,8 +9468,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#count
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#count
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9500,8 +9500,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9537,8 +9537,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#createChangeStream
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#createChangeStream
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9637,8 +9637,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#updateOrCreate
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#updateOrCreate
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9672,8 +9672,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#update
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#update
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9703,8 +9703,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#destroyById
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#destroyById
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9733,8 +9733,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungTranslation#removeById
-         * @methodOf lbservices.KsStiftungTranslation
+         * @name lbServices.KsStiftungTranslation#removeById
+         * @methodOf lbServices.KsStiftungTranslation
          *
          * @description
          *
@@ -9764,8 +9764,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStiftungTranslation#modelName
-    * @propertyOf lbservices.KsStiftungTranslation
+    * @name lbServices.KsStiftungTranslation#modelName
+    * @propertyOf lbServices.KsStiftungTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStiftungTranslation`.
@@ -9778,8 +9778,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStiftungVideoTranslation
- * @header lbservices.KsStiftungVideoTranslation
+ * @name lbServices.KsStiftungVideoTranslation
+ * @header lbServices.KsStiftungVideoTranslation
  * @object
  *
  * @description
@@ -9803,8 +9803,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#create
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#create
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -9841,8 +9841,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#createMany
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#createMany
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -9880,8 +9880,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#upsert
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#upsert
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -9918,8 +9918,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#exists
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#exists
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -9950,8 +9950,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#findById
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#findById
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -9985,8 +9985,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#find
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#find
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10019,8 +10019,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#findOne
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#findOne
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10052,8 +10052,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#updateAll
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#updateAll
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10086,8 +10086,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#deleteById
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#deleteById
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10119,8 +10119,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#count
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#count
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10151,8 +10151,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10188,8 +10188,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#createChangeStream
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#createChangeStream
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10229,8 +10229,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#updateOrCreate
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#updateOrCreate
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10264,8 +10264,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#update
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#update
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10295,8 +10295,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#destroyById
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#destroyById
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10325,8 +10325,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideoTranslation#removeById
-         * @methodOf lbservices.KsStiftungVideoTranslation
+         * @name lbServices.KsStiftungVideoTranslation#removeById
+         * @methodOf lbServices.KsStiftungVideoTranslation
          *
          * @description
          *
@@ -10356,8 +10356,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStiftungVideoTranslation#modelName
-    * @propertyOf lbservices.KsStiftungVideoTranslation
+    * @name lbServices.KsStiftungVideoTranslation#modelName
+    * @propertyOf lbServices.KsStiftungVideoTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStiftungVideoTranslation`.
@@ -10370,8 +10370,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStiftung
- * @header lbservices.KsStiftung
+ * @name lbServices.KsStiftung
+ * @header lbServices.KsStiftung
  * @object
  *
  * @description
@@ -10499,8 +10499,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#create
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#create
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10537,8 +10537,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#createMany
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#createMany
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10576,8 +10576,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#upsert
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#upsert
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10614,8 +10614,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#exists
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#exists
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10646,8 +10646,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#findById
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#findById
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10681,8 +10681,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#find
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#find
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10715,8 +10715,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#findOne
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#findOne
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10748,8 +10748,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#updateAll
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#updateAll
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10782,8 +10782,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#deleteById
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#deleteById
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10815,8 +10815,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#count
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#count
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10847,8 +10847,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#prototype$updateAttributes
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#prototype$updateAttributes
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10884,8 +10884,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#createChangeStream
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#createChangeStream
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10921,8 +10921,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#getContentData
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#getContentData
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10961,8 +10961,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#updateOrCreate
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#updateOrCreate
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -10996,8 +10996,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#update
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#update
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -11027,8 +11027,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#destroyById
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#destroyById
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -11057,8 +11057,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#removeById
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#removeById
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -11088,8 +11088,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStiftung#modelName
-    * @propertyOf lbservices.KsStiftung
+    * @name lbServices.KsStiftung#modelName
+    * @propertyOf lbServices.KsStiftung
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStiftung`.
@@ -11098,23 +11098,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsStiftung.translations
-     * @header lbservices.KsStiftung.translations
+     * @name lbServices.KsStiftung.translations
+     * @header lbServices.KsStiftung.translations
      * @object
      * @description
      *
      * The object `KsStiftung.translations` groups methods
      * manipulating `KsStiftungTranslation` instances related to `KsStiftung`.
      *
-     * Call {@link lbservices.KsStiftung#translations KsStiftung.translations()}
+     * Call {@link lbServices.KsStiftung#translations KsStiftung.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#translations
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#translations
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -11149,8 +11149,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#count
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#count
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11184,8 +11184,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#create
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#create
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11222,8 +11222,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#createMany
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#createMany
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11260,8 +11260,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#destroyAll
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#destroyAll
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11291,8 +11291,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#destroyById
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#destroyById
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11324,8 +11324,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#findById
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#findById
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11360,8 +11360,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.translations#updateById
-         * @methodOf lbservices.KsStiftung.translations
+         * @name lbServices.KsStiftung.translations#updateById
+         * @methodOf lbServices.KsStiftung.translations
          *
          * @description
          *
@@ -11399,23 +11399,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsStiftung.videos
-     * @header lbservices.KsStiftung.videos
+     * @name lbServices.KsStiftung.videos
+     * @header lbServices.KsStiftung.videos
      * @object
      * @description
      *
      * The object `KsStiftung.videos` groups methods
      * manipulating `KsStiftungVideo` instances related to `KsStiftung`.
      *
-     * Call {@link lbservices.KsStiftung#videos KsStiftung.videos()}
+     * Call {@link lbServices.KsStiftung#videos KsStiftung.videos()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung#videos
-         * @methodOf lbservices.KsStiftung
+         * @name lbServices.KsStiftung#videos
+         * @methodOf lbServices.KsStiftung
          *
          * @description
          *
@@ -11450,8 +11450,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#count
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#count
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11485,8 +11485,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#create
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#create
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11523,8 +11523,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#createMany
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#createMany
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11561,8 +11561,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#destroyAll
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#destroyAll
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11592,8 +11592,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#destroyById
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#destroyById
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11625,8 +11625,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#findById
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#findById
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11661,8 +11661,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftung.videos#updateById
-         * @methodOf lbservices.KsStiftung.videos
+         * @name lbServices.KsStiftung.videos#updateById
+         * @methodOf lbServices.KsStiftung.videos
          *
          * @description
          *
@@ -11704,8 +11704,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKultur
- * @header lbservices.KsKultur
+ * @name lbServices.KsKultur
+ * @header lbServices.KsKultur
  * @object
  *
  * @description
@@ -11833,8 +11833,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#create
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#create
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -11871,8 +11871,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#createMany
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#createMany
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -11910,8 +11910,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#upsert
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#upsert
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -11948,8 +11948,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#exists
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#exists
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -11980,8 +11980,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#findById
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#findById
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12015,8 +12015,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#find
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#find
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12049,8 +12049,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#findOne
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#findOne
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12082,8 +12082,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#updateAll
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#updateAll
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12116,8 +12116,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#deleteById
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#deleteById
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12149,8 +12149,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#count
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#count
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12181,8 +12181,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#prototype$updateAttributes
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#prototype$updateAttributes
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12218,8 +12218,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#createChangeStream
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#createChangeStream
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12255,8 +12255,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#getContentData
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#getContentData
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12295,8 +12295,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#updateOrCreate
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#updateOrCreate
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12330,8 +12330,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#update
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#update
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12361,8 +12361,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#destroyById
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#destroyById
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12391,8 +12391,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#removeById
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#removeById
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12422,8 +12422,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKultur#modelName
-    * @propertyOf lbservices.KsKultur
+    * @name lbServices.KsKultur#modelName
+    * @propertyOf lbServices.KsKultur
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKultur`.
@@ -12432,23 +12432,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsKultur.translations
-     * @header lbservices.KsKultur.translations
+     * @name lbServices.KsKultur.translations
+     * @header lbServices.KsKultur.translations
      * @object
      * @description
      *
      * The object `KsKultur.translations` groups methods
      * manipulating `KsKulturTranslation` instances related to `KsKultur`.
      *
-     * Call {@link lbservices.KsKultur#translations KsKultur.translations()}
+     * Call {@link lbServices.KsKultur#translations KsKultur.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#translations
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#translations
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12483,8 +12483,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#count
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#count
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12518,8 +12518,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#create
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#create
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12556,8 +12556,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#createMany
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#createMany
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12594,8 +12594,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#destroyAll
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#destroyAll
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12625,8 +12625,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#destroyById
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#destroyById
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12658,8 +12658,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#findById
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#findById
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12694,8 +12694,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.translations#updateById
-         * @methodOf lbservices.KsKultur.translations
+         * @name lbServices.KsKultur.translations#updateById
+         * @methodOf lbServices.KsKultur.translations
          *
          * @description
          *
@@ -12733,23 +12733,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsKultur.items
-     * @header lbservices.KsKultur.items
+     * @name lbServices.KsKultur.items
+     * @header lbServices.KsKultur.items
      * @object
      * @description
      *
      * The object `KsKultur.items` groups methods
      * manipulating `KsKulturItem` instances related to `KsKultur`.
      *
-     * Call {@link lbservices.KsKultur#items KsKultur.items()}
+     * Call {@link lbServices.KsKultur#items KsKultur.items()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur#items
-         * @methodOf lbservices.KsKultur
+         * @name lbServices.KsKultur#items
+         * @methodOf lbServices.KsKultur
          *
          * @description
          *
@@ -12784,8 +12784,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#count
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#count
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -12819,8 +12819,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#create
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#create
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -12857,8 +12857,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#createMany
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#createMany
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -12895,8 +12895,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#destroyAll
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#destroyAll
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -12926,8 +12926,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#destroyById
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#destroyById
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -12959,8 +12959,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#findById
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#findById
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -12995,8 +12995,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKultur.items#updateById
-         * @methodOf lbservices.KsKultur.items
+         * @name lbServices.KsKultur.items#updateById
+         * @methodOf lbServices.KsKultur.items
          *
          * @description
          *
@@ -13038,8 +13038,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKulturTranslation
- * @header lbservices.KsKulturTranslation
+ * @name lbServices.KsKulturTranslation
+ * @header lbServices.KsKulturTranslation
  * @object
  *
  * @description
@@ -13063,8 +13063,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#create
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#create
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13101,8 +13101,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#createMany
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#createMany
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13140,8 +13140,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#upsert
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#upsert
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13178,8 +13178,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#exists
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#exists
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13210,8 +13210,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#findById
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#findById
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13245,8 +13245,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#find
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#find
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13279,8 +13279,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#findOne
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#findOne
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13312,8 +13312,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#updateAll
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#updateAll
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13346,8 +13346,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#deleteById
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#deleteById
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13379,8 +13379,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#count
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#count
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13411,8 +13411,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13448,8 +13448,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#createChangeStream
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#createChangeStream
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13548,8 +13548,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#updateOrCreate
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#updateOrCreate
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13583,8 +13583,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#update
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#update
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13614,8 +13614,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#destroyById
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#destroyById
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13644,8 +13644,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturTranslation#removeById
-         * @methodOf lbservices.KsKulturTranslation
+         * @name lbServices.KsKulturTranslation#removeById
+         * @methodOf lbServices.KsKulturTranslation
          *
          * @description
          *
@@ -13675,8 +13675,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKulturTranslation#modelName
-    * @propertyOf lbservices.KsKulturTranslation
+    * @name lbServices.KsKulturTranslation#modelName
+    * @propertyOf lbServices.KsKulturTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKulturTranslation`.
@@ -13689,8 +13689,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKulturItem
- * @header lbservices.KsKulturItem
+ * @name lbServices.KsKulturItem
+ * @header lbServices.KsKulturItem
  * @object
  *
  * @description
@@ -13818,8 +13818,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#create
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#create
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -13856,8 +13856,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#createMany
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#createMany
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -13895,8 +13895,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#upsert
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#upsert
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -13933,8 +13933,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#exists
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#exists
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -13965,8 +13965,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#findById
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#findById
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14000,8 +14000,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#find
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#find
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14034,8 +14034,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#findOne
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#findOne
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14067,8 +14067,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#updateAll
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#updateAll
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14101,8 +14101,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#deleteById
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#deleteById
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14134,8 +14134,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#count
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#count
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14166,8 +14166,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#prototype$updateAttributes
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#prototype$updateAttributes
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14203,8 +14203,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#createChangeStream
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#createChangeStream
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14303,8 +14303,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#updateOrCreate
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#updateOrCreate
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14338,8 +14338,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#update
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#update
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14369,8 +14369,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#destroyById
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#destroyById
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14399,8 +14399,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#removeById
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#removeById
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14430,8 +14430,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKulturItem#modelName
-    * @propertyOf lbservices.KsKulturItem
+    * @name lbServices.KsKulturItem#modelName
+    * @propertyOf lbServices.KsKulturItem
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKulturItem`.
@@ -14440,23 +14440,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsKulturItem.images
-     * @header lbservices.KsKulturItem.images
+     * @name lbServices.KsKulturItem.images
+     * @header lbServices.KsKulturItem.images
      * @object
      * @description
      *
      * The object `KsKulturItem.images` groups methods
      * manipulating `KsKulturItemImage` instances related to `KsKulturItem`.
      *
-     * Call {@link lbservices.KsKulturItem#images KsKulturItem.images()}
+     * Call {@link lbServices.KsKulturItem#images KsKulturItem.images()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#images
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#images
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14491,8 +14491,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#count
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#count
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14526,8 +14526,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#create
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#create
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14564,8 +14564,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#createMany
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#createMany
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14602,8 +14602,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#destroyAll
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#destroyAll
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14633,8 +14633,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#destroyById
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#destroyById
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14666,8 +14666,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#findById
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#findById
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14702,8 +14702,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.images#updateById
-         * @methodOf lbservices.KsKulturItem.images
+         * @name lbServices.KsKulturItem.images#updateById
+         * @methodOf lbServices.KsKulturItem.images
          *
          * @description
          *
@@ -14741,23 +14741,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsKulturItem.videos
-     * @header lbservices.KsKulturItem.videos
+     * @name lbServices.KsKulturItem.videos
+     * @header lbServices.KsKulturItem.videos
      * @object
      * @description
      *
      * The object `KsKulturItem.videos` groups methods
      * manipulating `KsKulturItemVideo` instances related to `KsKulturItem`.
      *
-     * Call {@link lbservices.KsKulturItem#videos KsKulturItem.videos()}
+     * Call {@link lbServices.KsKulturItem#videos KsKulturItem.videos()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem#videos
-         * @methodOf lbservices.KsKulturItem
+         * @name lbServices.KsKulturItem#videos
+         * @methodOf lbServices.KsKulturItem
          *
          * @description
          *
@@ -14792,8 +14792,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#count
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#count
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -14827,8 +14827,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#create
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#create
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -14865,8 +14865,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#createMany
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#createMany
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -14903,8 +14903,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#destroyAll
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#destroyAll
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -14934,8 +14934,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#destroyById
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#destroyById
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -14967,8 +14967,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#findById
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#findById
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -15003,8 +15003,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItem.videos#updateById
-         * @methodOf lbservices.KsKulturItem.videos
+         * @name lbServices.KsKulturItem.videos#updateById
+         * @methodOf lbServices.KsKulturItem.videos
          *
          * @description
          *
@@ -15046,8 +15046,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKulturItemImage
- * @header lbservices.KsKulturItemImage
+ * @name lbServices.KsKulturItemImage
+ * @header lbServices.KsKulturItemImage
  * @object
  *
  * @description
@@ -15071,8 +15071,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#create
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#create
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15109,8 +15109,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#createMany
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#createMany
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15148,8 +15148,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#upsert
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#upsert
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15186,8 +15186,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#exists
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#exists
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15218,8 +15218,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#findById
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#findById
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15253,8 +15253,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#find
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#find
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15287,8 +15287,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#findOne
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#findOne
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15320,8 +15320,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#updateAll
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#updateAll
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15354,8 +15354,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#deleteById
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#deleteById
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15387,8 +15387,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#count
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#count
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15419,8 +15419,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#prototype$updateAttributes
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#prototype$updateAttributes
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15456,8 +15456,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#createChangeStream
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#createChangeStream
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15556,8 +15556,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#updateOrCreate
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#updateOrCreate
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15591,8 +15591,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#update
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#update
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15622,8 +15622,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#destroyById
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#destroyById
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15652,8 +15652,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImage#removeById
-         * @methodOf lbservices.KsKulturItemImage
+         * @name lbServices.KsKulturItemImage#removeById
+         * @methodOf lbServices.KsKulturItemImage
          *
          * @description
          *
@@ -15683,8 +15683,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKulturItemImage#modelName
-    * @propertyOf lbservices.KsKulturItemImage
+    * @name lbServices.KsKulturItemImage#modelName
+    * @propertyOf lbServices.KsKulturItemImage
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKulturItemImage`.
@@ -15697,8 +15697,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKulturItemImageTranslation
- * @header lbservices.KsKulturItemImageTranslation
+ * @name lbServices.KsKulturItemImageTranslation
+ * @header lbServices.KsKulturItemImageTranslation
  * @object
  *
  * @description
@@ -15722,8 +15722,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#create
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#create
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15760,8 +15760,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#createMany
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#createMany
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15799,8 +15799,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#upsert
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#upsert
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15837,8 +15837,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#exists
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#exists
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15869,8 +15869,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#findById
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#findById
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15904,8 +15904,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#find
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#find
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15938,8 +15938,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#findOne
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#findOne
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -15971,8 +15971,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#updateAll
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#updateAll
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16005,8 +16005,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#deleteById
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#deleteById
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16038,8 +16038,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#count
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#count
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16070,8 +16070,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16107,8 +16107,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#createChangeStream
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#createChangeStream
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16148,8 +16148,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#updateOrCreate
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#updateOrCreate
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16183,8 +16183,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#update
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#update
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16214,8 +16214,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#destroyById
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#destroyById
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16244,8 +16244,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemImageTranslation#removeById
-         * @methodOf lbservices.KsKulturItemImageTranslation
+         * @name lbServices.KsKulturItemImageTranslation#removeById
+         * @methodOf lbServices.KsKulturItemImageTranslation
          *
          * @description
          *
@@ -16275,8 +16275,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKulturItemImageTranslation#modelName
-    * @propertyOf lbservices.KsKulturItemImageTranslation
+    * @name lbServices.KsKulturItemImageTranslation#modelName
+    * @propertyOf lbServices.KsKulturItemImageTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKulturItemImageTranslation`.
@@ -16289,8 +16289,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKulturItemVideo
- * @header lbservices.KsKulturItemVideo
+ * @name lbServices.KsKulturItemVideo
+ * @header lbServices.KsKulturItemVideo
  * @object
  *
  * @description
@@ -16314,8 +16314,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#create
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#create
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16352,8 +16352,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#createMany
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#createMany
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16391,8 +16391,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#upsert
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#upsert
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16429,8 +16429,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#exists
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#exists
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16461,8 +16461,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#findById
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#findById
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16496,8 +16496,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#find
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#find
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16530,8 +16530,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#findOne
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#findOne
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16563,8 +16563,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#updateAll
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#updateAll
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16597,8 +16597,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#deleteById
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#deleteById
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16630,8 +16630,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#count
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#count
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16662,8 +16662,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#prototype$updateAttributes
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#prototype$updateAttributes
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16699,8 +16699,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#createChangeStream
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#createChangeStream
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16799,8 +16799,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#updateOrCreate
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#updateOrCreate
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16834,8 +16834,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#update
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#update
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16865,8 +16865,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#destroyById
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#destroyById
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16895,8 +16895,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideo#removeById
-         * @methodOf lbservices.KsKulturItemVideo
+         * @name lbServices.KsKulturItemVideo#removeById
+         * @methodOf lbServices.KsKulturItemVideo
          *
          * @description
          *
@@ -16926,8 +16926,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKulturItemVideo#modelName
-    * @propertyOf lbservices.KsKulturItemVideo
+    * @name lbServices.KsKulturItemVideo#modelName
+    * @propertyOf lbServices.KsKulturItemVideo
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKulturItemVideo`.
@@ -16940,8 +16940,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsKulturItemVideoTranslation
- * @header lbservices.KsKulturItemVideoTranslation
+ * @name lbServices.KsKulturItemVideoTranslation
+ * @header lbServices.KsKulturItemVideoTranslation
  * @object
  *
  * @description
@@ -16965,8 +16965,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#create
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#create
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17003,8 +17003,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#createMany
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#createMany
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17042,8 +17042,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#upsert
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#upsert
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17080,8 +17080,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#exists
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#exists
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17112,8 +17112,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#findById
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#findById
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17147,8 +17147,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#find
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#find
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17181,8 +17181,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#findOne
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#findOne
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17214,8 +17214,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#updateAll
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#updateAll
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17248,8 +17248,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#deleteById
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#deleteById
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17281,8 +17281,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#count
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#count
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17313,8 +17313,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17350,8 +17350,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#createChangeStream
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#createChangeStream
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17391,8 +17391,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#updateOrCreate
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#updateOrCreate
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17426,8 +17426,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#update
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#update
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17457,8 +17457,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#destroyById
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#destroyById
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17487,8 +17487,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsKulturItemVideoTranslation#removeById
-         * @methodOf lbservices.KsKulturItemVideoTranslation
+         * @name lbServices.KsKulturItemVideoTranslation#removeById
+         * @methodOf lbServices.KsKulturItemVideoTranslation
          *
          * @description
          *
@@ -17518,8 +17518,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsKulturItemVideoTranslation#modelName
-    * @propertyOf lbservices.KsKulturItemVideoTranslation
+    * @name lbServices.KsKulturItemVideoTranslation#modelName
+    * @propertyOf lbServices.KsKulturItemVideoTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsKulturItemVideoTranslation`.
@@ -17532,8 +17532,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreis
- * @header lbservices.KsMusikpreis
+ * @name lbServices.KsMusikpreis
+ * @header lbServices.KsMusikpreis
  * @object
  *
  * @description
@@ -17661,8 +17661,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#create
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#create
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17699,8 +17699,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#createMany
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#createMany
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17738,8 +17738,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#upsert
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#upsert
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17776,8 +17776,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#exists
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#exists
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17808,8 +17808,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#findById
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#findById
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17843,8 +17843,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#find
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#find
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17877,8 +17877,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#findOne
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#findOne
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17910,8 +17910,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#updateAll
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#updateAll
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17944,8 +17944,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#deleteById
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#deleteById
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -17977,8 +17977,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#count
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#count
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18009,8 +18009,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18046,8 +18046,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#createChangeStream
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#createChangeStream
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18083,8 +18083,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#getContentData
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#getContentData
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18123,8 +18123,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#updateOrCreate
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#updateOrCreate
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18158,8 +18158,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#update
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#update
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18189,8 +18189,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#destroyById
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#destroyById
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18219,8 +18219,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#removeById
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#removeById
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18250,8 +18250,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreis#modelName
-    * @propertyOf lbservices.KsMusikpreis
+    * @name lbServices.KsMusikpreis#modelName
+    * @propertyOf lbServices.KsMusikpreis
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreis`.
@@ -18260,23 +18260,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsMusikpreis.translations
-     * @header lbservices.KsMusikpreis.translations
+     * @name lbServices.KsMusikpreis.translations
+     * @header lbServices.KsMusikpreis.translations
      * @object
      * @description
      *
      * The object `KsMusikpreis.translations` groups methods
      * manipulating `KsMusikpreisTranslation` instances related to `KsMusikpreis`.
      *
-     * Call {@link lbservices.KsMusikpreis#translations KsMusikpreis.translations()}
+     * Call {@link lbServices.KsMusikpreis#translations KsMusikpreis.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#translations
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#translations
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18311,8 +18311,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#count
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#count
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18346,8 +18346,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#create
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#create
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18384,8 +18384,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#createMany
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#createMany
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18422,8 +18422,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#destroyAll
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#destroyAll
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18453,8 +18453,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#destroyById
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#destroyById
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18486,8 +18486,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#findById
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#findById
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18522,8 +18522,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.translations#updateById
-         * @methodOf lbservices.KsMusikpreis.translations
+         * @name lbServices.KsMusikpreis.translations#updateById
+         * @methodOf lbServices.KsMusikpreis.translations
          *
          * @description
          *
@@ -18561,23 +18561,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsMusikpreis.items
-     * @header lbservices.KsMusikpreis.items
+     * @name lbServices.KsMusikpreis.items
+     * @header lbServices.KsMusikpreis.items
      * @object
      * @description
      *
      * The object `KsMusikpreis.items` groups methods
      * manipulating `KsMusikpreisItem` instances related to `KsMusikpreis`.
      *
-     * Call {@link lbservices.KsMusikpreis#items KsMusikpreis.items()}
+     * Call {@link lbServices.KsMusikpreis#items KsMusikpreis.items()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis#items
-         * @methodOf lbservices.KsMusikpreis
+         * @name lbServices.KsMusikpreis#items
+         * @methodOf lbServices.KsMusikpreis
          *
          * @description
          *
@@ -18612,8 +18612,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#count
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#count
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18647,8 +18647,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#create
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#create
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18685,8 +18685,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#createMany
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#createMany
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18723,8 +18723,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#destroyAll
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#destroyAll
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18754,8 +18754,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#destroyById
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#destroyById
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18787,8 +18787,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#findById
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#findById
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18823,8 +18823,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreis.items#updateById
-         * @methodOf lbservices.KsMusikpreis.items
+         * @name lbServices.KsMusikpreis.items#updateById
+         * @methodOf lbServices.KsMusikpreis.items
          *
          * @description
          *
@@ -18866,8 +18866,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreisTranslation
- * @header lbservices.KsMusikpreisTranslation
+ * @name lbServices.KsMusikpreisTranslation
+ * @header lbServices.KsMusikpreisTranslation
  * @object
  *
  * @description
@@ -18891,8 +18891,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#create
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#create
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -18929,8 +18929,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#createMany
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#createMany
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -18968,8 +18968,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#upsert
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#upsert
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19006,8 +19006,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#exists
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#exists
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19038,8 +19038,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#findById
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#findById
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19073,8 +19073,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#find
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#find
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19107,8 +19107,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#findOne
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#findOne
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19140,8 +19140,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#updateAll
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#updateAll
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19174,8 +19174,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#deleteById
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#deleteById
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19207,8 +19207,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#count
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#count
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19239,8 +19239,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19276,8 +19276,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#createChangeStream
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#createChangeStream
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19376,8 +19376,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#updateOrCreate
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#updateOrCreate
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19411,8 +19411,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#update
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#update
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19442,8 +19442,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#destroyById
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#destroyById
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19472,8 +19472,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisTranslation#removeById
-         * @methodOf lbservices.KsMusikpreisTranslation
+         * @name lbServices.KsMusikpreisTranslation#removeById
+         * @methodOf lbServices.KsMusikpreisTranslation
          *
          * @description
          *
@@ -19503,8 +19503,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreisTranslation#modelName
-    * @propertyOf lbservices.KsMusikpreisTranslation
+    * @name lbServices.KsMusikpreisTranslation#modelName
+    * @propertyOf lbServices.KsMusikpreisTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreisTranslation`.
@@ -19517,8 +19517,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreisItem
- * @header lbservices.KsMusikpreisItem
+ * @name lbServices.KsMusikpreisItem
+ * @header lbServices.KsMusikpreisItem
  * @object
  *
  * @description
@@ -19646,8 +19646,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#create
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#create
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19684,8 +19684,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#createMany
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#createMany
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19723,8 +19723,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#upsert
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#upsert
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19761,8 +19761,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#exists
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#exists
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19793,8 +19793,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#findById
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#findById
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19828,8 +19828,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#find
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#find
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19862,8 +19862,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#findOne
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#findOne
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19895,8 +19895,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#updateAll
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#updateAll
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19929,8 +19929,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#deleteById
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#deleteById
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19962,8 +19962,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#count
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#count
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -19994,8 +19994,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20031,8 +20031,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#createChangeStream
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#createChangeStream
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20131,8 +20131,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#updateOrCreate
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#updateOrCreate
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20166,8 +20166,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#update
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#update
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20197,8 +20197,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#destroyById
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#destroyById
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20227,8 +20227,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#removeById
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#removeById
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20258,8 +20258,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreisItem#modelName
-    * @propertyOf lbservices.KsMusikpreisItem
+    * @name lbServices.KsMusikpreisItem#modelName
+    * @propertyOf lbServices.KsMusikpreisItem
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreisItem`.
@@ -20268,23 +20268,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsMusikpreisItem.texts
-     * @header lbservices.KsMusikpreisItem.texts
+     * @name lbServices.KsMusikpreisItem.texts
+     * @header lbServices.KsMusikpreisItem.texts
      * @object
      * @description
      *
      * The object `KsMusikpreisItem.texts` groups methods
      * manipulating `KsMusikpreisItemText` instances related to `KsMusikpreisItem`.
      *
-     * Call {@link lbservices.KsMusikpreisItem#texts KsMusikpreisItem.texts()}
+     * Call {@link lbServices.KsMusikpreisItem#texts KsMusikpreisItem.texts()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#texts
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#texts
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20319,8 +20319,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#count
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#count
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20354,8 +20354,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#create
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#create
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20392,8 +20392,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#createMany
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#createMany
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20430,8 +20430,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#destroyAll
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#destroyAll
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20461,8 +20461,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#destroyById
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#destroyById
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20494,8 +20494,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#findById
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#findById
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20530,8 +20530,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.texts#updateById
-         * @methodOf lbservices.KsMusikpreisItem.texts
+         * @name lbServices.KsMusikpreisItem.texts#updateById
+         * @methodOf lbServices.KsMusikpreisItem.texts
          *
          * @description
          *
@@ -20569,23 +20569,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsMusikpreisItem.persons
-     * @header lbservices.KsMusikpreisItem.persons
+     * @name lbServices.KsMusikpreisItem.persons
+     * @header lbServices.KsMusikpreisItem.persons
      * @object
      * @description
      *
      * The object `KsMusikpreisItem.persons` groups methods
      * manipulating `KsMusikpreisItemPerson` instances related to `KsMusikpreisItem`.
      *
-     * Call {@link lbservices.KsMusikpreisItem#persons KsMusikpreisItem.persons()}
+     * Call {@link lbServices.KsMusikpreisItem#persons KsMusikpreisItem.persons()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem#persons
-         * @methodOf lbservices.KsMusikpreisItem
+         * @name lbServices.KsMusikpreisItem#persons
+         * @methodOf lbServices.KsMusikpreisItem
          *
          * @description
          *
@@ -20620,8 +20620,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#count
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#count
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20655,8 +20655,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#create
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#create
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20693,8 +20693,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#createMany
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#createMany
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20731,8 +20731,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#destroyAll
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#destroyAll
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20762,8 +20762,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#destroyById
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#destroyById
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20795,8 +20795,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#findById
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#findById
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20831,8 +20831,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItem.persons#updateById
-         * @methodOf lbservices.KsMusikpreisItem.persons
+         * @name lbServices.KsMusikpreisItem.persons#updateById
+         * @methodOf lbServices.KsMusikpreisItem.persons
          *
          * @description
          *
@@ -20874,8 +20874,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreisItemText
- * @header lbservices.KsMusikpreisItemText
+ * @name lbServices.KsMusikpreisItemText
+ * @header lbServices.KsMusikpreisItemText
  * @object
  *
  * @description
@@ -20899,8 +20899,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#create
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#create
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -20937,8 +20937,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#createMany
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#createMany
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -20976,8 +20976,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#upsert
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#upsert
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21014,8 +21014,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#exists
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#exists
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21046,8 +21046,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#findById
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#findById
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21081,8 +21081,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#find
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#find
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21115,8 +21115,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#findOne
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#findOne
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21148,8 +21148,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#updateAll
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#updateAll
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21182,8 +21182,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#deleteById
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#deleteById
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21215,8 +21215,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#count
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#count
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21247,8 +21247,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21284,8 +21284,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#createChangeStream
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#createChangeStream
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21384,8 +21384,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#updateOrCreate
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#updateOrCreate
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21419,8 +21419,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#update
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#update
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21450,8 +21450,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#destroyById
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#destroyById
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21480,8 +21480,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemText#removeById
-         * @methodOf lbservices.KsMusikpreisItemText
+         * @name lbServices.KsMusikpreisItemText#removeById
+         * @methodOf lbServices.KsMusikpreisItemText
          *
          * @description
          *
@@ -21511,8 +21511,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreisItemText#modelName
-    * @propertyOf lbservices.KsMusikpreisItemText
+    * @name lbServices.KsMusikpreisItemText#modelName
+    * @propertyOf lbServices.KsMusikpreisItemText
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreisItemText`.
@@ -21525,8 +21525,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreisItemTextTranslation
- * @header lbservices.KsMusikpreisItemTextTranslation
+ * @name lbServices.KsMusikpreisItemTextTranslation
+ * @header lbServices.KsMusikpreisItemTextTranslation
  * @object
  *
  * @description
@@ -21550,8 +21550,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#create
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#create
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21588,8 +21588,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#createMany
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#createMany
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21627,8 +21627,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#upsert
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#upsert
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21665,8 +21665,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#exists
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#exists
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21697,8 +21697,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#findById
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#findById
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21732,8 +21732,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#find
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#find
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21766,8 +21766,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#findOne
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#findOne
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21799,8 +21799,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#updateAll
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#updateAll
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21833,8 +21833,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#deleteById
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#deleteById
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21866,8 +21866,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#count
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#count
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21898,8 +21898,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21935,8 +21935,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#createChangeStream
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#createChangeStream
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -21976,8 +21976,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#updateOrCreate
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#updateOrCreate
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -22011,8 +22011,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#update
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#update
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -22042,8 +22042,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#destroyById
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#destroyById
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -22072,8 +22072,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemTextTranslation#removeById
-         * @methodOf lbservices.KsMusikpreisItemTextTranslation
+         * @name lbServices.KsMusikpreisItemTextTranslation#removeById
+         * @methodOf lbServices.KsMusikpreisItemTextTranslation
          *
          * @description
          *
@@ -22103,8 +22103,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreisItemTextTranslation#modelName
-    * @propertyOf lbservices.KsMusikpreisItemTextTranslation
+    * @name lbServices.KsMusikpreisItemTextTranslation#modelName
+    * @propertyOf lbServices.KsMusikpreisItemTextTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreisItemTextTranslation`.
@@ -22117,8 +22117,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreisItemPerson
- * @header lbservices.KsMusikpreisItemPerson
+ * @name lbServices.KsMusikpreisItemPerson
+ * @header lbServices.KsMusikpreisItemPerson
  * @object
  *
  * @description
@@ -22142,8 +22142,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#create
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#create
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22180,8 +22180,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#createMany
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#createMany
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22219,8 +22219,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#upsert
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#upsert
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22257,8 +22257,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#exists
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#exists
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22289,8 +22289,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#findById
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#findById
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22324,8 +22324,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#find
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#find
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22358,8 +22358,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#findOne
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#findOne
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22391,8 +22391,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#updateAll
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#updateAll
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22425,8 +22425,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#deleteById
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#deleteById
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22458,8 +22458,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#count
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#count
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22490,8 +22490,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22527,8 +22527,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#createChangeStream
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#createChangeStream
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22627,8 +22627,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#updateOrCreate
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#updateOrCreate
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22662,8 +22662,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#update
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#update
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22693,8 +22693,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#destroyById
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#destroyById
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22723,8 +22723,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPerson#removeById
-         * @methodOf lbservices.KsMusikpreisItemPerson
+         * @name lbServices.KsMusikpreisItemPerson#removeById
+         * @methodOf lbServices.KsMusikpreisItemPerson
          *
          * @description
          *
@@ -22754,8 +22754,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreisItemPerson#modelName
-    * @propertyOf lbservices.KsMusikpreisItemPerson
+    * @name lbServices.KsMusikpreisItemPerson#modelName
+    * @propertyOf lbServices.KsMusikpreisItemPerson
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreisItemPerson`.
@@ -22768,8 +22768,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsMusikpreisItemPersonTranslation
- * @header lbservices.KsMusikpreisItemPersonTranslation
+ * @name lbServices.KsMusikpreisItemPersonTranslation
+ * @header lbServices.KsMusikpreisItemPersonTranslation
  * @object
  *
  * @description
@@ -22793,8 +22793,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#create
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#create
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -22831,8 +22831,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#createMany
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#createMany
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -22870,8 +22870,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#upsert
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#upsert
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -22908,8 +22908,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#exists
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#exists
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -22940,8 +22940,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#findById
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#findById
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -22975,8 +22975,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#find
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#find
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23009,8 +23009,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#findOne
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#findOne
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23042,8 +23042,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#updateAll
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#updateAll
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23076,8 +23076,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#deleteById
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#deleteById
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23109,8 +23109,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#count
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#count
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23141,8 +23141,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23178,8 +23178,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#createChangeStream
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#createChangeStream
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23219,8 +23219,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#updateOrCreate
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#updateOrCreate
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23254,8 +23254,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#update
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#update
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23285,8 +23285,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#destroyById
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#destroyById
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23315,8 +23315,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsMusikpreisItemPersonTranslation#removeById
-         * @methodOf lbservices.KsMusikpreisItemPersonTranslation
+         * @name lbServices.KsMusikpreisItemPersonTranslation#removeById
+         * @methodOf lbServices.KsMusikpreisItemPersonTranslation
          *
          * @description
          *
@@ -23346,8 +23346,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsMusikpreisItemPersonTranslation#modelName
-    * @propertyOf lbservices.KsMusikpreisItemPersonTranslation
+    * @name lbServices.KsMusikpreisItemPersonTranslation#modelName
+    * @propertyOf lbServices.KsMusikpreisItemPersonTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsMusikpreisItemPersonTranslation`.
@@ -23360,8 +23360,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItemVideo
- * @header lbservices.SvHilfsprojektItemVideo
+ * @name lbServices.SvHilfsprojektItemVideo
+ * @header lbServices.SvHilfsprojektItemVideo
  * @object
  *
  * @description
@@ -23385,8 +23385,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#create
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#create
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23423,8 +23423,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#createMany
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#createMany
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23462,8 +23462,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#upsert
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#upsert
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23500,8 +23500,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#exists
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#exists
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23532,8 +23532,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#findById
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#findById
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23567,8 +23567,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#find
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#find
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23601,8 +23601,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#findOne
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#findOne
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23634,8 +23634,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#updateAll
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#updateAll
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23668,8 +23668,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#deleteById
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#deleteById
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23701,8 +23701,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#count
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#count
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23733,8 +23733,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23770,8 +23770,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23870,8 +23870,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23905,8 +23905,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#update
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#update
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23936,8 +23936,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#destroyById
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#destroyById
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23966,8 +23966,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideo#removeById
-         * @methodOf lbservices.SvHilfsprojektItemVideo
+         * @name lbServices.SvHilfsprojektItemVideo#removeById
+         * @methodOf lbServices.SvHilfsprojektItemVideo
          *
          * @description
          *
@@ -23997,8 +23997,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItemVideo#modelName
-    * @propertyOf lbservices.SvHilfsprojektItemVideo
+    * @name lbServices.SvHilfsprojektItemVideo#modelName
+    * @propertyOf lbServices.SvHilfsprojektItemVideo
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItemVideo`.
@@ -24011,8 +24011,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvHilfsprojektItemVideoTranslation
- * @header lbservices.SvHilfsprojektItemVideoTranslation
+ * @name lbServices.SvHilfsprojektItemVideoTranslation
+ * @header lbServices.SvHilfsprojektItemVideoTranslation
  * @object
  *
  * @description
@@ -24036,8 +24036,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#create
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#create
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24074,8 +24074,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#createMany
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#createMany
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24113,8 +24113,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#upsert
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#upsert
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24151,8 +24151,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#exists
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#exists
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24183,8 +24183,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#findById
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#findById
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24218,8 +24218,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#find
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#find
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24252,8 +24252,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#findOne
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#findOne
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24285,8 +24285,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#updateAll
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#updateAll
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24319,8 +24319,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#deleteById
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#deleteById
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24352,8 +24352,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#count
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#count
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24384,8 +24384,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24421,8 +24421,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#createChangeStream
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#createChangeStream
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24462,8 +24462,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#updateOrCreate
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#updateOrCreate
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24497,8 +24497,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#update
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#update
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24528,8 +24528,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#destroyById
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#destroyById
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24558,8 +24558,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvHilfsprojektItemVideoTranslation#removeById
-         * @methodOf lbservices.SvHilfsprojektItemVideoTranslation
+         * @name lbServices.SvHilfsprojektItemVideoTranslation#removeById
+         * @methodOf lbServices.SvHilfsprojektItemVideoTranslation
          *
          * @description
          *
@@ -24589,8 +24589,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvHilfsprojektItemVideoTranslation#modelName
-    * @propertyOf lbservices.SvHilfsprojektItemVideoTranslation
+    * @name lbServices.SvHilfsprojektItemVideoTranslation#modelName
+    * @propertyOf lbServices.SvHilfsprojektItemVideoTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvHilfsprojektItemVideoTranslation`.
@@ -24603,8 +24603,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvZfhilftTranslation
- * @header lbservices.SvZfhilftTranslation
+ * @name lbServices.SvZfhilftTranslation
+ * @header lbServices.SvZfhilftTranslation
  * @object
  *
  * @description
@@ -24628,8 +24628,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#create
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#create
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24666,8 +24666,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#createMany
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#createMany
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24705,8 +24705,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#upsert
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#upsert
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24743,8 +24743,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#exists
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#exists
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24775,8 +24775,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#findById
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#findById
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24810,8 +24810,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#find
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#find
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24844,8 +24844,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#findOne
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#findOne
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24877,8 +24877,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#updateAll
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#updateAll
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24911,8 +24911,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#deleteById
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#deleteById
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24944,8 +24944,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#count
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#count
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -24976,8 +24976,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#prototype$updateAttributes
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#prototype$updateAttributes
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -25013,8 +25013,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#createChangeStream
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#createChangeStream
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -25113,8 +25113,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#updateOrCreate
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#updateOrCreate
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -25148,8 +25148,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#update
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#update
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -25179,8 +25179,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#destroyById
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#destroyById
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -25209,8 +25209,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilftTranslation#removeById
-         * @methodOf lbservices.SvZfhilftTranslation
+         * @name lbServices.SvZfhilftTranslation#removeById
+         * @methodOf lbServices.SvZfhilftTranslation
          *
          * @description
          *
@@ -25240,8 +25240,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvZfhilftTranslation#modelName
-    * @propertyOf lbservices.SvZfhilftTranslation
+    * @name lbServices.SvZfhilftTranslation#modelName
+    * @propertyOf lbServices.SvZfhilftTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvZfhilftTranslation`.
@@ -25254,8 +25254,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.SvZfhilft
- * @header lbservices.SvZfhilft
+ * @name lbServices.SvZfhilft
+ * @header lbServices.SvZfhilft
  * @object
  *
  * @description
@@ -25331,6 +25331,33 @@ module.factory(
           method: "PUT"
         },
 
+        // INTERNAL. Use SvZfhilft.images.findById() instead.
+        "prototype$__findById__images": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/SvZfhilfts/:id/images/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.destroyById() instead.
+        "prototype$__destroyById__images": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/SvZfhilfts/:id/images/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.updateById() instead.
+        "prototype$__updateById__images": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/SvZfhilfts/:id/images/:fk",
+          method: "PUT"
+        },
+
         // INTERNAL. Use SvZfhilft.translations() instead.
         "prototype$__get__translations": {
           isArray: true,
@@ -25381,10 +25408,35 @@ module.factory(
           method: "GET"
         },
 
+        // INTERNAL. Use SvZfhilft.images() instead.
+        "prototype$__get__images": {
+          isArray: true,
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "GET"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.create() instead.
+        "prototype$__create__images": {
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "POST"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.destroyAll() instead.
+        "prototype$__delete__images": {
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.count() instead.
+        "prototype$__count__images": {
+          url: urlBase + "/SvZfhilfts/:id/images/count",
+          method: "GET"
+        },
+
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#create
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#create
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25421,8 +25473,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#createMany
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#createMany
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25460,8 +25512,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#upsert
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#upsert
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25498,8 +25550,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#exists
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#exists
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25530,8 +25582,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#findById
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#findById
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25565,8 +25617,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#find
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#find
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25599,8 +25651,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#findOne
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#findOne
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25632,8 +25684,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#updateAll
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#updateAll
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25666,8 +25718,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#deleteById
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#deleteById
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25699,8 +25751,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#count
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#count
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25731,8 +25783,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#prototype$updateAttributes
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#prototype$updateAttributes
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25768,8 +25820,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#createChangeStream
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#createChangeStream
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25805,8 +25857,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#getContentData
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#getContentData
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25845,8 +25897,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#updateOrCreate
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#updateOrCreate
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25880,8 +25932,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#update
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#update
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25911,8 +25963,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#destroyById
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#destroyById
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25941,8 +25993,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#removeById
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#removeById
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -25972,8 +26024,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.SvZfhilft#modelName
-    * @propertyOf lbservices.SvZfhilft
+    * @name lbServices.SvZfhilft#modelName
+    * @propertyOf lbServices.SvZfhilft
     * @description
     * The name of the model represented by this $resource,
     * i.e. `SvZfhilft`.
@@ -25982,23 +26034,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.SvZfhilft.translations
-     * @header lbservices.SvZfhilft.translations
+     * @name lbServices.SvZfhilft.translations
+     * @header lbServices.SvZfhilft.translations
      * @object
      * @description
      *
      * The object `SvZfhilft.translations` groups methods
      * manipulating `SvZfhilftTranslation` instances related to `SvZfhilft`.
      *
-     * Call {@link lbservices.SvZfhilft#translations SvZfhilft.translations()}
+     * Call {@link lbServices.SvZfhilft#translations SvZfhilft.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#translations
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#translations
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -26033,8 +26085,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#count
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#count
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26068,8 +26120,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#create
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#create
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26106,8 +26158,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#createMany
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#createMany
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26144,8 +26196,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#destroyAll
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#destroyAll
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26175,8 +26227,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#destroyById
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#destroyById
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26208,8 +26260,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#findById
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#findById
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26244,8 +26296,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.translations#updateById
-         * @methodOf lbservices.SvZfhilft.translations
+         * @name lbServices.SvZfhilft.translations#updateById
+         * @methodOf lbServices.SvZfhilft.translations
          *
          * @description
          *
@@ -26283,23 +26335,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.SvZfhilft.projects
-     * @header lbservices.SvZfhilft.projects
+     * @name lbServices.SvZfhilft.projects
+     * @header lbServices.SvZfhilft.projects
      * @object
      * @description
      *
      * The object `SvZfhilft.projects` groups methods
      * manipulating `SvHilfsprojekt` instances related to `SvZfhilft`.
      *
-     * Call {@link lbservices.SvZfhilft#projects SvZfhilft.projects()}
+     * Call {@link lbServices.SvZfhilft#projects SvZfhilft.projects()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft#projects
-         * @methodOf lbservices.SvZfhilft
+         * @name lbServices.SvZfhilft#projects
+         * @methodOf lbServices.SvZfhilft
          *
          * @description
          *
@@ -26334,8 +26386,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#count
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#count
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26369,8 +26421,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#create
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#create
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26407,8 +26459,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#createMany
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#createMany
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26445,8 +26497,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#destroyAll
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#destroyAll
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26476,8 +26528,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#destroyById
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#destroyById
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26509,8 +26561,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#findById
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#findById
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26545,8 +26597,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.SvZfhilft.projects#updateById
-         * @methodOf lbservices.SvZfhilft.projects
+         * @name lbServices.SvZfhilft.projects#updateById
+         * @methodOf lbServices.SvZfhilft.projects
          *
          * @description
          *
@@ -26582,14 +26634,315 @@ module.factory(
           var action = TargetResource["::updateById::SvZfhilft::projects"];
           return action.apply(R, arguments);
         };
+    /**
+     * @ngdoc object
+     * @name lbServices.SvZfhilft.images
+     * @header lbServices.SvZfhilft.images
+     * @object
+     * @description
+     *
+     * The object `SvZfhilft.images` groups methods
+     * manipulating `SvZfhilftImage` instances related to `SvZfhilft`.
+     *
+     * Call {@link lbServices.SvZfhilft#images SvZfhilft.images()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft#images
+         * @methodOf lbServices.SvZfhilft
+         *
+         * @description
+         *
+         * Queries images of SvZfhilft.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R.images = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::get::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#count
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Counts images of SvZfhilft.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.images.count = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::count::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#create
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Creates a new instance in images of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R.images.create = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::create::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#createMany
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Creates a new instance in images of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R.images.createMany = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::createMany::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#destroyAll
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Deletes all images of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.images.destroyAll = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::delete::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#destroyById
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Delete a related item by id for images.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for images
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.images.destroyById = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::destroyById::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#findById
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Find a related item by id for images.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for images
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R.images.findById = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::findById::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilft.images#updateById
+         * @methodOf lbServices.SvZfhilft.images
+         *
+         * @description
+         *
+         * Update a related item by id for images.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for images
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R.images.updateById = function() {
+          var TargetResource = $injector.get("SvZfhilftImage");
+          var action = TargetResource["::updateById::SvZfhilft::images"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
 
 /**
  * @ngdoc object
- * @name lbservices.KsStiftungVideo
- * @header lbservices.KsStiftungVideo
+ * @name lbServices.KsStiftungVideo
+ * @header lbServices.KsStiftungVideo
  * @object
  *
  * @description
@@ -26613,8 +26966,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#create
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#create
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26651,8 +27004,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#createMany
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#createMany
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26690,8 +27043,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#upsert
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#upsert
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26728,8 +27081,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#exists
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#exists
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26760,8 +27113,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#findById
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#findById
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26795,8 +27148,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#find
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#find
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26829,8 +27182,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#findOne
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#findOne
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26862,8 +27215,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#updateAll
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#updateAll
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26896,8 +27249,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#deleteById
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#deleteById
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26929,8 +27282,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#count
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#count
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26961,8 +27314,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#prototype$updateAttributes
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#prototype$updateAttributes
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -26998,8 +27351,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#createChangeStream
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#createChangeStream
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -27098,8 +27451,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#updateOrCreate
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#updateOrCreate
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -27133,8 +27486,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#update
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#update
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -27164,8 +27517,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#destroyById
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#destroyById
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -27194,8 +27547,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStiftungVideo#removeById
-         * @methodOf lbservices.KsStiftungVideo
+         * @name lbServices.KsStiftungVideo#removeById
+         * @methodOf lbServices.KsStiftungVideo
          *
          * @description
          *
@@ -27225,8 +27578,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStiftungVideo#modelName
-    * @propertyOf lbservices.KsStiftungVideo
+    * @name lbServices.KsStiftungVideo#modelName
+    * @propertyOf lbServices.KsStiftungVideo
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStiftungVideo`.
@@ -27239,8 +27592,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiat
- * @header lbservices.KsStipendiat
+ * @name lbServices.KsStipendiat
+ * @header lbServices.KsStipendiat
  * @object
  *
  * @description
@@ -27368,8 +27721,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#create
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#create
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27406,8 +27759,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#createMany
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#createMany
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27445,8 +27798,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#upsert
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#upsert
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27483,8 +27836,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#exists
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#exists
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27515,8 +27868,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#findById
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#findById
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27550,8 +27903,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#find
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#find
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27584,8 +27937,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#findOne
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#findOne
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27617,8 +27970,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#updateAll
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#updateAll
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27651,8 +28004,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#deleteById
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#deleteById
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27684,8 +28037,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#count
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#count
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27716,8 +28069,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27753,8 +28106,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#createChangeStream
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#createChangeStream
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27790,8 +28143,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#getContentData
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#getContentData
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27830,8 +28183,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#updateOrCreate
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#updateOrCreate
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27865,8 +28218,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#update
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#update
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27896,8 +28249,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#destroyById
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#destroyById
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27926,8 +28279,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#removeById
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#removeById
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -27957,8 +28310,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiat#modelName
-    * @propertyOf lbservices.KsStipendiat
+    * @name lbServices.KsStipendiat#modelName
+    * @propertyOf lbServices.KsStipendiat
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiat`.
@@ -27967,23 +28320,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsStipendiat.translations
-     * @header lbservices.KsStipendiat.translations
+     * @name lbServices.KsStipendiat.translations
+     * @header lbServices.KsStipendiat.translations
      * @object
      * @description
      *
      * The object `KsStipendiat.translations` groups methods
      * manipulating `KsStipendiatTranslation` instances related to `KsStipendiat`.
      *
-     * Call {@link lbservices.KsStipendiat#translations KsStipendiat.translations()}
+     * Call {@link lbServices.KsStipendiat#translations KsStipendiat.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#translations
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#translations
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -28018,8 +28371,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#count
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#count
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28053,8 +28406,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#create
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#create
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28091,8 +28444,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#createMany
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#createMany
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28129,8 +28482,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#destroyAll
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#destroyAll
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28160,8 +28513,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#destroyById
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#destroyById
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28193,8 +28546,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#findById
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#findById
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28229,8 +28582,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.translations#updateById
-         * @methodOf lbservices.KsStipendiat.translations
+         * @name lbServices.KsStipendiat.translations#updateById
+         * @methodOf lbServices.KsStipendiat.translations
          *
          * @description
          *
@@ -28268,23 +28621,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsStipendiat.items
-     * @header lbservices.KsStipendiat.items
+     * @name lbServices.KsStipendiat.items
+     * @header lbServices.KsStipendiat.items
      * @object
      * @description
      *
      * The object `KsStipendiat.items` groups methods
      * manipulating `KsStipendiatItem` instances related to `KsStipendiat`.
      *
-     * Call {@link lbservices.KsStipendiat#items KsStipendiat.items()}
+     * Call {@link lbServices.KsStipendiat#items KsStipendiat.items()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat#items
-         * @methodOf lbservices.KsStipendiat
+         * @name lbServices.KsStipendiat#items
+         * @methodOf lbServices.KsStipendiat
          *
          * @description
          *
@@ -28319,8 +28672,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#count
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#count
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28354,8 +28707,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#create
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#create
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28392,8 +28745,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#createMany
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#createMany
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28430,8 +28783,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#destroyAll
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#destroyAll
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28461,8 +28814,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#destroyById
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#destroyById
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28494,8 +28847,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#findById
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#findById
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28530,8 +28883,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiat.items#updateById
-         * @methodOf lbservices.KsStipendiat.items
+         * @name lbServices.KsStipendiat.items#updateById
+         * @methodOf lbServices.KsStipendiat.items
          *
          * @description
          *
@@ -28573,8 +28926,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiatTranslation
- * @header lbservices.KsStipendiatTranslation
+ * @name lbServices.KsStipendiatTranslation
+ * @header lbServices.KsStipendiatTranslation
  * @object
  *
  * @description
@@ -28598,8 +28951,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#create
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#create
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28636,8 +28989,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#createMany
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#createMany
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28675,8 +29028,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#upsert
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#upsert
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28713,8 +29066,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#exists
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#exists
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28745,8 +29098,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#findById
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#findById
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28780,8 +29133,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#find
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#find
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28814,8 +29167,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#findOne
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#findOne
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28847,8 +29200,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#updateAll
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#updateAll
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28881,8 +29234,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#deleteById
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#deleteById
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28914,8 +29267,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#count
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#count
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28946,8 +29299,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -28983,8 +29336,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#createChangeStream
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#createChangeStream
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -29083,8 +29436,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#updateOrCreate
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#updateOrCreate
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -29118,8 +29471,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#update
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#update
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -29149,8 +29502,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#destroyById
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#destroyById
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -29179,8 +29532,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatTranslation#removeById
-         * @methodOf lbservices.KsStipendiatTranslation
+         * @name lbServices.KsStipendiatTranslation#removeById
+         * @methodOf lbServices.KsStipendiatTranslation
          *
          * @description
          *
@@ -29210,8 +29563,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiatTranslation#modelName
-    * @propertyOf lbservices.KsStipendiatTranslation
+    * @name lbServices.KsStipendiatTranslation#modelName
+    * @propertyOf lbServices.KsStipendiatTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiatTranslation`.
@@ -29224,8 +29577,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiatItem
- * @header lbservices.KsStipendiatItem
+ * @name lbServices.KsStipendiatItem
+ * @header lbServices.KsStipendiatItem
  * @object
  *
  * @description
@@ -29353,8 +29706,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#create
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#create
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29391,8 +29744,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#createMany
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#createMany
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29430,8 +29783,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#upsert
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#upsert
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29468,8 +29821,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#exists
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#exists
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29500,8 +29853,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#findById
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#findById
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29535,8 +29888,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#find
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#find
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29569,8 +29922,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#findOne
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#findOne
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29602,8 +29955,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#updateAll
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#updateAll
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29636,8 +29989,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#deleteById
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#deleteById
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29669,8 +30022,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#count
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#count
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29701,8 +30054,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29738,8 +30091,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#createChangeStream
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#createChangeStream
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29838,8 +30191,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#updateOrCreate
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#updateOrCreate
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29873,8 +30226,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#update
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#update
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29904,8 +30257,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#destroyById
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#destroyById
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29934,8 +30287,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#removeById
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#removeById
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -29965,8 +30318,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiatItem#modelName
-    * @propertyOf lbservices.KsStipendiatItem
+    * @name lbServices.KsStipendiatItem#modelName
+    * @propertyOf lbServices.KsStipendiatItem
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiatItem`.
@@ -29975,23 +30328,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsStipendiatItem.persons
-     * @header lbservices.KsStipendiatItem.persons
+     * @name lbServices.KsStipendiatItem.persons
+     * @header lbServices.KsStipendiatItem.persons
      * @object
      * @description
      *
      * The object `KsStipendiatItem.persons` groups methods
      * manipulating `KsStipendiatItemPerson` instances related to `KsStipendiatItem`.
      *
-     * Call {@link lbservices.KsStipendiatItem#persons KsStipendiatItem.persons()}
+     * Call {@link lbServices.KsStipendiatItem#persons KsStipendiatItem.persons()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#persons
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#persons
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -30026,8 +30379,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#count
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#count
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30061,8 +30414,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#create
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#create
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30099,8 +30452,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#createMany
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#createMany
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30137,8 +30490,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#destroyAll
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#destroyAll
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30168,8 +30521,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#destroyById
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#destroyById
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30201,8 +30554,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#findById
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#findById
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30237,8 +30590,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.persons#updateById
-         * @methodOf lbservices.KsStipendiatItem.persons
+         * @name lbServices.KsStipendiatItem.persons#updateById
+         * @methodOf lbServices.KsStipendiatItem.persons
          *
          * @description
          *
@@ -30276,23 +30629,23 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbservices.KsStipendiatItem.texts
-     * @header lbservices.KsStipendiatItem.texts
+     * @name lbServices.KsStipendiatItem.texts
+     * @header lbServices.KsStipendiatItem.texts
      * @object
      * @description
      *
      * The object `KsStipendiatItem.texts` groups methods
      * manipulating `KsStipendiatItemText` instances related to `KsStipendiatItem`.
      *
-     * Call {@link lbservices.KsStipendiatItem#texts KsStipendiatItem.texts()}
+     * Call {@link lbServices.KsStipendiatItem#texts KsStipendiatItem.texts()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem#texts
-         * @methodOf lbservices.KsStipendiatItem
+         * @name lbServices.KsStipendiatItem#texts
+         * @methodOf lbServices.KsStipendiatItem
          *
          * @description
          *
@@ -30327,8 +30680,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#count
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#count
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30362,8 +30715,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#create
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#create
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30400,8 +30753,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#createMany
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#createMany
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30438,8 +30791,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#destroyAll
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#destroyAll
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30469,8 +30822,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#destroyById
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#destroyById
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30502,8 +30855,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#findById
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#findById
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30538,8 +30891,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItem.texts#updateById
-         * @methodOf lbservices.KsStipendiatItem.texts
+         * @name lbServices.KsStipendiatItem.texts#updateById
+         * @methodOf lbServices.KsStipendiatItem.texts
          *
          * @description
          *
@@ -30581,8 +30934,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiatItemPerson
- * @header lbservices.KsStipendiatItemPerson
+ * @name lbServices.KsStipendiatItemPerson
+ * @header lbServices.KsStipendiatItemPerson
  * @object
  *
  * @description
@@ -30658,8 +31011,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#create
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#create
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30696,8 +31049,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#createMany
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#createMany
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30735,8 +31088,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#upsert
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#upsert
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30773,8 +31126,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#exists
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#exists
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30805,8 +31158,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#findById
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#findById
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30840,8 +31193,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#find
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#find
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30874,8 +31227,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#findOne
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#findOne
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30907,8 +31260,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#updateAll
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#updateAll
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30941,8 +31294,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#deleteById
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#deleteById
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -30974,8 +31327,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#count
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#count
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31006,8 +31359,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31043,8 +31396,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#createChangeStream
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#createChangeStream
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31143,8 +31496,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#updateOrCreate
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#updateOrCreate
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31178,8 +31531,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#update
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#update
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31209,8 +31562,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#destroyById
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#destroyById
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31239,8 +31592,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#removeById
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#removeById
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31270,8 +31623,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiatItemPerson#modelName
-    * @propertyOf lbservices.KsStipendiatItemPerson
+    * @name lbServices.KsStipendiatItemPerson#modelName
+    * @propertyOf lbServices.KsStipendiatItemPerson
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiatItemPerson`.
@@ -31280,23 +31633,23 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbservices.KsStipendiatItemPerson.translations
-     * @header lbservices.KsStipendiatItemPerson.translations
+     * @name lbServices.KsStipendiatItemPerson.translations
+     * @header lbServices.KsStipendiatItemPerson.translations
      * @object
      * @description
      *
      * The object `KsStipendiatItemPerson.translations` groups methods
      * manipulating `KsStipendiatItemPersonTranslation` instances related to `KsStipendiatItemPerson`.
      *
-     * Call {@link lbservices.KsStipendiatItemPerson#translations KsStipendiatItemPerson.translations()}
+     * Call {@link lbServices.KsStipendiatItemPerson#translations KsStipendiatItemPerson.translations()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson#translations
-         * @methodOf lbservices.KsStipendiatItemPerson
+         * @name lbServices.KsStipendiatItemPerson#translations
+         * @methodOf lbServices.KsStipendiatItemPerson
          *
          * @description
          *
@@ -31331,8 +31684,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#count
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#count
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31366,8 +31719,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#create
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#create
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31404,8 +31757,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#createMany
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#createMany
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31442,8 +31795,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#destroyAll
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#destroyAll
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31473,8 +31826,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#destroyById
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#destroyById
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31506,8 +31859,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#findById
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#findById
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31542,8 +31895,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPerson.translations#updateById
-         * @methodOf lbservices.KsStipendiatItemPerson.translations
+         * @name lbServices.KsStipendiatItemPerson.translations#updateById
+         * @methodOf lbServices.KsStipendiatItemPerson.translations
          *
          * @description
          *
@@ -31585,8 +31938,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiatItemPersonTranslation
- * @header lbservices.KsStipendiatItemPersonTranslation
+ * @name lbServices.KsStipendiatItemPersonTranslation
+ * @header lbServices.KsStipendiatItemPersonTranslation
  * @object
  *
  * @description
@@ -31610,8 +31963,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#create
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#create
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31648,8 +32001,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#createMany
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#createMany
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31687,8 +32040,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#upsert
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#upsert
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31725,8 +32078,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#exists
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#exists
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31757,8 +32110,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#findById
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#findById
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31792,8 +32145,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#find
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#find
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31826,8 +32179,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#findOne
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#findOne
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31859,8 +32212,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#updateAll
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#updateAll
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31893,8 +32246,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#deleteById
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#deleteById
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31926,8 +32279,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#count
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#count
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31958,8 +32311,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -31995,8 +32348,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#createChangeStream
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#createChangeStream
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -32095,8 +32448,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#updateOrCreate
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#updateOrCreate
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -32130,8 +32483,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#update
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#update
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -32161,8 +32514,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#destroyById
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#destroyById
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -32191,8 +32544,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemPersonTranslation#removeById
-         * @methodOf lbservices.KsStipendiatItemPersonTranslation
+         * @name lbServices.KsStipendiatItemPersonTranslation#removeById
+         * @methodOf lbServices.KsStipendiatItemPersonTranslation
          *
          * @description
          *
@@ -32222,8 +32575,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiatItemPersonTranslation#modelName
-    * @propertyOf lbservices.KsStipendiatItemPersonTranslation
+    * @name lbServices.KsStipendiatItemPersonTranslation#modelName
+    * @propertyOf lbServices.KsStipendiatItemPersonTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiatItemPersonTranslation`.
@@ -32236,8 +32589,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiatItemText
- * @header lbservices.KsStipendiatItemText
+ * @name lbServices.KsStipendiatItemText
+ * @header lbServices.KsStipendiatItemText
  * @object
  *
  * @description
@@ -32261,8 +32614,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#create
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#create
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32299,8 +32652,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#createMany
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#createMany
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32338,8 +32691,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#upsert
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#upsert
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32376,8 +32729,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#exists
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#exists
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32408,8 +32761,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#findById
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#findById
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32443,8 +32796,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#find
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#find
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32477,8 +32830,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#findOne
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#findOne
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32510,8 +32863,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#updateAll
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#updateAll
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32544,8 +32897,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#deleteById
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#deleteById
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32577,8 +32930,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#count
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#count
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32609,8 +32962,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32646,8 +32999,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#createChangeStream
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#createChangeStream
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32746,8 +33099,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#updateOrCreate
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#updateOrCreate
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32781,8 +33134,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#update
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#update
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32812,8 +33165,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#destroyById
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#destroyById
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32842,8 +33195,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemText#removeById
-         * @methodOf lbservices.KsStipendiatItemText
+         * @name lbServices.KsStipendiatItemText#removeById
+         * @methodOf lbServices.KsStipendiatItemText
          *
          * @description
          *
@@ -32873,8 +33226,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiatItemText#modelName
-    * @propertyOf lbservices.KsStipendiatItemText
+    * @name lbServices.KsStipendiatItemText#modelName
+    * @propertyOf lbServices.KsStipendiatItemText
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiatItemText`.
@@ -32887,8 +33240,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.KsStipendiatItemTextTranslation
- * @header lbservices.KsStipendiatItemTextTranslation
+ * @name lbServices.KsStipendiatItemTextTranslation
+ * @header lbServices.KsStipendiatItemTextTranslation
  * @object
  *
  * @description
@@ -32912,8 +33265,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#create
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#create
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -32950,8 +33303,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#createMany
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#createMany
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -32989,8 +33342,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#upsert
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#upsert
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33027,8 +33380,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#exists
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#exists
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33059,8 +33412,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#findById
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#findById
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33094,8 +33447,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#find
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#find
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33128,8 +33481,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#findOne
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#findOne
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33161,8 +33514,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#updateAll
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#updateAll
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33195,8 +33548,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#deleteById
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#deleteById
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33228,8 +33581,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#count
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#count
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33260,8 +33613,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#prototype$updateAttributes
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#prototype$updateAttributes
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33297,8 +33650,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#createChangeStream
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#createChangeStream
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33338,8 +33691,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#updateOrCreate
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#updateOrCreate
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33373,8 +33726,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#update
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#update
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33404,8 +33757,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#destroyById
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#destroyById
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33434,8 +33787,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.KsStipendiatItemTextTranslation#removeById
-         * @methodOf lbservices.KsStipendiatItemTextTranslation
+         * @name lbServices.KsStipendiatItemTextTranslation#removeById
+         * @methodOf lbServices.KsStipendiatItemTextTranslation
          *
          * @description
          *
@@ -33465,8 +33818,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.KsStipendiatItemTextTranslation#modelName
-    * @propertyOf lbservices.KsStipendiatItemTextTranslation
+    * @name lbServices.KsStipendiatItemTextTranslation#modelName
+    * @propertyOf lbServices.KsStipendiatItemTextTranslation
     * @description
     * The name of the model represented by this $resource,
     * i.e. `KsStipendiatItemTextTranslation`.
@@ -33479,8 +33832,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.Container
- * @header lbservices.Container
+ * @name lbServices.Container
+ * @header lbServices.Container
  * @object
  *
  * @description
@@ -33504,8 +33857,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#getContainers
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#getContainers
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33541,8 +33894,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#createContainer
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#createContainer
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33581,8 +33934,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#destroyContainer
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#destroyContainer
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33615,8 +33968,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#getContainer
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#getContainer
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33650,8 +34003,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#getFiles
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#getFiles
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33686,8 +34039,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#getFile
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#getFile
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33723,8 +34076,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#removeFile
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#removeFile
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33759,8 +34112,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#upload
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#upload
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33800,8 +34153,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.Container#download
-         * @methodOf lbservices.Container
+         * @name lbServices.Container#download
+         * @methodOf lbServices.Container
          *
          * @description
          *
@@ -33843,8 +34196,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.Container#modelName
-    * @propertyOf lbservices.Container
+    * @name lbServices.Container#modelName
+    * @propertyOf lbServices.Container
     * @description
     * The name of the model represented by this $resource,
     * i.e. `Container`.
@@ -33857,8 +34210,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.AppUser
- * @header lbservices.AppUser
+ * @name lbServices.AppUser
+ * @header lbServices.AppUser
  * @object
  *
  * @description
@@ -33882,8 +34235,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__findById__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__findById__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -33920,8 +34273,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__destroyById__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__destroyById__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -33955,8 +34308,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__updateById__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__updateById__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -33997,8 +34350,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__get__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__get__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34033,8 +34386,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__create__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__create__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34070,8 +34423,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__delete__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__delete__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34100,8 +34453,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$__count__accessTokens
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$__count__accessTokens
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34134,8 +34487,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#create
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#create
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34172,8 +34525,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#createMany
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#createMany
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34211,8 +34564,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#upsert
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#upsert
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34249,8 +34602,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#exists
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#exists
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34281,8 +34634,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#findById
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#findById
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34316,8 +34669,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#find
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#find
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34350,8 +34703,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#findOne
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#findOne
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34383,8 +34736,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#updateAll
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#updateAll
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34417,8 +34770,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#deleteById
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#deleteById
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34450,8 +34803,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#count
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#count
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34482,8 +34835,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#prototype$updateAttributes
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#prototype$updateAttributes
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34519,8 +34872,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#createChangeStream
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#createChangeStream
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34556,8 +34909,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#login
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#login
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34612,8 +34965,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#logout
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#logout
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34654,8 +35007,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#confirm
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#confirm
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34688,8 +35041,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#resetPassword
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#resetPassword
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34723,8 +35076,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#ping
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#ping
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34759,8 +35112,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#getCurrent
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#getCurrent
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34802,8 +35155,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#updateOrCreate
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#updateOrCreate
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34837,8 +35190,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#update
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#update
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34868,8 +35221,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#destroyById
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#destroyById
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34898,8 +35251,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#removeById
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#removeById
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
@@ -34928,14 +35281,14 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#getCachedCurrent
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#getCachedCurrent
+         * @methodOf lbServices.AppUser
          *
          * @description
          *
          * Get data of the currently logged user that was returned by the last
-         * call to {@link lbservices.AppUser#login} or
-         * {@link lbservices.AppUser#getCurrent}. Return null when there
+         * call to {@link lbServices.AppUser#login} or
+         * {@link lbServices.AppUser#getCurrent}. Return null when there
          * is no user logged in or the data of the current user were not fetched
          * yet.
          *
@@ -34948,8 +35301,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#isAuthenticated
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#isAuthenticated
+         * @methodOf lbServices.AppUser
          *
          * @returns {boolean} True if the current user is authenticated (logged in).
          */
@@ -34959,8 +35312,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppUser#getCurrentId
-         * @methodOf lbservices.AppUser
+         * @name lbServices.AppUser#getCurrentId
+         * @methodOf lbServices.AppUser
          *
          * @returns {Object} Id of the currently logged-in user or null.
          */
@@ -34970,8 +35323,8 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.AppUser#modelName
-    * @propertyOf lbservices.AppUser
+    * @name lbServices.AppUser#modelName
+    * @propertyOf lbServices.AppUser
     * @description
     * The name of the model represented by this $resource,
     * i.e. `AppUser`.
@@ -34984,8 +35337,8 @@ module.factory(
 
 /**
  * @ngdoc object
- * @name lbservices.AppLanguage
- * @header lbservices.AppLanguage
+ * @name lbServices.AppLanguage
+ * @header lbServices.AppLanguage
  * @object
  *
  * @description
@@ -35009,8 +35362,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#create
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#create
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35047,8 +35400,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#createMany
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#createMany
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35086,8 +35439,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#upsert
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#upsert
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35124,8 +35477,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#exists
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#exists
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35156,8 +35509,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#findById
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#findById
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35191,8 +35544,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#find
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#find
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35225,8 +35578,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#findOne
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#findOne
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35258,8 +35611,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#updateAll
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#updateAll
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35292,8 +35645,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#deleteById
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#deleteById
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35325,8 +35678,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#count
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#count
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35357,8 +35710,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#prototype$updateAttributes
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#prototype$updateAttributes
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35394,8 +35747,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#createChangeStream
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#createChangeStream
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35435,8 +35788,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#updateOrCreate
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#updateOrCreate
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35470,8 +35823,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#update
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#update
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35501,8 +35854,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#destroyById
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#destroyById
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35531,8 +35884,8 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbservices.AppLanguage#removeById
-         * @methodOf lbservices.AppLanguage
+         * @name lbServices.AppLanguage#removeById
+         * @methodOf lbServices.AppLanguage
          *
          * @description
          *
@@ -35562,13 +35915,664 @@ module.factory(
 
     /**
     * @ngdoc property
-    * @name lbservices.AppLanguage#modelName
-    * @propertyOf lbservices.AppLanguage
+    * @name lbServices.AppLanguage#modelName
+    * @propertyOf lbServices.AppLanguage
     * @description
     * The name of the model represented by this $resource,
     * i.e. `AppLanguage`.
     */
     R.modelName = "AppLanguage";
+
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.SvZfhilftImage
+ * @header lbServices.SvZfhilftImage
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `SvZfhilftImage` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "SvZfhilftImage",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/SvZfhilftImages/:id",
+      { 'id': '@id' },
+      {
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#create
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/SvZfhilftImages",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#createMany
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/SvZfhilftImages",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#upsert
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/SvZfhilftImages",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#exists
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` - 
+         */
+        "exists": {
+          url: urlBase + "/SvZfhilftImages/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#findById
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/SvZfhilftImages/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#find
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/SvZfhilftImages",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#findOne
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/SvZfhilftImages/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#updateAll
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        "updateAll": {
+          url: urlBase + "/SvZfhilftImages/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#deleteById
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "deleteById": {
+          url: urlBase + "/SvZfhilftImages/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#count
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        "count": {
+          url: urlBase + "/SvZfhilftImages/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#prototype$updateAttributes
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/SvZfhilftImages/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#createChangeStream
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` - 
+         */
+        "createChangeStream": {
+          url: urlBase + "/SvZfhilftImages/change-stream",
+          method: "POST"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.findById() instead.
+        "::findById::SvZfhilft::images": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/SvZfhilfts/:id/images/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.destroyById() instead.
+        "::destroyById::SvZfhilft::images": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/SvZfhilfts/:id/images/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.updateById() instead.
+        "::updateById::SvZfhilft::images": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/SvZfhilfts/:id/images/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use SvZfhilft.images() instead.
+        "::get::SvZfhilft::images": {
+          isArray: true,
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "GET"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.create() instead.
+        "::create::SvZfhilft::images": {
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "POST"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.createMany() instead.
+        "::createMany::SvZfhilft::images": {
+          isArray: true,
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "POST"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.destroyAll() instead.
+        "::delete::SvZfhilft::images": {
+          url: urlBase + "/SvZfhilfts/:id/images",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use SvZfhilft.images.count() instead.
+        "::count::SvZfhilft::images": {
+          url: urlBase + "/SvZfhilfts/:id/images/count",
+          method: "GET"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#updateOrCreate
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#update
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#destroyById
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.SvZfhilftImage#removeById
+         * @methodOf lbServices.SvZfhilftImage
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `SvZfhilftImage` object.)
+         * </em>
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.SvZfhilftImage#modelName
+    * @propertyOf lbServices.SvZfhilftImage
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `SvZfhilftImage`.
+    */
+    R.modelName = "SvZfhilftImage";
 
 
     return R;
@@ -35668,8 +36672,8 @@ module
 
   /**
    * @ngdoc object
-   * @name lbservices.LoopBackResourceProvider
-   * @header lbservices.LoopBackResourceProvider
+   * @name lbServices.LoopBackResourceProvider
+   * @header lbServices.LoopBackResourceProvider
    * @description
    * Use `LoopBackResourceProvider` to change the global configuration
    * settings used by all models. Note that the provider is available
@@ -35689,8 +36693,8 @@ module
   .provider('LoopBackResource', function LoopBackResourceProvider() {
     /**
      * @ngdoc method
-     * @name lbservices.LoopBackResourceProvider#setAuthHeader
-     * @methodOf lbservices.LoopBackResourceProvider
+     * @name lbServices.LoopBackResourceProvider#setAuthHeader
+     * @methodOf lbServices.LoopBackResourceProvider
      * @param {string} header The header name to use, e.g. `X-Access-Token`
      * @description
      * Configure the REST transport to use a different header for sending
@@ -35703,8 +36707,8 @@ module
 
     /**
      * @ngdoc method
-     * @name lbservices.LoopBackResourceProvider#setUrlBase
-     * @methodOf lbservices.LoopBackResourceProvider
+     * @name lbServices.LoopBackResourceProvider#setUrlBase
+     * @methodOf lbServices.LoopBackResourceProvider
      * @param {string} url The URL to use, e.g. `/api` or `//example.com/api`.
      * @description
      * Change the URL of the REST API server. By default, the URL provided
@@ -35717,8 +36721,8 @@ module
 
     /**
      * @ngdoc method
-     * @name lbservices.LoopBackResourceProvider#getUrlBase
-     * @methodOf lbservices.LoopBackResourceProvider
+     * @name lbServices.LoopBackResourceProvider#getUrlBase
+     * @methodOf lbServices.LoopBackResourceProvider
      * @description
      * Get the URL of the REST API server. The URL provided
      * to the code generator (`lb-ng` or `grunt-loopback-sdk-angular`) is used.

@@ -4,6 +4,31 @@
 .gr-50 {
   background-color: #eee; }
 
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ddd; }
+  .login .login-card {
+    width: 50%;
+    margin: 0 auto; }
+
+.app {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .app .content {
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    width: 100%; }
+  .app .header {
+    z-index: 2; }
+
 .md-sidemenu md-divider {
   width: 100%;
   margin: 8px 0; }
@@ -90,31 +115,6 @@ md-sidemenu-button {
     padding-top: 6px; }
   .md-sidemenu-wrapper .md-button {
     padding-left: 32px; }
-
-.login {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #ddd; }
-  .login .login-card {
-    width: 50%;
-    margin: 0 auto; }
-
-.app {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-  .app .content {
-    padding: 0;
-    margin: 0;
-    overflow: scroll;
-    width: 100%; }
-  .app .header {
-    z-index: 2; }
 
 .files .light {
   background-color: #D0D0D0; }

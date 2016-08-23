@@ -1,8 +1,8 @@
 @import "variables";
 @import "body";
 @import "utils";
-@import "../app/components/sidemenu/sidemenu";
-@import "../app/components/login/login";
-@import "../app/components/admin/admin";
-@import "../app/components/dashboard/dashboard";
-@import "../app/components/files/files";
+@import "../app/login/login";
+@import "../app/admin/admin";
+@import "../app/admin/sidemenu/sidemenu";
+@import "../app/admin/dashboard/dashboard";
+@import "../app/admin/files/files";

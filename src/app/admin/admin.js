@@ -2,19 +2,19 @@
  * Created by danieldihardja on 24/07/16.
  */
 
-
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
 import adminController from './admin.controller';
 import adminView from './admin.html!text';
 
-import sideMenu from '../sidemenu/sidemenu';
-import login from '../login/login';
-import dashboard from '../dashboard/dashboard';
-import profil from '../profil/profil';
-
-import files from '../files/files';
+// core components
+import login 		from '../login/login';
+import dashboard 	from './dashboard/dashboard';
+import sideMenu 	from './sidemenu/sidemenu';
+import profil 		from './profil/profil';
+import files 		from './files/files';
+import components 	from '../components/components';
 
 let adminModule = angular.module('admin', [
 		uiRouter,
@@ -22,7 +22,8 @@ let adminModule = angular.module('admin', [
 		login.name,
 		dashboard.name,
 		profil.name,
-		files.name
+		files.name,
+		components.name
 	])
 	.config(['$stateProvider', ($stateProvider)=> {
 

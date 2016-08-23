@@ -35,7 +35,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
 	return gulp.src("src/sass/main.scss")
 		.pipe(sass())
-		.pipe(gulp.dest("src/app/assets"))
+		.pipe(gulp.dest("src/assets"))
 		.pipe(browserSync.stream());
 });
 
