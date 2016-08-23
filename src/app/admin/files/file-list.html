@@ -3,6 +3,7 @@
         <md-toolbar class="md-table-toolbar">
             <div class="md-toolbar-tools md-hue-10"><span>{{'files.title' | translate}}</span></div>
         </md-toolbar>
+
         <md-table-container>
             <table md-table md-row-select multiple="false" ng-model="vm.selectedFiles">
                 <thead md-head md-order="vm.query.order" md-on-reorder="vm.getFiles">
