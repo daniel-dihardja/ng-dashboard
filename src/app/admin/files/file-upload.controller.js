@@ -3,6 +3,7 @@
  */
 
 class UploadController {
+
 	constructor($q, $scope, $files, $state, $stateParams) {
 		this.$q = $q;
 		this.$scope = $scope;

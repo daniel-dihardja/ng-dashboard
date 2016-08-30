@@ -1,33 +1,38 @@
-<div class="files" layout="column">
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
 
-        <md-toolbar class="md-table-toolbar">
-            <div class="md-toolbar-tools md-hue-10"><span>{{'files.title' | translate}}</span></div>
-        </md-toolbar>
+    <h2>Dateien</h2>
 
         <md-table-container>
             <table md-table md-row-select multiple="false" ng-model="vm.selectedFiles">
                 <thead md-head md-order="vm.query.order" md-on-reorder="vm.getFiles">
                 <tr md-row class="gr-50">
                     <th md-column md-order-by="name"><span>Name</span></th>
-                    <th md-column><span>Action</span></th>
+                    <th md-column><span></span></th>
                 </tr>
                 </thead>
                 <trbody md-body>
                     <tr md-row ng-repeat="file in vm.files.data | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page -1)*vm.query.limit" md-select="file" md-auto-select="true" md-select-id="name">
                         <td md-cell >{{file.name}}</td>
                         <td md-cell layout="row">
-                            <md-button class="md-warn" ng-click="vm.deleteFile(file)">{{'app.delete' | translate}}</md-button>
+                            <span flex></span>
+                            <md-button class="md-icon-button" ng-click="vm.deleteFile(file)"><md-icon>delete</md-icon></md-button>
                         </td>
                     </tr>
                 </trbody>
+                <tfoot md-foot>
+                <tr md-row>
+                    <td md-cell></td>
+                    <td md-cell><strong>Total: </strong>{{vm.files.count}}</td>
+                    <td md-cell colspan="6"></td>
+                </tr>
+                </tfoot>
 
             </table>
         </md-table-container>
         <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15]" md-page="vm.query.page" md-total="{{vm.files.count}}" md-on-paginate="getFiles" md-page-select></md-table-pagination>
 
         <md-card-actions layout="row">
-            <span flex></span>
             <md-button class="md-raised md-primary" ng-click="vm.gotoUpload()">{{'files.new' | translate}}</md-button>
         </md-card-actions>
 
-</div>
+        </md-content>

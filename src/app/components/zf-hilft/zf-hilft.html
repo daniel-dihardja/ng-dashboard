@@ -1,70 +1,158 @@
-<div class="zf-hilft">
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
 
-    <!-- Toolbar -->
-    <md-toolbar class="md-table-toolbar md-primary md-hue-2">
-        <div class="md-toolbar-tools"><span>ZF Hilft</span></div>
-    </md-toolbar>
-
-    <md-content layout-padding class="pdl-60" style="width: 680px">
-
-        <md-input-container class="md-block" flex-gt-sm></md-input-container>
-
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Titel</label>
-            <input ng-model="vm.firstName" required>
-        </md-input-container>
-
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Slug</label>
-            <input ng-model="vm.lastName" required>
-        </md-input-container>
-
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Description...</label>
-            <textarea ng-model="vm.description" required></textarea>
-        </md-input-container>
-
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Intro Text</label>
-            <textarea ng-model="vm.introText" required></textarea>
-        </md-input-container>
-
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>State</label>
-            <md-select ng-model="vm.userState">
-                <md-option><em>Nada</em></md-option>
-                <md-option ng-value="1">1</md-option>
-                <md-option ng-value="2">2</md-option>
-                </md-option>
-            </md-select>
-        </md-input-container>
+<!-- Toolbar -->
+<!--
+<md-toolbar class="md-table-toolbar md-primary md-hue-2">
+    <div class="md-toolbar-tools"><span>ZF Hilft</span></div>
+</md-toolbar>
+-->
 
 
-        <md-input-container>
-            <h2>Übersetzungen EN</h2>
-        </md-input-container>
+    <h1>ZF Hilft</h1>
 
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Titel</label>
-            <input ng-model="vm.firstName">
-        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Titel</label>
+        <input ng-model="vm.form.title" required>
+    </md-input-container>
 
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Description...</label>
-            <textarea ng-model="vm.description"></textarea>
-        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Slug</label>
+        <input ng-model="vm.form.slug" required>
+    </md-input-container>
 
-        <md-input-container class="md-block" flex-gt-sm>
-            <label>Intro Text</label>
-            <textarea ng-model="vm.introText"></textarea>
-        </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Beschreibung</label>
+        <textarea ng-model="vm.form.description" required></textarea>
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Intro Text</label>
+        <textarea ng-model="vm.form.introText" required></textarea>
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Bild</label>
+        <textarea ng-model="vm.form.image" required></textarea>
+    </md-input-container>
 
 
 
-        <md-card-actions layout="row">
-            <span flex></span>
-            <md-button class="md-raised md-primary" ng-click="">Speichern</md-button>
-        </md-card-actions>
 
-    </md-content>
-</div>
+    <md-input-container>
+        <h2>Übersetzungen EN</h2>
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Titel</label>
+        <input ng-model="vm.translation.title">
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Description...</label>
+        <textarea ng-model="vm.translation.description"></textarea>
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Intro Text</label>
+        <textarea ng-model="vm.translation.introText"></textarea>
+    </md-input-container>
+
+
+
+    <div class="md-block">
+        <h2>Bilder</h2>
+        <md-table-container>
+            <table md-table>
+                <thead md-head>
+                <tr md-row class="gr-50">
+                    <th md-column><span>Name</span></th>
+                    <th md-column><span>Typ</span></th>
+                    <th md-column><span></span></th>
+                </tr>
+                </thead>
+                <trbody md-body>
+
+
+                    <tr md-row ng-repeat="image in vm.images">
+                        <td md-cell>{{image.source}}</td>
+                        <td md-cell>{{image.type}}</td>
+                        <td md-cell layout="row">
+                            <span flex></span>
+                            <md-button class="md-icon-button"><md-icon>edit</md-icon></md-button>
+                            <md-button class="md-icon-button"><md-icon>delete</md-icon></md-button>
+                        </td>
+                    </tr>
+                </trbody>
+            </table>
+        </md-table-container>
+
+    </div>
+
+    <md-card-actions layout="row" class="pdt-30">
+        <span flex></span>
+        <md-button class="md-raised">Neu</md-button>
+    </md-card-actions>
+
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <h2>Projekt Info</h2>
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Titel</label>
+        <input ng-model="vm.project.title" required>
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Slug</label>
+        <input ng-model="vm.project.slug" required>
+    </md-input-container>
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Date</label>
+        <input ng-model="vm.project.date" required>
+    </md-input-container>
+
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <h2>Projekt Items</h2>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+        <md-table-container>
+            <table md-table ng-model="vm.selectedItems">
+                <thead md-head>
+                <tr md-row class="gr-50">
+                    <th md-column><span>Name</span></th>
+                    <th md-column><span></span></th>
+                </tr>
+                </thead>
+                <trbody md-body>
+                    <tr md-row ng-repeat="item in vm.projectItems" md-select="item" md-select-id="id" md-auto-select="true">
+                        <td md-cell>{{item.type}}</td>
+                        <td md-cell layout="row">
+                            <span flex></span>
+                            <md-button class="md-icon-button"><md-icon>edit</md-icon></md-button>
+                            <md-button class="md-icon-button"><md-icon>delete</md-icon></md-button>
+                        </td>
+                    </tr>
+                </trbody>
+            </table>
+        </md-table-container>
+
+    </md-input-container>
+
+    <md-card-actions layout="row" class="pdt-30">
+        <span flex></span>
+        <md-button class="md-raised">Neu</md-button>
+    </md-card-actions>
+
+
+    <md-card-actions layout="row">
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>

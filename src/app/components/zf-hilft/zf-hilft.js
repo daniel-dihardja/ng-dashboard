@@ -7,6 +7,7 @@ import uiRouter from 'angular-ui-router';
 
 import controller from './zf-hilft.controller';
 import template from './zf-hilft.html!text';
+import service from './zf-hilft.service';
 
 let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
@@ -19,6 +20,7 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					url: '/zfhilft'
 				}
 			)
-	}]);
+	}])
+	.service('$zfHilft', service);
 
 export default zfHilftModule;
