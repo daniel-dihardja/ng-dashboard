@@ -9,8 +9,11 @@ class ZFHilftService {
 	 * @param SvZfhilft
 	 * @param $q
 	 */
-	constructor(SvZfhilft, $q) {
+	constructor(SvZfhilft, SvZfhilftTranslation, $q) {
+
 		this.SvZfhilft = SvZfhilft;
+		this.SvZfhilftTranslation = SvZfhilftTranslation;
+
 		this.$q = $q;
 		this.instance = null;
 	}
@@ -58,8 +61,14 @@ class ZFHilftService {
 		return defer.promise;
 	}
 
+	
+	save() {
+		var defer = this.$q.defer();
+		return defer.promise;
+	}
+
 	/**
-	 *
+	 *	Save ZF Hilft content
 	 * @param form
 	 * @returns {*}
 	 */
@@ -89,7 +98,33 @@ class ZFHilftService {
 
 		return defer.promise;
 	}
+
+
+	/**
+	 * save ZfHilft Translations
+	 * @param form
+	 */
+	saveTranslation(form) {
+		var defer = this.$q.defer();
+
+		var translation = form.translations[0];
+		var ent = {id: translation.id};
+		var updates = {
+			title: translation.title,
+			description: translation.description,
+			introText: translation.introText
+		};
+
+		this.SvZfhilftTranslation.prototype$updateAttributes(ent, updates, function() {
+			defer.resolve();
+		},
+		function(err) {
+			defer.reject(err);
+		});
+
+		return defer.promise;
+	}
 }
 
-ZFHilftService.$inject = ['SvZfhilft', '$q'];
+ZFHilftService.$inject = ['SvZfhilft', 'SvZfhilftTranslation', '$q'];
 export default ZFHilftService;

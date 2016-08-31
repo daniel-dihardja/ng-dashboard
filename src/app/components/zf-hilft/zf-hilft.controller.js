@@ -30,17 +30,17 @@ class ZFHilftController {
 		var _this = this;
 
 		this.$zfHilft.getInstance().then(function(res) {
-			_this.form = res;
 			console.log(_this.form);
 
-			/*
-			_this.default = res;
+			_this.form = res;
 			_this.translation = res.translations[0];
+
+			/*
 			_this.images = res.images;
 			_this.project = res.projects[0];
 			_this.projectItems = res.projects[0].items;
 			*/
-			console.log(res);
+
 		});
 	}
 
@@ -48,7 +48,8 @@ class ZFHilftController {
 	 * Save ZF Hilft and all its sub contents
 	 */
 	save() {
-		this.$zfHilft.saveDefault(this.form);
+		//this.$zfHilft.saveDefault(this.form);
+		this.$zfHilft.saveTranslation(this.form);
 	}
 };
 
