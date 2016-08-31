@@ -3,8 +3,6 @@
  */
 
 
-import appSettings from '../../app.settings';
-
 class FileDeleteController {
 
 	constructor($state, $files, $stateParams) {
@@ -25,9 +23,8 @@ class FileDeleteController {
 	deleteFile() {
 		console.log('delete file ...');
 		var container = this.$stateParams.container || 'etc';
-		var url = appSettings.baseApiUrl + '/containers/'+ container +'/files/' + this.file;
 		var _this = this;
-		this.$files.delete(url)
+		this.$files.delete(_this.file, container)
 			.then(function(res) {
 				console.log('file deleted', res);
 				var con = _this.$stateParams.container;

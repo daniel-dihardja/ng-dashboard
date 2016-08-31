@@ -15,7 +15,7 @@ import controllerDelete from './file-delete.controller';
 import templateDelete from './file-delete.html!text';
 
 import directiveUpload from './file-upload.directive';
-import fileService from './files.service';
+import fileServiceProvider from './files.service';
 
 let fileModule = angular.module('admin.files', [uiRouter, dataTable])
 
@@ -45,7 +45,7 @@ let fileModule = angular.module('admin.files', [uiRouter, dataTable])
 			})
 	}])
 
-	.service('$files', fileService)
+	.provider('$files', fileServiceProvider)
 	.directive('fileModel', directiveUpload);
 
 export default fileModule;

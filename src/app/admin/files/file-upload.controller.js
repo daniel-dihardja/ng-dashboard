@@ -2,8 +2,6 @@
  * Created by danieldihardja on 17/08/16.
  */
 
-import appSettings from '../../app.settings';
-
 class UploadController {
 
 	constructor($q, $scope, $files, $state, $stateParams) {
@@ -20,10 +18,9 @@ class UploadController {
 
 		var file = this.$scope.myFile;
 		var container = this.$stateParams.container || 'etc';
-		var uploadUrl = appSettings.baseApiUrl + "/containers/"+ container +"/upload";
 
 		var _this = this;
-		this.$file.uploadToUrl(file, uploadUrl)
+		this.$file.uploadToUrl(file, container)
 			.then(function(res) {
 				console.log('done ...');
 				var con = _this.$stateParams.container;

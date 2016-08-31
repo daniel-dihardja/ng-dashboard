@@ -10,6 +10,9 @@ class FileListController {
 
 	constructor($state, $files, $scope, $stateParams) {
 
+
+		console.log('$files', $files);
+
 		this.$state = $state;
 		this.$files = $files;
 		this.$scope = $scope;
@@ -25,10 +28,10 @@ class FileListController {
 		};
 
 		var container = this.$stateParams.container || 'etc';
-		var url = appSettings.baseApiUrl + '/containers/'+ container +'/files';
+		//var url = appSettings.baseApiUrl + '/containers/'+ container +'/files';
 		var _this = this;
 
-		this.$files.getList(url)
+		this.$files.getList(container)
 			.then(function(res) {
 				_this.files = {
 					count: res.data.length,

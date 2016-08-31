@@ -38,10 +38,13 @@ let appModule = angular.module('app', [
 	zfAdmin.name
 ])
 
-.config(['$urlRouterProvider', '$httpProvider', 'LoopBackResourceProvider', ($urlRouterProvider, $httpProvider, LoopBackResourceProvider) => {
+.config(['$urlRouterProvider', '$httpProvider', 'LoopBackResourceProvider', '$filesProvider', ($urlRouterProvider, $httpProvider, LoopBackResourceProvider, $filesProvider) => {
 
 	// set API base URL
 	LoopBackResourceProvider.setUrlBase(appSettings.baseApiUrl);
+
+	// set files base URL
+	$filesProvider.setUrlBase(appSettings.baseApiUrl);
 
 	// set 401 interceptor to redirect to the login page
 	$httpProvider.interceptors.push(function authInterceptor($injector) {
