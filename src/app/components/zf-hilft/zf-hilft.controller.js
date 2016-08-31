@@ -4,17 +4,14 @@
 
 class ZFHilftController {
 
-	constructor($zfHilft, $scope) {
+	constructor($zfHilft) {
 
 		this.$zfHilft = $zfHilft;
-		this.$scope = $scope;
-
 		this.selectedImages = [];
 		this.selectedItems = [];
 
 
 		this.form = {};
-
 
 
 		// set data
@@ -36,11 +33,8 @@ class ZFHilftController {
 			_this.translation = res.translations[0];
 			_this.project = res.projects[0];
 
-			/*
 			_this.images = res.images;
-
 			_this.projectItems = res.projects[0].items;
-			*/
 
 		});
 	}
@@ -55,5 +49,5 @@ class ZFHilftController {
 	}
 };
 
-ZFHilftController.$inject = ['$zfHilft', '$scope'];
+ZFHilftController.$inject = ['$zfHilft'];
 export default ZFHilftController;
