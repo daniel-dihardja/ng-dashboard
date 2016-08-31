@@ -9,13 +9,13 @@ class ZFHilftService {
 	 * @param SvZfhilft
 	 * @param $q
 	 */
-	constructor(SvZfhilft, SvZfhilftTranslation, $q) {
-
-		this.SvZfhilft = SvZfhilft;
-		this.SvZfhilftTranslation = SvZfhilftTranslation;
+	constructor($q, SvZfhilft, SvZfhilftTranslation, SvHilfsprojekt) {
 
 		this.$q = $q;
-		this.instance = null;
+		this.SvZfhilft = SvZfhilft;
+		this.SvZfhilftTranslation = SvZfhilftTranslation;
+		this.SvHilfsprojekt = SvHilfsprojekt;
+
 	}
 
 	/**
@@ -55,13 +55,12 @@ class ZFHilftService {
 			}
 			res.projects[0].items = newItems;
 
-			_this.instance = res;
 			defer.resolve(res.toJSON());
 		});
 		return defer.promise;
 	}
 
-	
+
 	save() {
 		var defer = this.$q.defer();
 		return defer.promise;
@@ -124,7 +123,27 @@ class ZFHilftService {
 
 		return defer.promise;
 	}
+
+	saveProject(form) {
+		var defer = this.$q.defer();
+		var project = form.projects[0];
+		var target = {id: project.id};
+		var updates = {
+			date: project.date,
+			slug: project.slug,
+			title: project.title
+		};
+
+		this.SvHilfsprojekt.prototype$updateAttributes(target, updates, function() {
+			defer.resolve();
+		},
+		function(err) {
+			defer.reject(err);
+		});
+
+		return defer.promise;
+	}
 }
 
-ZFHilftService.$inject = ['SvZfhilft', 'SvZfhilftTranslation', '$q'];
+ZFHilftService.$inject = ['$q', 'SvZfhilft', 'SvZfhilftTranslation', 'SvHilfsprojekt'];
 export default ZFHilftService;

@@ -30,14 +30,15 @@ class ZFHilftController {
 		var _this = this;
 
 		this.$zfHilft.getInstance().then(function(res) {
-			console.log(_this.form);
+			console.log(res);
 
 			_this.form = res;
 			_this.translation = res.translations[0];
+			_this.project = res.projects[0];
 
 			/*
 			_this.images = res.images;
-			_this.project = res.projects[0];
+
 			_this.projectItems = res.projects[0].items;
 			*/
 
@@ -49,7 +50,8 @@ class ZFHilftController {
 	 */
 	save() {
 		//this.$zfHilft.saveDefault(this.form);
-		this.$zfHilft.saveTranslation(this.form);
+		//this.$zfHilft.saveTranslation(this.form);
+		this.$zfHilft.saveProject(this.form);
 	}
 };
 
