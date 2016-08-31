@@ -19,7 +19,7 @@ class ZFHilftService {
 	 * get ZF Hilft data from the zf_hilft & relations
 	 * @returns {*}
 	 */
-	getData() {
+	getInstance() {
 
 		var defer = this.$q.defer();
 		var q = {
@@ -67,15 +67,24 @@ class ZFHilftService {
 
 		var defer = this.$q.defer();
 
-		this.instance.title = form.title;
-		this.instance.slug = form.slug;
-		this.instance.description = form.description;
-		this.instance.image = form.image;
-		this.instance.component = form.component;
-		this.instance.introText = form.introText;
+		var entity = {
+			id: form.id
+		};
 
-		this.instance.$save(function() {
+		var updates = {
+			title: form.title,
+			slug: form.slug,
+			description: form.description,
+			image: form.image,
+			component: form.component,
+			introText: form.introText,
+		};
+
+		this.SvZfhilft.prototype$updateAttributes(entity, updates, function() {
 			defer.resolve();
+		},
+		function(err) {
+			defer.reject(err)
 		});
 
 		return defer.promise;

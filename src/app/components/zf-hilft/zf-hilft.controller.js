@@ -29,7 +29,7 @@ class ZFHilftController {
 	init() {
 		var _this = this;
 
-		this.$zfHilft.getData().then(function(res) {
+		this.$zfHilft.getInstance().then(function(res) {
 			_this.form = res;
 			console.log(_this.form);
 

@@ -25,6 +25,7 @@ import zfLogin from './login/login';
 import zfAdmin from './admin/admin';
 
 import appText from './app.text';
+import appSettings from './app.settings';
 
 let appModule = angular.module('app', [
 	uiRouter,
@@ -37,9 +38,13 @@ let appModule = angular.module('app', [
 	zfAdmin.name
 ])
 
-.config(['$urlRouterProvider', '$httpProvider', ($urlRouterProvider, $httpProvider) => {
+.config(['$urlRouterProvider', '$httpProvider', 'LoopBackResourceProvider', ($urlRouterProvider, $httpProvider, LoopBackResourceProvider) => {
 
-	function authInterceptor($injector) {
+	// set API base URL
+	LoopBackResourceProvider.setUrlBase(appSettings.baseApiUrl);
+
+	// set 401 interceptor to redirect to the login page
+	$httpProvider.interceptors.push(function authInterceptor($injector) {
 		return  {
 			responseError: function(res) {
 				if(res.status == 401) {
@@ -49,9 +54,7 @@ let appModule = angular.module('app', [
 				return res;
 			}
 		}
-	}
-
-	$httpProvider.interceptors.push(authInterceptor);
+	});
 
 	$urlRouterProvider.otherwise('/login');
 }])
