@@ -1,7 +1,7 @@
 <div class="file-selector">
     <h1>{{selectedFile}}</h1>
     <div>
-        <img ng-if="selectedFileUrl" src="{{selectedFileUrl}}" />
+        <img ng-if="selectedFile !== undefined" ng-src="{{selectedFileUrl}}" />
     </div>
     <md-button class="md-raised" ng-click="openDialog($event)">Select</md-button>
 </div>
