@@ -7,25 +7,23 @@ import appSettings from '../../app.settings';
 class ZFHilftController {
 
 	constructor($zfHilft, $files) {
-
-		this.$zfHilft = $zfHilft;
-		this.selectedImages = [];
-		this.selectedItems = [];
-
-
-		this.form = {};
-
-		this.baseUrl = appSettings.baseUrl + 'assets';
-
 		var _this = this;
-		$files.getList('images')
-			.then(function(res) {
-				console.log(res);
-				_this.files = res.data;
-			});
+
+		_this.$zfHilft = $zfHilft;
+		_this.selectedImages = [];
+		_this.selectedItems = [];
+		_this.form = {};
+
+
+		_this.baseUrl = appSettings.baseUrl + 'assets';
+
+
+		$files.getList('images').then(function(res) {
+			_this.files = res.data;
+		});
 
 		// set data
-		this.init();
+		_this.init();
 	}
 
 
@@ -52,9 +50,11 @@ class ZFHilftController {
 	 * Save ZF Hilft and all its sub contents
 	 */
 	save() {
-		//this.$zfHilft.saveDefault(this.form);
-		//this.$zfHilft.saveTranslation(this.form);
-		//this.$zfHilft.saveProject(this.form);
+
+		this.$zfHilft.saveDefault(this.form);
+		this.$zfHilft.saveTranslation(this.form);
+		this.$zfHilft.saveProject(this.form);
+
 		console.log(this.form);
 	}
 };
