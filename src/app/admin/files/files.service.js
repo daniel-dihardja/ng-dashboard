@@ -7,39 +7,44 @@ class FileServiceProvider {
 
 	constructor() {
 		this.urlBase = 'http://192.168.99.100:3000/api';
+		var _this = this;
+
+		this.initFactoryGet();
 	}
 
 	setUrlBase(url) {
 		this.urlBase = url;
 	}
 
-	$get($http) {
+	initFactoryGet() {
 		var _this = this;
-		_this.$http = $http;
 
-		return {
-			getList: function(container) {
-				var url = _this.urlBase + '/containers/'+ container +'/files';
-				return _this.$http.get(url);
-			},
+		this.$get = ['$http', function($http) {
+			_this.$http = $http;
+			return {
+				getList: function(container) {
+					var url = _this.urlBase + '/containers/'+ container +'/files';
+					return _this.$http.get(url);
+				},
 
-			uploadToUrl: function(file, container) {
-				var fd = new FormData();
-				fd.append('file', file);
-				var params = {
-					transformRequest: angular.identity,
-					headers: {'Content-Type': undefined}
-				};
+				uploadToUrl: function(file, container) {
+					var fd = new FormData();
+					fd.append('file', file);
+					var params = {
+						transformRequest: angular.identity,
+						headers: {'Content-Type': undefined}
+					};
 
-				var uploadUrl = _this.urlBase + "/containers/"+ container +"/upload";
-				return _this.$http.post(uploadUrl, fd, params);
-			},
+					var uploadUrl = _this.urlBase + "/containers/"+ container +"/upload";
+					return _this.$http.post(uploadUrl, fd, params);
+				},
 
-			delete: function(file, container) {
-				var url = _this.urlBase + '/containers/'+ container +'/files/' + file;
-				return _this.$http.delete(url);
+				delete: function(file, container) {
+					var url = _this.urlBase + '/containers/'+ container +'/files/' + file;
+					return _this.$http.delete(url);
+				}
 			}
-		}
+		}]
 	}
 }
 

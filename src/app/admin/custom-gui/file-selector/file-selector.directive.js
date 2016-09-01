@@ -10,25 +10,31 @@ class FileSelector {
 
 		this.restrict = 'E';
 		this.template = template;
+		this.require = 'ngModel';
 		this.scope = {
 			files: '=',
 			container: '@',
-			selectedFile: '@',
 			baseUrl: '@'
 		};
 
 		this.$mdDialog = $mdDialog;
 	}
 
-	link(scope, element, attrs) {
+	link(scope, element, attrs, ngModelCtrl) {
+
+		console.log('ngModelCtrl', ngModelCtrl);
 
 		console.log('scope', scope);
 
 		scope.baseUrl = scope.baseUrl || '/assets/images/';
 
-		scope.selectedFile = scope.selectedFile || 'dummy.jpg';
 
-		scope.selectedFileUrl = scope.baseUrl + scope.selectedFile;
+		ngModelCtrl.$render = function() {
+			scope.selectedFile = ngModelCtrl.$viewValue;
+			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
+			console.log('selectedFileUrl', scope.selectedFileUrl);
+		};
+
 
 		var _this = this;
 		scope.openDialog = function($event) {

@@ -33,16 +33,9 @@
     <md-input-container class="md-block" flex-gt-sm>
         <label>Bild</label>
 
+        <file-selector files="vm.files" ng-model="vm.form.image" container="images" base-url="{{vm.baseUrl}}"></file-selector>
 
-
-
-        <file-selector files="vm.files" selected-file="{{vm.selectedFile}}" container="{{vm.imagesContainer}}"></file-selector>
-
-
-
-
-
-        <textarea ng-model="vm.form.image" required></textarea>
+        <!--textarea ng-model="vm.form.image" required></textarea-->
     </md-input-container>
 
 

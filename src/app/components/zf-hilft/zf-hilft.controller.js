@@ -2,21 +2,28 @@
  * Created by danieldihardja on 23/08/16.
  */
 
+import appSettings from '../../app.settings';
+
 class ZFHilftController {
 
-	constructor($zfHilft) {
+	constructor($zfHilft, $files) {
 
 		this.$zfHilft = $zfHilft;
 		this.selectedImages = [];
 		this.selectedItems = [];
 
 
-		this.files = ["file-1", "file-2", "file-3"];
-		this.selectedFile = "dummy.jpg";
-		this.imagesContainer = 'images';
-
 		this.form = {};
 
+		this.baseUrl = appSettings.baseUrl;
+
+
+		var _this = this;
+		$files.getList('images')
+			.then(function(res) {
+				console.log(res);
+				_this.files = res.data;
+			});
 
 		// set data
 		this.init();
@@ -36,7 +43,6 @@ class ZFHilftController {
 			_this.form = res;
 			_this.translation = res.translations[0];
 			_this.project = res.projects[0];
-
 			_this.images = res.images;
 			_this.projectItems = res.projects[0].items;
 
@@ -53,5 +59,5 @@ class ZFHilftController {
 	}
 };
 
-ZFHilftController.$inject = ['$zfHilft'];
+ZFHilftController.$inject = ['$zfHilft', '$files'];
 export default ZFHilftController;

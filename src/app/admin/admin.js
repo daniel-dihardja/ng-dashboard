@@ -42,7 +42,7 @@ let adminModule = angular.module('admin', [
 				template: adminView,
 				url: '/admin',
 				resolve: {
-					auth: function(AppUser) {return AppUser.ping()}
+					auth: ['AppUser', function(AppUser) {return AppUser.ping()}]
 				}
 			});
 	}])

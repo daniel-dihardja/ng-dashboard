@@ -51,7 +51,8 @@ let appModule = angular.module('app', [
 	$filesProvider.setUrlBase(appSettings.baseApiUrl);
 
 	// set 401 interceptor to redirect to the login page
-	$httpProvider.interceptors.push(function authInterceptor($injector) {
+
+	$httpProvider.interceptors.push(['$injector', function authInterceptor($injector) {
 		return  {
 			responseError: function(res) {
 				if(res.status == 401) {
@@ -61,7 +62,8 @@ let appModule = angular.module('app', [
 				return res;
 			}
 		}
-	});
+	}]);
+
 
 	$urlRouterProvider.otherwise('/login');
 }])

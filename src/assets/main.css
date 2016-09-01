@@ -143,3 +143,6 @@ md-sidemenu-button {
 
 .files .row {
   padding-bottom: 20px; }
+
+.file-selector img {
+  max-width: 640px; }
