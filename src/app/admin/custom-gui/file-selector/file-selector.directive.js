@@ -3,9 +3,15 @@
  */
 
 import template from './file-selector.html!text';
+import dialogController from './dialog-controller';
+import dialogTemplate from './dialog-template.html!text';
 
 class FileSelector {
 
+	/**
+	 * init file selector
+	 * @param $mdDialog
+	 */
 	constructor($mdDialog) {
 
 		this.restrict = 'E';
@@ -18,41 +24,63 @@ class FileSelector {
 		};
 
 		this.$mdDialog = $mdDialog;
+		this.ngModelCtrl = null;
 	}
 
+	/**
+	 * handle file selector events
+	 * @param scope
+	 * @param element
+	 * @param attrs
+	 * @param ngModelCtrl
+	 */
 	link(scope, element, attrs, ngModelCtrl) {
 
-		console.log('ngModelCtrl', ngModelCtrl);
-
-		console.log('scope', scope);
+		var _this = this;
 
 		scope.baseUrl = scope.baseUrl || '/assets/images/';
-
-
-		ngModelCtrl.$render = function() {
-			scope.selectedFile = ngModelCtrl.$viewValue;
-			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
-			console.log('selectedFileUrl', scope.selectedFileUrl);
+		scope.openDialog = function($event) {
+			_this.openDialog(_this.$mdDialog, $event, scope);
 		};
 
+		this.ngModelCtrl = ngModelCtrl;
+		this.ngModelCtrl.$render = function() {
+			scope.selectedFile = ngModelCtrl.$viewValue;
+			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
+		};
 
-		var _this = this;
-		scope.openDialog = function($event) {
-			_this.openDialog(_this.$mdDialog, $event);
-		}
+		console.log(scope);
 	}
 
-	openDialog($mdDialog, $event) {
-		$mdDialog.show(
-			$mdDialog.alert()
-				.parent(angular.element(document.body))
-				.clickOutsideToClose(true)
-				.title('This is an alert title')
-				.textContent('You can specify some description text in here.')
-				.ariaLabel('Alert Dialog Demo')
-				.ok('Got it!')
-				.targetEvent($event)
-		);
+	/**
+	 * open file select dialog
+	 * @param $mdDialog
+	 * @param $event
+	 * @param scope
+	 */
+	openDialog($mdDialog, $event, scope) {
+		var _this = this;
+		$mdDialog.show({
+			controller: dialogController,
+			controllerAs: 'vm',
+			template: dialogTemplate,
+			parent: angular.element(document.body),
+			targetEvent: $event,
+			clickOutsideToClose:true,
+			fullscreen: false,
+			locals: {
+				files: scope.files,
+				selectedFile: scope.selectedFile
+			},
+		})
+		.then(function(answer) {
+			scope.selectedFile = answer;
+			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
+			_this.ngModelCtrl.$setViewValue(answer);
+
+		}, function(){
+			console.log('cancel');
+		})
 	}
 
 	static directiveFactory($parse) {

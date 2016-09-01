@@ -15,8 +15,7 @@ class ZFHilftController {
 
 		this.form = {};
 
-		this.baseUrl = appSettings.baseUrl;
-
+		this.baseUrl = appSettings.baseUrl + 'assets';
 
 		var _this = this;
 		$files.getList('images')
@@ -55,7 +54,8 @@ class ZFHilftController {
 	save() {
 		//this.$zfHilft.saveDefault(this.form);
 		//this.$zfHilft.saveTranslation(this.form);
-		this.$zfHilft.saveProject(this.form);
+		//this.$zfHilft.saveProject(this.form);
+		console.log(this.form);
 	}
 };
 
