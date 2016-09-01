@@ -16,6 +16,10 @@ import profil 		from './profil/profil';
 import files 		from './files/files';
 import components 	from '../components/components';
 
+
+// custom gui
+import fileSelector from './custom-gui/file-selector/file-selector.directive';
+
 let adminModule = angular.module('admin', [
 		uiRouter,
 		sideMenu.name,
@@ -41,7 +45,8 @@ let adminModule = angular.module('admin', [
 					auth: function(AppUser) {return AppUser.ping()}
 				}
 			});
-	}]);
+	}])
+	.directive('fileSelector', fileSelector)
 
 export default adminModule;
 

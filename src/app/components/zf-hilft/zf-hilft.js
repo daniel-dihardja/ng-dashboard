@@ -4,6 +4,7 @@
 
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import admin from '../../admin/admin';
 
 import controller from './zf-hilft.controller';
 import template from './zf-hilft.html!text';

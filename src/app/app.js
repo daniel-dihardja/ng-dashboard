@@ -38,7 +38,11 @@ let appModule = angular.module('app', [
 	zfAdmin.name
 ])
 
-.config(['$urlRouterProvider', '$httpProvider', 'LoopBackResourceProvider', '$filesProvider', ($urlRouterProvider, $httpProvider, LoopBackResourceProvider, $filesProvider) => {
+.config(['$urlRouterProvider',
+	'$httpProvider',
+	'LoopBackResourceProvider',
+	'$filesProvider',
+	($urlRouterProvider, $httpProvider, LoopBackResourceProvider, $filesProvider) => {
 
 	// set API base URL
 	LoopBackResourceProvider.setUrlBase(appSettings.baseApiUrl);

@@ -11,6 +11,10 @@ class ZFHilftController {
 		this.selectedItems = [];
 
 
+		this.files = ["file-1", "file-2", "file-3"];
+		this.selectedFile = "dummy.jpg";
+		this.imagesContainer = 'images';
+
 		this.form = {};
 
 
