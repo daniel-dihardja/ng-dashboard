@@ -32,7 +32,7 @@
 
     <md-input-container class="md-block" flex-gt-sm>
         <label>Bild</label>
-        <file-selector files="vm.files" ng-model="vm.form.image" container="images" base-url="{{vm.baseUrl}}"></file-selector>
+        <file-selector ng-model="vm.form.image" container="images" base-url="{{vm.baseUrl}}"></file-selector>
     </md-input-container>
 
 
@@ -78,7 +78,7 @@
                         <td md-cell>{{image.type}}</td>
                         <td md-cell layout="row">
                             <span flex></span>
-                            <md-button class="md-icon-button"><md-icon>edit</md-icon></md-button>
+                            <md-button class="md-icon-button" ng-click="vm.editImage(image)"><md-icon>edit</md-icon></md-button>
                             <md-button class="md-icon-button"><md-icon>delete</md-icon></md-button>
                         </td>
                     </tr>
@@ -90,7 +90,7 @@
 
     <md-card-actions layout="row" class="pdt-30">
         <span flex></span>
-        <md-button class="md-raised">Neu</md-button>
+        <md-button class="md-raised" ng-click="vm.createImage()">Neu</md-button>
     </md-card-actions>
 
 

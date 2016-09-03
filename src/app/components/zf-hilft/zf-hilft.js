@@ -10,6 +10,11 @@ import controller from './zf-hilft.controller';
 import template from './zf-hilft.html!text';
 import service from './zf-hilft.service';
 
+// image
+import imageEditController from './zf-hilt-image-edit.controller';
+import imageCreateController from './zf-hilt-image-create.controller';
+import imageForm from './zf-hilft-image-form.html!text';
+
 let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
 		$stateProvider
@@ -19,6 +24,24 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					controllerAs: 'vm',
 					template,
 					url: '/zfhilft'
+				}
+			)
+
+			.state(
+				'admin.zfhilft-image-create', {
+					controller: imageCreateController,
+					controllerAs: 'vm',
+					template: imageForm,
+					url: '/image-create'
+				}
+			)
+
+			.state(
+				'admin.zfhilft-image-edit', {
+					controller: imageEditController,
+					controllerAs: 'vm',
+					template: imageForm,
+					url: '/image-edit'
 				}
 			)
 	}])

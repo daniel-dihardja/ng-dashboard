@@ -12,19 +12,20 @@ class FileSelector {
 	 * init file selector
 	 * @param $mdDialog
 	 */
-	constructor($mdDialog) {
+	constructor($mdDialog, $files) {
 
 		this.restrict = 'E';
 		this.template = template;
 		this.require = 'ngModel';
 		this.scope = {
-			files: '=',
 			container: '@',
 			baseUrl: '@'
 		};
 
 		this.$mdDialog = $mdDialog;
 		this.ngModelCtrl = null;
+
+		this.$files = $files;
 	}
 
 	/**
@@ -48,6 +49,11 @@ class FileSelector {
 			scope.selectedFile = ngModelCtrl.$viewValue;
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
 		};
+
+		// get files from trhe given container
+		this.$files.getList(scope.container).then(function(res) {
+			scope.files = res.data;
+		});
 
 		console.log(scope);
 	}
@@ -83,10 +89,10 @@ class FileSelector {
 		})
 	}
 
-	static directiveFactory($parse) {
-		return new FileSelector($parse);
+	static directiveFactory($mdDialog, $files) {
+		return new FileSelector($mdDialog, $files);
 	}
 }
 
-FileSelector.directiveFactory.$inject = ['$mdDialog'];
+FileSelector.directiveFactory.$inject = ['$mdDialog', '$files'];
 export default FileSelector.directiveFactory;

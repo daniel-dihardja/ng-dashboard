@@ -6,8 +6,10 @@ import appSettings from '../../app.settings';
 
 class ZFHilftController {
 
-	constructor($zfHilft, $files) {
+	constructor($zfHilft, $files, $state) {
 		var _this = this;
+
+		_this.$state = $state;
 
 		_this.$zfHilft = $zfHilft;
 		_this.selectedImages = [];
@@ -17,10 +19,6 @@ class ZFHilftController {
 
 		_this.baseUrl = appSettings.baseUrl + 'assets';
 
-
-		$files.getList('images').then(function(res) {
-			_this.files = res.data;
-		});
 
 		// set data
 		_this.init();
@@ -46,6 +44,15 @@ class ZFHilftController {
 		});
 	}
 
+	editImage(img) {
+		console.log('img', img);
+		//this.$state.go('admin.image.create');
+	}
+
+	createImage() {
+		this.$state.go('admin.zfhilft-image-create');
+	}
+
 	/**
 	 * Save ZF Hilft and all its sub contents
 	 */
@@ -59,5 +66,5 @@ class ZFHilftController {
 	}
 };
 
-ZFHilftController.$inject = ['$zfHilft', '$files'];
+ZFHilftController.$inject = ['$zfHilft', '$files', '$state'];
 export default ZFHilftController;
