@@ -6,19 +6,18 @@ import appSettings from '../../app.settings';
 
 class ZFHilftController {
 
-	constructor($zfHilft, $files, $state) {
+	constructor($scope, $zfHilft, $state, $mdDialog, SvZfhilftImage) {
 		var _this = this;
 
-		_this.$state = $state;
-
+		_this.$scope = $scope;
 		_this.$zfHilft = $zfHilft;
+		_this.$state = $state;
+		_this.$mdDialog = $mdDialog;
+		_this.SvZfhilftImage = SvZfhilftImage;
+
 		_this.selectedImages = [];
 		_this.selectedItems = [];
 		_this.form = {};
-
-
-		_this.baseUrl = appSettings.baseUrl + 'assets';
-
 
 		// set data
 		_this.init();
@@ -45,12 +44,33 @@ class ZFHilftController {
 	}
 
 	editImage(img) {
-		console.log('img', img);
-		//this.$state.go('admin.image.create');
+		console.log(img);
+		this.$state.go('admin.zfhilft-image-edit', {data: {image: img}});
 	}
 
 	createImage() {
-		this.$state.go('admin.zfhilft-image-create');
+		this.$state.go('admin.zfhilft-image-create', {zfhilftId: this.form.id});
+	}
+
+	deleteImage(img, ev) {
+		var confirm = this.$mdDialog.confirm()
+			.title('Löschen')
+			.textContent(img.source)
+			.ariaLabel('Lucky day')
+			.targetEvent(ev)
+			.ok('Ja')
+			.cancel('Nein');
+
+		var _this = this;
+		this.$mdDialog.show(confirm).then(function() {
+			_this.SvZfhilftImage.deleteById({id: img.id}, function() {
+				_this.init();
+			})
+		}, function() {
+			//$scope.status = 'You decided to keep your debt.';
+		});
+
+		console.log(img);
 	}
 
 	/**
@@ -66,5 +86,5 @@ class ZFHilftController {
 	}
 };
 
-ZFHilftController.$inject = ['$zfHilft', '$files', '$state'];
+ZFHilftController.$inject = ['$scope', '$zfHilft', '$state', '$mdDialog', 'SvZfhilftImage'];
 export default ZFHilftController;

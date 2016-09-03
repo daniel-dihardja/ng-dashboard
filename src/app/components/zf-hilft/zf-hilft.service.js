@@ -9,12 +9,13 @@ class ZFHilftService {
 	 * @param SvZfhilft
 	 * @param $q
 	 */
-	constructor($q, SvZfhilft, SvZfhilftTranslation, SvHilfsprojekt) {
+	constructor($q, SvZfhilft, SvZfhilftTranslation, SvHilfsprojekt, SvZfhilftImage) {
 
 		this.$q = $q;
 		this.SvZfhilft = SvZfhilft;
 		this.SvZfhilftTranslation = SvZfhilftTranslation;
 		this.SvHilfsprojekt = SvHilfsprojekt;
+		this.SvZfhilftImage = SvZfhilftImage;
 
 	}
 
@@ -143,7 +144,9 @@ class ZFHilftService {
 
 		return defer.promise;
 	}
+
+
 }
 
-ZFHilftService.$inject = ['$q', 'SvZfhilft', 'SvZfhilftTranslation', 'SvHilfsprojekt'];
+ZFHilftService.$inject = ['$q', 'SvZfhilft', 'SvZfhilftTranslation', 'SvHilfsprojekt', 'SvZfhilftImage'];
 export default ZFHilftService;

@@ -5,6 +5,7 @@
 import template from './file-selector.html!text';
 import dialogController from './dialog-controller';
 import dialogTemplate from './dialog-template.html!text';
+import appSettings from '../../../app.settings';
 
 class FileSelector {
 
@@ -19,12 +20,10 @@ class FileSelector {
 		this.require = 'ngModel';
 		this.scope = {
 			container: '@',
-			baseUrl: '@'
 		};
 
 		this.$mdDialog = $mdDialog;
 		this.ngModelCtrl = null;
-
 		this.$files = $files;
 	}
 
@@ -39,7 +38,7 @@ class FileSelector {
 
 		var _this = this;
 
-		scope.baseUrl = scope.baseUrl || '/assets/images/';
+		scope.baseUrl = appSettings.baseUrl + 'assets' || '/assets/images/';
 		scope.openDialog = function($event) {
 			_this.openDialog(_this.$mdDialog, $event, scope);
 		};

@@ -32,7 +32,7 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					controller: imageCreateController,
 					controllerAs: 'vm',
 					template: imageForm,
-					url: '/image-create'
+					url: '/image-create/:zfhilftId'
 				}
 			)
 
@@ -41,7 +41,10 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					controller: imageEditController,
 					controllerAs: 'vm',
 					template: imageForm,
-					url: '/image-edit'
+					url: '/image-edit',
+					params: {
+						data: null
+					}
 				}
 			)
 	}])
