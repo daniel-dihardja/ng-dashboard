@@ -91,6 +91,7 @@ class ZFHilftController {
 
 	editPItem(item) {
 		if(item.type == 'image') this.editProjectImage(item);
+		else if(item.type == 'video') this.editProjectVideo(item);
 	}
 
 	deletePItem(item) {
@@ -107,6 +108,17 @@ class ZFHilftController {
 			data: image
 		};
 		this.$state.go('admin.zfhilft-pimage-edit', params);
+	}
+
+	editProjectVideo(item) {
+		var params = {
+			zfhilftId: this.form.id,
+			zfHilfsprojektId: item.svHilfsprojektItemId,
+			type: 'video',
+			id: item.id,
+			data: item
+		};
+		this.$state.go('admin.zfhilft-pvideo-edit', params);
 	}
 
 	deleteProjectImage(img, ev) {

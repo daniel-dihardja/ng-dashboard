@@ -23,7 +23,7 @@ import pimageForm from './zf-hilft-pimage-form.html!text';
 
 // project video
 import pvideoCreateController from './zf-hilft-pvideo-create.controller';
-//import pvideoEditController from './zf-hilft-pvideo-edit.controller';
+import pvideoEditController from './zf-hilft-pvideo-edit.controller';
 import pvideoForm from './zf-hilft-pvideo-form.html!text';
 
 let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
@@ -74,13 +74,12 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					controller: pimageEditController,
 					controllerAs: 'vm',
 					template: pimageForm,
-					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/:type/:id',
+					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/image/:id',
 					params: {
 						data: null
 					}
 				}
 			)
-
 
 			.state(
 				'admin.zfhilft-pvideo-create', {
@@ -88,6 +87,18 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					controllerAs: 'vm',
 					template: pvideoForm,
 					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/video'
+				}
+			)
+
+			.state(
+				'admin.zfhilft-pvideo-edit', {
+					controller: pvideoEditController,
+					controllerAs: 'vm',
+					template: pvideoForm,
+					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/video/:id',
+					params: {
+						data: null
+					}
 				}
 			)
 
