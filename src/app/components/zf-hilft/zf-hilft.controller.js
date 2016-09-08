@@ -6,7 +6,7 @@ import appSettings from '../../app.settings';
 
 class ZFHilftController {
 
-	constructor($scope, $zfHilft, $state, $mdDialog, SvZfhilftImage, SvHilfsprojektItem, SvHilfsprojektItemImage) {
+	constructor($scope, $zfHilft, $state, $mdDialog, SvZfhilftImage, SvHilfsprojektItem, SvHilfsprojektItemImage, SvHilfsprojektItemVideo) {
 		var _this = this;
 
 		_this.$scope = $scope;
@@ -16,6 +16,7 @@ class ZFHilftController {
 		_this.SvZfhilftImage = SvZfhilftImage;
 		_this.SvHilfsprojektItem = SvHilfsprojektItem;
 		_this.SvHilfsprojektItemImage = SvHilfsprojektItemImage;
+		_this.SvHilfsprojektItemVideo = SvHilfsprojektItemVideo;
 
 		_this.selectedImages = [];
 		_this.selectedItems = [];
@@ -24,7 +25,6 @@ class ZFHilftController {
 		// set data
 		_this.init();
 	}
-
 
 	/**
 	 * 	get ZF Hilft data
@@ -35,7 +35,6 @@ class ZFHilftController {
 
 		this.$zfHilft.getInstance().then(function(res) {
 			console.log(res);
-
 			_this.form = res;
 			_this.translation = res.translations[0];
 			_this.project = res.projects[0];
@@ -85,11 +84,21 @@ class ZFHilftController {
 			zfhilftId: this.form.id,
 			zfHilfsprojektId: this.form.projects[0].id
 		};
-		this.$state.go('admin.zfhilft-pimage-create', params);
+
+		if(type == 'image') this.$state.go('admin.zfhilft-pimage-create', params);
+		else if(type == 'video') this.$state.go('admin.zfhilft-pvideo-create', params);
+	}
+
+	editPItem(item) {
+		if(item.type == 'image') this.editProjectImage(item);
+	}
+
+	deletePItem(item) {
+		if(item.type == 'image') this.deleteProjectImage(item);
+		else if(item.type == 'video') this.deleteProjectVideo(item);
 	}
 
 	editProjectImage(image) {
-		console.log(image);
 		var params = {
 			zfhilftId: this.form.id,
 			zfHilfsprojektId: image.svHilfsprojektItemId,
@@ -115,6 +124,21 @@ class ZFHilftController {
 		console.log(img);
 	}
 
+	deleteProjectVideo(video, ev) {
+		var _this = this;
+		this.$mdDialog.show(this.confirmDialog(video.video, ev)).then(function() {
+			_this.SvHilfsprojektItemVideo.deleteById({id: video.id}, function() {
+				_this.SvHilfsprojektItem.deleteById({id: video.svHilfsprojektItemId}, function() {
+					_this.init();
+				})
+			})
+		}, function() {
+			//$scope.status = 'You decided to keep your debt.';
+		});
+
+		console.log(video);
+	}
+
 	/**
 	 * Save ZF Hilft and all its sub contents
 	 */
@@ -128,5 +152,5 @@ class ZFHilftController {
 	}
 };
 
-ZFHilftController.$inject = ['$scope', '$zfHilft', '$state', '$mdDialog', 'SvZfhilftImage', 'SvHilfsprojektItem', 'SvHilfsprojektItemImage'];
+ZFHilftController.$inject = ['$scope', '$zfHilft', '$state', '$mdDialog', 'SvZfhilftImage', 'SvHilfsprojektItem', 'SvHilfsprojektItemImage', 'SvHilfsprojektItemVideo'];
 export default ZFHilftController;

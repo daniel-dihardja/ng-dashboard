@@ -10,8 +10,6 @@ import controller from './zf-hilft.controller';
 import template from './zf-hilft.html!text';
 import service from './zf-hilft.service';
 
-
-
 // image
 import imageEditController from './zf-hilt-image-edit.controller';
 import imageCreateController from './zf-hilt-image-create.controller';
@@ -22,6 +20,11 @@ import pimageCreateController from './zf-hilft-pimage-create.controller';
 import pimageEditController from './zf-hilft-pimage-edit.controller';
 import pimageForm from './zf-hilft-pimage-form.html!text';
 
+
+// project video
+import pvideoCreateController from './zf-hilft-pvideo-create.controller';
+//import pvideoEditController from './zf-hilft-pvideo-edit.controller';
+import pvideoForm from './zf-hilft-pvideo-form.html!text';
 
 let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
@@ -61,7 +64,7 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					controller: pimageCreateController,
 					controllerAs: 'vm',
 					template: pimageForm,
-					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/:type'
+					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/image'
 				}
 			)
 
@@ -75,6 +78,16 @@ let zfHilftModule = angular.module('admin.zfHilft', [uiRouter])
 					params: {
 						data: null
 					}
+				}
+			)
+
+
+			.state(
+				'admin.zfhilft-pvideo-create', {
+					controller: pvideoCreateController,
+					controllerAs: 'vm',
+					template: pvideoForm,
+					url: '/zfhilft/:zfhilftId/project/:zfHilfsprojektId/video'
 				}
 			)
 

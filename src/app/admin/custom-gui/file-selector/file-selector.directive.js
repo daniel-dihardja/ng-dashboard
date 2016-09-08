@@ -20,6 +20,7 @@ class FileSelector {
 		this.require = 'ngModel';
 		this.scope = {
 			container: '@',
+			modelValue: '=ngModel'
 		};
 
 		this.$mdDialog = $mdDialog;
@@ -45,7 +46,7 @@ class FileSelector {
 
 		this.ngModelCtrl = ngModelCtrl;
 		this.ngModelCtrl.$render = function() {
-			scope.selectedFile = ngModelCtrl.$viewValue;
+			scope.selectedFile = scope.modelValue;
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
 		};
 
@@ -79,9 +80,8 @@ class FileSelector {
 			},
 		})
 		.then(function(answer) {
-			scope.selectedFile = answer;
+			scope.modelValue = scope.selectedFile = answer;
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
-			_this.ngModelCtrl.$setViewValue(answer);
 
 		}, function(){
 			console.log('cancel');
