@@ -1,0 +1,23 @@
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+    <h1>Projekt Bild</h1>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Bild</label>
+            <file-selector ng-model="vm.form.image" container="images"></file-selector>
+        </md-input-container>
+
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Info</label>
+            <input ng-model="vm.form.info" required>
+        </md-input-container>
+
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Date</label>
+            <input ng-model="vm.form.dateString" required>
+        </md-input-container>
+
+    <md-card-actions layout="row">
+        <md-button class="md-raised" ng-click="vm.goBack()">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>

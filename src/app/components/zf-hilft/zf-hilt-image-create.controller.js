@@ -11,7 +11,6 @@ class ImageCreateController {
 
 		this.zfhilftId = $stateParams.zfhilftId;
 		this.title = "Neues Bild";
-		this.image = "";
 		this.asLogo = false;
 
 		console.log('$stateParams', $stateParams);
@@ -38,5 +37,6 @@ class ImageCreateController {
 		this.$state.go('admin.zfhilft');
 	}
 }
+
 ImageCreateController.$inject = ['$state', '$stateParams', 'SvZfhilftImage'];
 export default ImageCreateController;

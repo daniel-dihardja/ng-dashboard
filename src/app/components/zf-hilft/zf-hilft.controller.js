@@ -52,17 +52,21 @@ class ZFHilftController {
 		this.$state.go('admin.zfhilft-image-create', {zfhilftId: this.form.id});
 	}
 
-	deleteImage(img, ev) {
+	confirmDialog(text, ev) {
+		text = text || '';
 		var confirm = this.$mdDialog.confirm()
 			.title('Löschen')
-			.textContent(img.source)
+			.textContent(text)
 			.ariaLabel('Lucky day')
 			.targetEvent(ev)
 			.ok('Ja')
 			.cancel('Nein');
+		return confirm;
+	}
 
+	deleteImage(img, ev) {
 		var _this = this;
-		this.$mdDialog.show(confirm).then(function() {
+		this.$mdDialog.show(this.confirmDialog(img.source, ev)).then(function() {
 			_this.SvZfhilftImage.deleteById({id: img.id}, function() {
 				_this.init();
 			})
@@ -71,6 +75,27 @@ class ZFHilftController {
 		});
 
 		console.log(img);
+	}
+
+	createPItem(type) {
+		var params = {
+			type: type,
+			zfhilftId: this.form.id,
+			zfHilfsprojektId: this.form.projects[0].id
+		};
+		this.$state.go('admin.zfhilft-pimage-create', params);
+	}
+
+	editProjectImage(image) {
+		console.log(image);
+		var params = {
+			zfhilftId: this.form.id,
+			zfHilfsprojektId: image.svHilfsprojektItemId,
+			type: 'image',
+			id: image.id,
+			data: image
+		};
+		this.$state.go('admin.zfhilft-pimage-edit', params);
 	}
 
 	/**

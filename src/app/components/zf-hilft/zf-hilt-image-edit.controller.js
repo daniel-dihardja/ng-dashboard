@@ -22,8 +22,8 @@ class ImageEditController {
 		};
 
 		this.SvZfhilftImage.prototype$updateAttributes(target, updates, function() {
-			_this.$state.go('admin.zfhilft');
-		})
+			_this.goBack();
+		});
 	}
 
 	goBack() {
