@@ -6,7 +6,7 @@ import appSettings from '../../app.settings';
 
 class ZFHilftController {
 
-	constructor($scope, $zfHilft, $state, $mdDialog, SvZfhilftImage) {
+	constructor($scope, $zfHilft, $state, $mdDialog, SvZfhilftImage, SvHilfsprojektItem, SvHilfsprojektItemImage) {
 		var _this = this;
 
 		_this.$scope = $scope;
@@ -14,6 +14,8 @@ class ZFHilftController {
 		_this.$state = $state;
 		_this.$mdDialog = $mdDialog;
 		_this.SvZfhilftImage = SvZfhilftImage;
+		_this.SvHilfsprojektItem = SvHilfsprojektItem;
+		_this.SvHilfsprojektItemImage = SvHilfsprojektItemImage;
 
 		_this.selectedImages = [];
 		_this.selectedItems = [];
@@ -98,6 +100,21 @@ class ZFHilftController {
 		this.$state.go('admin.zfhilft-pimage-edit', params);
 	}
 
+	deleteProjectImage(img, ev) {
+		var _this = this;
+		this.$mdDialog.show(this.confirmDialog(img.image, ev)).then(function() {
+			_this.SvHilfsprojektItemImage.deleteById({id: img.id}, function() {
+				_this.SvHilfsprojektItem.deleteById({id: img.svHilfsprojektItemId}, function() {
+					_this.init();
+				})
+			})
+		}, function() {
+			//$scope.status = 'You decided to keep your debt.';
+		});
+
+		console.log(img);
+	}
+
 	/**
 	 * Save ZF Hilft and all its sub contents
 	 */
@@ -111,5 +128,5 @@ class ZFHilftController {
 	}
 };
 
-ZFHilftController.$inject = ['$scope', '$zfHilft', '$state', '$mdDialog', 'SvZfhilftImage'];
+ZFHilftController.$inject = ['$scope', '$zfHilft', '$state', '$mdDialog', 'SvZfhilftImage', 'SvHilfsprojektItem', 'SvHilfsprojektItemImage'];
 export default ZFHilftController;
