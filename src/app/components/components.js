@@ -4,10 +4,11 @@
 import angular from 'angular';
 
 //
-
 import zfHilft from './zf-hilft/zf-hilft';
+import zukunftProjekte from './zukunft-projekte/zukunft-projekte';
 
 let componentsModule = angular.module('admin.components', [
-	zfHilft.name
+	zfHilft.name,
+	zukunftProjekte.name
 ]);
 export default componentsModule;

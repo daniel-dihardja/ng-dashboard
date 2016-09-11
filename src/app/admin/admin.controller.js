@@ -16,6 +16,11 @@ class AppController {
 		this.$state.go('admin.filelist', {container: 'videos'});
 	}
 
+	gotoZPArticles(stationId) {
+		console.log('stationId', stationId);
+		this.$state.go('admin.zukunft-projekte-station', {stationId: stationId});
+	}
+
 	logout() {
 		this.AppUser.logout();
 		this.$state.go('login');

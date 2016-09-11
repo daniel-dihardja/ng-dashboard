@@ -1,0 +1,25 @@
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+    <h1>ZpArtikel</h1>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>headline</label>
+        <input ng-model="vm.entity.headline" required>
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>teaserText</label>
+        <input ng-model="vm.entity.teaserText" required>
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>mainText</label>
+        <input ng-model="vm.entity.mainText" required>
+    </md-input-container>
+    
+
+    <md-card-actions layout="row">
+        <md-button class="md-raised" ng-click="vm.goBack()">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>
