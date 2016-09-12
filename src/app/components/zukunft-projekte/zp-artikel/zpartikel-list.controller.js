@@ -41,8 +41,7 @@ class ZpArtikelListController {
 	editEntity(entity) {
 		this.$state.go('admin.zukunft-projekte-edit-article', {
 			stationId: entity.zpStationId,
-			articleId: entity.id,
-			entity: entity
+			articleId: entity.id
 		});
 	}
 

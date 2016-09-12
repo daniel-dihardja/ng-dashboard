@@ -11,6 +11,11 @@ import articleEditController from './zp-artikel/zpartikel-edit.controller';
 import articleCreateController from './zp-artikel/zpartikel-create.controller';
 import articleListTpl from './zp-artikel/zpartikel-list.html!text';
 import articleEditTpl from './zp-artikel/zpartikel-edit.html!text';
+import articleCreateTpl from './zp-artikel/zpartikel-create.html!text';
+
+import imageCreateController from './zp-item-image/zpitemimage-create.controller';
+import imageEditController from './zp-item-image/zpitemimage-edit.controller';
+import imageEditTpl from './zp-item-image/zpitemimage-edit.html!text';
 
 let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
@@ -22,21 +27,38 @@ let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter])
 					template: articleListTpl,
 					url: '/zukunft-projekte/stations/:stationId/articles'
 				})
-			.state('admin.zukunft-projekte-create-article', {
-				controller: articleCreateController,
-				controllerAs: 'vm',
-				template: articleEditTpl,
-				url: '/zukunft-projekte/stations/:stationId/articles/create'
-			})
+			.state(
+				'admin.zukunft-projekte-create-article', {
+					controller: articleCreateController,
+					controllerAs: 'vm',
+					template: articleCreateTpl,
+					url: '/zukunft-projekte/stations/:stationId/articles/create'
+				})
 			.state('admin.zukunft-projekte-edit-article', {
-				controller: articleEditController,
+					controller: articleEditController,
+					controllerAs: 'vm',
+					template: articleEditTpl,
+					url: '/zukunft-projekte/stations/:stationId/articles/:articleId',
+
+			})
+
+			.state('admin.zukunft-projekte-create-image', {
+				controller: imageCreateController,
 				controllerAs: 'vm',
-				template: articleEditTpl,
-				url: '/zukunft-projekte/stations/:stationId/articles/:articleId',
+				template: imageEditTpl,
+				url: '/zukunft-projekte/stations/:stationId/articles/:articleId/images/create'
+			})
+
+			.state('admin.zukunft-projekte-edit-image', {
+				controller: imageEditController,
+				controllerAs: 'vm',
+				template: imageEditTpl,
+				url: '/zukunft-projekte/stations/:stationId/articles/:articleId/images/:imageId',
 				params: {
 					entity: null
 				}
 			})
+
 
 	}]);
 
