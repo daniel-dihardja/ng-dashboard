@@ -17,6 +17,11 @@ import imageCreateController from './zp-item-image/zpitemimage-create.controller
 import imageEditController from './zp-item-image/zpitemimage-edit.controller';
 import imageEditTpl from './zp-item-image/zpitemimage-edit.html!text';
 
+import videoCreateController from './zp-item-video/zpitemvideo-create.controller';
+import videoEditController from './zp-item-video/zpitemvideo-edit.controller';
+import videoEditTpl from './zp-item-video/zpitemvideo-edit.html!text';
+
+
 let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
 		$stateProvider
@@ -53,7 +58,24 @@ let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter])
 				controller: imageEditController,
 				controllerAs: 'vm',
 				template: imageEditTpl,
-				url: '/zukunft-projekte/stations/:stationId/articles/:articleId/images/:imageId',
+				url: '/zukunft-projekte/stations/:stationId/articles/:articleId/images/:id',
+				params: {
+					entity: null
+				}
+			})
+
+			.state('admin.zukunft-projekte-create-video', {
+				controller: videoCreateController,
+				controllerAs: 'vm',
+				template: videoEditTpl,
+				url: '/zukunft-projekte/stations/:stationId/articles/:articleId/videos/create'
+			})
+
+			.state('admin.zukunft-projekte-edit-video', {
+				controller: videoEditController,
+				controllerAs: 'vm',
+				template: videoEditTpl,
+				url: '/zukunft-projekte/stations/:stationId/articles/:articleId/videos/:id',
 				params: {
 					entity: null
 				}

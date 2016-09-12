@@ -3,7 +3,7 @@
  */
 class ZpArtikelEditController {
 
-	constructor($state, $stateParams, $mdDialog, ZpArtikel, ZpArtikelItem, ZpItemImage) {
+	constructor($state, $stateParams, $mdDialog, ZpArtikel, ZpArtikelItem, ZpItemImage, ZpItemVideo) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$mdDialog = $mdDialog;
@@ -11,8 +11,9 @@ class ZpArtikelEditController {
 
 		this.ZpArtikel = ZpArtikel;
 		this.ZpArtikelItem = ZpArtikelItem;
-		this.ZpItemImage = ZpItemImage;
 
+		this.ZpItemImage = ZpItemImage;
+		this.ZpItemVideo = ZpItemVideo;
 
 		this.entity = $stateParams.entity;
 		this.init();
@@ -48,22 +49,26 @@ class ZpArtikelEditController {
 			stationId: this.$stateParams.stationId,
 			articleId: this.$stateParams.articleId
 		};
-		console.log('type', type);
+
 		if(type == 'image') this.$state.go('admin.zukunft-projekte-create-image', params);
+		if(type == 'video') this.$state.go('admin.zukunft-projekte-create-video', params);
 	}
 
 	editItem(entity) {
 		var params = {
 			stationId: this.$stateParams.stationId,
 			articleId: this.$stateParams.articleId,
-			imageId: entity.id,
+			id: this.entity.id,
 			entity: entity
 		};
+
 		if(entity.type == 'image') this.$state.go('admin.zukunft-projekte-edit-image', params);
+		if(entity.type == 'video') this.$state.go('admin.zukunft-projekte-edit-video', params);
 	}
 
 	deleteItem(entity, ev) {
 		if(entity.type == 'image') this.deleteImage(entity, ev);
+		if(entity.type == 'video') this.deleteVideo(entity, ev);
 	}
 
 	deleteImage(entity, ev) {
@@ -77,6 +82,20 @@ class ZpArtikelEditController {
 		function() {
 			// cancel ...  do nothingh yet
 		});
+	}
+
+	deleteVideo(entity, ev) {
+		console.log('delete video');
+		this.$mdDialog.show(this.confirmDialog(entity.id, ev)).then(function() {
+				this.ZpItemVideo.deleteById({id: entity.id}, function() {
+					this.ZpArtikelItem.deleteById({id: entity.zpItemId}, function() {
+						this.init();
+					}.bind(this))
+				}.bind(this))
+			}.bind(this),
+			function() {
+				// cancel ...  do nothingh yet
+			});
 	}
 
 	confirmDialog(text, ev) {
@@ -102,5 +121,5 @@ class ZpArtikelEditController {
 		this.$state.go('admin.zukunft-projekte-station', {stationId: this.stationId});
 	}
 }
-ZpArtikelEditController.$inject = ['$state', '$stateParams', '$mdDialog', 'ZpArtikel', 'ZpArtikelItem', 'ZpItemImage'];
+ZpArtikelEditController.$inject = ['$state', '$stateParams', '$mdDialog', 'ZpArtikel', 'ZpArtikelItem', 'ZpItemImage', 'ZpItemVideo'];
 export default ZpArtikelEditController;

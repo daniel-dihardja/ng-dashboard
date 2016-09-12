@@ -15,7 +15,9 @@ class ZpArtikelListController {
 
 	init() {
 		var q = {
-			filter: {}
+			filter: {
+				where: {zpStationId: this.$stateParams.stationId}
+			}
 		};
 		this.ZpArtikel.find(q, function(res) {
 			this.entities = res;

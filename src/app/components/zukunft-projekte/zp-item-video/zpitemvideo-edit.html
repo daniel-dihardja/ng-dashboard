@@ -1,0 +1,22 @@
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+    <h1>ZpItemVideo</h1>
+    
+
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>src</label>
+        <file-selector ng-model="vm.entity.src" container="videos"></file-selector>
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>thumb</label>
+        <file-selector ng-model="vm.entity.thumb" container="images"></file-selector>
+    </md-input-container>
+    
+
+    <md-card-actions layout="row">
+        <md-button class="md-raised" ng-click="vm.goBack()">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>
