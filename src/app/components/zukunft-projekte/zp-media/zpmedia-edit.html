@@ -1,0 +1,72 @@
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+    <h1>Edit ZpMedia</h1>
+
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="DE">
+            <md-content>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>type</label>
+                    <input ng-model="vm.entity.type" required>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>title</label>
+                    <input ng-model="vm.entity.title" required>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>description</label>
+                    <textarea ng-model="vm.entity.description" required></textarea>
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>src</label>
+                    <file-selector ng-model="vm.entity.src" container="videos"></file-selector>
+                    <!--input ng-model="vm.entity.src" required-->
+                </md-input-container>
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>thumb</label>
+                    <file-selector ng-model="vm.entity.thumb" container="images"></file-selector>
+                    <!--input ng-model="vm.entity.thumb" required-->
+                </md-input-container>
+                
+            </md-content>
+        </md-tab>
+
+        <md-tab label="EN">
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>title</label>
+                <input ng-model="vm.translation.title" required>
+            </md-input-container>
+            
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>description</label>
+                <textarea ng-model="vm.translation.description" required></textarea>
+            </md-input-container>
+            
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>src</label>
+                <file-selector ng-model="vm.translation.src" container="videos"></file-selector>
+                <!--input ng-model="vm.translation.src" required-->
+            </md-input-container>
+            
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>thumb</label>
+                <file-selector ng-model="vm.translation.thumb" container="images"></file-selector>
+                <!--input ng-model="vm.translation.thumb" required-->
+            </md-input-container>
+            
+        </md-tab>
+
+    </md-tabs>
+
+
+    <md-card-actions layout="row">
+        <md-button class="md-raised" ng-click="vm.goBack()">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>

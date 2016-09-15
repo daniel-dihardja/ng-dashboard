@@ -21,8 +21,10 @@ import videoCreateController from './zp-item-video/zpitemvideo-create.controller
 import videoEditController from './zp-item-video/zpitemvideo-edit.controller';
 import videoEditTpl from './zp-item-video/zpitemvideo-edit.html!text';
 
+import zpMedia from './zp-media/index';
 
-let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter])
+
+let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter, zpMedia.name])
 	.config(['$stateProvider', ($stateProvider) => {
 		$stateProvider
 			.state(
@@ -80,7 +82,6 @@ let zukunftProjekte = angular.module('admin.zukunftProjekte', [uiRouter])
 					entity: null
 				}
 			})
-
 
 	}]);
 

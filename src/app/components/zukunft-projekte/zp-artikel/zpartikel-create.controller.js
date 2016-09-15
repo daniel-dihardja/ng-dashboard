@@ -12,6 +12,7 @@ class ZpArtikelCreateController {
 	}
 
 	save() {
+		console.log('article', this.entity);
 		this.ZpArtikel.create(this.entity, function(res) {
 			console.log('new entity created');
 			this.goBack();

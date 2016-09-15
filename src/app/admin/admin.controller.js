@@ -21,6 +21,10 @@ class AppController {
 		this.$state.go('admin.zukunft-projekte-station', {stationId: stationId});
 	}
 
+	gotoZPMedia() {
+		console.log('media');
+	}
+
 	logout() {
 		this.AppUser.logout();
 		this.$state.go('login');
