@@ -96,13 +96,6 @@ class ZpMediaListController {
 			this.init();
 		}.bind(this))
 	}
-
-	updateRankings(entity) {
-		for(var i=0; i<this.entities.length; i++) {
-			var item = this.entities[i];
-			console.log('item', item);
-		}
-	}
 }
 ZpMediaListController.$inject = ['$state', '$stateParams', '$mdDialog', 'ZpMedia', 'ZpMediaTranslation'];
 export default ZpMediaListController;
