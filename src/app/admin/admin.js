@@ -48,6 +48,13 @@ let adminModule = angular.module('admin', [
 	}])
 	.directive('fileSelector', fileSelector)
 
+	// workaround for the audio / ng-src issue
+	.filter("trustUrl", ['$sce', function ($sce) {
+		return function (recordingUrl) {
+			return $sce.trustAsResourceUrl(recordingUrl);
+		};
+}]);
+
 export default adminModule;
 
 

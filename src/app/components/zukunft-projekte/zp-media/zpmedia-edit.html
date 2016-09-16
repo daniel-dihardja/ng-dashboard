@@ -20,15 +20,15 @@
                     <textarea ng-model="vm.entity.description" required></textarea>
                 </md-input-container>
                 
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>src</label>
-                    <file-selector ng-model="vm.entity.src" container="videos"></file-selector>
+                <md-input-container class="md-block pd-left-0" flex-gt-sm>
+                    <label class="left-0">src</label>
+                    <file-selector ng-model="vm.entity.src" container="videos" type="audio"></file-selector>
                     <!--input ng-model="vm.entity.src" required-->
                 </md-input-container>
                 
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>thumb</label>
-                    <file-selector ng-model="vm.entity.thumb" container="images"></file-selector>
+                <md-input-container class="md-block pd-left-0" flex-gt-sm>
+                    <label class="left-0">thumb</label>
+                    <file-selector ng-model="vm.entity.thumb" container="images" type="image"></file-selector>
                     <!--input ng-model="vm.entity.thumb" required-->
                 </md-input-container>
                 
@@ -47,16 +47,15 @@
                 <textarea ng-model="vm.translation.description" required></textarea>
             </md-input-container>
             
-            <md-input-container class="md-block" flex-gt-sm>
-                <label>src</label>
-                <file-selector ng-model="vm.translation.src" container="videos"></file-selector>
+            <md-input-container class="md-block pd-left-0" flex-gt-sm>
+                <label class="left-0">src</label>
+                <file-selector ng-model="vm.translation.src" container="videos" type="audio"></file-selector>
                 <!--input ng-model="vm.translation.src" required-->
             </md-input-container>
             
-            <md-input-container class="md-block" flex-gt-sm>
-                <label>thumb</label>
-                <file-selector ng-model="vm.translation.thumb" container="images"></file-selector>
-                <!--input ng-model="vm.translation.thumb" required-->
+            <md-input-container class="md-block pd-left-0" flex-gt-sm>
+                <label class="left-0">thumb</label>
+                <file-selector ng-model="vm.translation.thumb" container="images" type="image"></file-selector>
             </md-input-container>
             
         </md-tab>

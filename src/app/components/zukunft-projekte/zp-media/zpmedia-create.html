@@ -13,17 +13,17 @@
     
     <md-input-container class="md-block" flex-gt-sm>
         <label>description</label>
-        <input ng-model="vm.entity.description" required>
+        <textarea ng-model="vm.entity.description" required></textarea>
     </md-input-container>
     
     <md-input-container class="md-block" flex-gt-sm>
         <label>src</label>
-        <input ng-model="vm.entity.src" required>
+        <file-selector ng-model="vm.entity.src" container="videos"></file-selector>
     </md-input-container>
     
     <md-input-container class="md-block" flex-gt-sm>
         <label>thumb</label>
-        <input ng-model="vm.entity.thumb" required>
+        <file-selector ng-model="vm.entity.thumb" container="images"></file-selector>
     </md-input-container>
     
 

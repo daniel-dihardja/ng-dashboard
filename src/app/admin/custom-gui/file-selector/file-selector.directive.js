@@ -20,7 +20,8 @@ class FileSelector {
 		this.require = 'ngModel';
 		this.scope = {
 			container: '@',
-			modelValue: '=ngModel'
+			modelValue: '=ngModel',
+			type: '@'
 		};
 
 		this.$mdDialog = $mdDialog;
@@ -39,16 +40,21 @@ class FileSelector {
 
 		var _this = this;
 
-		scope.baseUrl = appSettings.baseUrl + 'assets' || '/assets/images/';
+		scope.baseUrl = appSettings.baseUrl + 'assets' || '/assets/';
 		scope.openDialog = function($event) {
 			_this.openDialog(_this.$mdDialog, $event, scope);
 		};
+
+		scope.selectedFile = "";
+		scope.selectedFileUrl = "";
 
 		this.ngModelCtrl = ngModelCtrl;
 		this.ngModelCtrl.$render = function() {
 			scope.selectedFile = scope.modelValue;
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
 		};
+
+
 
 		// get files from trhe given container
 		this.$files.getList(scope.container).then(function(res) {

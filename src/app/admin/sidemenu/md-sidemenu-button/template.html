@@ -1,4 +1,4 @@
-<md-button class="md-sidemenu-button" ui-sref="{{$mdSidemenuButton.uiSref}}" ng-if="$mdSidemenuButton.uiSref">
+<md-button class="md-sidemenu-button md-accent" ui-sref="{{$mdSidemenuButton.uiSref}}" ng-if="$mdSidemenuButton.uiSref">
     <div layout="row">
         <md-icon ng-if="$mdSidemenuButton.icon">{{ $mdSidemenuButton.icon }}</md-icon>
         <span flex>{{ $mdSidemenuButton.heading }}</span>
@@ -6,7 +6,7 @@
     <div layout="row" layout-fill layout-align="start center" ng-transclude></div>
 </md-button>
 
-<md-button class="md-sidemenu-button" ng-if="!$mdSidemenuButton.uiSref">
+<md-button class="md-sidemenu-button md-accent" ng-if="!$mdSidemenuButton.uiSref">
     <div layout="row">
         <md-icon ng-if="$mdSidemenuButton.icon">{{ $mdSidemenuButton.icon }}</md-icon>
         <span flex>{{ $mdSidemenuButton.heading }}</span>

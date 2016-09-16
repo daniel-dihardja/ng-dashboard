@@ -1,7 +1,17 @@
 <div class="file-selector">
     <h1>{{selectedFile}}</h1>
-    <div>
+
+    <div ng-show="type=='image'">
         <img ng-if="selectedFile !== undefined" ng-src="{{selectedFileUrl}}" />
     </div>
-    <md-button class="md-raised" ng-click="openDialog($event)">Ändern</md-button>
-</div>
+
+    <div ng-show="type=='audio'">
+        <audio src="{{selectedFileUrl | trustUrl}}" controls>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div>
+    <md-button class="md-fab md-mini" ng-click="openDialog($event)"><md-icon>edit</md-icon></md-button>
+    </div>
+    </div>

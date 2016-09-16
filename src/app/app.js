@@ -42,7 +42,8 @@ let appModule = angular.module('app', [
 	'$httpProvider',
 	'LoopBackResourceProvider',
 	'$filesProvider',
-	($urlRouterProvider, $httpProvider, LoopBackResourceProvider, $filesProvider) => {
+	'$mdThemingProvider',
+	($urlRouterProvider, $httpProvider, LoopBackResourceProvider, $filesProvider, $mdThemingProvider) => {
 
 	// set API base URL
 	LoopBackResourceProvider.setUrlBase(appSettings.baseApiUrl);
@@ -63,6 +64,11 @@ let appModule = angular.module('app', [
 			}
 		}
 	}]);
+
+	// theming
+	$mdThemingProvider.theme('default')
+		.primaryPalette('lime')
+		.accentPalette('grey', {'default': '600'});
 
 
 	$urlRouterProvider.otherwise('/login');
