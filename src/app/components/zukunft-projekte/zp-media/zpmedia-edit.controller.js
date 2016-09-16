@@ -25,6 +25,8 @@ class ZpMediaEditController {
 		this.ZpMedia.findOne(q, function(res) {
 			this.entity = res.toJSON();
 			this.translation = this.entity.translations[0] || {};
+			this.entity.publish = (this.entity.publish == 1);
+			console.log(this.entity);
 		}.bind(this));
 	}
 

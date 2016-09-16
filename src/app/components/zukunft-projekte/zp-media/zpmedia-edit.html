@@ -3,11 +3,20 @@
 
     <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="DE">
-            <md-content>
-                
+            <md-content class="pd-top-20">
+
                 <md-input-container class="md-block" flex-gt-sm>
+                    <md-checkbox checked="{{vm.entity.publish == 1}}" ng-model="vm.entity.publish" aria-label="Publizieren">
+                        Publizieren
+                    </md-checkbox>
+                </md-input-container>
+
+                <md-input-container class="" flex-gt-sm>
                     <label>type</label>
-                    <input ng-model="vm.entity.type" required>
+                    <md-select ng-model="vm.entity.type">
+                        <md-option value="video">video</md-option>
+                        <md-option value="audio">audio</md-option>
+                    </md-select>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
@@ -20,7 +29,7 @@
                     <textarea ng-model="vm.entity.description" required></textarea>
                 </md-input-container>
                 
-                <md-input-container class="md-block pd-left-0" flex-gt-sm>
+                <md-input-container class="md-block pd-left-0" ng-if="vm.entity.type == 'audio'" flex-gt-sm>
                     <label class="left-0">src</label>
                     <file-selector ng-model="vm.entity.src" container="videos" type="audio"></file-selector>
                     <!--input ng-model="vm.entity.src" required-->
@@ -36,7 +45,7 @@
         </md-tab>
 
         <md-tab label="EN">
-
+            <md-content class="pd-top-20">
             <md-input-container class="md-block" flex-gt-sm>
                 <label>title</label>
                 <input ng-model="vm.translation.title" required>
@@ -57,7 +66,7 @@
                 <label class="left-0">thumb</label>
                 <file-selector ng-model="vm.translation.thumb" container="images" type="image"></file-selector>
             </md-input-container>
-            
+            </md-content>
         </md-tab>
 
     </md-tabs>

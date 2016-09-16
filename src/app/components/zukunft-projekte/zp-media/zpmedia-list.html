@@ -6,6 +6,7 @@
             <tr md-row class="gr-50">
                 <th md-column><span>Title</span></th>
 
+
                 <!-- Additional Tab Titles -->
 
                 <th md-column><span></span></th>
@@ -14,6 +15,7 @@
             <trbody md-body>
                 <tr md-row ng-repeat="entity in vm.entities">
                     <td md-cell>{{entity.title}}</td>
+
 
                     <!-- Additional Entity Property/field -->
 
@@ -26,8 +28,10 @@
                     </td>
                 </tr>
             </trbody>
+
         </table>
     </md-table-container>
+    <md-table-pagination md-limit="10" md-limit-options="[10, 50, 75]" md-page="1" md-total="{{vm.entities.length}}" md-page-select></md-table-pagination>
 
 
     <md-card-actions layout="row" class="pdt-30">
