@@ -17,7 +17,8 @@ class ZpMediaListController {
 	init() {
 		var q = {
 			filter: {
-				include: 'translations'
+				include: 'translations',
+				order: 'ranking ASC'
 			}
 		};
 		this.ZpMedia.find(q, function(res) {
@@ -44,7 +45,6 @@ class ZpMediaListController {
 			.then(function(res) {
 				this.init();
 			}.bind(this))
-
 	}
 
 	deleteEntityTranslation(translation) {
@@ -62,6 +62,46 @@ class ZpMediaListController {
 			.ok('Ja')
 			.cancel('Nein');
 		return confirm;
+	}
+
+	rankUp(entity) {
+		console.log('rank up', entity.ranking);
+		for(var i=0; i<this.entities.length; i++) {
+			var item = this.entities[i];
+			if(item.id == entity.id) continue;
+			if(item.ranking == entity.ranking - 1) {
+				item.ranking = entity.ranking;
+				item.$save();
+			}
+		}
+		entity.ranking -= 1;
+		if(entity.ranking < 1) entity.ranking = 1;
+		entity.$save(function() {
+			this.init();
+		}.bind(this))
+	}
+
+	rankDown(entity) {
+		console.log('rank down', entity.ranking);
+		for(var i=0; i<this.entities.length; i++) {
+			var item = this.entities[i];
+			if(item.id == entity.id) continue;
+			if(item.ranking == entity.ranking + 1) {
+				item.ranking = entity.ranking;
+				item.$save();
+			}
+		}
+		entity.ranking += 1;
+		entity.$save(function() {
+			this.init();
+		}.bind(this))
+	}
+
+	updateRankings(entity) {
+		for(var i=0; i<this.entities.length; i++) {
+			var item = this.entities[i];
+			console.log('item', item);
+		}
 	}
 }
 ZpMediaListController.$inject = ['$state', '$stateParams', '$mdDialog', 'ZpMedia', 'ZpMediaTranslation'];
