@@ -1,9 +1,12 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
     <h1>New ZpMedia</h1>
     
-    <md-input-container class="md-block" flex-gt-sm>
+    <md-input-container class="" flex-gt-sm>
         <label>type</label>
-        <input ng-model="vm.entity.type" required>
+        <md-select ng-model="vm.entity.type">
+            <md-option value="video">video</md-option>
+            <md-option value="audio">audio</md-option>
+        </md-select>
     </md-input-container>
     
     <md-input-container class="md-block" flex-gt-sm>
