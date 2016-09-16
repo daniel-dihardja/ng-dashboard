@@ -1,14 +1,14 @@
 /**
  * Created by danieldihardja on 08/09/16.
  */
-class ZpArtikelListController {
+class ZpArtikelMediaListController {
 
-	constructor($state, $stateParams, $mdDialog, ZpArtikel, ZpArtikelTranslation) {
+	constructor($state, $stateParams, $mdDialog, ZpArtikelMedia, ZpArtikelMediaTranslation) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$mdDialog = $mdDialog;
-		this.ZpArtikel = ZpArtikel;
-		this.ZpArtikelTranslation = ZpArtikelTranslation;
+		this.ZpArtikelMedia = ZpArtikelMedia;
+		this.ZpArtikelMediaTranslation = ZpArtikelMediaTranslation;
 
 		this.entities = [];
 		this.init();
@@ -28,7 +28,7 @@ class ZpArtikelListController {
 				order: 'ranking ASC'
 			}
 		};
-		this.ZpArtikel.find(q, function(res) {
+		this.ZpArtikelMedia.find(q, function(res) {
 			this.entities = res;
 		}.bind(this));
 	}
@@ -46,7 +46,7 @@ class ZpArtikelListController {
 	deleteEntity(entity) {
 		this.deleteEntityTranslation(entity.translations[0])
 			.then(function(res) {
-				return this.ZpArtikel.deleteById({id: entity.id}).$promise;
+				return this.ZpArtikelMedia.deleteById({id: entity.id}).$promise;
 			}.bind(this))
 
 			.then(function(res) {
@@ -57,7 +57,7 @@ class ZpArtikelListController {
 
 	deleteEntityTranslation(translation) {
 		translation = translation || {id: 0};
-		return this.ZpArtikelTranslation.deleteById({id: translation.id}).$promise;
+		return this.ZpArtikelMediaTranslation.deleteById({id: translation.id}).$promise;
 	}
 
 	confirmDialog(text, ev) {
@@ -107,5 +107,5 @@ class ZpArtikelListController {
 		}.bind(this))
 	}
 }
-ZpArtikelListController.$inject = ['$state', '$stateParams', '$mdDialog', 'ZpArtikel', 'ZpArtikelTranslation'];
-export default ZpArtikelListController;
+ZpArtikelMediaListController.$inject = ['$state', '$stateParams', '$mdDialog', 'ZpArtikelMedia', 'ZpArtikelMediaTranslation'];
+export default ZpArtikelMediaListController;

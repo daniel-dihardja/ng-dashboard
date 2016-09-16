@@ -1,13 +1,13 @@
 /**
  * Created by danieldihardja on 08/09/16.
  */
-class ZpArtikelEditController {
+class ZpArtikelMediaEditController {
 
-	constructor($state, $stateParams, ZpArtikel, ZpArtikelTranslation) {
+	constructor($state, $stateParams, ZpArtikelMedia, ZpArtikelMediaTranslation) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
-		this.ZpArtikel = ZpArtikel;
-		this.ZpArtikelTranslation = ZpArtikelTranslation;
+		this.ZpArtikelMedia = ZpArtikelMedia;
+		this.ZpArtikelMediaTranslation = ZpArtikelMediaTranslation;
 
 		this.entity = {};
 		this.translation = {};
@@ -22,7 +22,7 @@ class ZpArtikelEditController {
 				include: ['translations']
 			}
 		};
-		this.ZpArtikel.findOne(q, function(res) {
+		this.ZpArtikelMedia.findOne(q, function(res) {
 			this.entity = res.toJSON();
 			// workaround for the checkbox
 			this.entity.publish = (this.entity.publish == 1);
@@ -32,7 +32,7 @@ class ZpArtikelEditController {
 
 	save() {
 		this.saveTranslation();
-		this.ZpArtikel.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
+		this.ZpArtikelMedia.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.goBack();
 		}.bind(this))
 	}
@@ -43,22 +43,22 @@ class ZpArtikelEditController {
 	}
 
 	createTranslation() {
-		this.translation.zpArtikelId = this.entity.id;
+		this.translation.zpMediaId = this.entity.id;
 		this.translation.appLanguageId = 1; //  hardcode id for EN
-		this.ZpArtikelTranslation.create(this.translation, function(res) {
+		this.ZpArtikelMediaTranslation.create(this.translation, function(res) {
 				console.log(res);
 			}.bind(this));
 	}
 
 	updateTranslation() {
-		this.ZpArtikelTranslation.prototype$updateAttributes({id: this.translation.id}, this.translation, function(res) {
+		this.ZpArtikelMediaTranslation.prototype$updateAttributes({id: this.translation.id}, this.translation, function(res) {
 				console.log(res);
 		}.bind(this))
 	}
 
 	goBack() {
-		this.$state.go('admin.ZpArtikel-list');
+		this.$state.go('admin.ZpArtikelMedia-list');
 	}
 }
-ZpArtikelEditController.$inject = ['$state', '$stateParams', 'ZpArtikel', 'ZpArtikelTranslation'];
-export default ZpArtikelEditController;
+ZpArtikelMediaEditController.$inject = ['$state', '$stateParams', 'ZpArtikelMedia', 'ZpArtikelMediaTranslation'];
+export default ZpArtikelMediaEditController;

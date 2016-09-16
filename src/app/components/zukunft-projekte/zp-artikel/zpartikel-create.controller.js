@@ -8,20 +8,16 @@ class ZpArtikelCreateController {
 		this.$stateParams = $stateParams;
 		this.ZpArtikel = ZpArtikel;
 		this.entity = {};
-		this.entity.zpStationId = $stateParams.stationId;
 	}
 
 	save() {
-		console.log('article', this.entity);
 		this.ZpArtikel.create(this.entity, function(res) {
-			console.log('new entity created');
 			this.goBack();
-
 		}.bind(this));
 	}
 
 	goBack() {
-		this.$state.go('admin.zukunft-projekte-station', {stationId: this.entity.zpStationId});
+		this.$state.go('admin.ZpArtikel-list');
 	}
 }
 

@@ -36719,6484 +36719,6 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
 /**
  * @ngdoc object
- * @name lbServices.ZpArtikelTranslation
- * @header lbServices.ZpArtikelTranslation
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpArtikelTranslation` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpArtikelTranslation",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpArtikelTranslations/:id",
-          { 'id': '@id' },
-          {
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#create
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpArtikelTranslations",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#createMany
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelTranslations",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#upsert
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpArtikelTranslations",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#exists
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpArtikelTranslations/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#findById
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpArtikelTranslations/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#find
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelTranslations",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#findOne
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpArtikelTranslations/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#updateAll
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpArtikelTranslations/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#deleteById
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpArtikelTranslations/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#count
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpArtikelTranslations/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#prototype$updateAttributes
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpArtikelTranslations/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#createChangeStream
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpArtikelTranslations/change-stream",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.findById() instead.
-            "::findById::ZpArtikel::translations": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/translations/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.destroyById() instead.
-            "::destroyById::ZpArtikel::translations": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/translations/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.updateById() instead.
-            "::updateById::ZpArtikel::translations": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/translations/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations() instead.
-            "::get::ZpArtikel::translations": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.create() instead.
-            "::create::ZpArtikel::translations": {
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.createMany() instead.
-            "::createMany::ZpArtikel::translations": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.destroyAll() instead.
-            "::delete::ZpArtikel::translations": {
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.count() instead.
-            "::count::ZpArtikel::translations": {
-              url: urlBase + "/ZpArtikels/:id/translations/count",
-              method: "GET",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#updateOrCreate
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#update
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#destroyById
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelTranslation#removeById
-             * @methodOf lbServices.ZpArtikelTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpArtikelTranslation#modelName
-        * @propertyOf lbServices.ZpArtikelTranslation
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpArtikelTranslation`.
-        */
-        R.modelName = "ZpArtikelTranslation";
-
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpArtikel
- * @header lbServices.ZpArtikel
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpArtikel` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpArtikel",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpArtikels/:id",
-          { 'id': '@id' },
-          {
-
-            // INTERNAL. Use ZpArtikel.translations.findById() instead.
-            "prototype$__findById__translations": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/translations/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.destroyById() instead.
-            "prototype$__destroyById__translations": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/translations/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.updateById() instead.
-            "prototype$__updateById__translations": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/translations/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.findById() instead.
-            "prototype$__findById__items": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/items/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.destroyById() instead.
-            "prototype$__destroyById__items": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/items/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.updateById() instead.
-            "prototype$__updateById__items": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/items/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations() instead.
-            "prototype$__get__translations": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.create() instead.
-            "prototype$__create__translations": {
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.destroyAll() instead.
-            "prototype$__delete__translations": {
-              url: urlBase + "/ZpArtikels/:id/translations",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.translations.count() instead.
-            "prototype$__count__translations": {
-              url: urlBase + "/ZpArtikels/:id/translations/count",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.items() instead.
-            "prototype$__get__items": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.create() instead.
-            "prototype$__create__items": {
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.destroyAll() instead.
-            "prototype$__delete__items": {
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.count() instead.
-            "prototype$__count__items": {
-              url: urlBase + "/ZpArtikels/:id/items/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#create
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpArtikels",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#createMany
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#upsert
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpArtikels",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#exists
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpArtikels/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#findById
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpArtikels/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#find
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#findOne
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpArtikels/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#updateAll
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpArtikels/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#deleteById
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpArtikels/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#count
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpArtikels/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#prototype$updateAttributes
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpArtikels/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#createChangeStream
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpArtikels/change-stream",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#voteUp
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * <em>
-             * (The remote method definition does not provide any description.)
-             * </em>
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{number}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "voteUp": {
-              url: urlBase + "/ZpArtikels/:id/voteUp",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#voteDown
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * <em>
-             * (The remote method definition does not provide any description.)
-             * </em>
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{number}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-            "voteDown": {
-              url: urlBase + "/ZpArtikels/:id/voteDown",
-              method: "GET",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#updateOrCreate
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#update
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#destroyById
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#removeById
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikel` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpArtikel#modelName
-        * @propertyOf lbServices.ZpArtikel
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpArtikel`.
-        */
-        R.modelName = "ZpArtikel";
-
-    /**
-     * @ngdoc object
-     * @name lbServices.ZpArtikel.translations
-     * @header lbServices.ZpArtikel.translations
-     * @object
-     * @description
-     *
-     * The object `ZpArtikel.translations` groups methods
-     * manipulating `ZpArtikelTranslation` instances related to `ZpArtikel`.
-     *
-     * Call {@link lbServices.ZpArtikel#translations ZpArtikel.translations()}
-     * to query all related instances.
-     */
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#translations
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Queries translations of ZpArtikel.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `filter` – `{object=}` -
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R.translations = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::get::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#count
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Counts translations of ZpArtikel.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-        R.translations.count = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::count::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#create
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Creates a new instance in translations of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R.translations.create = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::create::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#createMany
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Creates a new instance in translations of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R.translations.createMany = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::createMany::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#destroyAll
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Deletes all translations of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.translations.destroyAll = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::delete::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#destroyById
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Delete a related item by id for translations.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for translations
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.translations.destroyById = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::destroyById::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#findById
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Find a related item by id for translations.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for translations
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R.translations.findById = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::findById::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.translations#updateById
-             * @methodOf lbServices.ZpArtikel.translations
-             *
-             * @description
-             *
-             * Update a related item by id for translations.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for translations
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelTranslation` object.)
-             * </em>
-             */
-        R.translations.updateById = function() {
-          var TargetResource = $injector.get("ZpArtikelTranslation");
-          var action = TargetResource["::updateById::ZpArtikel::translations"];
-          return action.apply(R, arguments);
-        };
-    /**
-     * @ngdoc object
-     * @name lbServices.ZpArtikel.items
-     * @header lbServices.ZpArtikel.items
-     * @object
-     * @description
-     *
-     * The object `ZpArtikel.items` groups methods
-     * manipulating `ZpArtikelItem` instances related to `ZpArtikel`.
-     *
-     * Call {@link lbServices.ZpArtikel#items ZpArtikel.items()}
-     * to query all related instances.
-     */
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel#items
-             * @methodOf lbServices.ZpArtikel
-             *
-             * @description
-             *
-             * Queries items of ZpArtikel.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `filter` – `{object=}` -
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R.items = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::get::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#count
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Counts items of ZpArtikel.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-        R.items.count = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::count::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#create
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Creates a new instance in items of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R.items.create = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::create::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#createMany
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Creates a new instance in items of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R.items.createMany = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::createMany::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#destroyAll
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Deletes all items of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.items.destroyAll = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::delete::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#destroyById
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Delete a related item by id for items.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for items
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.items.destroyById = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::destroyById::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#findById
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Find a related item by id for items.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for items
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R.items.findById = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::findById::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikel.items#updateById
-             * @methodOf lbServices.ZpArtikel.items
-             *
-             * @description
-             *
-             * Update a related item by id for items.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for items
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R.items.updateById = function() {
-          var TargetResource = $injector.get("ZpArtikelItem");
-          var action = TargetResource["::updateById::ZpArtikel::items"];
-          return action.apply(R, arguments);
-        };
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpArtikelVote
- * @header lbServices.ZpArtikelVote
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpArtikelVote` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpArtikelVote",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpArtikelVotes/:id",
-          { 'id': '@id' },
-          {
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#create
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpArtikelVotes",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#createMany
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelVotes",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#upsert
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpArtikelVotes",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#exists
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpArtikelVotes/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#findById
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpArtikelVotes/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#find
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelVotes",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#findOne
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpArtikelVotes/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#updateAll
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpArtikelVotes/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#deleteById
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpArtikelVotes/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#count
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpArtikelVotes/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#prototype$updateAttributes
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpArtikelVotes/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#createChangeStream
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpArtikelVotes/change-stream",
-              method: "POST",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#updateOrCreate
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#update
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#destroyById
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelVote#removeById
-             * @methodOf lbServices.ZpArtikelVote
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelVote` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpArtikelVote#modelName
-        * @propertyOf lbServices.ZpArtikelVote
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpArtikelVote`.
-        */
-        R.modelName = "ZpArtikelVote";
-
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpArtikelItem
- * @header lbServices.ZpArtikelItem
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpArtikelItem` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpArtikelItem",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpArtikelItems/:id",
-          { 'id': '@id' },
-          {
-
-            // INTERNAL. Use ZpArtikelItem.images.findById() instead.
-            "prototype$__findById__images": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/images/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.destroyById() instead.
-            "prototype$__destroyById__images": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/images/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.updateById() instead.
-            "prototype$__updateById__images": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/images/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.findById() instead.
-            "prototype$__findById__videos": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/videos/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.destroyById() instead.
-            "prototype$__destroyById__videos": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/videos/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.updateById() instead.
-            "prototype$__updateById__videos": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/videos/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images() instead.
-            "prototype$__get__images": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.create() instead.
-            "prototype$__create__images": {
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.destroyAll() instead.
-            "prototype$__delete__images": {
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.count() instead.
-            "prototype$__count__images": {
-              url: urlBase + "/ZpArtikelItems/:id/images/count",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos() instead.
-            "prototype$__get__videos": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.create() instead.
-            "prototype$__create__videos": {
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.destroyAll() instead.
-            "prototype$__delete__videos": {
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.count() instead.
-            "prototype$__count__videos": {
-              url: urlBase + "/ZpArtikelItems/:id/videos/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#create
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpArtikelItems",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#createMany
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#upsert
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpArtikelItems",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#exists
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpArtikelItems/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#findById
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpArtikelItems/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#find
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#findOne
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpArtikelItems/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#updateAll
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpArtikelItems/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#deleteById
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpArtikelItems/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#count
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpArtikelItems/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#prototype$updateAttributes
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpArtikelItems/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#createChangeStream
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpArtikelItems/change-stream",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.findById() instead.
-            "::findById::ZpArtikel::items": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/items/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.destroyById() instead.
-            "::destroyById::ZpArtikel::items": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/items/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.updateById() instead.
-            "::updateById::ZpArtikel::items": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikels/:id/items/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikel.items() instead.
-            "::get::ZpArtikel::items": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.create() instead.
-            "::create::ZpArtikel::items": {
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.createMany() instead.
-            "::createMany::ZpArtikel::items": {
-              isArray: true,
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.destroyAll() instead.
-            "::delete::ZpArtikel::items": {
-              url: urlBase + "/ZpArtikels/:id/items",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikel.items.count() instead.
-            "::count::ZpArtikel::items": {
-              url: urlBase + "/ZpArtikels/:id/items/count",
-              method: "GET",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#updateOrCreate
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#update
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#destroyById
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#removeById
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpArtikelItem` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpArtikelItem#modelName
-        * @propertyOf lbServices.ZpArtikelItem
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpArtikelItem`.
-        */
-        R.modelName = "ZpArtikelItem";
-
-    /**
-     * @ngdoc object
-     * @name lbServices.ZpArtikelItem.images
-     * @header lbServices.ZpArtikelItem.images
-     * @object
-     * @description
-     *
-     * The object `ZpArtikelItem.images` groups methods
-     * manipulating `ZpItemImage` instances related to `ZpArtikelItem`.
-     *
-     * Call {@link lbServices.ZpArtikelItem#images ZpArtikelItem.images()}
-     * to query all related instances.
-     */
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#images
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Queries images of ZpArtikelItem.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `filter` – `{object=}` -
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R.images = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::get::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#count
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Counts images of ZpArtikelItem.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-        R.images.count = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::count::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#create
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Creates a new instance in images of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R.images.create = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::create::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#createMany
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Creates a new instance in images of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R.images.createMany = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::createMany::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#destroyAll
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Deletes all images of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.images.destroyAll = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::delete::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#destroyById
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Delete a related item by id for images.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for images
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.images.destroyById = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::destroyById::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#findById
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Find a related item by id for images.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for images
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R.images.findById = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::findById::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.images#updateById
-             * @methodOf lbServices.ZpArtikelItem.images
-             *
-             * @description
-             *
-             * Update a related item by id for images.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for images
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R.images.updateById = function() {
-          var TargetResource = $injector.get("ZpItemImage");
-          var action = TargetResource["::updateById::ZpArtikelItem::images"];
-          return action.apply(R, arguments);
-        };
-    /**
-     * @ngdoc object
-     * @name lbServices.ZpArtikelItem.videos
-     * @header lbServices.ZpArtikelItem.videos
-     * @object
-     * @description
-     *
-     * The object `ZpArtikelItem.videos` groups methods
-     * manipulating `ZpItemVideo` instances related to `ZpArtikelItem`.
-     *
-     * Call {@link lbServices.ZpArtikelItem#videos ZpArtikelItem.videos()}
-     * to query all related instances.
-     */
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem#videos
-             * @methodOf lbServices.ZpArtikelItem
-             *
-             * @description
-             *
-             * Queries videos of ZpArtikelItem.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `filter` – `{object=}` -
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R.videos = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::get::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#count
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Counts videos of ZpArtikelItem.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-        R.videos.count = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::count::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#create
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Creates a new instance in videos of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R.videos.create = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::create::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#createMany
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Creates a new instance in videos of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R.videos.createMany = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::createMany::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#destroyAll
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Deletes all videos of this model.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.videos.destroyAll = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::delete::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#destroyById
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Delete a related item by id for videos.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for videos
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * This method returns no data.
-             */
-        R.videos.destroyById = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::destroyById::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#findById
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Find a related item by id for videos.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for videos
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R.videos.findById = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::findById::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpArtikelItem.videos#updateById
-             * @methodOf lbServices.ZpArtikelItem.videos
-             *
-             * @description
-             *
-             * Update a related item by id for videos.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             *  - `fk` – `{*}` - Foreign key for videos
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R.videos.updateById = function() {
-          var TargetResource = $injector.get("ZpItemVideo");
-          var action = TargetResource["::updateById::ZpArtikelItem::videos"];
-          return action.apply(R, arguments);
-        };
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpItemImage
- * @header lbServices.ZpItemImage
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpItemImage` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpItemImage",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpItemImages/:id",
-          { 'id': '@id' },
-          {
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#create
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpItemImages",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#createMany
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpItemImages",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#upsert
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpItemImages",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#exists
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpItemImages/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#findById
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpItemImages/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#find
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpItemImages",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#findOne
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpItemImages/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#updateAll
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpItemImages/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#deleteById
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpItemImages/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#count
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpItemImages/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#prototype$updateAttributes
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpItemImages/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#createChangeStream
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpItemImages/change-stream",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.findById() instead.
-            "::findById::ZpArtikelItem::images": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/images/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.destroyById() instead.
-            "::destroyById::ZpArtikelItem::images": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/images/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.updateById() instead.
-            "::updateById::ZpArtikelItem::images": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/images/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images() instead.
-            "::get::ZpArtikelItem::images": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.create() instead.
-            "::create::ZpArtikelItem::images": {
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.createMany() instead.
-            "::createMany::ZpArtikelItem::images": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.destroyAll() instead.
-            "::delete::ZpArtikelItem::images": {
-              url: urlBase + "/ZpArtikelItems/:id/images",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.images.count() instead.
-            "::count::ZpArtikelItem::images": {
-              url: urlBase + "/ZpArtikelItems/:id/images/count",
-              method: "GET",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#updateOrCreate
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#update
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#destroyById
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImage#removeById
-             * @methodOf lbServices.ZpItemImage
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImage` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpItemImage#modelName
-        * @propertyOf lbServices.ZpItemImage
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpItemImage`.
-        */
-        R.modelName = "ZpItemImage";
-
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpItemImageTranslation
- * @header lbServices.ZpItemImageTranslation
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpItemImageTranslation` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpItemImageTranslation",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpItemImageTranslations/:id",
-          { 'id': '@id' },
-          {
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#create
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpItemImageTranslations",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#createMany
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpItemImageTranslations",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#upsert
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpItemImageTranslations",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#exists
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpItemImageTranslations/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#findById
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpItemImageTranslations/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#find
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpItemImageTranslations",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#findOne
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpItemImageTranslations/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#updateAll
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpItemImageTranslations/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#deleteById
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpItemImageTranslations/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#count
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpItemImageTranslations/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#prototype$updateAttributes
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpItemImageTranslations/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#createChangeStream
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpItemImageTranslations/change-stream",
-              method: "POST",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#updateOrCreate
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#update
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#destroyById
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemImageTranslation#removeById
-             * @methodOf lbServices.ZpItemImageTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemImageTranslation` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpItemImageTranslation#modelName
-        * @propertyOf lbServices.ZpItemImageTranslation
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpItemImageTranslation`.
-        */
-        R.modelName = "ZpItemImageTranslation";
-
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpItemVideo
- * @header lbServices.ZpItemVideo
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpItemVideo` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpItemVideo",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpItemVideos/:id",
-          { 'id': '@id' },
-          {
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#create
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpItemVideos",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#createMany
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpItemVideos",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#upsert
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpItemVideos",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#exists
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpItemVideos/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#findById
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpItemVideos/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#find
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpItemVideos",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#findOne
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpItemVideos/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#updateAll
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpItemVideos/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#deleteById
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpItemVideos/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#count
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpItemVideos/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#prototype$updateAttributes
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpItemVideos/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#createChangeStream
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpItemVideos/change-stream",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.findById() instead.
-            "::findById::ZpArtikelItem::videos": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/videos/:fk",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.destroyById() instead.
-            "::destroyById::ZpArtikelItem::videos": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/videos/:fk",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.updateById() instead.
-            "::updateById::ZpArtikelItem::videos": {
-              params: {
-                'fk': '@fk',
-              },
-              url: urlBase + "/ZpArtikelItems/:id/videos/:fk",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos() instead.
-            "::get::ZpArtikelItem::videos": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "GET",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.create() instead.
-            "::create::ZpArtikelItem::videos": {
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.createMany() instead.
-            "::createMany::ZpArtikelItem::videos": {
-              isArray: true,
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "POST",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.destroyAll() instead.
-            "::delete::ZpArtikelItem::videos": {
-              url: urlBase + "/ZpArtikelItems/:id/videos",
-              method: "DELETE",
-            },
-
-            // INTERNAL. Use ZpArtikelItem.videos.count() instead.
-            "::count::ZpArtikelItem::videos": {
-              url: urlBase + "/ZpArtikelItems/:id/videos/count",
-              method: "GET",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#updateOrCreate
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#update
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#destroyById
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideo#removeById
-             * @methodOf lbServices.ZpItemVideo
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideo` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpItemVideo#modelName
-        * @propertyOf lbServices.ZpItemVideo
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpItemVideo`.
-        */
-        R.modelName = "ZpItemVideo";
-
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
- * @name lbServices.ZpItemVideoTranslation
- * @header lbServices.ZpItemVideoTranslation
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `ZpItemVideoTranslation` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-  module.factory(
-    "ZpItemVideoTranslation",
-    [
-      'LoopBackResource', 'LoopBackAuth', '$injector',
-      function(Resource, LoopBackAuth, $injector) {
-        var R = Resource(
-        urlBase + "/ZpItemVideoTranslations/:id",
-          { 'id': '@id' },
-          {
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#create
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "create": {
-              url: urlBase + "/ZpItemVideoTranslations",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#createMany
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Create a new instance of the model and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "createMany": {
-              isArray: true,
-              url: urlBase + "/ZpItemVideoTranslations",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#upsert
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "upsert": {
-              url: urlBase + "/ZpItemVideoTranslations",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#exists
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Check whether a model instance exists in the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `exists` – `{boolean=}` -
-             */
-            "exists": {
-              url: urlBase + "/ZpItemVideoTranslations/:id/exists",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#findById
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Find a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             *  - `filter` – `{object=}` - Filter defining fields and include
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "findById": {
-              url: urlBase + "/ZpItemVideoTranslations/:id",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#find
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Find all instances of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Array.<Object>,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Array.<Object>} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "find": {
-              isArray: true,
-              url: urlBase + "/ZpItemVideoTranslations",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#findOne
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Find first instance of the model matched by filter from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "findOne": {
-              url: urlBase + "/ZpItemVideoTranslations/findOne",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#updateAll
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-            "updateAll": {
-              url: urlBase + "/ZpItemVideoTranslations/update",
-              method: "POST",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#deleteById
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "deleteById": {
-              url: urlBase + "/ZpItemVideoTranslations/:id",
-              method: "DELETE",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#count
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Count instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `count` – `{number=}` -
-             */
-            "count": {
-              url: urlBase + "/ZpItemVideoTranslations/count",
-              method: "GET",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#prototype$updateAttributes
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Update attributes for a model instance and persist it into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - PersistedModel id
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-            "prototype$updateAttributes": {
-              url: urlBase + "/ZpItemVideoTranslations/:id",
-              method: "PUT",
-            },
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#createChangeStream
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Create a change stream.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             *  - `options` – `{object=}` -
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * Data properties:
-             *
-             *  - `changes` – `{ReadableStream=}` -
-             */
-            "createChangeStream": {
-              url: urlBase + "/ZpItemVideoTranslations/change-stream",
-              method: "POST",
-            },
-          }
-        );
-
-
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#updateOrCreate
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Update an existing model instance or insert a new one into the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-        R["updateOrCreate"] = R["upsert"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#update
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Update instances of the model matched by where from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `where` – `{object=}` - Criteria to match model instances
-             *
-             * @param {Object} postData Request data.
-             *
-             * This method expects a subset of model properties as request parameters.
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * The number of instances updated
-             */
-        R["update"] = R["updateAll"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#destroyById
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-        R["destroyById"] = R["deleteById"];
-
-            /**
-             * @ngdoc method
-             * @name lbServices.ZpItemVideoTranslation#removeById
-             * @methodOf lbServices.ZpItemVideoTranslation
-             *
-             * @description
-             *
-             * Delete a model instance by id from the data source.
-             *
-             * @param {Object=} parameters Request parameters.
-             *
-             *  - `id` – `{*}` - Model id
-             *
-             * @param {function(Object,Object)=} successCb
-             *   Success callback with two arguments: `value`, `responseHeaders`.
-             *
-             * @param {function(Object)=} errorCb Error callback with one argument:
-             *   `httpResponse`.
-             *
-             * @returns {Object} An empty reference that will be
-             *   populated with the actual data once the response is returned
-             *   from the server.
-             *
-             * <em>
-             * (The remote method definition does not provide any description.
-             * This usually means the response is a `ZpItemVideoTranslation` object.)
-             * </em>
-             */
-        R["removeById"] = R["deleteById"];
-
-
-        /**
-        * @ngdoc property
-        * @name lbServices.ZpItemVideoTranslation#modelName
-        * @propertyOf lbServices.ZpItemVideoTranslation
-        * @description
-        * The name of the model represented by this $resource,
-        * i.e. `ZpItemVideoTranslation`.
-        */
-        R.modelName = "ZpItemVideoTranslation";
-
-
-
-        return R;
-      }]);
-
-/**
- * @ngdoc object
  * @name lbServices.ZukunftProjekte
  * @header lbServices.ZukunftProjekte
  * @object
@@ -45017,6 +38539,2031 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
 /**
  * @ngdoc object
+ * @name lbServices.ZpArtikel
+ * @header lbServices.ZpArtikel
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `ZpArtikel` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "ZpArtikel",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/ZpArtikels/:id",
+          { 'id': '@id' },
+          {
+
+            // INTERNAL. Use ZpArtikel.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.findById() instead.
+            "prototype$__findById__medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/medias/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.destroyById() instead.
+            "prototype$__destroyById__medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/medias/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.updateById() instead.
+            "prototype$__updateById__medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/medias/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/ZpArtikels/:id/translations/count",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias() instead.
+            "prototype$__get__medias": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.create() instead.
+            "prototype$__create__medias": {
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.destroyAll() instead.
+            "prototype$__delete__medias": {
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.count() instead.
+            "prototype$__count__medias": {
+              url: urlBase + "/ZpArtikels/:id/medias/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#create
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/ZpArtikels",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#createMany
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#upsert
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/ZpArtikels",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#exists
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/ZpArtikels/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#findById
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/ZpArtikels/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#find
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#findOne
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/ZpArtikels/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#updateAll
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/ZpArtikels/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#deleteById
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/ZpArtikels/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#count
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/ZpArtikels/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#prototype$updateAttributes
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/ZpArtikels/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#createChangeStream
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/ZpArtikels/change-stream",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#voteUp
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * <em>
+             * (The remote method definition does not provide any description.)
+             * </em>
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{number}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "voteUp": {
+              url: urlBase + "/ZpArtikels/:id/voteUp",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#voteDown
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * <em>
+             * (The remote method definition does not provide any description.)
+             * </em>
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{number}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+            "voteDown": {
+              url: urlBase + "/ZpArtikels/:id/voteDown",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#updateOrCreate
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#update
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#destroyById
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#removeById
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikel` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.ZpArtikel#modelName
+        * @propertyOf lbServices.ZpArtikel
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `ZpArtikel`.
+        */
+        R.modelName = "ZpArtikel";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.ZpArtikel.translations
+     * @header lbServices.ZpArtikel.translations
+     * @object
+     * @description
+     *
+     * The object `ZpArtikel.translations` groups methods
+     * manipulating `ZpArtikelTranslation` instances related to `ZpArtikel`.
+     *
+     * Call {@link lbServices.ZpArtikel#translations ZpArtikel.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#translations
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Queries translations of ZpArtikel.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::get::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#count
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Counts translations of ZpArtikel.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::count::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#create
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::create::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#createMany
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::createMany::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#destroyAll
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::delete::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#destroyById
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::destroyById::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#findById
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::findById::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.translations#updateById
+             * @methodOf lbServices.ZpArtikel.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("ZpArtikelTranslation");
+          var action = TargetResource["::updateById::ZpArtikel::translations"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.ZpArtikel.medias
+     * @header lbServices.ZpArtikel.medias
+     * @object
+     * @description
+     *
+     * The object `ZpArtikel.medias` groups methods
+     * manipulating `ZpArtikelMedia` instances related to `ZpArtikel`.
+     *
+     * Call {@link lbServices.ZpArtikel#medias ZpArtikel.medias()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel#medias
+             * @methodOf lbServices.ZpArtikel
+             *
+             * @description
+             *
+             * Queries medias of ZpArtikel.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R.medias = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::get::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#count
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Counts medias of ZpArtikel.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.medias.count = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::count::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#create
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Creates a new instance in medias of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R.medias.create = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::create::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#createMany
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Creates a new instance in medias of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R.medias.createMany = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::createMany::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#destroyAll
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Deletes all medias of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.medias.destroyAll = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::delete::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#destroyById
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Delete a related item by id for medias.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for medias
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.medias.destroyById = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::destroyById::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#findById
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Find a related item by id for medias.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for medias
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R.medias.findById = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::findById::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikel.medias#updateById
+             * @methodOf lbServices.ZpArtikel.medias
+             *
+             * @description
+             *
+             * Update a related item by id for medias.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for medias
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R.medias.updateById = function() {
+          var TargetResource = $injector.get("ZpArtikelMedia");
+          var action = TargetResource["::updateById::ZpArtikel::medias"];
+          return action.apply(R, arguments);
+        };
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.ZpArtikelTranslation
+ * @header lbServices.ZpArtikelTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `ZpArtikelTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "ZpArtikelTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/ZpArtikelTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#create
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/ZpArtikelTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#createMany
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#upsert
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/ZpArtikelTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#exists
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/ZpArtikelTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#findById
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/ZpArtikelTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#find
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#findOne
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/ZpArtikelTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#updateAll
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/ZpArtikelTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#deleteById
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/ZpArtikelTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#count
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/ZpArtikelTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#prototype$updateAttributes
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/ZpArtikelTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#createChangeStream
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/ZpArtikelTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.findById() instead.
+            "::findById::ZpArtikel::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.destroyById() instead.
+            "::destroyById::ZpArtikel::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.updateById() instead.
+            "::updateById::ZpArtikel::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations() instead.
+            "::get::ZpArtikel::translations": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.create() instead.
+            "::create::ZpArtikel::translations": {
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.createMany() instead.
+            "::createMany::ZpArtikel::translations": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.destroyAll() instead.
+            "::delete::ZpArtikel::translations": {
+              url: urlBase + "/ZpArtikels/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.translations.count() instead.
+            "::count::ZpArtikel::translations": {
+              url: urlBase + "/ZpArtikels/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#updateOrCreate
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#update
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#destroyById
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelTranslation#removeById
+             * @methodOf lbServices.ZpArtikelTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.ZpArtikelTranslation#modelName
+        * @propertyOf lbServices.ZpArtikelTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `ZpArtikelTranslation`.
+        */
+        R.modelName = "ZpArtikelTranslation";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
  * @name lbServices.ZpMedia
  * @header lbServices.ZpMedia
  * @object
@@ -46611,6 +42158,1255 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         * i.e. `ZpMediaTranslation`.
         */
         R.modelName = "ZpMediaTranslation";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.ZpArtikelMedia
+ * @header lbServices.ZpArtikelMedia
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `ZpArtikelMedia` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "ZpArtikelMedia",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/ZpArtikelMedia/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#create
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/ZpArtikelMedia",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#createMany
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMedia",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#upsert
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/ZpArtikelMedia",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#exists
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/ZpArtikelMedia/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#findById
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/ZpArtikelMedia/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#find
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMedia",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#findOne
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/ZpArtikelMedia/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#updateAll
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/ZpArtikelMedia/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#deleteById
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/ZpArtikelMedia/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#count
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/ZpArtikelMedia/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#prototype$updateAttributes
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/ZpArtikelMedia/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#createChangeStream
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/ZpArtikelMedia/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.findById() instead.
+            "::findById::ZpArtikel::medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/medias/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.destroyById() instead.
+            "::destroyById::ZpArtikel::medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/medias/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.updateById() instead.
+            "::updateById::ZpArtikel::medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikels/:id/medias/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias() instead.
+            "::get::ZpArtikel::medias": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.create() instead.
+            "::create::ZpArtikel::medias": {
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.createMany() instead.
+            "::createMany::ZpArtikel::medias": {
+              isArray: true,
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.destroyAll() instead.
+            "::delete::ZpArtikel::medias": {
+              url: urlBase + "/ZpArtikels/:id/medias",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikel.medias.count() instead.
+            "::count::ZpArtikel::medias": {
+              url: urlBase + "/ZpArtikels/:id/medias/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#updateOrCreate
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#update
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#destroyById
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#removeById
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMedia` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.ZpArtikelMedia#modelName
+        * @propertyOf lbServices.ZpArtikelMedia
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `ZpArtikelMedia`.
+        */
+        R.modelName = "ZpArtikelMedia";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.ZpArtikelMediaTranslation
+ * @header lbServices.ZpArtikelMediaTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `ZpArtikelMediaTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "ZpArtikelMediaTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/ZpArtikelMediaTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#create
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/ZpArtikelMediaTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#createMany
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMediaTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#upsert
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/ZpArtikelMediaTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#exists
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/ZpArtikelMediaTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#findById
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/ZpArtikelMediaTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#find
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMediaTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#findOne
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/ZpArtikelMediaTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#updateAll
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/ZpArtikelMediaTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#deleteById
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/ZpArtikelMediaTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#count
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/ZpArtikelMediaTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#prototype$updateAttributes
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/ZpArtikelMediaTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#createChangeStream
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/ZpArtikelMediaTranslations/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#updateOrCreate
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#update
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#destroyById
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMediaTranslation#removeById
+             * @methodOf lbServices.ZpArtikelMediaTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.ZpArtikelMediaTranslation#modelName
+        * @propertyOf lbServices.ZpArtikelMediaTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `ZpArtikelMediaTranslation`.
+        */
+        R.modelName = "ZpArtikelMediaTranslation";
 
 
 

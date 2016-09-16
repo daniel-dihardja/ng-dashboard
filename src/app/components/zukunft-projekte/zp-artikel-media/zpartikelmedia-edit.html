@@ -1,5 +1,5 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
-    <h1>Edit ZpArtikel</h1>
+    <h1>Edit ZpArtikelMedia</h1>
 
     <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="DE">
@@ -9,25 +9,25 @@
                         Publizieren
                     </md-checkbox>
                 </md-input-container>
-                
+
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>stationId</label>
-                    <input ng-model="vm.entity.zpStationId" required>
+                    <label>zpArtikelId</label>
+                    <input ng-model="vm.entity.zpArtikelId" required>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>type</label>
+                    <input ng-model="vm.entity.type" required>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>headline</label>
-                    <input ng-model="vm.entity.headline" required>
+                    <label>src</label>
+                    <input ng-model="vm.entity.src" required>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>teaserText</label>
-                    <input ng-model="vm.entity.teaserText" required>
-                </md-input-container>
-                
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>mainText</label>
-                    <input ng-model="vm.entity.mainText" required>
+                    <label>thumb</label>
+                    <input ng-model="vm.entity.thumb" required>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
@@ -42,23 +42,18 @@
             <md-content class="pd-top-20">
             
             <md-input-container class="md-block" flex-gt-sm>
-                <label>stationId</label>
-                <input ng-model="vm.translation.stationId" required>
+                <label>type</label>
+                <input ng-model="vm.translation.type" required>
             </md-input-container>
             
             <md-input-container class="md-block" flex-gt-sm>
-                <label>headline</label>
-                <input ng-model="vm.translation.headline" required>
+                <label>src</label>
+                <input ng-model="vm.translation.src" required>
             </md-input-container>
             
             <md-input-container class="md-block" flex-gt-sm>
-                <label>teaserText</label>
-                <input ng-model="vm.translation.teaserText" required>
-            </md-input-container>
-            
-            <md-input-container class="md-block" flex-gt-sm>
-                <label>mainText</label>
-                <input ng-model="vm.translation.mainText" required>
+                <label>thumb</label>
+                <input ng-model="vm.translation.thumb" required>
             </md-input-container>
             
             <md-input-container class="md-block" flex-gt-sm>
@@ -71,14 +66,10 @@
 
     </md-tabs>
 
-    <md-input-container class="md-block" flex-gt-sm>
-        <md-button ui-sref="admin.ZpArtikelMedia-list({belongsToEntity: vm.entity})">Zu den Medien</md-button>
-    </md-input-container>
-
 
     <md-card-actions layout="row">
         <span flex></span>
-        <md-button class="md-raised" ng-click="vm.goBack()">Zurück</md-button>
+        <md-button class="md-raised" ui-sref="admin.ZpArtikelMedia-list({belongsToEntity: vm.$stateParams.belongsToEntity})">Zurück</md-button>
         <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
     </md-card-actions>
 
