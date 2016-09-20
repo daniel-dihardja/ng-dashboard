@@ -25,6 +25,9 @@ let crudModule = angular.module('crud', [uiRouter])
 					controllerAs: 'vm',
 					template: listTemplate,
 					url: '/crud-list/:model',
+					params: {
+						filter: null
+					}
 				}
 			)
 			.state(

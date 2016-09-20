@@ -13,6 +13,22 @@ class CreateController {
 		this.model = $injector.get($stateParams.model);
 		this.fields = $crud.model($stateParams.model).createView().fields();
 		this.entity = {};
+
+		var filterKey;
+		var filterValue;
+		var filterPair;
+
+
+		if($stateParams.filter) {
+			filterPair = $stateParams.filter.split('=');
+			// hardcode for now. refactore later !!!
+			if(filterPair && filterPair.length == 2) {
+				filterKey = filterPair[0];
+				filterValue = filterPair[1];
+				this.entity[filterKey] = filterValue;
+			}
+		}
+
 	}
 
 	save() {

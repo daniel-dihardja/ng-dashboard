@@ -12,7 +12,7 @@
             </tr>
             </thead>
             <trbody md-body>
-                <tr md-row ng-repeat="entity in vm.entities">
+                <tr md-row ng-repeat="entity in vm.entities" ng-show="entity[vm.filterKey]==vm.filterValue">
                     <td md-cell ng-repeat="field in vm.fields">
                         <div ng-if="field.name != 'publish'">{{entity[field.name]}}</div>
                         <div ng-if="field.name == 'publish'">

@@ -14,6 +14,24 @@ class ListController {
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
 		this.fields = $crud.model($stateParams.model).listView().fields();
 
+
+		this.filterKey
+		this.filterValue;
+		var filterPair;
+
+		if($stateParams.filter) {
+			filterPair = $stateParams.filter.split('=');
+
+			// hardcode for now. refactore later !!!
+			if(filterPair && filterPair.length == 2) {
+				this.filterKey = filterPair[0];
+				this.filterValue = filterPair[1];
+			}
+
+		}
+
+		console.log(filterPair);
+
 		this.init();
 	}
 
