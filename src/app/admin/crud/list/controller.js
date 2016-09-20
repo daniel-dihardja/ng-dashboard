@@ -44,6 +44,12 @@ class ListController {
 		return confirm;
 	}
 
+	editItem(entity) {
+		var id = entity.id;
+		var model = this.$stateParams.model;
+		this.$state.go('admin.crud-edit', {model: model, id: id});
+	}
+
 	deleteItem(entity, ev) {
 		entity = entity.toJSON();
 		this.$mdDialog.show(this.confirmDialog(entity.id, ev)).then(function() {
@@ -69,7 +75,6 @@ class ListController {
 		translation = translation || {id: 0};
 		return this.modelTranslation.deleteById({id: translation.id}).$promise;
 	}
-
 
 	rankUp(entity) {
 		for(var i=0; i<this.entities.length; i++) {
@@ -101,6 +106,11 @@ class ListController {
 		entity.$save(function() {
 			this.init();
 		}.bind(this))
+	}
+
+	newEntity() {
+		console.log('New');
+		this.$state.go('admin.crud-create', {model: this.$stateParams.model});
 	}
 }
 

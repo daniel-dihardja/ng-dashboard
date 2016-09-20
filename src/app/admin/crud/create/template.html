@@ -1,0 +1,40 @@
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+    <h1>Create</h1>
+
+    <div ng-repeat="field in vm.fields">
+
+        <!-- default input text -->
+        <md-input-container class="md-block" flex-gt-sm ng-if="field.type == undefined" >
+            <label>{{field.name}}</label>
+            <input ng-model="vm.entity[field.name]" required>
+        </md-input-container>
+
+        <!-- default select -->
+        <md-input-container class="" flex-gt-sm ng-if="field.type == 'select'">
+            <label>{{field.name}}</label>
+            <md-select ng-model="vm.entity.type">
+                <md-option ng-value="value" ng-repeat="value in field.config.values">{{value}}</md-option>
+            </md-select>
+        </md-input-container>
+
+        <!-- textarea -->
+        <md-input-container class="md-block" flex-gt-sm ng-if="field.type == 'text'" >
+            <label>{{field.name}}</label>
+            <textarea ng-model="vm.entity[field.name]" required></textarea>
+        </md-input-container>
+
+        <!-- File -->
+        <md-input-container class="md-block pd-left-0" flex-gt-sm ng-if="field.type == 'file'" >
+            <label class="left-0">{{field.name}}</label>
+            <file-selector ng-model="vm.entity[field.name]" container="images" type="image"></file-selector>
+        </md-input-container>
+
+    </div>
+
+    <md-card-actions layout="row">
+        <span flex></span>
+        <md-button class="md-raised" ng-click="vm.back()">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>

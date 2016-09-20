@@ -8,11 +8,11 @@ import uiRouter from 'angular-ui-router';
 import listController from './list/controller';
 import listTemplate from './list/template.html!text';
 
-import editController from './edit/edit-controller';
-import editTemplate from './edit/edit.html!text';
+import createController from './create/controller';
+import createTemplate from './create/template.html!text';
 
-import createController from './create/create-controller';
-import createTemplate from './create/create.html!text';
+import editController from './edit/controller';
+import editTemplate from './edit/template.html!text';
 
 import crudProvider from './crud-provider';
 
@@ -28,25 +28,25 @@ let crudModule = angular.module('crud', [uiRouter])
 				}
 			)
 			.state(
-				'admin.crud-edit', {
-					controller: editController,
-					controllerAs: 'vm',
-					template: editTemplate,
-					params: {
-						data: null
-					}
-				}
-			)
-			.state(
 				'admin.crud-create', {
 					controller: createController,
 					controllerAs: 'vm',
 					template: createTemplate,
+					url: '/crud-create/:model',
 					params: {
-						data: null
+						filter: null
 					}
 				}
 			)
+			.state(
+				'admin.crud-edit', {
+					controller: editController,
+					controllerAs: 'vm',
+					template: editTemplate,
+					url: '/crud-edit/:model/:id'
+				}
+			)
+
 	}])
 	.provider('$crud', crudProvider)
 

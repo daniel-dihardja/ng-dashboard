@@ -8,11 +8,26 @@ class ViewConfig {
 	constructor(type) {
 		this.type = type;
 		this._fields = [];
+		this._translationFields = [];
+		this._translationKey;
 	}
 
 	fields(fields) {
 		if(! fields) return this._fields;
 		this._fields = fields;
+		return this;
+	}
+
+	translationFields(fields) {
+		if(! fields) return this._translationFields;
+		this._translationFields = fields;
+		return this;
+	}
+
+	translationKey(key) {
+		if(! key) return this._translationKey;
+		this._translationKey = key;
+		return this;
 	}
 
 	addField(name, type, config) {
@@ -21,6 +36,15 @@ class ViewConfig {
 			type: type,
 			config: config
 		});
+		return this;
+	}
+
+	addTranslationField(name, type, config) {
+		this._translationFields.push({
+			name: name,
+			type: type,
+			config: config
+		})
 		return this;
 	}
 }
