@@ -42191,6 +42191,58 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
           { 'id': '@id' },
           {
 
+            // INTERNAL. Use ZpArtikelMedia.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikelMedia/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikelMedia/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikelMedia/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/ZpArtikelMedia/:id/translations/count",
+              method: "GET",
+            },
+
             /**
              * @ngdoc method
              * @name lbServices.ZpArtikelMedia#create
@@ -42813,6 +42865,307 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         */
         R.modelName = "ZpArtikelMedia";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.ZpArtikelMedia.translations
+     * @header lbServices.ZpArtikelMedia.translations
+     * @object
+     * @description
+     *
+     * The object `ZpArtikelMedia.translations` groups methods
+     * manipulating `ZpArtikelMediaTranslation` instances related to `ZpArtikelMedia`.
+     *
+     * Call {@link lbServices.ZpArtikelMedia#translations ZpArtikelMedia.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia#translations
+             * @methodOf lbServices.ZpArtikelMedia
+             *
+             * @description
+             *
+             * Queries translations of ZpArtikelMedia.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::get::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#count
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Counts translations of ZpArtikelMedia.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::count::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#create
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::create::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#createMany
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::createMany::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#destroyAll
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::delete::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#destroyById
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::destroyById::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#findById
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::findById::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpArtikelMedia.translations#updateById
+             * @methodOf lbServices.ZpArtikelMedia.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpArtikelMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("ZpArtikelMediaTranslation");
+          var action = TargetResource["::updateById::ZpArtikelMedia::translations"];
+          return action.apply(R, arguments);
+        };
 
 
         return R;
@@ -43266,6 +43619,65 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               url: urlBase + "/ZpArtikelMediaTranslations/change-stream",
               method: "POST",
             },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.findById() instead.
+            "::findById::ZpArtikelMedia::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikelMedia/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.destroyById() instead.
+            "::destroyById::ZpArtikelMedia::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikelMedia/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.updateById() instead.
+            "::updateById::ZpArtikelMedia::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpArtikelMedia/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations() instead.
+            "::get::ZpArtikelMedia::translations": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.create() instead.
+            "::create::ZpArtikelMedia::translations": {
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.createMany() instead.
+            "::createMany::ZpArtikelMedia::translations": {
+              isArray: true,
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.destroyAll() instead.
+            "::delete::ZpArtikelMedia::translations": {
+              url: urlBase + "/ZpArtikelMedia/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpArtikelMedia.translations.count() instead.
+            "::count::ZpArtikelMedia::translations": {
+              url: urlBase + "/ZpArtikelMedia/:id/translations/count",
+              method: "GET",
+            },
           }
         );
 
@@ -43407,6 +43819,7421 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         * i.e. `ZpArtikelMediaTranslation`.
         */
         R.modelName = "ZpArtikelMediaTranslation";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.Tag
+ * @header lbServices.Tag
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `Tag` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "Tag",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/Tags/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#create
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/Tags",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#createMany
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/Tags",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#upsert
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/Tags",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#exists
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/Tags/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#findById
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/Tags/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#find
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/Tags",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#findOne
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/Tags/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#updateAll
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/Tags/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#deleteById
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/Tags/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#count
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/Tags/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#prototype$updateAttributes
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/Tags/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#createChangeStream
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/Tags/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#updateOrCreate
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#update
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#destroyById
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.Tag#removeById
+             * @methodOf lbServices.Tag
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Tag` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.Tag#modelName
+        * @propertyOf lbServices.Tag
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `Tag`.
+        */
+        R.modelName = "Tag";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.File
+ * @header lbServices.File
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `File` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "File",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/Files/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#create
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/Files",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#createMany
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/Files",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#upsert
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/Files",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#exists
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/Files/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#findById
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/Files/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#find
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/Files",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#findOne
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/Files/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#updateAll
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/Files/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#deleteById
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/Files/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#count
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/Files/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#prototype$updateAttributes
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/Files/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#createChangeStream
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/Files/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#updateOrCreate
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#update
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#destroyById
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.File#removeById
+             * @methodOf lbServices.File
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `File` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.File#modelName
+        * @propertyOf lbServices.File
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `File`.
+        */
+        R.modelName = "File";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.FileTag
+ * @header lbServices.FileTag
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `FileTag` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "FileTag",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/FileTags/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#create
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/FileTags",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#createMany
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/FileTags",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#upsert
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/FileTags",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#exists
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/FileTags/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#findById
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/FileTags/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#find
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/FileTags",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#findOne
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/FileTags/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#updateAll
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/FileTags/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#deleteById
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/FileTags/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#count
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/FileTags/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#prototype$updateAttributes
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/FileTags/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#createChangeStream
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/FileTags/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#updateOrCreate
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#update
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#destroyById
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileTag#removeById
+             * @methodOf lbServices.FileTag
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileTag` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.FileTag#modelName
+        * @propertyOf lbServices.FileTag
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `FileTag`.
+        */
+        R.modelName = "FileTag";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.EbContent
+ * @header lbServices.EbContent
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `EbContent` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "EbContent",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/EbContents/:id",
+          { 'id': '@id' },
+          {
+
+            // INTERNAL. Use EbContent.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbContent.medias.findById() instead.
+            "prototype$__findById__medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/medias/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.medias.destroyById() instead.
+            "prototype$__destroyById__medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/medias/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.medias.updateById() instead.
+            "prototype$__updateById__medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/medias/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbContent.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/EbContents/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/EbContents/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/EbContents/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/EbContents/:id/translations/count",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.medias() instead.
+            "prototype$__get__medias": {
+              isArray: true,
+              url: urlBase + "/EbContents/:id/medias",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.medias.create() instead.
+            "prototype$__create__medias": {
+              url: urlBase + "/EbContents/:id/medias",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.medias.destroyAll() instead.
+            "prototype$__delete__medias": {
+              url: urlBase + "/EbContents/:id/medias",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.medias.count() instead.
+            "prototype$__count__medias": {
+              url: urlBase + "/EbContents/:id/medias/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#create
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/EbContents",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#createMany
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/EbContents",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#upsert
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/EbContents",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#exists
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/EbContents/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#findById
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/EbContents/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#find
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/EbContents",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#findOne
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/EbContents/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#updateAll
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/EbContents/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#deleteById
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/EbContents/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#count
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/EbContents/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#prototype$updateAttributes
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/EbContents/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#createChangeStream
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/EbContents/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.contents.findById() instead.
+            "::findById::EbCategory::contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/contents/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.contents.destroyById() instead.
+            "::destroyById::EbCategory::contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/contents/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.contents.updateById() instead.
+            "::updateById::EbCategory::contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/contents/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbCategory.contents() instead.
+            "::get::EbCategory::contents": {
+              isArray: true,
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.contents.create() instead.
+            "::create::EbCategory::contents": {
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.contents.createMany() instead.
+            "::createMany::EbCategory::contents": {
+              isArray: true,
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.contents.destroyAll() instead.
+            "::delete::EbCategory::contents": {
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.contents.count() instead.
+            "::count::EbCategory::contents": {
+              url: urlBase + "/EbCategories/:id/contents/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#updateOrCreate
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#update
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#destroyById
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#removeById
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.EbContent#modelName
+        * @propertyOf lbServices.EbContent
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `EbContent`.
+        */
+        R.modelName = "EbContent";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.EbContent.translations
+     * @header lbServices.EbContent.translations
+     * @object
+     * @description
+     *
+     * The object `EbContent.translations` groups methods
+     * manipulating `EbContentTranslation` instances related to `EbContent`.
+     *
+     * Call {@link lbServices.EbContent#translations EbContent.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#translations
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Queries translations of EbContent.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::get::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#count
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Counts translations of EbContent.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::count::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#create
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::create::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#createMany
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::createMany::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#destroyAll
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::delete::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#destroyById
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::destroyById::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#findById
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::findById::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.translations#updateById
+             * @methodOf lbServices.EbContent.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("EbContentTranslation");
+          var action = TargetResource["::updateById::EbContent::translations"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.EbContent.medias
+     * @header lbServices.EbContent.medias
+     * @object
+     * @description
+     *
+     * The object `EbContent.medias` groups methods
+     * manipulating `EbMedia` instances related to `EbContent`.
+     *
+     * Call {@link lbServices.EbContent#medias EbContent.medias()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent#medias
+             * @methodOf lbServices.EbContent
+             *
+             * @description
+             *
+             * Queries medias of EbContent.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R.medias = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::get::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#count
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Counts medias of EbContent.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.medias.count = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::count::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#create
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Creates a new instance in medias of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R.medias.create = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::create::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#createMany
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Creates a new instance in medias of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R.medias.createMany = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::createMany::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#destroyAll
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Deletes all medias of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.medias.destroyAll = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::delete::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#destroyById
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Delete a related item by id for medias.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for medias
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.medias.destroyById = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::destroyById::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#findById
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Find a related item by id for medias.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for medias
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R.medias.findById = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::findById::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContent.medias#updateById
+             * @methodOf lbServices.EbContent.medias
+             *
+             * @description
+             *
+             * Update a related item by id for medias.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for medias
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R.medias.updateById = function() {
+          var TargetResource = $injector.get("EbMedia");
+          var action = TargetResource["::updateById::EbContent::medias"];
+          return action.apply(R, arguments);
+        };
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.EbCategoryTranslation
+ * @header lbServices.EbCategoryTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `EbCategoryTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "EbCategoryTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/EbCategoryTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#create
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/EbCategoryTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#createMany
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/EbCategoryTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#upsert
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/EbCategoryTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#exists
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/EbCategoryTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#findById
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/EbCategoryTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#find
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/EbCategoryTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#findOne
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/EbCategoryTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#updateAll
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/EbCategoryTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#deleteById
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/EbCategoryTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#count
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/EbCategoryTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#prototype$updateAttributes
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/EbCategoryTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#createChangeStream
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/EbCategoryTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.translations.findById() instead.
+            "::findById::EbCategory::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.translations.destroyById() instead.
+            "::destroyById::EbCategory::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.translations.updateById() instead.
+            "::updateById::EbCategory::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbCategory.translations() instead.
+            "::get::EbCategory::translations": {
+              isArray: true,
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.translations.create() instead.
+            "::create::EbCategory::translations": {
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.translations.createMany() instead.
+            "::createMany::EbCategory::translations": {
+              isArray: true,
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.translations.destroyAll() instead.
+            "::delete::EbCategory::translations": {
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.translations.count() instead.
+            "::count::EbCategory::translations": {
+              url: urlBase + "/EbCategories/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#updateOrCreate
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#update
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#destroyById
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategoryTranslation#removeById
+             * @methodOf lbServices.EbCategoryTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.EbCategoryTranslation#modelName
+        * @propertyOf lbServices.EbCategoryTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `EbCategoryTranslation`.
+        */
+        R.modelName = "EbCategoryTranslation";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.EbCategory
+ * @header lbServices.EbCategory
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `EbCategory` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "EbCategory",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/EbCategories/:id",
+          { 'id': '@id' },
+          {
+
+            // INTERNAL. Use EbCategory.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbCategory.contents.findById() instead.
+            "prototype$__findById__contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/contents/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.contents.destroyById() instead.
+            "prototype$__destroyById__contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/contents/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.contents.updateById() instead.
+            "prototype$__updateById__contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbCategories/:id/contents/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbCategory.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/EbCategories/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/EbCategories/:id/translations/count",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.contents() instead.
+            "prototype$__get__contents": {
+              isArray: true,
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbCategory.contents.create() instead.
+            "prototype$__create__contents": {
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbCategory.contents.destroyAll() instead.
+            "prototype$__delete__contents": {
+              url: urlBase + "/EbCategories/:id/contents",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbCategory.contents.count() instead.
+            "prototype$__count__contents": {
+              url: urlBase + "/EbCategories/:id/contents/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#create
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/EbCategories",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#createMany
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/EbCategories",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#upsert
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/EbCategories",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#exists
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/EbCategories/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#findById
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/EbCategories/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#find
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/EbCategories",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#findOne
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/EbCategories/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#updateAll
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/EbCategories/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#deleteById
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/EbCategories/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#count
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/EbCategories/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#prototype$updateAttributes
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/EbCategories/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#createChangeStream
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/EbCategories/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#updateOrCreate
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#update
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#destroyById
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#removeById
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategory` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.EbCategory#modelName
+        * @propertyOf lbServices.EbCategory
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `EbCategory`.
+        */
+        R.modelName = "EbCategory";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.EbCategory.translations
+     * @header lbServices.EbCategory.translations
+     * @object
+     * @description
+     *
+     * The object `EbCategory.translations` groups methods
+     * manipulating `EbCategoryTranslation` instances related to `EbCategory`.
+     *
+     * Call {@link lbServices.EbCategory#translations EbCategory.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#translations
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Queries translations of EbCategory.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::get::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#count
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Counts translations of EbCategory.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::count::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#create
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::create::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#createMany
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::createMany::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#destroyAll
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::delete::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#destroyById
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::destroyById::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#findById
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::findById::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.translations#updateById
+             * @methodOf lbServices.EbCategory.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbCategoryTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("EbCategoryTranslation");
+          var action = TargetResource["::updateById::EbCategory::translations"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.EbCategory.contents
+     * @header lbServices.EbCategory.contents
+     * @object
+     * @description
+     *
+     * The object `EbCategory.contents` groups methods
+     * manipulating `EbContent` instances related to `EbCategory`.
+     *
+     * Call {@link lbServices.EbCategory#contents EbCategory.contents()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory#contents
+             * @methodOf lbServices.EbCategory
+             *
+             * @description
+             *
+             * Queries contents of EbCategory.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R.contents = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::get::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#count
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Counts contents of EbCategory.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.contents.count = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::count::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#create
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Creates a new instance in contents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R.contents.create = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::create::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#createMany
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Creates a new instance in contents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R.contents.createMany = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::createMany::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#destroyAll
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Deletes all contents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.contents.destroyAll = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::delete::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#destroyById
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Delete a related item by id for contents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for contents
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.contents.destroyById = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::destroyById::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#findById
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Find a related item by id for contents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for contents
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R.contents.findById = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::findById::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbCategory.contents#updateById
+             * @methodOf lbServices.EbCategory.contents
+             *
+             * @description
+             *
+             * Update a related item by id for contents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for contents
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContent` object.)
+             * </em>
+             */
+        R.contents.updateById = function() {
+          var TargetResource = $injector.get("EbContent");
+          var action = TargetResource["::updateById::EbCategory::contents"];
+          return action.apply(R, arguments);
+        };
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.EbContentTranslation
+ * @header lbServices.EbContentTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `EbContentTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "EbContentTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/EbContentTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#create
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/EbContentTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#createMany
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/EbContentTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#upsert
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/EbContentTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#exists
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/EbContentTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#findById
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/EbContentTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#find
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/EbContentTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#findOne
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/EbContentTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#updateAll
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/EbContentTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#deleteById
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/EbContentTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#count
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/EbContentTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#prototype$updateAttributes
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/EbContentTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#createChangeStream
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/EbContentTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.translations.findById() instead.
+            "::findById::EbContent::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.translations.destroyById() instead.
+            "::destroyById::EbContent::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.translations.updateById() instead.
+            "::updateById::EbContent::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbContent.translations() instead.
+            "::get::EbContent::translations": {
+              isArray: true,
+              url: urlBase + "/EbContents/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.translations.create() instead.
+            "::create::EbContent::translations": {
+              url: urlBase + "/EbContents/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.translations.createMany() instead.
+            "::createMany::EbContent::translations": {
+              isArray: true,
+              url: urlBase + "/EbContents/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.translations.destroyAll() instead.
+            "::delete::EbContent::translations": {
+              url: urlBase + "/EbContents/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.translations.count() instead.
+            "::count::EbContent::translations": {
+              url: urlBase + "/EbContents/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#updateOrCreate
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#update
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#destroyById
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbContentTranslation#removeById
+             * @methodOf lbServices.EbContentTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbContentTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.EbContentTranslation#modelName
+        * @propertyOf lbServices.EbContentTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `EbContentTranslation`.
+        */
+        R.modelName = "EbContentTranslation";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.EbMedia
+ * @header lbServices.EbMedia
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `EbMedia` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "EbMedia",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/EbMedia/:id",
+          { 'id': '@id' },
+          {
+
+            // INTERNAL. Use EbMedia.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbMedia/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbMedia.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbMedia/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbMedia.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbMedia/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbMedia.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbMedia.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbMedia.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbMedia.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/EbMedia/:id/translations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#create
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/EbMedia",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#createMany
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/EbMedia",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#upsert
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/EbMedia",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#exists
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/EbMedia/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#findById
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/EbMedia/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#find
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/EbMedia",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#findOne
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/EbMedia/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#updateAll
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/EbMedia/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#deleteById
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/EbMedia/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#count
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/EbMedia/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#prototype$updateAttributes
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/EbMedia/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#createChangeStream
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/EbMedia/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.medias.findById() instead.
+            "::findById::EbContent::medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/medias/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.medias.destroyById() instead.
+            "::destroyById::EbContent::medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/medias/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.medias.updateById() instead.
+            "::updateById::EbContent::medias": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbContents/:id/medias/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbContent.medias() instead.
+            "::get::EbContent::medias": {
+              isArray: true,
+              url: urlBase + "/EbContents/:id/medias",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbContent.medias.create() instead.
+            "::create::EbContent::medias": {
+              url: urlBase + "/EbContents/:id/medias",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.medias.createMany() instead.
+            "::createMany::EbContent::medias": {
+              isArray: true,
+              url: urlBase + "/EbContents/:id/medias",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbContent.medias.destroyAll() instead.
+            "::delete::EbContent::medias": {
+              url: urlBase + "/EbContents/:id/medias",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbContent.medias.count() instead.
+            "::count::EbContent::medias": {
+              url: urlBase + "/EbContents/:id/medias/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#updateOrCreate
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#update
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#destroyById
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#removeById
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMedia` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.EbMedia#modelName
+        * @propertyOf lbServices.EbMedia
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `EbMedia`.
+        */
+        R.modelName = "EbMedia";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.EbMedia.translations
+     * @header lbServices.EbMedia.translations
+     * @object
+     * @description
+     *
+     * The object `EbMedia.translations` groups methods
+     * manipulating `EbMediaTranslation` instances related to `EbMedia`.
+     *
+     * Call {@link lbServices.EbMedia#translations EbMedia.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia#translations
+             * @methodOf lbServices.EbMedia
+             *
+             * @description
+             *
+             * Queries translations of EbMedia.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::get::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#count
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Counts translations of EbMedia.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::count::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#create
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::create::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#createMany
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::createMany::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#destroyAll
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::delete::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#destroyById
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::destroyById::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#findById
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::findById::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMedia.translations#updateById
+             * @methodOf lbServices.EbMedia.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("EbMediaTranslation");
+          var action = TargetResource["::updateById::EbMedia::translations"];
+          return action.apply(R, arguments);
+        };
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.EbMediaTranslation
+ * @header lbServices.EbMediaTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `EbMediaTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "EbMediaTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/EbMediaTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#create
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/EbMediaTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#createMany
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/EbMediaTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#upsert
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/EbMediaTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#exists
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/EbMediaTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#findById
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/EbMediaTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#find
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/EbMediaTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#findOne
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/EbMediaTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#updateAll
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/EbMediaTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#deleteById
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/EbMediaTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#count
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/EbMediaTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#prototype$updateAttributes
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/EbMediaTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#createChangeStream
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/EbMediaTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbMedia.translations.findById() instead.
+            "::findById::EbMedia::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbMedia/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbMedia.translations.destroyById() instead.
+            "::destroyById::EbMedia::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbMedia/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbMedia.translations.updateById() instead.
+            "::updateById::EbMedia::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/EbMedia/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use EbMedia.translations() instead.
+            "::get::EbMedia::translations": {
+              isArray: true,
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use EbMedia.translations.create() instead.
+            "::create::EbMedia::translations": {
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbMedia.translations.createMany() instead.
+            "::createMany::EbMedia::translations": {
+              isArray: true,
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use EbMedia.translations.destroyAll() instead.
+            "::delete::EbMedia::translations": {
+              url: urlBase + "/EbMedia/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use EbMedia.translations.count() instead.
+            "::count::EbMedia::translations": {
+              url: urlBase + "/EbMedia/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#updateOrCreate
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#update
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#destroyById
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.EbMediaTranslation#removeById
+             * @methodOf lbServices.EbMediaTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `EbMediaTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.EbMediaTranslation#modelName
+        * @propertyOf lbServices.EbMediaTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `EbMediaTranslation`.
+        */
+        R.modelName = "EbMediaTranslation";
 
 
 

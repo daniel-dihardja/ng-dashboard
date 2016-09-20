@@ -54,8 +54,6 @@ class FileSelector {
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
 		};
 
-
-
 		// get files from trhe given container
 		this.$files.getList(scope.container).then(function(res) {
 			scope.files = res.data;

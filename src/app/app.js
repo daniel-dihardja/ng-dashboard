@@ -67,7 +67,7 @@ let appModule = angular.module('app', [
 
 	// theming
 	$mdThemingProvider.theme('default')
-		.primaryPalette('lime')
+		.primaryPalette('light-blue')
 		.accentPalette('grey', {'default': '600'});
 
 

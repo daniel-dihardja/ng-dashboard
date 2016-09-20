@@ -1,5 +1,5 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
-    <h1>Edit ZpArtikelMedia</h1>
+    <h1>Edit EbCategory</h1>
 
     <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="DE">
@@ -9,25 +9,20 @@
                         Publizieren
                     </md-checkbox>
                 </md-input-container>
-
+                
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>zpArtikelId</label>
-                    <input ng-model="vm.entity.zpArtikelId" required>
-                </md-input-container>
-
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>type</label>
-                    <input ng-model="vm.entity.type" required>
+                    <label>title</label>
+                    <input ng-model="vm.entity.title" required>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>src</label>
-                    <input ng-model="vm.entity.src" required>
+                    <label>text</label>
+                    <input ng-model="vm.entity.text" required>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>thumb</label>
-                    <input ng-model="vm.entity.thumb" required>
+                    <label>longText</label>
+                    <input ng-model="vm.entity.longText" required>
                 </md-input-container>
                 
                 <md-input-container class="md-block" flex-gt-sm>
@@ -42,18 +37,18 @@
             <md-content class="pd-top-20">
             
             <md-input-container class="md-block" flex-gt-sm>
-                <label>type</label>
-                <input ng-model="vm.translation.type" required>
+                <label>title</label>
+                <input ng-model="vm.translation.title" required>
             </md-input-container>
             
             <md-input-container class="md-block" flex-gt-sm>
-                <label>src</label>
-                <input ng-model="vm.translation.src" required>
+                <label>text</label>
+                <input ng-model="vm.translation.text" required>
             </md-input-container>
             
             <md-input-container class="md-block" flex-gt-sm>
-                <label>thumb</label>
-                <input ng-model="vm.translation.thumb" required>
+                <label>longText</label>
+                <input ng-model="vm.translation.longText" required>
             </md-input-container>
             
             <md-input-container class="md-block" flex-gt-sm>
@@ -68,12 +63,12 @@
 
 
     <md-card-actions layout="row">
-        <span flex></span>
-        <!--md-button class="md-raised" ui-sref="admin.ZpArtikelMedia-list({belongsToEntity: vm.$stateParams.belongsToEntity})">Zurück</md-button-->
-        <md-button class="md-raised" ui-sref="admin.ZpArtikelMedia-list({belongsToEntity: vm.$stateParams.belongsToEntity})">Zurück</md-button>
-
-        <md-button class="md-raised" ui-sref="admin.ZpArtikelMedia-list({belongsToEntity: vm.$stateParams.belongsToEntity})">Zurück</md-button>
+        <md-button class="md-raised" ng-click="vm.goBack()">Zurück</md-button>
         <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
     </md-card-actions>
+
+
+
+    <lb-list entity="EbContent" filter="ebCategoryId={{vm.entity.id}}" fields=""></lb-list>
 
 </md-content>

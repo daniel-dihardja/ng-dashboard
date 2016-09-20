@@ -1,0 +1,42 @@
+<md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+    <h1>New EbMedia</h1>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>title</label>
+        <input ng-model="vm.entity.title" required>
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>text</label>
+        <input ng-model="vm.entity.text" required>
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>longText</label>
+        <input ng-model="vm.entity.longText" required>
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>src</label>
+        <file-selector ng-model="vm.entity.src" container="images" type="image"></file-selector>
+        <!--input ng-model="vm.entity.src" required-->
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>thumb</label>
+        <file-selector ng-model="vm.entity.thumb" container="images" type="image"></file-selector>
+        <!--input ng-model="vm.entity.thumb" required-->
+    </md-input-container>
+    
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>ranking</label>
+        <input ng-model="vm.entity.ranking" required>
+    </md-input-container>
+    
+
+    <md-card-actions layout="row">
+        <md-button class="md-raised" ui-sref="admin.EbMedia-list({belongsToEntity: vm.$stateParams.belongsToEntity})">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
+</md-content>
