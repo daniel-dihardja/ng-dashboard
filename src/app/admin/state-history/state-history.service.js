@@ -7,14 +7,12 @@ class StateHistory {
 		this.$state = $state;
 		this.$rootScope = $rootScope;
 		this.history = [];
-		$rootScope.$on('$stateChangeSuccess', this.onStateChangeSuccess.bind(this));
-
 		this.addToHistory = true;
+		$rootScope.$on('$stateChangeSuccess', this.onStateChangeSuccess.bind(this));
 	}
 
 	onStateChangeSuccess(event, toState, toParams, fromState, fromParams, error) {
 		if(! this.addToHistory) {
-			// reset the history lock
 			this.addToHistory = true;
 			return;
 		}
@@ -31,8 +29,6 @@ class StateHistory {
 
 		// do not track states from history
 		this.addToHistory = false;
-
-
 		this.$state.go(last.state.name, last.params);
 	}
 }

@@ -13,7 +13,12 @@ class ListController {
 
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
-		this.fields = $crud.model($stateParams.model).listView().fields();
+
+
+		var crudView = $crud.model($stateParams.model).listView();
+
+		this.fields = crudView.fields();
+		this.useBackButton = crudView.useBackButton();
 
 		this.filterKey
 		this.filterValue;

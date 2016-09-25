@@ -21,8 +21,6 @@ class EditController {
 
 		this.hasManyLinks = $crud.model($stateParams.model).editView().hasManyLinks();
 
-		console.log(this.hasManyLinks);
-
 		this.init();
 	}
 

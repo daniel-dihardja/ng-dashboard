@@ -38,7 +38,7 @@
 
     <md-card-actions layout="row" class="pdt-30">
         <span flex></span>
-        <md-button class="md-raised" ng-click="vm.back()">Zurück</md-button>
+        <md-button class="md-raised" ng-click="vm.back()" ng-if="vm.useBackButton">Zurück</md-button>
         <md-button class="md-primary md-raised" ng-click="vm.newEntity()">Neu</md-button>
     </md-card-actions>
 
