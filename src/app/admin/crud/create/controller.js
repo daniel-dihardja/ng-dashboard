@@ -8,7 +8,6 @@ class CreateController {
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
 		this.$crud = $crud;
-		this.$window = $window;
 		this.$stateHistory = $stateHistory;
 
 		this.model = $injector.get($stateParams.model);

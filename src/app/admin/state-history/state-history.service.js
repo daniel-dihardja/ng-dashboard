@@ -7,21 +7,32 @@ class StateHistory {
 		this.$state = $state;
 		this.$rootScope = $rootScope;
 		this.history = [];
-		$rootScope.$on('$stateChangeSuccess', this.onStateChangeSuccess.bind(this))
+		$rootScope.$on('$stateChangeSuccess', this.onStateChangeSuccess.bind(this));
+
+		this.addToHistory = true;
 	}
 
 	onStateChangeSuccess(event, toState, toParams, fromState, fromParams, error) {
+		if(! this.addToHistory) {
+			// reset the history lock
+			this.addToHistory = true;
+			return;
+		}
+
 		this.history.push({
 			state: toState,
 			params: toParams
 		});
-
-		console.log(this.history);
 	}
 
 	back() {
 		this.history.pop();
 		var last = this.history[this.history.length - 1];
+
+		// do not track states from history
+		this.addToHistory = false;
+
+
 		this.$state.go(last.state.name, last.params);
 	}
 }

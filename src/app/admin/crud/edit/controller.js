@@ -19,6 +19,10 @@ class EditController {
 		this.fields = $crud.model($stateParams.model).editView().fields();
 		this.translationFields = $crud.model($stateParams.model).editView().translationFields();
 
+		this.hasManyLinks = $crud.model($stateParams.model).editView().hasManyLinks();
+
+		console.log(this.hasManyLinks);
+
 		this.init();
 	}
 
@@ -61,6 +65,14 @@ class EditController {
 		this.modelTranslation.prototype$updateAttributes({id: this.translation.id}, this.translation, function(res) {
 			console.log(res);
 		}.bind(this))
+	}
+
+	gotoHasManyRelation(link) {
+		console.log(link);
+		this.$state.go('admin.crud-list', {
+			model: link.model,
+			filter: (link.foreignKey + '=' + this.entity.id)
+		});
 	}
 
 	back() {

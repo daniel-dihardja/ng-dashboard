@@ -3,12 +3,13 @@
  */
 class ListController {
 
-	constructor($state, $stateParams, $injector, $crud, $mdDialog) {
+	constructor($state, $stateParams, $injector, $crud, $mdDialog, $stateHistory) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
 		this.$crud = $crud;
 		this.$mdDialog = $mdDialog;
+		this.$stateHistory = $stateHistory;
 
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
@@ -128,7 +129,11 @@ class ListController {
 	newEntity() {
 		this.$state.go('admin.crud-create', {model: this.$stateParams.model, filter: this.$stateParams.filter});
 	}
+
+	back() {
+		this.$stateHistory.back();
+	}
 }
 
-ListController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$mdDialog'];
+ListController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$mdDialog', '$stateHistory'];
 export default ListController;

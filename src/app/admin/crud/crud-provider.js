@@ -10,7 +10,7 @@ class ViewConfig {
 		this._fields = [];
 		this._translationFields = [];
 		this._translationKey;
-		this.lbList = [];
+		this._hasManyLinks = [];
 	}
 
 	fields(fields) {
@@ -49,12 +49,15 @@ class ViewConfig {
 		return this;
 	}
 
-	lbList(label, model, filter) {
-		this.lbList.push({
-			label: label,
+	hasManyLink(model, foreignKey) {
+		this._hasManyLinks.push({
 			model: model,
-			filter: filter
+			foreignKey: foreignKey
 		});
+	}
+
+	hasManyLinks() {
+		return this._hasManyLinks;
 	}
 }
 

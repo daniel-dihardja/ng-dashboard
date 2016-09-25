@@ -18,7 +18,9 @@ function config($crudProvider) {
 
 		.translationField('headline')
 		.translationField('teaserText', 'text')
-		.translationField('mainText', 'text');
+		.translationField('mainText', 'text')
+
+		.hasManyLink('ZpArtikelMedia', 'zpArtikelId');
 
 	zpArtikel.createView()
 		.field('headline')
