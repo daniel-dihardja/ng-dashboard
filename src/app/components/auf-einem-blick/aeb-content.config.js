@@ -18,11 +18,11 @@ function config($cp) {
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')
-		.translationKey('ebCategoryId')
+		.translationKey('ebContentId')
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
-		.hasManyLink('EbMedia', 'ebContentId')
+		.hasManyLink('EbMedia', 'ebContentId', {label: '...'});
 
 
 	aebContent.createView()

@@ -92,7 +92,7 @@
     </md-tabs>
 
     <md-input-container class="md-block" ng-repeat="link in vm.hasManyLinks">
-        <md-button class="md-raised" ng-click="vm.gotoHasManyRelation(link)">{{link.model}}</md-button>
+        <md-button class="md-raised" ng-click="vm.gotoHasManyRelation(link)">{{link.config.label || link.model}}</md-button>
     </md-input-container>
 
     <md-card-actions layout="row">

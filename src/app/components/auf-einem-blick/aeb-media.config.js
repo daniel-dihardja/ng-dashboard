@@ -19,13 +19,12 @@ function config($cp) {
 		.field('longText', 'text')
 		.field('src')
 		.field('thumb')
-		.translationKey('ebCategoryId')
+		.translationKey('ebMediaId')
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
 		.translationField('src')
-		.translationField('thumb')
-
+		.translationField('thumb');
 
 	aebMedia.createView()
 		.title('Media Erstellen')
