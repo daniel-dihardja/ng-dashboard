@@ -3,12 +3,12 @@
  */
 class EditController {
 
-	constructor($state, $stateParams, $injector, $crud, $window) {
+	constructor($state, $stateParams, $injector, $crud, $stateHistory) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
 		this.$crud = $crud;
-		this.$window = $window;
+		this.$stateHistory = $stateHistory;
 
 		this.entity = {};
 		this.translation = {};
@@ -64,8 +64,8 @@ class EditController {
 	}
 
 	back() {
-		this.$window.history.back();
+		this.$stateHistory.back();
 	}
 }
-EditController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$window'];
+EditController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$stateHistory'];
 export default EditController;

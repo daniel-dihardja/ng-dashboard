@@ -10,6 +10,7 @@ class ViewConfig {
 		this._fields = [];
 		this._translationFields = [];
 		this._translationKey;
+		this.lbList = [];
 	}
 
 	fields(fields) {
@@ -30,7 +31,7 @@ class ViewConfig {
 		return this;
 	}
 
-	addField(name, type, config) {
+	field(name, type, config) {
 		this._fields.push({
 			name: name,
 			type: type,
@@ -39,13 +40,21 @@ class ViewConfig {
 		return this;
 	}
 
-	addTranslationField(name, type, config) {
+	translationField(name, type, config) {
 		this._translationFields.push({
 			name: name,
 			type: type,
 			config: config
-		})
+		});
 		return this;
+	}
+
+	lbList(label, model, filter) {
+		this.lbList.push({
+			label: label,
+			model: model,
+			filter: filter
+		});
 	}
 }
 

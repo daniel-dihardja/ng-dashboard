@@ -3,12 +3,13 @@
  */
 class CreateController {
 
-	constructor($state, $stateParams, $injector, $crud, $window) {
+	constructor($state, $stateParams, $injector, $crud, $stateHistory) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
 		this.$crud = $crud;
 		this.$window = $window;
+		this.$stateHistory = $stateHistory;
 
 		this.model = $injector.get($stateParams.model);
 		this.fields = $crud.model($stateParams.model).createView().fields();
@@ -29,6 +30,16 @@ class CreateController {
 			}
 		}
 
+		this.init();
+
+	}
+
+	init() {
+		this.model.count().$promise
+			.then(function(res) {
+				console.log(res);
+				this.entity.ranking = res.count + 1;
+			}.bind(this))
 	}
 
 	save() {
@@ -39,8 +50,8 @@ class CreateController {
 	}
 
 	back() {
-		this.$window.history.back();
+		this.$stateHistory.back();
 	}
 }
-CreateController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$window'];
+CreateController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$stateHistory'];
 export default CreateController;

@@ -14,7 +14,6 @@ class ListController {
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
 		this.fields = $crud.model($stateParams.model).listView().fields();
 
-
 		this.filterKey
 		this.filterValue;
 		var filterPair;
@@ -30,7 +29,7 @@ class ListController {
 
 		}
 
-		console.log(filterPair);
+		console.log($stateParams);
 
 		this.init();
 	}
@@ -127,8 +126,7 @@ class ListController {
 	}
 
 	newEntity() {
-		console.log('New');
-		this.$state.go('admin.crud-create', {model: this.$stateParams.model});
+		this.$state.go('admin.crud-create', {model: this.$stateParams.model, filter: this.$stateParams.filter});
 	}
 }
 

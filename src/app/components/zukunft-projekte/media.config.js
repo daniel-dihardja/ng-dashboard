@@ -1,5 +1,5 @@
 /**
- * Created by danieldihardja on 20/09/16.
+ * Created by danieldihardja on 25/09/16.
  */
 function config($crudProvider) {
 

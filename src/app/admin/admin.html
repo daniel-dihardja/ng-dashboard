@@ -27,36 +27,35 @@
             <md-content md-scroll-y flex layout="column">
                 <md-sidemenu md-locked="true">
 
-                    <md-sidemenu-group>
-
+                    <!--md-sidemenu-group>
                         <md-subheader class="md-no-sticky">ZF Forum</md-subheader>
                         <md-sidemenu-content md-icon="people_outline" md-heading="Soz. Verantwortung" md-arrow="true" >
                             <md-sidemenu-button md-icon="phonelink_setup" md-heading="ZF Hilft" ui-sref="admin.zfhilft"></md-sidemenu-button>
-                            <!--md-sidemenu-button md-icon="phonelink_setup" md-heading="Kunststiftung" ui-sref="admin.filelist({container: 'videos'})"></md-sidemenu-button-->
                         </md-sidemenu-content>
-                    </md-sidemenu-group>
+                    </md-sidemenu-group-->
 
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="people_outline" md-heading="Zukunft Projekte" md-arrow="true" >
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Artikeln" ui-sref="admin.ZpArtikel-list"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Film Vertiefung" ui-sref="admin.ZpMedia-list"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Artikeln St. 1" ui-sref="admin.crud-list({model: 'ZpArtikel', filter: 'zpStationId=1'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Artikeln St. 2" ui-sref="admin.crud-list({model: 'ZpArtikel', filter: 'zpStationId=2'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Film Vertiefung" ui-sref="admin.crud-list({model: 'ZpMedia', filter: null})"></md-sidemenu-button>
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
-                    <md-sidemenu-group>
+                    <!--md-sidemenu-group>
                         <md-sidemenu-content md-icon="people_outline" md-heading="Auf Einen Blick" md-arrow="true" >
                             <md-sidemenu-button md-icon="phonelink_setup" md-heading="Kategorie" ui-sref="admin.EbCategory-list"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="phonelink_setup" md-heading="Beitrag" ui-sref="admin.EbContent-list"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="phonelink_setup" md-heading="Media" ui-sref="admin.EbMedia-list"></md-sidemenu-button>
                         </md-sidemenu-content>
-                    </md-sidemenu-group>
+                    </md-sidemenu-group-->
 
-                    <md-sidemenu-group>
+                    <!--md-sidemenu-group>
                         <md-sidemenu-content md-icon="people_outline" md-heading="Test" md-arrow="true" >
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="ZpMedia" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'title=ert'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="ZpMedia" ui-sref="admin.crud-list({model: 'ZpMedia'})"></md-sidemenu-button>
                         </md-sidemenu-content>
-                    </md-sidemenu-group>
+                    </md-sidemenu-group-->
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="folder_open" md-heading="Dateien" md-arrow="true" >
@@ -65,9 +64,9 @@
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
-                    <md-sidemenu-group>
+                    <!--md-sidemenu-group>
                         <md-sidemenu-button md-icon="person_outline" md-heading="Profil" ng-click=""></md-sidemenu-button>
-                    </md-sidemenu-group>
+                    </md-sidemenu-group-->
 
                    <md-sidemenu-group>
                        <md-sidemenu-button md-icon="backspace" md-heading="Logout" ng-click="vm.logout()"></md-sidemenu-button>

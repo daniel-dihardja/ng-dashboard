@@ -22,8 +22,8 @@ import components 	from '../components/components';
 
 // custom gui
 import fileSelector from './custom-gui/file-selector/file-selector.directive';
+import stateHistory from './state-history/state-history.service';
 
-import zpMediaCrudConfig from './zp-media.crud-config';
 
 let adminModule = angular.module('admin', [
 		uiRouter,
@@ -56,11 +56,9 @@ let adminModule = angular.module('admin', [
 	}])
 
 
-	.config(['$crudProvider', zpMediaCrudConfig])
-
-
-
 	.directive('fileSelector', fileSelector)
+
+	.service('$stateHistory', stateHistory)
 
 	// workaround for the audio / ng-src issue
 	.filter("trustUrl", ['$sce', function ($sce) {

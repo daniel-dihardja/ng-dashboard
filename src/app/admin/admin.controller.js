@@ -3,9 +3,17 @@
  */
 class AppController {
 
-	constructor($state, AppUser) {
+	constructor($state, AppUser, $rootScope, $stateHistory) {
 		this.$state = $state;
 		this.AppUser = AppUser;
+		this.$rootScope = $rootScope;
+		this.$stateHistory = $stateHistory;
+
+		// start the state history navigator.
+		// this ensure that the state params
+		// are also being set whlie navigating
+		// back to a previous state.
+		this.$stateHistory.init($state, $rootScope);
 	};
 
 	gotoImages() {
@@ -31,5 +39,5 @@ class AppController {
 	}
 }
 
-AppController.$inject = ['$state', 'AppUser'];
+AppController.$inject = ['$state', 'AppUser', '$rootScope', '$stateHistory'];
 export default AppController;
