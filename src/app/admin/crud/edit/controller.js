@@ -14,12 +14,14 @@ class EditController {
 		this.translation = {};
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
-		this.translationKey = $stateParams.translationKey;
 
-		this.fields = $crud.model($stateParams.model).editView().fields();
-		this.translationFields = $crud.model($stateParams.model).editView().translationFields();
 
-		this.hasManyLinks = $crud.model($stateParams.model).editView().hasManyLinks();
+		var editView = $crud.model($stateParams.model).editView();
+		this.fields = editView.fields();
+		this.translationKey = editView.translationKey();
+		this.translationFields = editView.translationFields();
+		this.hasManyLinks = editView.hasManyLinks();
+
 
 		this.init();
 	}
@@ -53,6 +55,7 @@ class EditController {
 
 	createTranslation() {
 		this.translation[this.translationKey] = this.entity.id;
+		console.log('this.translationKey', this.translationKey);
 		this.translation.appLanguageId = 1; //  hardcode id for EN
 		this.modelTranslation.create(this.translation, function(res) {
 			console.log(res);
