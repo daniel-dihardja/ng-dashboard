@@ -1,5 +1,5 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
-    <h1>Edit Entity</h1>
+    <h1>{{vm.title}}</h1>
     <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="DE">
             <md-content class="pd-top-20">
@@ -9,7 +9,7 @@
                     <!-- default input text -->
                     <md-input-container class="md-block" flex-gt-sm ng-if="field.type == undefined">
                         <label>{{field.name}}</label>
-                        <input ng-model="vm.entity[field.name]" required>
+                        <input ng-model="vm.entity[field.name]" >
                     </md-input-container>
 
                     <!-- default checkbox -->
@@ -30,7 +30,7 @@
                     <!-- textarea -->
                     <md-input-container class="md-block" flex-gt-sm ng-if="field.type == 'text'" >
                         <label>{{field.name}}</label>
-                        <textarea ng-model="vm.entity[field.name]" required></textarea>
+                        <textarea ng-model="vm.entity[field.name]" ></textarea>
                     </md-input-container>
 
                     <!-- File -->
@@ -75,7 +75,7 @@
                     <!-- textarea -->
                     <md-input-container class="md-block" flex-gt-sm ng-if="field.type == 'text'" >
                         <label>{{field.name}}</label>
-                        <textarea ng-model="vm.translation[field.name]" required></textarea>
+                        <textarea ng-model="vm.translation[field.name]"></textarea>
                     </md-input-container>
 
                     <!-- File -->

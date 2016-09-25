@@ -11,7 +11,11 @@ class CreateController {
 		this.$stateHistory = $stateHistory;
 
 		this.model = $injector.get($stateParams.model);
-		this.fields = $crud.model($stateParams.model).createView().fields();
+
+
+		var crudView = $crud.model($stateParams.model).createView();
+		this.fields = crudView.fields();
+		this.title = crudView.title() || 'Create';
 		this.entity = {};
 
 		var filterKey;
@@ -29,7 +33,7 @@ class CreateController {
 			}
 		}
 
-		this.init();
+		//this.init();
 
 	}
 

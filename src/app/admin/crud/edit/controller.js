@@ -21,6 +21,7 @@ class EditController {
 		this.translationKey = editView.translationKey();
 		this.translationFields = editView.translationFields();
 		this.hasManyLinks = editView.hasManyLinks();
+		this.title = editView.title() || 'Edit';
 
 
 		this.init();

@@ -5,10 +5,12 @@ function config($crudProvider) {
 
 	var zpArtikel = $crudProvider.model('ZpArtikel');
 	zpArtikel.listView()
+		.title('Artikeln')
 		.field('headline')
 		.field('publish');
 
 	zpArtikel.editView()
+		.title('Artikel Bearbeiten')
 		.field('publish', 'checkbox')
 		.field('headline')
 		.field('teaserText', 'text')
@@ -23,6 +25,7 @@ function config($crudProvider) {
 		.hasManyLink('ZpArtikelMedia', 'zpArtikelId');
 
 	zpArtikel.createView()
+		.title('Artikel Erstellen')
 		.field('headline')
 		.field('teaserText', 'text')
 		.field('mainText', 'text');

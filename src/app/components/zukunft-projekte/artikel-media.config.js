@@ -5,9 +5,10 @@ function config($crudProvider) {
 
 	var zpArtikelMedia = $crudProvider.model('ZpArtikelMedia');
 	zpArtikelMedia.listView()
+		.title('Medien eines Artikels')
 		.field('id')
 		.field('publish')
-		.backButton(true)
+		.backButton(true);
 
 	zpArtikelMedia.createView()
 		.field('type', 'select', {values: ['image', 'video']})

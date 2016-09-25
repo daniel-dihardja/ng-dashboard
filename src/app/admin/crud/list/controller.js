@@ -17,8 +17,11 @@ class ListController {
 
 		var crudView = $crud.model($stateParams.model).listView();
 
+		this.title = crudView.title() || 'CRUD List';
 		this.fields = crudView.fields();
 		this.useBackButton = crudView.useBackButton();
+
+
 
 		this.filterKey
 		this.filterValue;
@@ -42,9 +45,13 @@ class ListController {
 
 	init() {
 		this.filter = this.filter || null;
+
+		var w = {};
+		w[this.filterKey] = this.filterValue;
+
 		var q = {
 			filter: {
-				where: {},
+				where: w,
 				include: 'translations',
 				order: 'ranking ASC'
 			}

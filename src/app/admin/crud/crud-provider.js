@@ -12,6 +12,7 @@ class ViewConfig {
 		this._translationKey;
 		this._hasManyLinks = [];
 		this._backButton = false;
+		this._title;
 	}
 
 	fields(fields) {
@@ -67,6 +68,12 @@ class ViewConfig {
 
 	useBackButton() {
 		return this._backButton;
+	}
+
+	title(t) {
+		if(! t) return this._title;
+		this._title = t;
+		return this;
 	}
 }
 

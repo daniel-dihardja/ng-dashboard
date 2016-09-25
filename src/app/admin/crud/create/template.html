@@ -1,12 +1,12 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
-    <h1>Create</h1>
+    <h1>{{vm.title}}</h1>
 
     <div ng-repeat="field in vm.fields">
 
         <!-- default input text -->
         <md-input-container class="md-block" flex-gt-sm ng-if="field.type == undefined" >
             <label>{{field.name}}</label>
-            <input ng-model="vm.entity[field.name]" required>
+            <input ng-model="vm.entity[field.name]">
         </md-input-container>
 
         <!-- default select -->
@@ -20,7 +20,7 @@
         <!-- textarea -->
         <md-input-container class="md-block" flex-gt-sm ng-if="field.type == 'text'" >
             <label>{{field.name}}</label>
-            <textarea ng-model="vm.entity[field.name]" required></textarea>
+            <textarea ng-model="vm.entity[field.name]"></textarea>
         </md-input-container>
 
         <!-- File -->
