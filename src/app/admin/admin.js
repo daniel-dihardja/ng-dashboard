@@ -22,6 +22,7 @@ import components 	from '../components/components';
 
 // custom gui
 import fileSelector from './custom-gui/file-selector/file-selector.directive';
+import fileUploader from './custom-gui/file-uploader/file-upload.directive';
 import stateHistory from './state-history/state-history.service';
 
 
@@ -57,6 +58,7 @@ let adminModule = angular.module('admin', [
 
 
 	.directive('fileSelector', fileSelector)
+	.directive('fileUploader', fileUploader)
 
 	.service('$stateHistory', stateHistory)
 

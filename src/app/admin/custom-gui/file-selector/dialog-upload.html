@@ -1,0 +1,32 @@
+<md-dialog aria-label="Mango (Fruit)" class="file-selector">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Hochladen</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="vm.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div><img id="imagePreview" src=""></div>
+                <div class="pd-50">
+                    <input type="file" file-model="fileToUpload" onchange="angular.element(this).scope().onFileChanged()"/>
+                </div>
+                <div>
+                    <div>Breite: {{vm.previewImageWidth}} px</div>
+                    <div>Höhe: {{vm.previewImageHeight}} px</div>
+                    <div>Grösse: {{vm.previewImageSize}} MB</div>
+                </div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="vm.cancel()">Abbrechen</md-button>
+            <md-button ng-click="vm.upload()">Hochladen</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

@@ -154,4 +154,10 @@ md-sidemenu-button {
   padding-bottom: 20px; }
 
 .file-selector img {
-  max-width: 640px; }
+  /*max-width: 640px;*/ }
+
+.file-uploader img {
+  /*max-width: 640px;*/ }
+
+.file-uploader .warning {
+  color: #FF0000; }

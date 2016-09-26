@@ -36,7 +36,12 @@
                     <!-- File -->
                     <md-input-container class="md-block pd-left-0" flex-gt-sm ng-if="field.type == 'file'" >
                         <label class="left-0">{{field.name}}</label>
-                        <file-selector ng-model="vm.entity[field.name]" container="images" type="image"></file-selector>
+                        <file-uploader ng-model="vm.entity[field.name]" max-width="{{field.config.maxWidth}}" max-height="{{field.config.maxHeight}}" max-size="{{field.config.maxSize}}" container="{{field.config.container}}" type="image"></file-uploader>
+                    </md-input-container>
+
+                    <md-input-container class="md-block pd-left-0" flex-gt-sm ng-if="field.type == 'file-thumb'" >
+                        <label class="left-0">{{field.name}}</label>
+                        <file-uploader ng-model="vm.entity.thumb" container="assets" type="image"></file-uploader>
                     </md-input-container>
 
                 </div>
@@ -54,7 +59,7 @@
                     <!-- default input text -->
                     <md-input-container class="md-block" flex-gt-sm ng-if="field.type == undefined">
                         <label>{{field.name}}</label>
-                        <input ng-model="vm.translation[field.name]" required>
+                        <input ng-model="vm.translation[field.name]">
                     </md-input-container>
 
                     <!-- default checkbox -->
@@ -81,7 +86,7 @@
                     <!-- File -->
                     <md-input-container class="md-block pd-left-0" flex-gt-sm ng-if="field.type == 'file'" >
                         <label class="left-0">{{field.name}}</label>
-                        <file-selector ng-model="vm.translation[field.name]" container="images" type="image"></file-selector>
+                        <file-uploader ng-model="vm.translation[field.name]" container="assets" type="image"></file-uploader>
                     </md-input-container>
 
                 </div>

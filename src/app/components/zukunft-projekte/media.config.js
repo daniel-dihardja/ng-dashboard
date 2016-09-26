@@ -1,6 +1,8 @@
 /**
  * Created by danieldihardja on 25/09/16.
  */
+import settings from '../../app.settings';
+
 function config($crudProvider) {
 
 	var zpMedia = $crudProvider.model('ZpMedia');
@@ -21,14 +23,23 @@ function config($crudProvider) {
 		.field('publish', 'checkbox')
 		.field('title')
 		.field('description', 'text')
-		.field('src', 'file')
-		.field('thumb', 'file')
-
+		.field('src', 'file', {
+			container: 'assets',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight,
+			maxSize: settings.maxImageMBSize * 1024 * 1024
+		})
+		.field('thumb', 'file', {container: 'assets'})
 		.translationKey('zpMediaId')
-
 		.translationField('title')
 		.translationField('description', 'text')
-		.translationField('src', 'file')
-		.translationField('thumb', 'file')
+		.translationField('src', 'file', {
+			container: 'assets',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight,
+			maxSize: settings.maxImageMBSize * 1024 * 1024
+		})
+		.translationField('thumb', 'file', {container: 'assets'})
+
 }
 export default config;

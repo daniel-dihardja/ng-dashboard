@@ -13,7 +13,7 @@ import appSettings from '../../../app.settings';
 
 
 
-class FileSelector {
+class FileUploader {
 
 	/**
 	 * init file selector
@@ -50,9 +50,6 @@ class FileSelector {
 		var _this = this;
 
 		scope.baseUrl = appSettings.baseUrl + 'assets' || '/assets/';
-		scope.openDialog = function($event) {
-			_this.openDialog(_this.$mdDialog, $event, scope);
-		};
 
 		scope.openUploadDialog = this.openUploadDialog.bind(this);
 
@@ -65,42 +62,7 @@ class FileSelector {
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
 		};
 
-		// get files from trhe given container
-		this.$files.getList(scope.container).then(function(res) {
-			scope.files = res.data;
-		});
-
 		console.log(scope);
-	}
-
-	/**
-	 * open file select dialog
-	 * @param $mdDialog
-	 * @param $event
-	 * @param scope
-	 */
-	openDialog($mdDialog, $event, scope) {
-		var _this = this;
-		$mdDialog.show({
-			controller: dialogController,
-			controllerAs: 'vm',
-			template: dialogTemplate,
-			parent: angular.element(document.body),
-			targetEvent: $event,
-			clickOutsideToClose:true,
-			fullscreen: false,
-			locals: {
-				files: scope.files,
-				selectedFile: scope.selectedFile
-			},
-		})
-		.then(function(answer) {
-			scope.modelValue = scope.selectedFile = answer;
-			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
-
-		}, function(){
-			console.log('cancel');
-		})
 	}
 
 	openUploadDialog($event) {
@@ -125,9 +87,9 @@ class FileSelector {
 	}
 
 	static directiveFactory($mdDialog, $files) {
-		return new FileSelector($mdDialog, $files);
+		return new FileUploader($mdDialog, $files);
 	}
 }
 
-FileSelector.directiveFactory.$inject = ['$mdDialog', '$files'];
-export default FileSelector.directiveFactory;
+FileUploader.directiveFactory.$inject = ['$mdDialog', '$files'];
+export default FileUploader.directiveFactory;

@@ -43,6 +43,7 @@ class EditController {
 	}
 
 	save() {
+		console.log('*entity*', this.entity);
 		this.saveTranslation();
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.back();
