@@ -16,8 +16,13 @@
                     <td md-cell ng-repeat="field in vm.fields">
                         <div ng-if="field.name != 'publish'">{{entity[field.name]}}</div>
                         <div ng-if="field.name == 'publish'">
-                            <md-icon ng-show="! entity.publish">https</md-icon>
-                            <md-icon ng-show="entity.publish">done</md-icon>
+                            <md-button ng-show="! entity.publish" class="md-icon-button" ng-click="vm.togglePublish(entity)">
+                                <md-icon>https</md-icon>
+                            </md-button>
+
+                            <md-button ng-show="entity.publish" class="md-icon-button" ng-click="vm.togglePublish(entity)">
+                                <md-icon>done</md-icon>
+                            </md-button>
                         </div>
                     </td>
 

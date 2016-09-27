@@ -21,8 +21,6 @@ class ListController {
 		this.fields = crudView.fields();
 		this.useBackButton = crudView.useBackButton();
 
-
-
 		this.filterKey
 		this.filterValue;
 		var filterPair;
@@ -37,8 +35,6 @@ class ListController {
 			}
 
 		}
-
-		console.log($stateParams);
 
 		this.init();
 	}
@@ -72,6 +68,14 @@ class ListController {
 			.ok('Ja')
 			.cancel('Nein');
 		return confirm;
+	}
+
+	togglePublish(entity) {
+		if(entity.publish == 1) entity.publish = 0;
+		else if(entity.publish == 0) entity.publish = 1;
+		entity.$save().then(function() {
+			this.init();
+		}.bind(this))
 	}
 
 	editItem(entity) {
