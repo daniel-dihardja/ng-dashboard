@@ -15,14 +15,12 @@ class EditController {
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
 
-
 		var editView = $crud.model($stateParams.model).editView();
 		this.fields = editView.fields();
 		this.translationKey = editView.translationKey();
 		this.translationFields = editView.translationFields();
 		this.hasManyLinks = editView.hasManyLinks();
 		this.title = editView.title() || 'Edit';
-
 
 		this.init();
 	}
@@ -45,6 +43,7 @@ class EditController {
 	save() {
 		console.log('*entity*', this.entity);
 		this.saveTranslation();
+		if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.back();
 		}.bind(this))
