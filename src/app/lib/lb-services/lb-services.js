@@ -16491,7 +16491,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       'LoopBackResource', 'LoopBackAuth', '$injector',
       function(Resource, LoopBackAuth, $injector) {
         var R = Resource(
-        urlBase + "/SvZfhilft/:id",
+        urlBase + "/SvZfhilfts/:id",
           { 'id': '@id' },
           {
 
@@ -16500,7 +16500,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/translations/:fk",
+              url: urlBase + "/SvZfhilfts/:id/translations/:fk",
               method: "GET",
             },
 
@@ -16509,7 +16509,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/translations/:fk",
+              url: urlBase + "/SvZfhilfts/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -16518,7 +16518,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/translations/:fk",
+              url: urlBase + "/SvZfhilfts/:id/translations/:fk",
               method: "PUT",
             },
 
@@ -16527,7 +16527,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/medias/:fk",
+              url: urlBase + "/SvZfhilfts/:id/medias/:fk",
               method: "GET",
             },
 
@@ -16536,7 +16536,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/medias/:fk",
+              url: urlBase + "/SvZfhilfts/:id/medias/:fk",
               method: "DELETE",
             },
 
@@ -16545,7 +16545,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/medias/:fk",
+              url: urlBase + "/SvZfhilfts/:id/medias/:fk",
               method: "PUT",
             },
 
@@ -16554,7 +16554,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/projects/:fk",
+              url: urlBase + "/SvZfhilfts/:id/projects/:fk",
               method: "GET",
             },
 
@@ -16563,7 +16563,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/projects/:fk",
+              url: urlBase + "/SvZfhilfts/:id/projects/:fk",
               method: "DELETE",
             },
 
@@ -16572,82 +16572,82 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/projects/:fk",
+              url: urlBase + "/SvZfhilfts/:id/projects/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvZfhilft.translations() instead.
             "prototype$__get__translations": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.translations.create() instead.
             "prototype$__create__translations": {
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.translations.destroyAll() instead.
             "prototype$__delete__translations": {
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvZfhilft.translations.count() instead.
             "prototype$__count__translations": {
-              url: urlBase + "/SvZfhilft/:id/translations/count",
+              url: urlBase + "/SvZfhilfts/:id/translations/count",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.medias() instead.
             "prototype$__get__medias": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.medias.create() instead.
             "prototype$__create__medias": {
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.medias.destroyAll() instead.
             "prototype$__delete__medias": {
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvZfhilft.medias.count() instead.
             "prototype$__count__medias": {
-              url: urlBase + "/SvZfhilft/:id/medias/count",
+              url: urlBase + "/SvZfhilfts/:id/medias/count",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.projects() instead.
             "prototype$__get__projects": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.projects.create() instead.
             "prototype$__create__projects": {
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.projects.destroyAll() instead.
             "prototype$__delete__projects": {
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvZfhilft.projects.count() instead.
             "prototype$__count__projects": {
-              url: urlBase + "/SvZfhilft/:id/projects/count",
+              url: urlBase + "/SvZfhilfts/:id/projects/count",
               method: "GET",
             },
 
@@ -16685,7 +16685,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "create": {
-              url: urlBase + "/SvZfhilft",
+              url: urlBase + "/SvZfhilfts",
               method: "POST",
             },
 
@@ -16724,7 +16724,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/SvZfhilft",
+              url: urlBase + "/SvZfhilfts",
               method: "POST",
             },
 
@@ -16762,7 +16762,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "upsert": {
-              url: urlBase + "/SvZfhilft",
+              url: urlBase + "/SvZfhilfts",
               method: "PUT",
             },
 
@@ -16794,7 +16794,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/SvZfhilft/:id/exists",
+              url: urlBase + "/SvZfhilfts/:id/exists",
               method: "GET",
             },
 
@@ -16829,7 +16829,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findById": {
-              url: urlBase + "/SvZfhilft/:id",
+              url: urlBase + "/SvZfhilfts/:id",
               method: "GET",
             },
 
@@ -16863,7 +16863,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "find": {
               isArray: true,
-              url: urlBase + "/SvZfhilft",
+              url: urlBase + "/SvZfhilfts",
               method: "GET",
             },
 
@@ -16896,7 +16896,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findOne": {
-              url: urlBase + "/SvZfhilft/findOne",
+              url: urlBase + "/SvZfhilfts/findOne",
               method: "GET",
             },
 
@@ -16930,7 +16930,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * The number of instances updated
              */
             "updateAll": {
-              url: urlBase + "/SvZfhilft/update",
+              url: urlBase + "/SvZfhilfts/update",
               method: "POST",
             },
 
@@ -16963,7 +16963,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/SvZfhilft/:id",
+              url: urlBase + "/SvZfhilfts/:id",
               method: "DELETE",
             },
 
@@ -16995,7 +16995,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/SvZfhilft/count",
+              url: urlBase + "/SvZfhilfts/count",
               method: "GET",
             },
 
@@ -17032,7 +17032,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "prototype$updateAttributes": {
-              url: urlBase + "/SvZfhilft/:id",
+              url: urlBase + "/SvZfhilfts/:id",
               method: "PUT",
             },
 
@@ -17069,7 +17069,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/SvZfhilft/change-stream",
+              url: urlBase + "/SvZfhilfts/change-stream",
               method: "POST",
             },
 
@@ -17105,7 +17105,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "getContentData": {
-              url: urlBase + "/SvZfhilft/contentData",
+              url: urlBase + "/SvZfhilfts/contentData",
               method: "GET",
             },
           }
@@ -18612,7 +18612,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/translations/:fk",
+              url: urlBase + "/SvZfhilfts/:id/translations/:fk",
               method: "GET",
             },
 
@@ -18621,7 +18621,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/translations/:fk",
+              url: urlBase + "/SvZfhilfts/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -18630,39 +18630,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/translations/:fk",
+              url: urlBase + "/SvZfhilfts/:id/translations/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvZfhilft.translations() instead.
             "::get::SvZfhilft::translations": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.translations.create() instead.
             "::create::SvZfhilft::translations": {
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.translations.createMany() instead.
             "::createMany::SvZfhilft::translations": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.translations.destroyAll() instead.
             "::delete::SvZfhilft::translations": {
-              url: urlBase + "/SvZfhilft/:id/translations",
+              url: urlBase + "/SvZfhilfts/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvZfhilft.translations.count() instead.
             "::count::SvZfhilft::translations": {
-              url: urlBase + "/SvZfhilft/:id/translations/count",
+              url: urlBase + "/SvZfhilfts/:id/translations/count",
               method: "GET",
             },
           }
@@ -19318,7 +19318,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/medias/:fk",
+              url: urlBase + "/SvZfhilfts/:id/medias/:fk",
               method: "GET",
             },
 
@@ -19327,7 +19327,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/medias/:fk",
+              url: urlBase + "/SvZfhilfts/:id/medias/:fk",
               method: "DELETE",
             },
 
@@ -19336,39 +19336,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/medias/:fk",
+              url: urlBase + "/SvZfhilfts/:id/medias/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvZfhilft.medias() instead.
             "::get::SvZfhilft::medias": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.medias.create() instead.
             "::create::SvZfhilft::medias": {
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.medias.createMany() instead.
             "::createMany::SvZfhilft::medias": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.medias.destroyAll() instead.
             "::delete::SvZfhilft::medias": {
-              url: urlBase + "/SvZfhilft/:id/medias",
+              url: urlBase + "/SvZfhilfts/:id/medias",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvZfhilft.medias.count() instead.
             "::count::SvZfhilft::medias": {
-              url: urlBase + "/SvZfhilft/:id/medias/count",
+              url: urlBase + "/SvZfhilfts/:id/medias/count",
               method: "GET",
             },
           }
@@ -20377,7 +20377,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/projects/:fk",
+              url: urlBase + "/SvZfhilfts/:id/projects/:fk",
               method: "GET",
             },
 
@@ -20386,7 +20386,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/projects/:fk",
+              url: urlBase + "/SvZfhilfts/:id/projects/:fk",
               method: "DELETE",
             },
 
@@ -20395,39 +20395,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvZfhilft/:id/projects/:fk",
+              url: urlBase + "/SvZfhilfts/:id/projects/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvZfhilft.projects() instead.
             "::get::SvZfhilft::projects": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "GET",
             },
 
             // INTERNAL. Use SvZfhilft.projects.create() instead.
             "::create::SvZfhilft::projects": {
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.projects.createMany() instead.
             "::createMany::SvZfhilft::projects": {
               isArray: true,
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "POST",
             },
 
             // INTERNAL. Use SvZfhilft.projects.destroyAll() instead.
             "::delete::SvZfhilft::projects": {
-              url: urlBase + "/SvZfhilft/:id/projects",
+              url: urlBase + "/SvZfhilfts/:id/projects",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvZfhilft.projects.count() instead.
             "::count::SvZfhilft::projects": {
-              url: urlBase + "/SvZfhilft/:id/projects/count",
+              url: urlBase + "/SvZfhilfts/:id/projects/count",
               method: "GET",
             },
           }

@@ -63,7 +63,7 @@ class FileUploader {
 			else if(mv.indexOf('.mp4') > 0) {
 				scope.type = 'video/mp4';
 			}
-			else if(mv.indexOf('.jpg') > 0 || mv.indexOf('.jpeg') > 0) {
+			else if(mv.indexOf('.jpg') > 0 || mv.indexOf('.jpeg') > 0 || mv.indexOf('.png') > 0) {
 				scope.type = 'image/jpeg';
 			}
 			console.log('scope.modelValue', scope.modelValue);

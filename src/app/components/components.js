@@ -18,7 +18,14 @@ import stipendiaten from './social-resp/stipendiaten.config';
 import stipendiat from './social-resp/stipendiat.config';
 import kultur from './social-resp/kultur.config';
 import kulturItem from './social-resp/kultur-item.config';
-
+import musikPreis from './social-resp/musikpreis.config';
+import musikPreisItem from './social-resp/musikpreis-item.config';
+import kunstStiftung from './social-resp/kunststiftung.config';
+import kunstStiftungItem from './social-resp/kunststiftung-item.config';
+import hilfsproject from './social-resp/hilfsprojekt.config';
+import hilfsprojectItem from './social-resp/hilfsprojekt-item.config';
+import zfHilft from './social-resp/zf-hilft.config';
+import zfHilftItem from './social-resp/zf-hilft-item.config';
 
 let componentsModule = angular.module('admin.components', [crud.name])
 	.config(['$crudProvider', ($crudProvider) => {
@@ -36,6 +43,16 @@ let componentsModule = angular.module('admin.components', [crud.name])
 		stipendiat($crudProvider);
 		kultur($crudProvider);
 		kulturItem($crudProvider);
+		musikPreis($crudProvider);
+		musikPreisItem($crudProvider);
+		kunstStiftung($crudProvider);
+		kunstStiftungItem($crudProvider);
+
+		hilfsproject($crudProvider);
+		hilfsprojectItem($crudProvider);
+
+		zfHilft($crudProvider);
+		zfHilftItem($crudProvider);
 
 	}]);
 export default componentsModule;
