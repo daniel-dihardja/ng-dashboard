@@ -16426,8 +16426,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *   This method does not accept any parameters.
-             *   Supply an empty object or omit this argument altogether.
+             *  - `stationId` – `{string=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -22511,7 +22510,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       'LoopBackResource', 'LoopBackAuth', '$injector',
       function(Resource, LoopBackAuth, $injector) {
         var R = Resource(
-        urlBase + "/SvStipendiaten/:id",
+        urlBase + "/SvStipendiatens/:id",
           { 'id': '@id' },
           {
 
@@ -22520,7 +22519,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/translations/:fk",
+              url: urlBase + "/SvStipendiatens/:id/translations/:fk",
               method: "GET",
             },
 
@@ -22529,7 +22528,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/translations/:fk",
+              url: urlBase + "/SvStipendiatens/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -22538,7 +22537,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/translations/:fk",
+              url: urlBase + "/SvStipendiatens/:id/translations/:fk",
               method: "PUT",
             },
 
@@ -22547,7 +22546,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/:fk",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/:fk",
               method: "GET",
             },
 
@@ -22556,7 +22555,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/:fk",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/:fk",
               method: "DELETE",
             },
 
@@ -22565,57 +22564,57 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/:fk",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvStipendiaten.translations() instead.
             "prototype$__get__translations": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.create() instead.
             "prototype$__create__translations": {
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.destroyAll() instead.
             "prototype$__delete__translations": {
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.count() instead.
             "prototype$__count__translations": {
-              url: urlBase + "/SvStipendiaten/:id/translations/count",
+              url: urlBase + "/SvStipendiatens/:id/translations/count",
               method: "GET",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats() instead.
             "prototype$__get__stipendiats": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "GET",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.create() instead.
             "prototype$__create__stipendiats": {
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "POST",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.destroyAll() instead.
             "prototype$__delete__stipendiats": {
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.count() instead.
             "prototype$__count__stipendiats": {
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/count",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/count",
               method: "GET",
             },
 
@@ -22653,7 +22652,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "create": {
-              url: urlBase + "/SvStipendiaten",
+              url: urlBase + "/SvStipendiatens",
               method: "POST",
             },
 
@@ -22692,7 +22691,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten",
+              url: urlBase + "/SvStipendiatens",
               method: "POST",
             },
 
@@ -22730,7 +22729,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "upsert": {
-              url: urlBase + "/SvStipendiaten",
+              url: urlBase + "/SvStipendiatens",
               method: "PUT",
             },
 
@@ -22762,7 +22761,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/SvStipendiaten/:id/exists",
+              url: urlBase + "/SvStipendiatens/:id/exists",
               method: "GET",
             },
 
@@ -22797,7 +22796,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findById": {
-              url: urlBase + "/SvStipendiaten/:id",
+              url: urlBase + "/SvStipendiatens/:id",
               method: "GET",
             },
 
@@ -22831,7 +22830,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "find": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten",
+              url: urlBase + "/SvStipendiatens",
               method: "GET",
             },
 
@@ -22864,7 +22863,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findOne": {
-              url: urlBase + "/SvStipendiaten/findOne",
+              url: urlBase + "/SvStipendiatens/findOne",
               method: "GET",
             },
 
@@ -22898,7 +22897,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * The number of instances updated
              */
             "updateAll": {
-              url: urlBase + "/SvStipendiaten/update",
+              url: urlBase + "/SvStipendiatens/update",
               method: "POST",
             },
 
@@ -22931,7 +22930,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/SvStipendiaten/:id",
+              url: urlBase + "/SvStipendiatens/:id",
               method: "DELETE",
             },
 
@@ -22963,7 +22962,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/SvStipendiaten/count",
+              url: urlBase + "/SvStipendiatens/count",
               method: "GET",
             },
 
@@ -23000,7 +22999,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "prototype$updateAttributes": {
-              url: urlBase + "/SvStipendiaten/:id",
+              url: urlBase + "/SvStipendiatens/:id",
               method: "PUT",
             },
 
@@ -23037,7 +23036,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/SvStipendiaten/change-stream",
+              url: urlBase + "/SvStipendiatens/change-stream",
               method: "POST",
             },
 
@@ -23073,7 +23072,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "getContentData": {
-              url: urlBase + "/SvStipendiaten/contentData",
+              url: urlBase + "/SvStipendiatens/contentData",
               method: "GET",
             },
           }
@@ -24279,7 +24278,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/translations/:fk",
+              url: urlBase + "/SvStipendiatens/:id/translations/:fk",
               method: "GET",
             },
 
@@ -24288,7 +24287,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/translations/:fk",
+              url: urlBase + "/SvStipendiatens/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -24297,39 +24296,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/translations/:fk",
+              url: urlBase + "/SvStipendiatens/:id/translations/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvStipendiaten.translations() instead.
             "::get::SvStipendiaten::translations": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.create() instead.
             "::create::SvStipendiaten::translations": {
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.createMany() instead.
             "::createMany::SvStipendiaten::translations": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.destroyAll() instead.
             "::delete::SvStipendiaten::translations": {
-              url: urlBase + "/SvStipendiaten/:id/translations",
+              url: urlBase + "/SvStipendiatens/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvStipendiaten.translations.count() instead.
             "::count::SvStipendiaten::translations": {
-              url: urlBase + "/SvStipendiaten/:id/translations/count",
+              url: urlBase + "/SvStipendiatens/:id/translations/count",
               method: "GET",
             },
           }
@@ -25639,7 +25638,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/:fk",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/:fk",
               method: "GET",
             },
 
@@ -25648,7 +25647,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/:fk",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/:fk",
               method: "DELETE",
             },
 
@@ -25657,39 +25656,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/:fk",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats() instead.
             "::get::SvStipendiaten::stipendiats": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "GET",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.create() instead.
             "::create::SvStipendiaten::stipendiats": {
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "POST",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.createMany() instead.
             "::createMany::SvStipendiaten::stipendiats": {
               isArray: true,
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "POST",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.destroyAll() instead.
             "::delete::SvStipendiaten::stipendiats": {
-              url: urlBase + "/SvStipendiaten/:id/stipendiats",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvStipendiaten.stipendiats.count() instead.
             "::count::SvStipendiaten::stipendiats": {
-              url: urlBase + "/SvStipendiaten/:id/stipendiats/count",
+              url: urlBase + "/SvStipendiatens/:id/stipendiats/count",
               method: "GET",
             },
           }
@@ -44127,6 +44126,1196 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         * i.e. `ImageUtil`.
         */
         R.modelName = "ImageUtil";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.LedPool
+ * @header lbServices.LedPool
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `LedPool` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "LedPool",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/LedPools/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#create
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/LedPools",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#createMany
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/LedPools",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#upsert
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/LedPools",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#exists
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/LedPools/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#findById
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/LedPools/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#find
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/LedPools",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#findOne
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/LedPools/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#updateAll
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/LedPools/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#deleteById
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/LedPools/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#count
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/LedPools/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#prototype$updateAttributes
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/LedPools/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#createChangeStream
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/LedPools/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#updateOrCreate
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#update
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#destroyById
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#removeById
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPool` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.LedPool#modelName
+        * @propertyOf lbServices.LedPool
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `LedPool`.
+        */
+        R.modelName = "LedPool";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.LedContent
+ * @header lbServices.LedContent
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `LedContent` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "LedContent",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/LedContents/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#create
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/LedContents",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#createMany
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/LedContents",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#upsert
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/LedContents",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#exists
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/LedContents/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#findById
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/LedContents/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#find
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/LedContents",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#findOne
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/LedContents/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#updateAll
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/LedContents/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#deleteById
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/LedContents/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#count
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/LedContents/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#prototype$updateAttributes
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/LedContents/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#createChangeStream
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/LedContents/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#updateOrCreate
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#update
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#destroyById
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#removeById
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.LedContent#modelName
+        * @propertyOf lbServices.LedContent
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `LedContent`.
+        */
+        R.modelName = "LedContent";
 
 
 

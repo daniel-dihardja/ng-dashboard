@@ -34,6 +34,14 @@
                         </md-sidemenu-content>
                     </md-sidemenu-group-->
 
+                    <md-sidemenu-group>
+                        <md-sidemenu-content md-icon="remove_red_eye" md-heading="Soziale Verantwortung" md-arrow="true" >
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Stiftung" ui-sref="admin.crud-list({model: 'SvStiftung', filter: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Stipendiaten" ui-sref="admin.crud-list({model: 'SvStipendiaten', filter: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Kultur" ui-sref="admin.crud-list({model: 'SvKultur', filter: null})"></md-sidemenu-button>
+
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="watch" md-heading="Zukunft Projekte" md-arrow="true" >
@@ -60,6 +68,12 @@
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
+                    <md-sidemenu-group>
+                        <md-sidemenu-content md-icon="remove_red_eye" md-heading="LED Ring" md-arrow="true" >
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Kategorien" ui-sref="admin.crud-list({model: 'EbCategory', filter: null})"></md-sidemenu-button>
+                        </md-sidemenu-content>
+                    </md-sidemenu-group>
+
                     <!--md-sidemenu-group>
                         <md-sidemenu-content md-icon="people_outline" md-heading="Auf Einen Blick" md-arrow="true" >
                             <md-sidemenu-button md-icon="phonelink_setup" md-heading="Kategorie" ui-sref="admin.EbCategory-list"></md-sidemenu-button>
@@ -74,12 +88,12 @@
                         </md-sidemenu-content>
                     </md-sidemenu-group-->
 
-                    <md-sidemenu-group>
+                    <!--md-sidemenu-group>
                         <md-sidemenu-content md-icon="folder_open" md-heading="Dateien" md-arrow="true" >
                             <md-sidemenu-button md-icon="collections" md-heading="{{ 'files.images' | translate }}" ui-sref="admin.filelist({container: 'images'})"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="video_library" md-heading="{{ 'files.videos' | translate }}" ui-sref="admin.filelist({container: 'videos'})"></md-sidemenu-button>
                         </md-sidemenu-content>
-                    </md-sidemenu-group>
+                    </md-sidemenu-group-->
 
                     <!--md-sidemenu-group>
                         <md-sidemenu-button md-icon="person_outline" md-heading="Profil" ng-click=""></md-sidemenu-button>

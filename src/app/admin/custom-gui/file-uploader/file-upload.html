@@ -1,6 +1,6 @@
 <div class="file-uploader">
     <h1>{{selectedFile}}</h1>
-    <div ng-show="type=='image/jpeg'">
+    <div ng-show="type=='image/jpeg' || type=='image/png'">
         <img ng-if="selectedFile !== undefined" ng-src="{{selectedFileUrl}}" />
     </div>
 

@@ -43,8 +43,6 @@ class DialogUploadController {
 		img.onload = function(){
 			this.$scope.$apply(function() {
 
-
-
 				var warningWidth = false;
 				var warningHeight = false;
 				var allowUpload = true;

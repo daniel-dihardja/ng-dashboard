@@ -12,7 +12,8 @@ export default {
 		edit:		'Edit',
 		list: 		'List',
 
-		toMedia:	'zu den Medien'
+		toMedia:	'zu den Medien',
+		ledring:	'LED Ring'
 
 	}
 };

@@ -55,7 +55,6 @@ class FileUploader {
 			scope.selectedFile = scope.modelValue;
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
 
-
 			var mv = scope.modelValue;
 			if(! mv) return;
  			if(mv.indexOf('.mp3') > 0) {
@@ -67,13 +66,13 @@ class FileUploader {
 			else if(mv.indexOf('.jpg') > 0 || mv.indexOf('.jpeg') > 0) {
 				scope.type = 'image/jpeg';
 			}
-
 			console.log('scope.modelValue', scope.modelValue);
 		};
 	}
 
 	openUploadDialog($event, $mdDialog, scope) {
 
+		console.log('scope', scope);
 		$mdDialog.show({
 			controller: uploadController,
 			controllerAs: 'vm',
