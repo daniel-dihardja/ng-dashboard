@@ -5,7 +5,7 @@
 
             <md-toolbar>
                 <div class="md-toolbar-tools">
-                    <h2>{{'login.title' | translate}}</h2>
+                    <h2>{{'txt.login' | translate}}</h2>
                     <span flex></span>
                     <md-button type="button" class="md-icon-button" ng-click="vm.handleCancel(); $event.stopPropagation();">
                         <md-icon md-svg-icon="navigation:close" aria-label="Close dialog"></md-icon>
@@ -16,12 +16,12 @@
             <md-card-content>
                 <div class="md-dialog-content pd-50">
                     <md-input-container class="md-block">
-                        <label>{{'login.username' | translate}}:</label>
+                        <label>{{'txt.username' | translate}}:</label>
                         <input ng-model="vm.username" required>
                     </md-input-container>
 
                     <md-input-container class="md-block">
-                        <label>{{'login.password' | translate}}:</label>
+                        <label>{{'txt.password' | translate}}:</label>
                         <input ng-model="vm.password" type="password" required>
                     </md-input-container>
                 </div>
@@ -33,7 +33,7 @@
                            type="submit"
                            ng-class="{'md-raised': (loginForm.$dirty && loginForm.$valid) }"
                            aria-label="OK">
-                    {{'login.submit' | translate}}
+                    {{'txt.login' | translate}}
                 </md-button>
             </md-card-actions>
 

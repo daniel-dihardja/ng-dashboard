@@ -8,7 +8,7 @@
                 <md-icon md-svg-icon="assets/svg/menu.svg"></md-icon>
             </md-button-->
             <h2>
-                <span>{{'app.title' | translate}}</span>
+                <span>{{'txt.cmsTitle' | translate}}</span>
             </h2>
             <span flex></span>
             <md-button class="md-icon-button" aria-label="Favorite">
@@ -46,8 +46,11 @@
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
-                        <md-sidemenu-content md-icon="watch" md-heading="Film Vertiefung" md-arrow="true" >
-                        <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpMedia', filter: null})"></md-sidemenu-button>
+                        <md-sidemenu-content md-icon="personal_video" md-heading="Film Vertiefung" md-arrow="true" >
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=1'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=2'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=3'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=4'})"></md-sidemenu-button>
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
