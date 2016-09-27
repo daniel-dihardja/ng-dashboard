@@ -17,11 +17,11 @@
                         <div ng-if="field.name != 'publish'">{{entity[field.name]}}</div>
                         <div ng-if="field.name == 'publish'">
                             <md-button ng-show="! entity.publish" class="md-icon-button" ng-click="vm.togglePublish(entity)">
-                                <md-icon>https</md-icon>
+                                <md-icon>visibility_off</md-icon>
                             </md-button>
 
                             <md-button ng-show="entity.publish" class="md-icon-button" ng-click="vm.togglePublish(entity)">
-                                <md-icon>done</md-icon>
+                                <md-icon>visibility</md-icon>
                             </md-button>
                         </div>
                     </td>

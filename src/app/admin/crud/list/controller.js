@@ -33,7 +33,6 @@ class ListController {
 				this.filterKey = filterPair[0];
 				this.filterValue = filterPair[1];
 			}
-
 		}
 
 		this.init();

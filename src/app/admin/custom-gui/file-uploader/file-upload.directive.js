@@ -42,14 +42,10 @@ class FileUploader {
 	 */
 	link(scope, element, attrs, ngModelCtrl) {
 
-		console.log('scope', scope);
-
 		scope.baseUrl = appSettings.baseUrl + 'files' || '/files/';
-
 		scope.openUploadDialog = function(evt) {
 			this.openUploadDialog(evt, this.$mdDialog, scope)
 		}.bind(this);
-
 
 		scope.selectedFile = "";
 		scope.selectedFileUrl = "";
@@ -58,10 +54,26 @@ class FileUploader {
 		this.ngModelCtrl.$render = function() {
 			scope.selectedFile = scope.modelValue;
 			scope.selectedFileUrl = scope.baseUrl + '/' + scope.container + '/' + scope.selectedFile;
+
+
+			var mv = scope.modelValue;
+			if(! mv) return;
+ 			if(mv.indexOf('.mp3') > 0) {
+				scope.type = 'audio/mp3';
+			}
+			else if(mv.indexOf('.mp4') > 0) {
+				scope.type = 'video/mp4';
+			}
+			else if(mv.indexOf('.jpg') > 0 || mv.indexOf('.jpeg') > 0) {
+				scope.type = 'image/jpeg';
+			}
+
+			console.log('scope.modelValue', scope.modelValue);
 		};
 	}
 
 	openUploadDialog($event, $mdDialog, scope) {
+
 		$mdDialog.show({
 			controller: uploadController,
 			controllerAs: 'vm',
@@ -77,13 +89,12 @@ class FileUploader {
 				maxSize: scope.maxSize
 			}
 		})
-		.then(function(fileName) {
-			if(! fileName) return;
-			console.log('upload complete ...', fileName);
-			scope.modelValue = scope.selectedFile = fileName;
-			scope.selectedFileUrl = scope.baseUrl + '/' + fileName;
-			scope.modelValue = fileName;
-			console.log('scope', scope);
+		.then(function(file) {
+			if(! file.name) return;
+
+			scope.modelValue = scope.selectedFile = file.name;
+			scope.selectedFileUrl = scope.baseUrl + '/' + file.name;
+			scope.type = file.type;
 
 		}.bind(this),
 		function() {

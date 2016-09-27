@@ -21,6 +21,7 @@ function config($crudProvider) {
 
 	zpMedia.editView()
 		.field('publish', 'checkbox')
+		.field('type', 'select', {values: ['audio', 'video']})
 		.field('title')
 		.field('description', 'text')
 		.field('src', 'file', {
@@ -29,7 +30,10 @@ function config($crudProvider) {
 			maxHeight: settings.ipadProMaxHeight,
 			maxSize: settings.maxImageMBSize * 1024 * 1024
 		})
-		.field('thumb', 'file', {container: 'assets'})
+		.field('thumb', 'file', {
+			container: 'assets'
+		})
+
 		.translationKey('zpMediaId')
 		.translationField('title')
 		.translationField('description', 'text')
@@ -40,6 +44,5 @@ function config($crudProvider) {
 			maxSize: settings.maxImageMBSize * 1024 * 1024
 		})
 		.translationField('thumb', 'file', {container: 'assets'})
-
 }
 export default config;

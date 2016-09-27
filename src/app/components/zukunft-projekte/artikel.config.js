@@ -15,13 +15,10 @@ function config($crudProvider) {
 		.field('headline')
 		.field('teaserText', 'text')
 		.field('mainText', 'text')
-
 		.translationKey('zpArtikelId')
-
 		.translationField('headline')
 		.translationField('teaserText', 'text')
 		.translationField('mainText', 'text')
-
 		.hasManyLink('ZpArtikelMedia', 'zpArtikelId');
 
 	zpArtikel.createView()
@@ -29,6 +26,5 @@ function config($crudProvider) {
 		.field('headline')
 		.field('teaserText', 'text')
 		.field('mainText', 'text');
-
 }
 export default config;

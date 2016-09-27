@@ -1,14 +1,20 @@
 <div class="file-uploader">
     <h1>{{selectedFile}}</h1>
-    <div ng-show="type=='image'">
+    <div ng-show="type=='image/jpeg'">
         <img ng-if="selectedFile !== undefined" ng-src="{{selectedFileUrl}}" />
     </div>
 
-    <!--div ng-show="type=='audio'">
+    <div ng-show="type=='audio/mp3'">
         <audio src="{{selectedFileUrl | trustUrl}}" controls>
             Your browser does not support the audio element.
         </audio>
-    </div-->
+    </div>
+
+    <div ng-show="type=='video/mp4'">
+        <video src="{{selectedFileUrl | trustUrl}}" controls>
+            Your browser does not support the audio element.
+        </video>
+    </div>
 
     <div>
         <md-button class="md-fab md-mini" ng-click="openUploadDialog($event)"><md-icon>file_upload</md-icon></md-button>
