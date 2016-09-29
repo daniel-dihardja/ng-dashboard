@@ -9,7 +9,8 @@ function config($crudProvider) {
 	var item = $crudProvider.model('SvKunststiftungMedia');
 
 	item.listView()
-		.title('Kunststiftung Medien')
+		.backButton(true)
+		.title('/ Medien')
 		.field('id')
 		.field('publish')
 

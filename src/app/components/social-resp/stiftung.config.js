@@ -30,6 +30,7 @@ function config($crudProvider) {
 		.field('videoTitle');
 
 	stiftung.editView()
+		.title('Stiftung')
 		.field('title')
 		.field('slug')
 		.field('description', 'text')

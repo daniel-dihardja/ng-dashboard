@@ -12,7 +12,7 @@ function config($crudProvider) {
 	var kulturItem = $crudProvider.model('SvKulturItem');
 
 	kulturItem.listView()
-		.title('Kultur Item')
+		.title('/ Einträge')
 		.field('dateString')
 		.field('publish');
 

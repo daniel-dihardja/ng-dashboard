@@ -26,6 +26,9 @@ import hilfsproject from './social-resp/hilfsprojekt.config';
 import hilfsprojectItem from './social-resp/hilfsprojekt-item.config';
 import zfHilft from './social-resp/zf-hilft.config';
 import zfHilftItem from './social-resp/zf-hilft-item.config';
+import ledPool from './led-ring/led-pool.config';
+import ledContent from './led-ring/led-content.config';
+
 
 let componentsModule = angular.module('admin.components', [crud.name])
 	.config(['$crudProvider', ($crudProvider) => {
@@ -53,6 +56,9 @@ let componentsModule = angular.module('admin.components', [crud.name])
 
 		zfHilft($crudProvider);
 		zfHilftItem($crudProvider);
+
+		ledPool($crudProvider);
+		ledContent($crudProvider);
 
 	}]);
 export default componentsModule;

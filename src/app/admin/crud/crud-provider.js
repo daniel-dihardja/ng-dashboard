@@ -64,6 +64,7 @@ class ViewConfig {
 
 	backButton(b) {
 		this._backButton = b;
+		return this;
 	}
 
 	useBackButton() {

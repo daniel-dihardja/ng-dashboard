@@ -15,7 +15,11 @@ class CreateController {
 
 		var crudView = $crud.model($stateParams.model).createView();
 		this.fields = crudView.fields();
-		this.title = crudView.title() || 'Create';
+		var title = crudView.title() || $stateParams.title  || 'Neu';
+		if($stateParams.prevTitle) {
+			title = $stateParams.prevTitle + ' / ' + title;
+		}
+		this.title = title;
 		this.entity = {};
 
 		var filterKey;
@@ -33,19 +37,19 @@ class CreateController {
 			}
 		}
 
-		//this.init();
+		this.init();
 
 	}
 
 	init() {
 		this.model.count().$promise
 			.then(function(res) {
-				console.log(res);
 				this.entity.ranking = res.count + 1;
 			}.bind(this))
 	}
 
 	save() {
+		this.entity.publish = 0;
 		this.model.create(this.entity).$promise
 			.then(function() {
 				this.back();

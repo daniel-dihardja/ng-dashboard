@@ -36,13 +36,13 @@
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="remove_red_eye" md-heading="Soziale Verantwortung" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="ZF Hilft" ui-sref="admin.crud-list({model: 'SvZfhilft', filter: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Hilfsprojekte" ui-sref="admin.crud-list({model: 'SvZfhilftProject', filter: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Kunststiftung" ui-sref="admin.crud-list({model: 'SvKunststiftung', filter: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Stiftung" ui-sref="admin.crud-list({model: 'SvStiftung', filter: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Stipendiaten" ui-sref="admin.crud-list({model: 'SvStipendiaten', filter: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Musikpreis" ui-sref="admin.crud-list({model: 'SvMusikpreis', filter: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Kultur" ui-sref="admin.crud-list({model: 'SvKultur', filter: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="ZF Hilft" ui-sref="admin.crud-edit({model: 'SvZfhilft', id: '1',  prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Hilfsprojekte" ui-sref="admin.crud-list({model: 'SvZfhilftProject', filter: null, prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Kunststiftung" ui-sref="admin.crud-edit({model: 'SvKunststiftung', id: '1', filter: null, prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Stiftung" ui-sref="admin.crud-edit({model: 'SvStiftung', id: '1', filter: null, prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Stipendiaten" ui-sref="admin.crud-edit({model: 'SvStipendiaten', id:'1', filter: null, prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Musikpreis" ui-sref="admin.crud-edit({model: 'SvMusikpreis', id: '1', filter: null, prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Kultur" ui-sref="admin.crud-edit({model: 'SvKultur', id: '1', filter: null, prevTitle: null})"></md-sidemenu-button>
 
                         </md-sidemenu-content>
                     </md-sidemenu-group>
@@ -68,13 +68,17 @@
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="remove_red_eye" md-heading="Auf Einem Blick" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Kategorien" ui-sref="admin.crud-list({model: 'EbCategory', filter: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Dynamisch Wachsen" ui-sref="admin.crud-edit({model: 'EbCategory', id: '1', filter: null, title: 'Dynamisch Wachsen', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Konseuent Vordenken" ui-sref="admin.crud-edit({model: 'EbCategory', id:'2', filter: null, title: 'Konseuent Vordenken', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Individuell Fördern" ui-sref="admin.crud-edit({model: 'EbCategory', id: '3', filter: null, title: 'Individuell Fördern', prevTitle: null})"></md-sidemenu-button>
+
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="remove_red_eye" md-heading="LED Ring" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Kategorien" ui-sref="admin.crud-list({model: 'EbCategory', filter: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Pool 1" ui-sref="admin.crud-edit({model: 'LedPool', id: '1', filter: null, prevTitle: null, title: 'Pool 1'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Pool 2" ui-sref="admin.crud-edit({model: 'LedPool', id: '2', filter: null, prevTile: null, title: 'Pool 2'})"></md-sidemenu-button>
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 

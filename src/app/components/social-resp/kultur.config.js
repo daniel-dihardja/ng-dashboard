@@ -28,6 +28,7 @@ function config($crudProvider) {
 		.field('component')
 
 	kultur.editView()
+		.title('Kultur')
 		.field('title')
 		.field('description', 'text')
 		.field('image', 'file', {container: 'assets'})

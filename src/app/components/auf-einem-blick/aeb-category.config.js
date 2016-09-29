@@ -11,7 +11,6 @@ function config($cp) {
 
 
 	aebCat.editView()
-		.title('Kategorie Bearbeiten')
 		.field('publish', 'checkbox')
 		.field('title')
 		.field('text', 'text')

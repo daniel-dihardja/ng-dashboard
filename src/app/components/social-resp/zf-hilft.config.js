@@ -9,11 +9,12 @@ function config($crudProvider) {
 	var zfHilft = $crudProvider.model('SvZfhilft');
 
 	zfHilft.listView()
-		.title('Musikpreis')
+		.title('ZF Hilft')
 		.field('title')
 		.field('publish');
 
 	zfHilft.createView()
+		.title('ZF Hilft')
 		.field('title')
 		.field('description', 'text')
 		.field('introText', 'text')
@@ -25,6 +26,7 @@ function config($crudProvider) {
 		.field('component');
 
 	zfHilft.editView()
+		.title('ZF Hilft')
 		.field('title')
 		.field('description', 'text')
 		.field('introText', 'text')

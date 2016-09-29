@@ -9,7 +9,8 @@ function config($crudProvider) {
 	var zfHilftMedia = $crudProvider.model('SvZfhilftMedia');
 
 	zfHilftMedia.listView()
-		.title('Musikpreis')
+		.backButton(true)
+		.title('/ Medien')
 		.field('id')
 		.field('publish');
 
@@ -23,7 +24,7 @@ function config($crudProvider) {
 		.field('isLogo', 'checkbox')
 		.field('image', 'file', {container: 'assets'})
 
-		.translationKey('svZfhilftId')
+		.translationKey('svZfhilftMediaId')
 		.translationField('image', 'file', {container: 'assets'})
 
 }

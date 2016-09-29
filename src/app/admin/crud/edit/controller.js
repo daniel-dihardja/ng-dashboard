@@ -20,8 +20,13 @@ class EditController {
 		this.translationKey = editView.translationKey();
 		this.translationFields = editView.translationFields();
 		this.hasManyLinks = editView.hasManyLinks();
-		this.title = editView.title() || 'Edit';
+		//this.title = editView.title() || $stateParams.title || 'Edit';
+		var title = editView.title() || $stateParams.title || 'Bearbeiten';
+		if($stateParams.prevTitle) {
+			title = $stateParams.prevTitle + ' / ' + title;
+		}
 
+		this.title = title;
 		this.init();
 	}
 
@@ -41,9 +46,8 @@ class EditController {
 	}
 
 	save() {
-		console.log('*entity*', this.entity);
 		this.saveTranslation();
-		if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src
+		if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src;
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.back();
 		}.bind(this))
@@ -56,7 +60,6 @@ class EditController {
 
 	createTranslation() {
 		this.translation[this.translationKey] = this.entity.id;
-		console.log('this.translationKey', this.translationKey);
 		this.translation.appLanguageId = 1; //  hardcode id for EN
 		this.modelTranslation.create(this.translation, function(res) {
 			console.log(res);
@@ -70,10 +73,10 @@ class EditController {
 	}
 
 	gotoHasManyRelation(link) {
-		console.log(link);
 		this.$state.go('admin.crud-list', {
 			model: link.model,
-			filter: (link.foreignKey + '=' + this.entity.id)
+			filter: (link.foreignKey + '=' + this.entity.id),
+			prevTitle: this.title
 		});
 	}
 

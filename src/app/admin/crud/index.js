@@ -26,7 +26,9 @@ let crudModule = angular.module('crud', [uiRouter])
 					template: listTemplate,
 					url: '/crud-list/:model',
 					params: {
-						filter: null
+						filter: null,
+						title: null,
+						prevTitle: null
 					}
 				}
 			)
@@ -37,7 +39,9 @@ let crudModule = angular.module('crud', [uiRouter])
 					template: createTemplate,
 					url: '/crud-create/:model',
 					params: {
-						filter: null
+						filter: null,
+						title: null,
+						prevTitle: null
 					}
 				}
 			)
@@ -46,7 +50,11 @@ let crudModule = angular.module('crud', [uiRouter])
 					controller: editController,
 					controllerAs: 'vm',
 					template: editTemplate,
-					url: '/crud-edit/:model/:id'
+					url: '/crud-edit/:model/:id',
+					params: {
+						title: null,
+						prevTitle: null
+					}
 				}
 			)
 

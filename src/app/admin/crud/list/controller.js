@@ -17,7 +17,14 @@ class ListController {
 
 		var crudView = $crud.model($stateParams.model).listView();
 
-		this.title = crudView.title() || 'CRUD List';
+		console.log($stateParams);
+
+		var title = crudView.title() || $stateParams.title || 'CRUD List';
+		if($stateParams.prevTitle) {
+			title = $stateParams.prevTitle + ' ' + title;
+		}
+
+		this.title = title;
 		this.fields = crudView.fields();
 		this.useBackButton = crudView.useBackButton();
 
@@ -72,6 +79,10 @@ class ListController {
 	togglePublish(entity) {
 		if(entity.publish == 1) entity.publish = 0;
 		else if(entity.publish == 0) entity.publish = 1;
+
+		console.log('entity', entity);
+
+
 		entity.$save().then(function() {
 			this.init();
 		}.bind(this))
@@ -80,7 +91,11 @@ class ListController {
 	editItem(entity) {
 		var id = entity.id;
 		var model = this.$stateParams.model;
-		this.$state.go('admin.crud-edit', {model: model, id: id});
+		this.$state.go('admin.crud-edit', {
+			model: model,
+			id: id,
+			prevTitle: this.title
+		});
 	}
 
 	deleteItem(entity, ev) {
@@ -142,7 +157,11 @@ class ListController {
 	}
 
 	newEntity() {
-		this.$state.go('admin.crud-create', {model: this.$stateParams.model, filter: this.$stateParams.filter});
+		this.$state.go('admin.crud-create', {
+			model: this.$stateParams.model,
+			filter: this.$stateParams.filter,
+			prevTitle: this.title
+		});
 	}
 
 	back() {

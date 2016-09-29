@@ -9,11 +9,12 @@ function config($crudProvider) {
 	var project = $crudProvider.model('SvZfhilftProject');
 
 	project.listView()
-		.title('Musikpreis')
+		.title('Hilfsprojekte')
 		.field('title')
-		.field('publish')
+		.field('publish');
 
 	project.createView()
+		.title('Hilfsprojekte / *')
 		.field('title')
 		.field('date')
 		.field('introText', 'text')

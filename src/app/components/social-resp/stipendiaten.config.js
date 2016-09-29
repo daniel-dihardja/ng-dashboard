@@ -26,6 +26,7 @@ function config($crudProvider) {
 
 
 	stipendiaten.editView()
+		.title('Stipendiaten')
 		.field('title')
 		.field('slug')
 		.field('description', 'text')

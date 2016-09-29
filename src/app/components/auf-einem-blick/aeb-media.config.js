@@ -5,29 +5,27 @@ function config($cp) {
 	var aebMedia = $cp.model('EbMedia');
 
 	aebMedia.listView()
-		.title('Medien eines Beitrages')
+		.title('/ Medien')
 		.field('src')
 		.field('publish')
 		.backButton(true);
 
 
 	aebMedia.editView()
-		.title('Media Bearbeiten')
 		.field('publish', 'checkbox')
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')
-		.field('src')
-		.field('thumb')
+		.field('src', 'file', {container: 'aeb'})
+		.field('thumb', 'file', {container: 'aeb'})
 		.translationKey('ebMediaId')
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
-		.translationField('src')
-		.translationField('thumb');
+		.translationField('src', 'file', {container: 'aeb'})
+		.translationField('thumb', 'file', {container: 'aeb'});
 
 	aebMedia.createView()
-		.title('Media Erstellen')
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text');

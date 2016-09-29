@@ -9,7 +9,8 @@ function config($crudProvider) {
 	var item = $crudProvider.model('SvZfhilftProjectMedia');
 
 	item.listView()
-		.title('Musikpreis')
+		.title('/ Einträge')
+		.backButton(true)
 		.field('id')
 		.field('publish')
 

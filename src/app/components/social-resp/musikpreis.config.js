@@ -24,6 +24,7 @@ function config($crudProvider) {
 		.field('component');
 
 	musikpreis.editView()
+		.title('Musikpreis')
 		.field('title')
 		.field('slug')
 		.field('description', 'text')

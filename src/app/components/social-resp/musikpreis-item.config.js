@@ -9,7 +9,8 @@ function config($crudProvider) {
 	var musikpreisItem = $crudProvider.model('SvMusikpreisPerson');
 
 	musikpreisItem.listView()
-		.title('Musiker')
+		.backButton(true)
+		.title('/ Personen')
 		.field('name')
 		.field('publish')
 

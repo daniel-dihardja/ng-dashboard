@@ -44159,6 +44159,110 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
           { 'id': '@id' },
           {
 
+            // INTERNAL. Use LedPool.contents.findById() instead.
+            "prototype$__findById__contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/contents/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.contents.destroyById() instead.
+            "prototype$__destroyById__contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/contents/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.contents.updateById() instead.
+            "prototype$__updateById__contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/contents/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use LedPool.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use LedPool.contents() instead.
+            "prototype$__get__contents": {
+              isArray: true,
+              url: urlBase + "/LedPools/:id/contents",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.contents.create() instead.
+            "prototype$__create__contents": {
+              url: urlBase + "/LedPools/:id/contents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.contents.destroyAll() instead.
+            "prototype$__delete__contents": {
+              url: urlBase + "/LedPools/:id/contents",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.contents.count() instead.
+            "prototype$__count__contents": {
+              url: urlBase + "/LedPools/:id/contents/count",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/LedPools/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/LedPools/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/LedPools/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/LedPools/:id/translations/count",
+              method: "GET",
+            },
+
             /**
              * @ngdoc method
              * @name lbServices.LedPool#create
@@ -44722,6 +44826,608 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         */
         R.modelName = "LedPool";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.LedPool.contents
+     * @header lbServices.LedPool.contents
+     * @object
+     * @description
+     *
+     * The object `LedPool.contents` groups methods
+     * manipulating `LedContent` instances related to `LedPool`.
+     *
+     * Call {@link lbServices.LedPool#contents LedPool.contents()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#contents
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Queries contents of LedPool.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R.contents = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::get::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#count
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Counts contents of LedPool.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.contents.count = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::count::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#create
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Creates a new instance in contents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R.contents.create = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::create::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#createMany
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Creates a new instance in contents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R.contents.createMany = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::createMany::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#destroyAll
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Deletes all contents of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.contents.destroyAll = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::delete::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#destroyById
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Delete a related item by id for contents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for contents
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.contents.destroyById = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::destroyById::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#findById
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Find a related item by id for contents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for contents
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R.contents.findById = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::findById::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.contents#updateById
+             * @methodOf lbServices.LedPool.contents
+             *
+             * @description
+             *
+             * Update a related item by id for contents.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for contents
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContent` object.)
+             * </em>
+             */
+        R.contents.updateById = function() {
+          var TargetResource = $injector.get("LedContent");
+          var action = TargetResource["::updateById::LedPool::contents"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.LedPool.translations
+     * @header lbServices.LedPool.translations
+     * @object
+     * @description
+     *
+     * The object `LedPool.translations` groups methods
+     * manipulating `LedPoolTranslation` instances related to `LedPool`.
+     *
+     * Call {@link lbServices.LedPool#translations LedPool.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool#translations
+             * @methodOf lbServices.LedPool
+             *
+             * @description
+             *
+             * Queries translations of LedPool.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::get::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#count
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Counts translations of LedPool.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::count::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#create
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::create::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#createMany
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::createMany::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#destroyAll
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::delete::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#destroyById
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::destroyById::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#findById
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::findById::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPool.translations#updateById
+             * @methodOf lbServices.LedPool.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("LedPoolTranslation");
+          var action = TargetResource["::updateById::LedPool::translations"];
+          return action.apply(R, arguments);
+        };
 
 
         return R;
@@ -44753,6 +45459,58 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         urlBase + "/LedContents/:id",
           { 'id': '@id' },
           {
+
+            // INTERNAL. Use LedContent.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedContents/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedContent.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedContents/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedContent.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedContents/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use LedContent.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/LedContents/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedContent.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/LedContents/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedContent.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/LedContents/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedContent.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/LedContents/:id/translations/count",
+              method: "GET",
+            },
 
             /**
              * @ngdoc method
@@ -45175,6 +45933,65 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               url: urlBase + "/LedContents/change-stream",
               method: "POST",
             },
+
+            // INTERNAL. Use LedPool.contents.findById() instead.
+            "::findById::LedPool::contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/contents/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.contents.destroyById() instead.
+            "::destroyById::LedPool::contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/contents/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.contents.updateById() instead.
+            "::updateById::LedPool::contents": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/contents/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use LedPool.contents() instead.
+            "::get::LedPool::contents": {
+              isArray: true,
+              url: urlBase + "/LedPools/:id/contents",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.contents.create() instead.
+            "::create::LedPool::contents": {
+              url: urlBase + "/LedPools/:id/contents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.contents.createMany() instead.
+            "::createMany::LedPool::contents": {
+              isArray: true,
+              url: urlBase + "/LedPools/:id/contents",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.contents.destroyAll() instead.
+            "::delete::LedPool::contents": {
+              url: urlBase + "/LedPools/:id/contents",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.contents.count() instead.
+            "::count::LedPool::contents": {
+              url: urlBase + "/LedPools/:id/contents/count",
+              method: "GET",
+            },
           }
         );
 
@@ -45316,6 +46133,1615 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         * i.e. `LedContent`.
         */
         R.modelName = "LedContent";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.LedContent.translations
+     * @header lbServices.LedContent.translations
+     * @object
+     * @description
+     *
+     * The object `LedContent.translations` groups methods
+     * manipulating `LedContentTranslation` instances related to `LedContent`.
+     *
+     * Call {@link lbServices.LedContent#translations LedContent.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent#translations
+             * @methodOf lbServices.LedContent
+             *
+             * @description
+             *
+             * Queries translations of LedContent.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::get::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#count
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Counts translations of LedContent.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::count::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#create
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::create::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#createMany
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::createMany::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#destroyAll
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::delete::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#destroyById
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::destroyById::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#findById
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::findById::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContent.translations#updateById
+             * @methodOf lbServices.LedContent.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("LedContentTranslation");
+          var action = TargetResource["::updateById::LedContent::translations"];
+          return action.apply(R, arguments);
+        };
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.LedPoolTranslation
+ * @header lbServices.LedPoolTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `LedPoolTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "LedPoolTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/LedPoolTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#create
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/LedPoolTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#createMany
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/LedPoolTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#upsert
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/LedPoolTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#exists
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/LedPoolTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#findById
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/LedPoolTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#find
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/LedPoolTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#findOne
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/LedPoolTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#updateAll
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/LedPoolTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#deleteById
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/LedPoolTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#count
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/LedPoolTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#prototype$updateAttributes
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/LedPoolTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#createChangeStream
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/LedPoolTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.translations.findById() instead.
+            "::findById::LedPool::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.translations.destroyById() instead.
+            "::destroyById::LedPool::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.translations.updateById() instead.
+            "::updateById::LedPool::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedPools/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use LedPool.translations() instead.
+            "::get::LedPool::translations": {
+              isArray: true,
+              url: urlBase + "/LedPools/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedPool.translations.create() instead.
+            "::create::LedPool::translations": {
+              url: urlBase + "/LedPools/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.translations.createMany() instead.
+            "::createMany::LedPool::translations": {
+              isArray: true,
+              url: urlBase + "/LedPools/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedPool.translations.destroyAll() instead.
+            "::delete::LedPool::translations": {
+              url: urlBase + "/LedPools/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedPool.translations.count() instead.
+            "::count::LedPool::translations": {
+              url: urlBase + "/LedPools/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#updateOrCreate
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#update
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#destroyById
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedPoolTranslation#removeById
+             * @methodOf lbServices.LedPoolTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedPoolTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.LedPoolTranslation#modelName
+        * @propertyOf lbServices.LedPoolTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `LedPoolTranslation`.
+        */
+        R.modelName = "LedPoolTranslation";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.LedContentTranslation
+ * @header lbServices.LedContentTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `LedContentTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "LedContentTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/LedContentTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#create
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/LedContentTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#createMany
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/LedContentTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#upsert
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/LedContentTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#exists
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/LedContentTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#findById
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/LedContentTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#find
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/LedContentTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#findOne
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/LedContentTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#updateAll
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/LedContentTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#deleteById
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/LedContentTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#count
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/LedContentTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#prototype$updateAttributes
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/LedContentTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#createChangeStream
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/LedContentTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedContent.translations.findById() instead.
+            "::findById::LedContent::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedContents/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedContent.translations.destroyById() instead.
+            "::destroyById::LedContent::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedContents/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedContent.translations.updateById() instead.
+            "::updateById::LedContent::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/LedContents/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use LedContent.translations() instead.
+            "::get::LedContent::translations": {
+              isArray: true,
+              url: urlBase + "/LedContents/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use LedContent.translations.create() instead.
+            "::create::LedContent::translations": {
+              url: urlBase + "/LedContents/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedContent.translations.createMany() instead.
+            "::createMany::LedContent::translations": {
+              isArray: true,
+              url: urlBase + "/LedContents/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use LedContent.translations.destroyAll() instead.
+            "::delete::LedContent::translations": {
+              url: urlBase + "/LedContents/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use LedContent.translations.count() instead.
+            "::count::LedContent::translations": {
+              url: urlBase + "/LedContents/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#updateOrCreate
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#update
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#destroyById
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.LedContentTranslation#removeById
+             * @methodOf lbServices.LedContentTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `LedContentTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.LedContentTranslation#modelName
+        * @propertyOf lbServices.LedContentTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `LedContentTranslation`.
+        */
+        R.modelName = "LedContentTranslation";
 
 
 

@@ -9,7 +9,8 @@ function config($crudProvider) {
 	var stipendiat = $crudProvider.model('SvStipendiat');
 
 	stipendiat.listView()
-		.title('Stipendiaten')
+		.backButton(true)
+		.title('/ Personen')
 		.field('id')
 		.field('publish')
 

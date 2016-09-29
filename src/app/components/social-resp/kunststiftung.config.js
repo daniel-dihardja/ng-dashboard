@@ -9,7 +9,7 @@ function config($crudProvider) {
 	var kunstStiftung = $crudProvider.model('SvKunststiftung');
 
 	kunstStiftung.listView()
-		.title('Musikpreis')
+		.title('Kunststiftung')
 		.field('title')
 		.field('publish')
 
@@ -21,6 +21,7 @@ function config($crudProvider) {
 		.field('component')
 
 	kunstStiftung.editView()
+		.title('Kunststiftung')
 		.field('title')
 		.field('description', 'text')
 		.field('image', 'file', {container: 'assets'})
