@@ -15,11 +15,6 @@ class CheckboxField {
 		};
 	}
 
-	link(scope, element, attrs) {
-		console.log('scope', scope);
-		scope.modelValue = true;
-	}
-
 	static createInstance() {
 		return new CheckboxField();
 	}

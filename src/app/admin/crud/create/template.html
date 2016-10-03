@@ -3,6 +3,15 @@
 
     <div ng-repeat="field in vm.fields">
 
+        <!--
+        <crud-input ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == undefined"></crud-input>
+        <crud-text ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == 'text'"></crud-text>
+        <crud-checkbox ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == 'checkbox'"></crud-checkbox>
+        <crud-select ng-model="vm.entity[field.name]" label="{{field.name}}" values="field.config.values" ng-if="field.type == 'select'"></crud-select>
+        <crud-file ng-model="vm.entity[field.name]" label="{{field.name}}" container="{{field.config.container}}" ng-if="field.type == 'file'"></crud-file>
+        -->
+
+
         <!-- default input text -->
         <md-input-container class="md-block" flex-gt-sm ng-if="field.type == undefined" >
             <label>{{field.name}}</label>

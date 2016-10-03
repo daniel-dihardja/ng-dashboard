@@ -16,7 +16,7 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
 import 'angular-translate';
-import 'angular-sanitize';
+
 
 import './lib/lb-services/lb-services';
 
@@ -33,7 +33,6 @@ let appModule = angular.module('app', [
 	'pascalprecht.translate',
 	'ngMaterial',
 	'ngResource',
-	'ngSanitize',
 	'lbServices',
 	dataTable,
 	zfLogin.name,

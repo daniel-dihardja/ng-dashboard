@@ -17,10 +17,6 @@ class FileField {
 		};
 	}
 
-	link(scope, element, attrs) {
-
-	}
-
 	static createInstance() {
 		return new FileField();
 	}

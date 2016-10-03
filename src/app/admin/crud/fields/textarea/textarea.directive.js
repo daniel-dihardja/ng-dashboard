@@ -16,10 +16,6 @@ class TextareaField {
 		};
 	}
 
-	link(scope, element, attrs) {
-
-	}
-
 	static createInstance() {
 		return new TextareaField();
 	}

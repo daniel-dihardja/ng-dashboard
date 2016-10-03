@@ -15,10 +15,6 @@ class DefaultField {
 		};
 	}
 
-	link(scope, element, attrs) {
-
-	}
-
 	static createInstance() {
 		return new DefaultField();
 	}
