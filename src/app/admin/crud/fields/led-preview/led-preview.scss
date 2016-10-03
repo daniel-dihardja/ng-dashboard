@@ -1,0 +1,22 @@
+.led-preview {
+
+  width: 0px;
+  height: 57px;
+  display: flex;
+  background-color:#000;
+
+  .textbox{
+    color: #FFFFFF;
+    background-color: #000000;
+    height: 57px;
+    padding-left: 10px;
+    font-size: 23px;
+    &.center {
+      font-size: 46px;
+    }
+  }
+
+  .right {
+    padding-right: 10px;
+  }
+}

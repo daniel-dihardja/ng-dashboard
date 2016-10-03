@@ -23,6 +23,9 @@ import selectField from './fields/select/select.directive';
 import fileField from './fields/file/file.directive';
 
 
+import ledPreviewField from './fields/led-preview/led-preview.directive';
+
+
 
 let crudModule = angular.module('crud', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
@@ -74,5 +77,6 @@ let crudModule = angular.module('crud', [uiRouter])
 	.directive('crudCheckbox', checkboxField)
 	.directive('crudSelect', selectField)
 	.directive('crudFile', fileField)
+	.directive('ledPreview', ledPreviewField)
 
 export default crudModule;

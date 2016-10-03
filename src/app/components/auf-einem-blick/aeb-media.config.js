@@ -10,6 +10,12 @@ function config($cp) {
 		.field('publish')
 		.backButton(true);
 
+	aebMedia.createView()
+		.field('title')
+		.field('text', 'text')
+		.field('longText', 'text')
+		.field('src', 'file', {container: 'aeb'})
+		.field('thumb', 'file', {container: 'aeb'})
 
 	aebMedia.editView()
 		.field('publish', 'checkbox')
@@ -24,12 +30,5 @@ function config($cp) {
 		.translationField('longText', 'text')
 		.translationField('src', 'file', {container: 'aeb'})
 		.translationField('thumb', 'file', {container: 'aeb'});
-
-	aebMedia.createView()
-		.field('title')
-		.field('text', 'text')
-		.field('longText', 'text')
-		.field('src', 'file', {container: 'aeb'})
-		.field('thumb', 'file', {container: 'aeb'})
 }
 export default config;
