@@ -42,7 +42,7 @@ function config($crudProvider) {
 		.translationField('image', 'file', {container: 'assets'})
 		.translationField('introText')
 
-		.hasManyLink('SvStipendiat', 'svStipendiatenId')
+		.hasManyLink('SvStipendiat', 'svStipendiatenId', {label: 'Zu den Stipendiaten'})
 
 }
 export default config;

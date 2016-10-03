@@ -42,7 +42,7 @@ function config($crudProvider) {
 		.translationField('description', 'text')
 		.translationField('introText', 'text')
 
-		.hasManyLink('SvZfhilftMedia', 'svZfhilftId');
+		.hasManyLink('SvZfhilftMedia', 'svZfhilftId', {label: 'Zu den Medien'});
 }
 export default config;
 

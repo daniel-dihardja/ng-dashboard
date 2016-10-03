@@ -4,13 +4,14 @@
 function config($crudProvider) {
 
 	var zpArtikel = $crudProvider.model('ZpArtikel');
+
+
 	zpArtikel.listView()
-		.title('Artikeln')
 		.field('headline')
 		.field('publish');
 
 	zpArtikel.editView()
-		.title('Artikel Bearbeiten')
+		.title('#ENTITY_HEADLINE#')
 		.field('publish', 'checkbox')
 		.field('headline')
 		.field('teaserText', 'text')
@@ -19,10 +20,10 @@ function config($crudProvider) {
 		.translationField('headline')
 		.translationField('teaserText', 'text')
 		.translationField('mainText', 'text')
-		.hasManyLink('ZpArtikelMedia', 'zpArtikelId');
+
+		.hasManyLink('ZpArtikelMedia', 'zpArtikelId', {label: 'Zu den Medien'});
 
 	zpArtikel.createView()
-		.title('Artikel Erstellen')
 		.field('headline')
 		.field('teaserText', 'text')
 		.field('mainText', 'text');

@@ -20,8 +20,18 @@ class EditController {
 		this.translationKey = editView.translationKey();
 		this.translationFields = editView.translationFields();
 		this.hasManyLinks = editView.hasManyLinks();
-		//this.title = editView.title() || $stateParams.title || 'Edit';
+
+
+
 		var title = editView.title() || $stateParams.title || 'Bearbeiten';
+
+
+		// TODO:
+		// refactore this
+		if(title == '#ENTITY_ID#') title = $stateParams.entity.id;
+		if(title == '#ENTITY_TITLE#') title = $stateParams.entity.title;
+		if(title == '#ENTITY_HEADLINE#') title = $stateParams.entity.headline;
+
 		if($stateParams.prevTitle) {
 			title = $stateParams.prevTitle + ' / ' + title;
 		}

@@ -8,7 +8,6 @@ function config($crudProvider) {
 	var zpMedia = $crudProvider.model('ZpMedia');
 
 	zpMedia.listView()
-		.title('Filmvertiefung Medien')
 		.field('title')
 		.field('publish');
 

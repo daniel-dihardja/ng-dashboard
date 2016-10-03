@@ -15,6 +15,9 @@ class DialogUploadController {
 		this.$scope = $scope;
 		this.$scope.onFileChanged = this.onFileChanged.bind(this);
 		this.allowUpload = true;
+		this.showImageInfo = false;
+		this.block = false;
+		this.showPreviewImage = false;
 
 
 		this.previewImage.bind(this);
@@ -28,8 +31,8 @@ class DialogUploadController {
 			if(file.type == 'image/jpeg' || file.type == 'image/png') {
 				this.previewImage(file);
 			}
-			else if(file.type == 'audio/mp3') {
-
+			else {
+				this.showPreviewImage = false;
 			}
 
 		}.bind(this), 100);
@@ -64,16 +67,19 @@ class DialogUploadController {
 				this.previewImageHeight = img.height;
 				this.previewImageSize = file.size;
 
+				this.showPreviewImage = true;
+
 			}.bind(this));
 		}.bind(this);
 	}
 
 
-
 	upload() {
+		this.block = true;
 		var file = this.$scope.fileToUpload;
 		this.$files.uploadToUrl(file, this.container)
 			.then(function(res) {
+				this.block = false;
 				var fileObj = res.data.result.files.file[0];
 				this.$mdDialog.hide(fileObj);
 			}.bind(this))

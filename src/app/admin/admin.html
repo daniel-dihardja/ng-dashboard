@@ -27,13 +27,6 @@
             <md-content md-scroll-y flex layout="column">
                 <md-sidemenu md-locked="true">
 
-                    <!--md-sidemenu-group>
-                        <md-subheader class="md-no-sticky">ZF Forum</md-subheader>
-                        <md-sidemenu-content md-icon="people_outline" md-heading="Soz. Verantwortung" md-arrow="true" >
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="ZF Hilft" ui-sref="admin.zfhilft"></md-sidemenu-button>
-                        </md-sidemenu-content>
-                    </md-sidemenu-group-->
-
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="remove_red_eye" md-heading="Soziale Verantwortung" md-arrow="true" >
                             <md-sidemenu-button md-icon="folder_open" md-heading="ZF Hilft" ui-sref="admin.crud-edit({model: 'SvZfhilft', id: '1',  prevTitle: null})"></md-sidemenu-button>
@@ -49,63 +42,35 @@
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="watch" md-heading="Zukunft Projekte" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpArtikel', filter: 'zpStationId=1'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpArtikel', filter: 'zpStationId=2'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-list({model: 'ZpArtikel', filter: 'zpStationId=3'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy and Ecology" ui-sref="admin.crud-list({model: 'ZpArtikel', filter: 'zpStationId=4'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Work', prevTitle: null, filter: 'zpStationId=1'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Mobility', prevTitle: null, filter: 'zpStationId=2'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Living', prevTitle: null, filter: 'zpStationId=3'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy and Ecology" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Energy and Ecology', prevTitle: null, filter: 'zpStationId=4'})"></md-sidemenu-button>
 
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="personal_video" md-heading="Film Vertiefung" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=1'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=2'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=3'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy" ui-sref="admin.crud-list({model: 'ZpMedia', filter: 'zpStationId=4'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpMedia', title: 'Work', prevTitle: null, filter: 'zpStationId=1'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpMedia', title: 'Mobility', prevTitle: null, filter: 'zpStationId=2'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-list({model: 'ZpMedia', title: 'Living', prevTitle: null, filter: 'zpStationId=3'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy" ui-sref="admin.crud-list({model: 'ZpMedia', title: 'Energy', prevTitle: null, filter: 'zpStationId=4'})"></md-sidemenu-button>
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="remove_red_eye" md-heading="Auf Einem Blick" md-arrow="true" >
                             <md-sidemenu-button md-icon="folder_open" md-heading="Dynamisch Wachsen" ui-sref="admin.crud-edit({model: 'EbCategory', id: '1', filter: null, title: 'Dynamisch Wachsen', prevTitle: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Konseuent Vordenken" ui-sref="admin.crud-edit({model: 'EbCategory', id:'2', filter: null, title: 'Konseuent Vordenken', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Konsequent Vordenken" ui-sref="admin.crud-edit({model: 'EbCategory', id:'2', filter: null, title: 'Konsequent Vordenken', prevTitle: null})"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="folder_open" md-heading="Individuell Fördern" ui-sref="admin.crud-edit({model: 'EbCategory', id: '3', filter: null, title: 'Individuell Fördern', prevTitle: null})"></md-sidemenu-button>
 
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
-                        <md-sidemenu-content md-icon="remove_red_eye" md-heading="LED Ring" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Pool 1" ui-sref="admin.crud-edit({model: 'LedPool', id: '1', filter: null, prevTitle: null, title: 'Pool 1'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Pool 2" ui-sref="admin.crud-edit({model: 'LedPool', id: '2', filter: null, prevTile: null, title: 'Pool 2'})"></md-sidemenu-button>
-                        </md-sidemenu-content>
+                        <md-sidemenu-button md-icon="folder_open" md-heading="LED Ring" ui-sref="admin.crud-list({model: 'LedPool', filter: null, prevTitle: null, title: null})"></md-sidemenu-button>
                     </md-sidemenu-group>
-
-                    <!--md-sidemenu-group>
-                        <md-sidemenu-content md-icon="people_outline" md-heading="Auf Einen Blick" md-arrow="true" >
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Kategorie" ui-sref="admin.EbCategory-list"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Beitrag" ui-sref="admin.EbContent-list"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="Media" ui-sref="admin.EbMedia-list"></md-sidemenu-button>
-                        </md-sidemenu-content>
-                    </md-sidemenu-group-->
-
-                    <!--md-sidemenu-group>
-                        <md-sidemenu-content md-icon="people_outline" md-heading="Test" md-arrow="true" >
-                            <md-sidemenu-button md-icon="phonelink_setup" md-heading="ZpMedia" ui-sref="admin.crud-list({model: 'ZpMedia'})"></md-sidemenu-button>
-                        </md-sidemenu-content>
-                    </md-sidemenu-group-->
-
-                    <!--md-sidemenu-group>
-                        <md-sidemenu-content md-icon="folder_open" md-heading="Dateien" md-arrow="true" >
-                            <md-sidemenu-button md-icon="collections" md-heading="{{ 'files.images' | translate }}" ui-sref="admin.filelist({container: 'images'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="video_library" md-heading="{{ 'files.videos' | translate }}" ui-sref="admin.filelist({container: 'videos'})"></md-sidemenu-button>
-                        </md-sidemenu-content>
-                    </md-sidemenu-group-->
-
-                    <!--md-sidemenu-group>
-                        <md-sidemenu-button md-icon="person_outline" md-heading="Profil" ng-click=""></md-sidemenu-button>
-                    </md-sidemenu-group-->
 
                    <md-sidemenu-group>
                        <md-sidemenu-button md-icon="backspace" md-heading="Logout" ng-click="vm.logout()"></md-sidemenu-button>

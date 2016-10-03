@@ -5,7 +5,6 @@ function config($cp) {
 	var aebCat = $cp.model('EbCategory');
 
 	aebCat.listView()
-		.title('Kategorien')
 		.field('title')
 		.field('publish')
 
@@ -19,11 +18,11 @@ function config($cp) {
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
-		.hasManyLink('EbContent', 'ebCategoryId')
+		.hasManyLink('EbContent', 'ebCategoryId', {label: 'Zu den Beiträge'})
+		.hasManyLink('EbMedia', 'ebCategoryId', {label: 'Zu den Medien'})
 
 
 	aebCat.createView()
-		.title('Kategorie Erstellen')
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')

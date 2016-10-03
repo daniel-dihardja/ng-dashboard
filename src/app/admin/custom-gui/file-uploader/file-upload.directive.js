@@ -42,7 +42,7 @@ class FileUploader {
 	 */
 	link(scope, element, attrs, ngModelCtrl) {
 
-		scope.baseUrl = appSettings.baseUrl + 'files' || '/files/';
+		scope.baseUrl = appSettings.mediaBaseUrl + 'files' || '/files/';
 		scope.openUploadDialog = function(evt) {
 			this.openUploadDialog(evt, this.$mdDialog, scope)
 		}.bind(this);

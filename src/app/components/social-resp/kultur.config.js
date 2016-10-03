@@ -47,6 +47,6 @@ function config($crudProvider) {
 		.translationField('description', 'text')
 		.translationField('image', 'file', {container: 'assets'})
 		.translationField('introText', 'text')
-		.hasManyLink('SvKulturItem', 'svKulturId')
+		.hasManyLink('SvKulturItem', 'svKulturId', {label: 'Zu den Einträge'})
 }
 export default config;

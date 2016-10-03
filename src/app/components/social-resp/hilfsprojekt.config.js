@@ -23,6 +23,7 @@ function config($crudProvider) {
 
 
 	project.editView()
+		.title('#ENTITY_TITLE#')
 		.field('title')
 		.field('date')
 		.field('introText')
@@ -34,6 +35,6 @@ function config($crudProvider) {
 		.translationField('date')
 		.translationField('introText', 'text')
 
-		.hasManyLink('SvZfhilftProjectMedia', 'svZfhilftProjectId')
+		.hasManyLink('SvZfhilftProjectMedia', 'svZfhilftProjectId', {label: 'Zu den Projekt Einträge'})
 }
 export default config;

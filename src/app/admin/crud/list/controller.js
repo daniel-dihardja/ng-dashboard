@@ -94,7 +94,8 @@ class ListController {
 		this.$state.go('admin.crud-edit', {
 			model: model,
 			id: id,
-			prevTitle: this.title
+			prevTitle: this.title,
+			entity: entity
 		});
 	}
 

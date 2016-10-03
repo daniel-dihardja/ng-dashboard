@@ -9,7 +9,7 @@ function config($crudProvider) {
 	var ledPool = $crudProvider.model('LedPool');
 
 	ledPool.listView()
-		.title('LED Ring')
+		.title('Pools')
 		.field('title')
 		.field('publish');
 
@@ -17,11 +17,12 @@ function config($crudProvider) {
 		.field('title');
 
 	ledPool.editView()
+		.title('#ENTITY_TITLE#')
 		.field('publish', 'checkbox')
 		.field('title')
 		.translationKey('ledPoolId')
 		.translationField('title')
-		.hasManyLink('LedContent', 'ledPoolId')
+		.hasManyLink('LedContent', 'ledPoolId', {label: 'Zu den Beiträge'})
 }
 export default config;
 

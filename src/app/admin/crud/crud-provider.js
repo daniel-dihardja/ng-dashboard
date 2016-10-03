@@ -51,11 +51,13 @@ class ViewConfig {
 		return this;
 	}
 
-	hasManyLink(model, foreignKey) {
+	hasManyLink(model, foreignKey, config) {
 		this._hasManyLinks.push({
 			model: model,
-			foreignKey: foreignKey
+			foreignKey: foreignKey,
+			config: config
 		});
+		return this;
 	}
 
 	hasManyLinks() {
@@ -81,11 +83,11 @@ class ViewConfig {
 
 class Model {
 
-	constructor(entity) {
-		this.entity = entity;
+	constructor(name) {
+		this.name = name;
 		this._listView = null;
 		this._editView = null;
-		this._createView = null
+		this._createView = null;
 	}
 
 	listView() {
@@ -105,6 +107,9 @@ class Model {
 }
 
 
+
+
+
 class CrudProvider {
 
 	constructor() {
@@ -116,10 +121,10 @@ class CrudProvider {
 		this.baseUrl = url;
 	}
 
-	model(entity) {
-		if(this.models[entity]) return this.models[entity];
-		var model = new Model(entity);
-		this.models[entity] = model;
+	model(name) {
+		if(this.models[name]) return this.models[name];
+		var model = new Model(name);
+		this.models[name] = model;
 		return model;
 	}
 

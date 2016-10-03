@@ -11,22 +11,25 @@
         </md-toolbar>
         <md-dialog-content>
             <div class="md-dialog-content">
-                <div><img id="imagePreview" src=""></div>
+                <md-progress-linear md-mode="indeterminate" ng-show="vm.block"></md-progress-linear>
+                <div class="previewContainer" ng-show="vm.showPreviewImage"><img id="imagePreview" src=""></div>
                 <div class="pd-50">
                     <input type="file" file-model="fileToUpload" onchange="angular.element(this).scope().onFileChanged()"/>
                 </div>
-                <div>
-                    <div class="{{! vm.allowUpload ? 'warning' : ''}}">Breite: {{vm.previewImageWidth}} px</div>
-                    <div class="{{! vm.allowUpload ? 'warning' : ''}}">Höhe: {{vm.previewImageHeight}} px</div>
+                <div layout="row" ng-show="vm.showPreviewImage">
+                    <div class="{{! vm.allowUpload ? 'warning' : ''}}">{{vm.previewImageWidth}}</div>
+                    <div>X</div>
+                    <div class="{{! vm.allowUpload ? 'warning' : ''}}">{{vm.previewImageHeight}}</div>
                     <div class="{{! vm.allowUpload ? 'warning' : ''}}">Grösse: {{vm.previewImageSize}} Bytes</div>
                 </div>
             </div>
+
         </md-dialog-content>
 
         <md-dialog-actions layout="row">
             <span flex></span>
-            <md-button ng-click="vm.cancel()">Abbrechen</md-button>
-            <md-button ng-click="vm.upload()" ng-disabled="! vm.allowUpload">Hochladen</md-button>
+            <md-button ng-click="vm.cancel()" ng-disabled="vm.block">Abbrechen</md-button>
+            <md-button ng-click="vm.upload()" ng-disabled="! vm.allowUpload || vm.block">Hochladen</md-button>
         </md-dialog-actions>
     </form>
 </md-dialog>

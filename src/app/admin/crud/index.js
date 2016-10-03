@@ -16,6 +16,14 @@ import editTemplate from './edit/template.html!text';
 
 import crudProvider from './crud-provider';
 
+import defaultField from './fields/default/default.directive';
+import textareaField from './fields/textarea/textarea.directive';
+import checkboxField from './fields/checkbox/checkbox.directive';
+import selectField from './fields/select/select.directive';
+import fileField from './fields/file/file.directive';
+
+
+
 let crudModule = angular.module('crud', [uiRouter])
 	.config(['$stateProvider', ($stateProvider) => {
 		$stateProvider
@@ -53,12 +61,18 @@ let crudModule = angular.module('crud', [uiRouter])
 					url: '/crud-edit/:model/:id',
 					params: {
 						title: null,
-						prevTitle: null
+						prevTitle: null,
+						entity: null
 					}
 				}
 			)
 
 	}])
 	.provider('$crud', crudProvider)
+	.directive('crudInput', defaultField)
+	.directive('crudText', textareaField)
+	.directive('crudCheckbox', checkboxField)
+	.directive('crudSelect', selectField)
+	.directive('crudFile', fileField)
 
 export default crudModule;

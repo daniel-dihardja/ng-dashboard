@@ -5,7 +5,7 @@ function config($crudProvider) {
 
 	var zpArtikelMedia = $crudProvider.model('ZpArtikelMedia');
 	zpArtikelMedia.listView()
-		.title('Medien eines Artikels')
+		.title('/ Medien')
 		.field('id')
 		.field('publish')
 		.backButton(true);

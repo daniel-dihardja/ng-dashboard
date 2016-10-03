@@ -6,6 +6,7 @@ function config($crudProvider) {
 	var ledContet = $crudProvider.model('LedContent');
 
 	ledContet.listView()
+		.backButton(true)
 		.title('/ Beiträge')
 		.field('title')
 		.field('publish');

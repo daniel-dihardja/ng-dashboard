@@ -1,4 +1,18 @@
 .file-uploader {
+
+
+  .md-dialog-content {
+    overflow: hidden;
+  }
+
+  .previewContainer {
+    width: 1024px;
+    height: 400px;
+    max-width: 1024px;
+    max-height:400px;
+    overflow: scroll;
+  }
+
   img {
     /*max-width: 640px;*/
   }

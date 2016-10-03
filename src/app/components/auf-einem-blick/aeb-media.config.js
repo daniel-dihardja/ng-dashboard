@@ -28,6 +28,8 @@ function config($cp) {
 	aebMedia.createView()
 		.field('title')
 		.field('text', 'text')
-		.field('longText', 'text');
+		.field('longText', 'text')
+		.field('src', 'file', {container: 'aeb'})
+		.field('thumb', 'file', {container: 'aeb'})
 }
 export default config;

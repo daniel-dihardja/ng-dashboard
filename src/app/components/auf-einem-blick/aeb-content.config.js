@@ -5,14 +5,14 @@ function config($cp) {
 	var aebContent = $cp.model('EbContent');
 
 	aebContent.listView()
-		.title('Beiträge einer Kategorie')
+		.title('/ Beiträge')
 		.field('title')
 		.field('publish')
 		.backButton(true);
 
 
 	aebContent.editView()
-		.title('Beitrag Bearbeiten')
+		.title('#ENTITY_TITLE#')
 		.field('publish', 'checkbox')
 		.field('nameId')
 		.field('title')
@@ -22,11 +22,11 @@ function config($cp) {
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
-		.hasManyLink('EbMedia', 'ebContentId', {label: '...'});
+		.hasManyLink('EbMedia', 'ebContentId', {label: 'Zu den Medien'})
+		.hasManyLink('EbContent', 'ebContentId', {label: 'Zu den Unterbeiträge'});
 
 
 	aebContent.createView()
-		.title('Beitrag Erstellen')
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text');
