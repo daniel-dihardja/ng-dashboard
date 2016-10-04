@@ -15,6 +15,13 @@ class CheckboxField {
 		};
 	}
 
+	link(scope, element, attrs, ngModelCtrl) {
+		ngModelCtrl.$render = function() {
+			if(scope.modelValue == 1) scope.modelValue = true;
+			else if(scope.modelValue == 0) scope.modelValue = false;
+		}
+	}
+
 	static createInstance() {
 		return new CheckboxField();
 	}

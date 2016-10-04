@@ -49,8 +49,9 @@ class EditController {
 		};
 		this.model.findOne(q).$promise
 			.then(function(res) {
+				console.log('entity', res);
 				this.entity = res;
-				this.entity.publish = (this.entity.publish == 1);
+				//this.entity.publish = (this.entity.publish == 1);
 				this.translation = this.entity.translations[0] || {};
 			}.bind(this))
 	}
