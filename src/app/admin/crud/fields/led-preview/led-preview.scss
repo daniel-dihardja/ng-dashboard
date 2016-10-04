@@ -1,5 +1,10 @@
-.led-preview {
+@font-face {
+  font-family: ZFSansBold;
+  src: url("/assets/fonts/ZFSans-Bold.otf") format("opentype");
+}
 
+.led-preview {
+  font-family: ZFSansBold;
   width: 0px;
   height: 57px;
   display: flex;
@@ -12,12 +17,10 @@
     padding-left: 10px;
     font-size: 23px;
     white-space: nowrap;
-
     &.center {
       font-size: 46px;
     }
   }
-
   .right {
     padding-right: 10px;
   }

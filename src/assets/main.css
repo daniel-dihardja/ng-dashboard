@@ -180,7 +180,12 @@ md-sidemenu-button {
 .file-uploader .warning {
   color: #FF0000; }
 
+@font-face {
+  font-family: ZFSansBold;
+  src: url("/assets/fonts/ZFSans-Bold.otf") format("opentype"); }
+
 .led-preview {
+  font-family: ZFSansBold;
   width: 0px;
   height: 57px;
   display: flex;
