@@ -138,14 +138,16 @@ md-sidemenu-button {
 
 .md-sidemenu-wrapper {
   margin-top: -120%;
+  height: 0;
   overflow: hidden;
   opacity: 0;
   transform: translate3D(0, 0, 0);
   transition: 0.4s cubic-bezier(0.55, 0, 0.55, 0.2);
-  transition-property: transform, opacity, margin, background; }
+  transition-property: transform, opacity, margin, height, background; }
   .md-sidemenu-wrapper.md-active {
     margin-top: 0;
     opacity: 1;
+    height: 100%;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); }
   .md-sidemenu-wrapper.md-sidemenu-wrapper-icons .md-button {
     padding-left: 32px;

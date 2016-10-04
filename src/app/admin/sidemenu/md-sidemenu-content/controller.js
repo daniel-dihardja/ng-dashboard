@@ -7,7 +7,6 @@ export default function() {
 
 	this.changeState = function() {
 		this.visible = !this.visible;
-		console.log('changeState');
 	};
 
 }
