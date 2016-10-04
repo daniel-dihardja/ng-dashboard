@@ -190,7 +190,8 @@ md-sidemenu-button {
     background-color: #000000;
     height: 57px;
     padding-left: 10px;
-    font-size: 23px; }
+    font-size: 23px;
+    white-space: nowrap; }
     .led-preview .textbox.center {
       font-size: 46px; }
   .led-preview .right {
