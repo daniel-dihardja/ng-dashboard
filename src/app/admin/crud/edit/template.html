@@ -9,7 +9,7 @@
                     <crud-text ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == 'text'"></crud-text>
                     <crud-checkbox ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == 'checkbox'"></crud-checkbox>
                     <crud-select ng-model="vm.entity[field.name]" label="{{field.name}}" values="field.config.values" ng-if="field.type == 'select'"></crud-select>
-                    <crud-file ng-model="vm.entity[field.name]" label="{{field.name}}" container="{{field.config.container}}" ng-if="field.type == 'file'"></crud-file>
+                    <crud-file ng-model="vm.entity[field.name]" label="{{field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'"></crud-file>
                     <led-preview  label="{{field.name}}" entity="vm.entity" ng-if="field.type == 'ledpreview'"></led-preview>
                 </div>
             </md-content>

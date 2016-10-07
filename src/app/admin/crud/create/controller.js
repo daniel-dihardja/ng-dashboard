@@ -52,7 +52,7 @@ class CreateController {
 		this.entity.publish = 0;
 		this.model.create(this.entity).$promise
 			.then(function() {
-				this.back();
+				//this.back();
 			}.bind(this))
 	}
 

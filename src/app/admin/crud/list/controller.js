@@ -77,12 +77,8 @@ class ListController {
 	}
 
 	togglePublish(entity) {
-		if(entity.publish == 1) entity.publish = 0;
-		else if(entity.publish == 0) entity.publish = 1;
-
-		console.log('entity', entity);
-
-
+		if(entity.publish) entity.publish = 0;
+		else entity.publish = 1;
 		entity.$save().then(function() {
 			this.init();
 		}.bind(this))

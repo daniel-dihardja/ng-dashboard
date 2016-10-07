@@ -27,12 +27,15 @@ class FileServiceProvider {
 					return _this.$http.get(url);
 				},
 
-				uploadToUrl: function(file, container) {
+				uploadToUrl: function(file, container, options) {
 					var fd = new FormData();
+					options = options || {};
+					options = JSON.stringify(options);
 					fd.append('file', file);
+					fd.append('options', options);
 					var params = {
 						transformRequest: angular.identity,
-						headers: {'Content-Type': undefined}
+						headers: {'Content-Type': undefined, 'Accept-Encoding': 'UTF-8'}
 					};
 
 					var uploadUrl = _this.urlBase + "/containers/"+ container +"/upload";

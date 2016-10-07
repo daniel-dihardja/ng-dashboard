@@ -25,7 +25,8 @@ class FileUploader {
 			type: '@',
 			maxWidth: '@',
 			maxHeight: '@',
-			maxSize: '@'
+			maxSize: '@',
+			options: '='
 		};
 
 		this.$mdDialog = $mdDialog;
@@ -42,7 +43,7 @@ class FileUploader {
 	 */
 	link(scope, element, attrs, ngModelCtrl) {
 
-		scope.baseUrl = appSettings.mediaBaseUrl + 'files' || '/files/';
+		scope.baseUrl = appSettings.baseUrl + 'files' || '/files/';
 		scope.openUploadDialog = function(evt) {
 			this.openUploadDialog(evt, this.$mdDialog, scope)
 		}.bind(this);
@@ -85,7 +86,8 @@ class FileUploader {
 				container: scope.container,
 				maxWidth: scope.maxWidth,
 				maxHeight: scope.maxHeight,
-				maxSize: scope.maxSize
+				maxSize: scope.maxSize,
+				options: scope.options
 			}
 		})
 		.then(function(file) {

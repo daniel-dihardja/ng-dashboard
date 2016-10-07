@@ -3,7 +3,7 @@
  */
 class DialogUploadController {
 
-	constructor($scope, $mdDialog, $files, container, maxWidth, maxHeight, maxSize) {
+	constructor($scope, $mdDialog, $files, container, maxWidth, maxHeight, maxSize, options) {
 		this.$mdDialog = $mdDialog;
 		this.$files = $files;
 
@@ -11,6 +11,8 @@ class DialogUploadController {
 		this.maxWidth = maxWidth || 9999;
 		this.maxHeight = maxHeight || 9999;
 		this.maxSize = maxSize;
+
+		this.options = options;
 
 		this.$scope = $scope;
 		this.$scope.onFileChanged = this.onFileChanged.bind(this);
@@ -77,10 +79,12 @@ class DialogUploadController {
 	upload() {
 		this.block = true;
 		var file = this.$scope.fileToUpload;
-		this.$files.uploadToUrl(file, this.container)
+
+		this.$files.uploadToUrl(file, this.container, this.options)
 			.then(function(res) {
 				this.block = false;
 				var fileObj = res.data.result.files.file[0];
+				console.log(fileObj);
 				this.$mdDialog.hide(fileObj);
 			}.bind(this))
 			.catch(function(err) {
@@ -92,5 +96,5 @@ class DialogUploadController {
 		this.$mdDialog.hide();
 	}
 }
-DialogUploadController.$inject = ['$scope', '$mdDialog', '$files', 'container', 'maxWidth', 'maxHeight', 'maxSize'];
+DialogUploadController.$inject = ['$scope', '$mdDialog', '$files', 'container', 'maxWidth', 'maxHeight', 'maxSize', 'options'];
 export default DialogUploadController;

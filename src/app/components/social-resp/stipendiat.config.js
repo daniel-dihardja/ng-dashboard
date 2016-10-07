@@ -11,12 +11,14 @@ function config($crudProvider) {
 	stipendiat.listView()
 		.backButton(true)
 		.title('/ Personen')
-		.field('id')
+		.field('name')
+		.field('year')
 		.field('publish')
 
 	stipendiat.createView()
 		.field('year')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', {
+			container: 'assets'})
 		.field('bio', 'text')
 		.field('slug')
 		.field('component')
@@ -24,14 +26,22 @@ function config($crudProvider) {
 	stipendiat.editView()
 		.field('publish', 'checkbox')
 		.field('year')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', {
+			container: 'assets',
+			prefWidth: 800,
+			prefHeight: 800
+		})
 		.field('bio', 'text')
 		.field('slug')
 		.field('component')
 
-		.translationKey('svStpendiatId')
+		.translationKey('svStipendiatId')
 		.translationField('year')
-		.translationField('image', 'file', {container: 'assets'})
+		.translationField('image', 'file', {
+			container: 'assets',
+			prefWidth: 800,
+			prefHeight: 800
+		})
 		.translationField('bio', 'text')
 }
 export default config;

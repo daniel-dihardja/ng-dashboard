@@ -13,7 +13,7 @@ class FileField {
 			label: '@',
 			modelValue: '=ngModel',
 			container: '@',
-			params: '='
+			options: '='
 		};
 	}
 

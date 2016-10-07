@@ -12,23 +12,23 @@ function config($crudProvider) {
 		.backButton(true)
 		.title('/ Personen')
 		.field('name')
-		.field('publish')
+		.field('publish');
 
 	musikpreisItem.createView()
 		.field('name')
 		.field('year')
-		.field('bio', 'text')
 		.field('image', 'file', {container: 'assets'})
+		.field('bio', 'text')
 		.field('slug')
-		.field('component')
+		.field('component');
 
 
 	musikpreisItem.editView()
 		.field('publish', 'checkbox')
 		.field('name')
 		.field('year')
-		.field('bio', 'text')
 		.field('image', 'file', {container: 'assets'})
+		.field('bio', 'text')
 		.field('slug')
 		.field('component')
 
@@ -36,9 +36,6 @@ function config($crudProvider) {
 		.translationField('title')
 		.translationField('description', 'text')
 		.translationField('introText', 'text')
-		.translationField('image', 'file', {container: 'assets'})
-
-
-
+		.translationField('image', 'file', {container: 'assets'});
 }
 export default config;
