@@ -3,40 +3,38 @@
  */
 class DialogUploadController {
 
-	constructor($scope, $mdDialog, $files, container, maxWidth, maxHeight, maxSize, options) {
+	constructor($scope, $mdDialog, $files, container, options) {
 		this.$mdDialog = $mdDialog;
 		this.$files = $files;
 
 		this.container = container;
-		this.maxWidth = maxWidth || 9999;
-		this.maxHeight = maxHeight || 9999;
-		this.maxSize = maxSize;
-
 		this.options = options;
 
 		this.$scope = $scope;
 		this.$scope.onFileChanged = this.onFileChanged.bind(this);
-		this.allowUpload = true;
-		this.showImageInfo = false;
-		this.block = false;
+
+
 		this.showPreviewImage = false;
+		this.showWarning = false;
 
+		this.blockSubmit = true;
+		this.uploading = false;
 
-		this.previewImage.bind(this);
 		this.previewImage.bind(this);
 	}
 
 	onFileChanged() {
 		setTimeout(function() {
 			var file = this.$scope.fileToUpload;
-			console.log('file', file);
 			if(file.type == 'image/jpeg' || file.type == 'image/png') {
 				this.previewImage(file);
 			}
 			else {
-				this.showPreviewImage = false;
+				this.$scope.$apply(function() {
+					this.blockSubmit = false;
+					this.showPreviewImage = false;
+				}.bind(this));
 			}
-
 		}.bind(this), 100);
 	}
 
@@ -52,39 +50,35 @@ class DialogUploadController {
 				var warningHeight = false;
 				var allowUpload = true;
 
-				if(img.width > this.maxWidth ) {
-					warningWidth = true;
-					allowUpload = false;
+				var maxWidth = this.options.maxWidth || 9999;
+				var maxHeight = this.options.maxHeight || 9999;
+
+				if(img.width > maxWidth || img.height > maxHeight) {
+					this.imgWidth = img.width;
+					this.imgHeight = img.height;
+					this.maxWidth = maxWidth;
+					this.maxHeight = maxHeight;
+					this.showWarning = true;
+					this.showPreviewImage = false;
+					this.blockSubmit = true;
 				}
-				if(img.height > this.maxHeight) {
-					warningHeight = true;
-					allowUpload = false;
+				else {
+					this.showWarning = false;
+					this.showPreviewImage = true;
+					this.blockSubmit = false;
 				}
-
-				this.warningWidth = warningWidth;
-				this.warningHeight = warningHeight;
-				this.allowUpload = allowUpload;
-
-				this.previewImageWidth = img.width;
-				this.previewImageHeight = img.height;
-				this.previewImageSize = file.size;
-
-				this.showPreviewImage = true;
-
 			}.bind(this));
 		}.bind(this);
 	}
 
 
 	upload() {
-		this.block = true;
+		this.uploading = true;
 		var file = this.$scope.fileToUpload;
-
 		this.$files.uploadToUrl(file, this.container, this.options)
 			.then(function(res) {
-				this.block = false;
+				this.uploading = false;
 				var fileObj = res.data.result.files.file[0];
-				console.log(fileObj);
 				this.$mdDialog.hide(fileObj);
 			}.bind(this))
 			.catch(function(err) {
@@ -96,5 +90,5 @@ class DialogUploadController {
 		this.$mdDialog.hide();
 	}
 }
-DialogUploadController.$inject = ['$scope', '$mdDialog', '$files', 'container', 'maxWidth', 'maxHeight', 'maxSize', 'options'];
+DialogUploadController.$inject = ['$scope', '$mdDialog', '$files', 'container', 'options'];
 export default DialogUploadController;

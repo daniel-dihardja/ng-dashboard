@@ -35,7 +35,7 @@ class FileServiceProvider {
 					fd.append('options', options);
 					var params = {
 						transformRequest: angular.identity,
-						headers: {'Content-Type': undefined, 'Accept-Encoding': 'UTF-8'}
+						headers: {'Content-Type': undefined}
 					};
 
 					var uploadUrl = _this.urlBase + "/containers/"+ container +"/upload";

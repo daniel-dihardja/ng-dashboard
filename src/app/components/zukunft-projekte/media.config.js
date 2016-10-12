@@ -5,11 +5,21 @@ import settings from '../../app.settings';
 
 function config($crudProvider) {
 
+	var imgConfig = {
+		container: 'assets',
+		prefWidth: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxWidth,
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
+
 	var zpMedia = $crudProvider.model('ZpMedia');
 
 	zpMedia.listView()
+		.title('/ Medien')
 		.field('title')
-		.field('publish');
+		.field('publish')
+		.backButton(true)
 
 	zpMedia.createView()
 		.field('type', 'select', {values: ['audio', 'video']})
@@ -23,25 +33,13 @@ function config($crudProvider) {
 		.field('type', 'select', {values: ['audio', 'video']})
 		.field('title')
 		.field('description', 'text')
-		.field('src', 'file', {
-			container: 'assets',
-			maxWidth: settings.ipadProMaxWidth,
-			maxHeight: settings.ipadProMaxHeight,
-			maxSize: settings.maxImageMBSize * 1024 * 1024
-		})
-		.field('thumb', 'file', {
-			container: 'assets'
-		})
+		.field('src', 'file', imgConfig)
+		.field('thumb', 'file', imgConfig)
 
 		.translationKey('zpMediaId')
 		.translationField('title')
 		.translationField('description', 'text')
-		.translationField('src', 'file', {
-			container: 'assets',
-			maxWidth: settings.ipadProMaxWidth,
-			maxHeight: settings.ipadProMaxHeight,
-			maxSize: settings.maxImageMBSize * 1024 * 1024
-		})
-		.translationField('thumb', 'file', {container: 'assets'})
+		.translationField('src', 'file', imgConfig)
+		.translationField('thumb', 'file', imgConfig)
 }
 export default config;

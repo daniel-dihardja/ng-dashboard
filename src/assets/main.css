@@ -164,15 +164,18 @@ md-sidemenu-button {
 .file-selector img {
   /*max-width: 640px;*/ }
 
-.file-uploader .md-dialog-content {
+.file-uploader .container {
+  max-height: 1024px;
   overflow: hidden; }
 
 .file-uploader .previewContainer {
-  width: 1024px;
-  height: 400px;
-  max-width: 1024px;
-  max-height: 400px;
+  min-width: 600px;
+  min-height: 400px;
+  max-width: 2048px;
+  max-height: 600px;
   overflow: scroll; }
+  .file-uploader .previewContainer.error {
+    border: 4px solid red; }
 
 .file-uploader img {
   /*max-width: 640px;*/ }

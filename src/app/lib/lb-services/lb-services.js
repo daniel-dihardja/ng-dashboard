@@ -5266,6 +5266,65 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               url: urlBase + "/ZpMedia/change-stream",
               method: "POST",
             },
+
+            // INTERNAL. Use ZpMediaWrapper.items.findById() instead.
+            "::findById::ZpMediaWrapper::items": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/items/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.destroyById() instead.
+            "::destroyById::ZpMediaWrapper::items": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/items/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.updateById() instead.
+            "::updateById::ZpMediaWrapper::items": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/items/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items() instead.
+            "::get::ZpMediaWrapper::items": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.create() instead.
+            "::create::ZpMediaWrapper::items": {
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.createMany() instead.
+            "::createMany::ZpMediaWrapper::items": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.destroyAll() instead.
+            "::delete::ZpMediaWrapper::items": {
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.count() instead.
+            "::count::ZpMediaWrapper::items": {
+              url: urlBase + "/ZpMediaWrappers/:id/items/count",
+              method: "GET",
+            },
           }
         );
 
@@ -47739,6 +47798,1961 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         * i.e. `LedRing`.
         */
         R.modelName = "LedRing";
+
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.ZpMediaWrapper
+ * @header lbServices.ZpMediaWrapper
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `ZpMediaWrapper` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "ZpMediaWrapper",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/ZpMediaWrappers/:id",
+          { 'id': '@id' },
+          {
+
+            // INTERNAL. Use ZpMediaWrapper.items.findById() instead.
+            "prototype$__findById__items": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/items/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.destroyById() instead.
+            "prototype$__destroyById__items": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/items/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.updateById() instead.
+            "prototype$__updateById__items": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/items/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.findById() instead.
+            "prototype$__findById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.destroyById() instead.
+            "prototype$__destroyById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.updateById() instead.
+            "prototype$__updateById__translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items() instead.
+            "prototype$__get__items": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.create() instead.
+            "prototype$__create__items": {
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.destroyAll() instead.
+            "prototype$__delete__items": {
+              url: urlBase + "/ZpMediaWrappers/:id/items",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.items.count() instead.
+            "prototype$__count__items": {
+              url: urlBase + "/ZpMediaWrappers/:id/items/count",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations() instead.
+            "prototype$__get__translations": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.create() instead.
+            "prototype$__create__translations": {
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.destroyAll() instead.
+            "prototype$__delete__translations": {
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.count() instead.
+            "prototype$__count__translations": {
+              url: urlBase + "/ZpMediaWrappers/:id/translations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#create
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/ZpMediaWrappers",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#createMany
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#upsert
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/ZpMediaWrappers",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#exists
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/ZpMediaWrappers/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#findById
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/ZpMediaWrappers/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#find
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#findOne
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/ZpMediaWrappers/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#updateAll
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/ZpMediaWrappers/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#deleteById
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/ZpMediaWrappers/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#count
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/ZpMediaWrappers/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#prototype$updateAttributes
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/ZpMediaWrappers/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#createChangeStream
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/ZpMediaWrappers/change-stream",
+              method: "POST",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#updateOrCreate
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#update
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#destroyById
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#removeById
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapper` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.ZpMediaWrapper#modelName
+        * @propertyOf lbServices.ZpMediaWrapper
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `ZpMediaWrapper`.
+        */
+        R.modelName = "ZpMediaWrapper";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.ZpMediaWrapper.items
+     * @header lbServices.ZpMediaWrapper.items
+     * @object
+     * @description
+     *
+     * The object `ZpMediaWrapper.items` groups methods
+     * manipulating `ZpMedia` instances related to `ZpMediaWrapper`.
+     *
+     * Call {@link lbServices.ZpMediaWrapper#items ZpMediaWrapper.items()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#items
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Queries items of ZpMediaWrapper.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMedia` object.)
+             * </em>
+             */
+        R.items = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::get::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#count
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Counts items of ZpMediaWrapper.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.items.count = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::count::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#create
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Creates a new instance in items of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMedia` object.)
+             * </em>
+             */
+        R.items.create = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::create::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#createMany
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Creates a new instance in items of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMedia` object.)
+             * </em>
+             */
+        R.items.createMany = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::createMany::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#destroyAll
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Deletes all items of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.items.destroyAll = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::delete::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#destroyById
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Delete a related item by id for items.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for items
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.items.destroyById = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::destroyById::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#findById
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Find a related item by id for items.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for items
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMedia` object.)
+             * </em>
+             */
+        R.items.findById = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::findById::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.items#updateById
+             * @methodOf lbServices.ZpMediaWrapper.items
+             *
+             * @description
+             *
+             * Update a related item by id for items.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for items
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMedia` object.)
+             * </em>
+             */
+        R.items.updateById = function() {
+          var TargetResource = $injector.get("ZpMedia");
+          var action = TargetResource["::updateById::ZpMediaWrapper::items"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.ZpMediaWrapper.translations
+     * @header lbServices.ZpMediaWrapper.translations
+     * @object
+     * @description
+     *
+     * The object `ZpMediaWrapper.translations` groups methods
+     * manipulating `ZpMediaWrapperTranslation` instances related to `ZpMediaWrapper`.
+     *
+     * Call {@link lbServices.ZpMediaWrapper#translations ZpMediaWrapper.translations()}
+     * to query all related instances.
+     */
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper#translations
+             * @methodOf lbServices.ZpMediaWrapper
+             *
+             * @description
+             *
+             * Queries translations of ZpMediaWrapper.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `filter` – `{object=}` -
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R.translations = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::get::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#count
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Counts translations of ZpMediaWrapper.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.translations.count = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::count::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#create
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R.translations.create = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::create::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#createMany
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Creates a new instance in translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R.translations.createMany = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::createMany::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#destroyAll
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Deletes all translations of this model.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyAll = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::delete::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#destroyById
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Delete a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.translations.destroyById = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::destroyById::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#findById
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Find a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R.translations.findById = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::findById::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapper.translations#updateById
+             * @methodOf lbServices.ZpMediaWrapper.translations
+             *
+             * @description
+             *
+             * Update a related item by id for translations.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for translations
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R.translations.updateById = function() {
+          var TargetResource = $injector.get("ZpMediaWrapperTranslation");
+          var action = TargetResource["::updateById::ZpMediaWrapper::translations"];
+          return action.apply(R, arguments);
+        };
+
+
+        return R;
+      }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.ZpMediaWrapperTranslation
+ * @header lbServices.ZpMediaWrapperTranslation
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `ZpMediaWrapperTranslation` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "ZpMediaWrapperTranslation",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/ZpMediaWrapperTranslations/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#create
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "create": {
+              url: urlBase + "/ZpMediaWrapperTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#createMany
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Create a new instance of the model and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "createMany": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrapperTranslations",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#upsert
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "upsert": {
+              url: urlBase + "/ZpMediaWrapperTranslations",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#exists
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Check whether a model instance exists in the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `exists` – `{boolean=}` -
+             */
+            "exists": {
+              url: urlBase + "/ZpMediaWrapperTranslations/:id/exists",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#findById
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Find a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "findById": {
+              url: urlBase + "/ZpMediaWrapperTranslations/:id",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#find
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Find all instances of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Array.<Object>,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Array.<Object>} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "find": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrapperTranslations",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#findOne
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Find first instance of the model matched by filter from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "findOne": {
+              url: urlBase + "/ZpMediaWrapperTranslations/findOne",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#updateAll
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+            "updateAll": {
+              url: urlBase + "/ZpMediaWrapperTranslations/update",
+              method: "POST",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#deleteById
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "deleteById": {
+              url: urlBase + "/ZpMediaWrapperTranslations/:id",
+              method: "DELETE",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#count
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Count instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+            "count": {
+              url: urlBase + "/ZpMediaWrapperTranslations/count",
+              method: "GET",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#prototype$updateAttributes
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Update attributes for a model instance and persist it into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+            "prototype$updateAttributes": {
+              url: urlBase + "/ZpMediaWrapperTranslations/:id",
+              method: "PUT",
+            },
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#createChangeStream
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Create a change stream.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             *  - `options` – `{object=}` -
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `changes` – `{ReadableStream=}` -
+             */
+            "createChangeStream": {
+              url: urlBase + "/ZpMediaWrapperTranslations/change-stream",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.findById() instead.
+            "::findById::ZpMediaWrapper::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/translations/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.destroyById() instead.
+            "::destroyById::ZpMediaWrapper::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/translations/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.updateById() instead.
+            "::updateById::ZpMediaWrapper::translations": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/ZpMediaWrappers/:id/translations/:fk",
+              method: "PUT",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations() instead.
+            "::get::ZpMediaWrapper::translations": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "GET",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.create() instead.
+            "::create::ZpMediaWrapper::translations": {
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.createMany() instead.
+            "::createMany::ZpMediaWrapper::translations": {
+              isArray: true,
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "POST",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.destroyAll() instead.
+            "::delete::ZpMediaWrapper::translations": {
+              url: urlBase + "/ZpMediaWrappers/:id/translations",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use ZpMediaWrapper.translations.count() instead.
+            "::count::ZpMediaWrapper::translations": {
+              url: urlBase + "/ZpMediaWrappers/:id/translations/count",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#updateOrCreate
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Update an existing model instance or insert a new one into the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R["updateOrCreate"] = R["upsert"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#update
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Update instances of the model matched by where from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {Object} postData Request data.
+             *
+             * This method expects a subset of model properties as request parameters.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * The number of instances updated
+             */
+        R["update"] = R["updateAll"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#destroyById
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R["destroyById"] = R["deleteById"];
+
+            /**
+             * @ngdoc method
+             * @name lbServices.ZpMediaWrapperTranslation#removeById
+             * @methodOf lbServices.ZpMediaWrapperTranslation
+             *
+             * @description
+             *
+             * Delete a model instance by id from the data source.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - Model id
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `ZpMediaWrapperTranslation` object.)
+             * </em>
+             */
+        R["removeById"] = R["deleteById"];
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.ZpMediaWrapperTranslation#modelName
+        * @propertyOf lbServices.ZpMediaWrapperTranslation
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `ZpMediaWrapperTranslation`.
+        */
+        R.modelName = "ZpMediaWrapperTranslation";
 
 
 

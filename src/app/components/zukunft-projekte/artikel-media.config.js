@@ -1,7 +1,17 @@
 /**
  * Created by danieldihardja on 25/09/16.
  */
+import settings from '../../app.settings';
+
 function config($crudProvider) {
+
+	var imgConfig = {
+		container: 'assets',
+		prefWidth: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxWidth,
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
 
 	var zpArtikelMedia = $crudProvider.model('ZpArtikelMedia');
 	zpArtikelMedia.listView()
@@ -12,17 +22,20 @@ function config($crudProvider) {
 
 	zpArtikelMedia.createView()
 		.field('type', 'select', {values: ['image', 'video']})
-		.field('src', 'file')
-		.field('thumb', 'file');
+		.field('src', 'file', imgConfig)
+		.field('thumb', 'file', imgConfig)
+		.field('caption');
 
 	zpArtikelMedia.editView()
 		.field('publish', 'checkbox')
 		.field('type', 'select', {values: ['image', 'video']})
-		.field('src', 'file')
-		.field('thumb', 'file')
+		.field('src', 'file', imgConfig)
+		.field('thumb', 'file', imgConfig)
+		.field('caption')
 
 		.translationKey('zpArtikelMediaId')
-
 		.translationField('src')
 		.translationField('thumb')
+		.translationField('caption')
 }
+export default config;

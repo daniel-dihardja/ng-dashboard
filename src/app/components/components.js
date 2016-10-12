@@ -5,6 +5,7 @@ import angular from 'angular';
 import crud from '../admin/crud/index';
 
 import zpMediaConfig from './zukunft-projekte/media.config';
+import zpMediaWrapperConfig from './zukunft-projekte/media-wrapper.config';
 import zpArtikelConfig from './zukunft-projekte/artikel.config';
 import zpArtikelMediaConfig from './zukunft-projekte/artikel-media.config';
 
@@ -33,6 +34,7 @@ import ledContent from './led-ring/led-content.config';
 let componentsModule = angular.module('admin.components', [crud.name])
 	.config(['$crudProvider', ($crudProvider) => {
 
+		zpMediaWrapperConfig($crudProvider);
 		zpMediaConfig($crudProvider);
 		zpArtikelConfig($crudProvider);
 		zpArtikelMediaConfig($crudProvider);

@@ -7,7 +7,6 @@ import template from './file-upload.html!text';
 import uploadController from './dialog-upload.controller';
 import uploadTpl from './dialog-upload.html!text';
 
-
 class FileUploader {
 
 	/**
@@ -73,7 +72,6 @@ class FileUploader {
 
 	openUploadDialog($event, $mdDialog, scope) {
 
-		console.log('scope', scope);
 		$mdDialog.show({
 			controller: uploadController,
 			controllerAs: 'vm',
@@ -84,9 +82,6 @@ class FileUploader {
 			fullscreen: false,
 			locals: {
 				container: scope.container,
-				maxWidth: scope.maxWidth,
-				maxHeight: scope.maxHeight,
-				maxSize: scope.maxSize,
 				options: scope.options
 			}
 		})
@@ -99,6 +94,7 @@ class FileUploader {
 
 		}.bind(this),
 		function() {
+			// cancel the upload
 			console.log('cancel upload');
 		}.bind(this))
 	}
