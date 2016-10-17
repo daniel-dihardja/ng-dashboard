@@ -1,13 +1,28 @@
 /**
  * Created by danieldihardja on 18/08/16.
  */
-import cmsTxt from './zfcms-text';
 
 function appText($translateProvider) {
 
-	$translateProvider.translations('de', cmsTxt);
+	$translateProvider.translations('de', {
+
+		LOGIN: 		'Login',
+		USERNAME: 	'Username',
+		PASSWORD: 	'Password',
+		CMS_TITLE:	'ZF Forum',
+
+		CREATE: 	'Create',
+		EDIT:		'Edit',
+		LIST: 		'List',
+
+		TO_MEDIA:	'zu den Medien',
+		LED_RING:	'LED Ring',
+
+		SAVE_SUCCESS: 'Successfully Gespeichert'
+	});
 
 	$translateProvider.preferredLanguage('de');
 }
+
 appText.$inject = ['$translateProvider'];
 export default appText;

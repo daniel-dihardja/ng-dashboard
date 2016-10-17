@@ -3,14 +3,17 @@
  */
 class EditController {
 
-	constructor($state, $stateParams, $injector, $crud, $stateHistory) {
+	constructor($rootScope, $scope, $state, $stateParams, $injector, $crud, $stateHistory, $filter) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
 		this.$crud = $crud;
 		this.$stateHistory = $stateHistory;
+		this.$rootScope = $rootScope;
+		this.$scope = $scope;
+		this.$filter = $filter;
 
-		this.entity = {};
+		this.$scope.entity = {};
 		this.translation = {};
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
@@ -21,10 +24,7 @@ class EditController {
 		this.translationFields = editView.translationFields();
 		this.hasManyLinks = editView.hasManyLinks();
 
-
-
 		var title = editView.title() || $stateParams.title || 'Bearbeiten';
-
 
 		// TODO:
 		// refactore this
@@ -60,7 +60,8 @@ class EditController {
 		this.saveTranslation();
 		if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src;
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
-			//this.back();
+			console.log('toast');
+			this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'))
 		}.bind(this))
 	}
 
@@ -95,5 +96,5 @@ class EditController {
 		this.$stateHistory.back();
 	}
 }
-EditController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$stateHistory'];
+EditController.$inject = ['$rootScope', '$scope', '$state', '$stateParams', '$injector', '$crud', '$stateHistory', '$filter'];
 export default EditController;

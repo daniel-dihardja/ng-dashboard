@@ -3,6 +3,11 @@
  */
 function config($crudProvider) {
 
+
+	var inputConfig = {
+		blockRegex: new RegExp("[äöüÄÜÖ]", "g")
+	};
+
 	var ledContet = $crudProvider.model('LedContent');
 
 	ledContet.listView()
@@ -12,30 +17,29 @@ function config($crudProvider) {
 		.field('publish');
 
 	ledContet.createView()
-		.field('title')
-		.field('upperLeft')
-		.field('lowerLeft')
-		.field('center')
-		.field('upperRight')
-		.field('lowerRight');
+		.field('title', null, inputConfig)
+		.field('upperLeft', null, inputConfig)
+		.field('lowerLeft', null, inputConfig)
+		.field('center', null, inputConfig)
+		.field('upperRight', null, inputConfig)
+		.field('lowerRight', null, inputConfig);
 
 	ledContet.editView()
 		.field('publish', 'checkbox')
 		.field('title')
 
-		.field('upperLeft')
-		.field('lowerLeft')
-		.field('center')
-		.field('upperRight')
-		.field('lowerRight')
-		.field('ledPreview', 'ledpreview')
+		.field('upperLeft', null, inputConfig)
+		.field('lowerLeft', null, inputConfig)
+		.field('center', null, inputConfig)
+		.field('upperRight', null, inputConfig)
+		.field('lowerRight', null, inputConfig)
+		.field('ledPreview', 'ledpreview', null, inputConfig)
 		.translationKey('ledContentId')
 		.translationField('title')
-		.translationField('upperLeft')
-		.translationField('lowerLeft')
-		.translationField('center')
-		.translationField('upperRight')
-		.translationField('lowerRight')
-	
+		.translationField('upperLeft', null, inputConfig)
+		.translationField('lowerLeft', null, inputConfig)
+		.translationField('center', null, inputConfig)
+		.translationField('upperRight', null, inputConfig)
+		.translationField('lowerRight', null, inputConfig)
 }
 export default config;

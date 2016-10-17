@@ -2,6 +2,7 @@
  * Created by danieldihardja on 25/09/16.
  */
 function config($cp) {
+
 	var aebMedia = $cp.model('EbMedia');
 
 	aebMedia.listView()
@@ -15,7 +16,7 @@ function config($cp) {
 		.field('text', 'text')
 		.field('longText', 'text')
 		.field('src', 'file', {container: 'aeb'})
-		.field('thumb', 'file', {container: 'aeb'})
+		.field('thumb', 'file', {container: 'aeb'});
 
 	aebMedia.editView()
 		.field('publish', 'checkbox')

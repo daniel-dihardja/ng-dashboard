@@ -3,12 +3,15 @@
  */
 class CreateController {
 
-	constructor($state, $stateParams, $injector, $crud, $stateHistory) {
+	constructor($state, $stateParams, $injector, $crud, $stateHistory, $rootScope, $filter) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
 		this.$crud = $crud;
 		this.$stateHistory = $stateHistory;
+
+		this.$rootScope = $rootScope;
+		this.$filter = $filter;
 
 		this.model = $injector.get($stateParams.model);
 
@@ -52,7 +55,7 @@ class CreateController {
 		this.entity.publish = 0;
 		this.model.create(this.entity).$promise
 			.then(function() {
-				//this.back();
+				this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'));
 			}.bind(this))
 	}
 
@@ -60,5 +63,5 @@ class CreateController {
 		this.$stateHistory.back();
 	}
 }
-CreateController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$stateHistory'];
+CreateController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$stateHistory', '$rootScope', '$filter'];
 export default CreateController;

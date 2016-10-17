@@ -5,18 +5,19 @@
     </div>
 
     <div ng-show="type=='audio/mp3'">
-        <audio src="{{selectedFileUrl | trustUrl}}" controls>
+        <audio src="{{selectedFileUrl | trustUrl}}" preload="auto" controls>
             Your browser does not support the audio element.
         </audio>
     </div>
 
     <div ng-show="type=='video/mp4'">
-        <video src="{{selectedFileUrl | trustUrl}}" controls>
+        <video src="{{selectedFileUrl | trustUrl}}" preload="auto" controls>
             Your browser does not support the audio element.
         </video>
     </div>
 
-    <div>
+    <div layout="row">
         <md-button class="md-fab md-mini" ng-click="openUploadDialog($event)"><md-icon>file_upload</md-icon></md-button>
+        <md-button class="md-fab md-mini" ng-click="reload()"><md-icon>autorenew</md-icon></md-button>
     </div>
 </div>

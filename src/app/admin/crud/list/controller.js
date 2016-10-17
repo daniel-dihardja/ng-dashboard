@@ -11,13 +11,12 @@ class ListController {
 		this.$mdDialog = $mdDialog;
 		this.$stateHistory = $stateHistory;
 
+
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
 
 
 		var crudView = $crud.model($stateParams.model).listView();
-
-		console.log($stateParams);
 
 		var title = crudView.title() || $stateParams.title || 'CRUD List';
 		if($stateParams.prevTitle) {

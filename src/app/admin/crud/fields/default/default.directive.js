@@ -11,8 +11,21 @@ class DefaultField {
 		this.template = template;
 		this.scope = {
 			label: '@',
-			modelValue: '=ngModel'
+			modelValue: '=ngModel',
+			options: '='
 		};
+	}
+
+	link(scope, element, attrs, ngModel) {
+		var options = scope.options || {};
+		var blockRegex = options.blockRegex;
+		scope.onKeyUp = function() {
+			if(! blockRegex) return;
+			var value = ngModel.$viewValue;
+			value = value.replace(blockRegex, '');
+			ngModel.$setViewValue(value);
+			ngModel.$render();
+		}
 	}
 
 	static createInstance() {

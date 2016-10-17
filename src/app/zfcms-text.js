@@ -13,7 +13,9 @@ export default {
 		list: 		'List',
 
 		toMedia:	'zu den Medien',
-		ledring:	'LED Ring'
+		ledring:	'LED Ring',
+
+		SAVE_SUCCESS: 'Gespeichert'
 
 	}
 };

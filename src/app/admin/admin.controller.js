@@ -3,41 +3,37 @@
  */
 class AppController {
 
-	constructor($state, AppUser, $rootScope, $stateHistory) {
+	constructor($state, AppUser, $rootScope, $stateHistory, $mdToast, $filter) {
 		this.$state = $state;
 		this.AppUser = AppUser;
 		this.$rootScope = $rootScope;
 		this.$stateHistory = $stateHistory;
+		this.$mdToast = $mdToast;
+		this.$filter = $filter;
 
 		// start the state history navigator.
 		// this ensure that the state params
 		// are also being set whlie navigating
 		// back to a previous state.
 		this.$stateHistory.init($state, $rootScope);
+
+		this.$rootScope.$on('toast', this.showToast.bind(this));
 	};
-
-	gotoImages() {
-		this.$state.go('admin.filelist', {container: 'images'});
-	}
-
-	gotoVideos() {
-		this.$state.go('admin.filelist', {container: 'videos'});
-	}
-
-	gotoZPArticles(stationId) {
-		console.log('stationId', stationId);
-		this.$state.go('admin.zukunft-projekte-station', {stationId: stationId});
-	}
-
-	gotoZPMedia() {
-		console.log('media');
-	}
 
 	logout() {
 		this.AppUser.logout();
 		this.$state.go('login');
 	}
+
+	showToast(evt, data) {
+		this.$mdToast.show(
+			this.$mdToast.simple()
+				.textContent(data)
+				.position('top right')
+				.hideDelay(1000)
+		)
+	}
 }
 
-AppController.$inject = ['$state', 'AppUser', '$rootScope', '$stateHistory'];
+AppController.$inject = ['$state', 'AppUser', '$rootScope', '$stateHistory', '$mdToast', '$filter'];
 export default AppController;
