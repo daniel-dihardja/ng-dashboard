@@ -8,7 +8,7 @@ function config($crudProvider) {
 	var imgConfig = {
 		container: 'assets',
 		prefWidth: settings.zpImgMaxWidth,
-		prefHeight: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxHeight,
 		maxWidth: settings.imgMaxWidth,
 		maxHeight: settings.imgMaxHeight
 	};

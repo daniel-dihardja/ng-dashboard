@@ -26,7 +26,9 @@ class DialogUploadController {
 	onFileChanged() {
 		setTimeout(function() {
 			var file = this.$scope.fileToUpload;
-			if(file.type == 'image/jpeg' || file.type == 'image/png') {
+
+
+			if(file.type == 'image/jpeg' || file.type == 'image/png' || file.type == 'image/gif') {
 				this.previewImage(file);
 			}
 			else {
@@ -46,12 +48,9 @@ class DialogUploadController {
 		img.onload = function(){
 			this.$scope.$apply(function() {
 
-				var warningWidth = false;
-				var warningHeight = false;
-				var allowUpload = true;
-
 				var maxWidth = this.options.maxWidth || 9999;
 				var maxHeight = this.options.maxHeight || 9999;
+
 
 				if(img.width > maxWidth || img.height > maxHeight) {
 					this.imgWidth = img.width;
@@ -82,7 +81,7 @@ class DialogUploadController {
 				this.$mdDialog.hide(fileObj);
 			}.bind(this))
 			.catch(function(err) {
-				throw err
+				alert(err);
 			}.bind(this));
 	}
 

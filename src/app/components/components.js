@@ -12,6 +12,7 @@ import zpArtikelMediaConfig from './zukunft-projekte/artikel-media.config';
 import  aebCategory from './auf-einem-blick/aeb-category.config';
 import  aebContent from './auf-einem-blick/aeb-content.config';
 import  aebMedia from './auf-einem-blick/aeb-media.config';
+import  aebText from './auf-einem-blick/aeb-text.config';
 
 // social resp
 import stiftung from './social-resp/stiftung.config';
@@ -42,6 +43,7 @@ let componentsModule = angular.module('admin.components', [crud.name])
 		aebCategory($crudProvider);
 		aebContent($crudProvider);
 		aebMedia($crudProvider);
+		aebText($crudProvider);
 
 		stiftung($crudProvider);
 		stipendiaten($crudProvider);

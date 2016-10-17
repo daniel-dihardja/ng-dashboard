@@ -41,6 +41,6 @@ function config($crudProvider) {
 		.translationField('image', 'file', {container: 'assets'})
 
 
-		.hasManyLink('SvMusikpreisPerson', 'svMusikpreisId', {label: 'Zu den Musiker'})
+		.hasManyLink('SvMusikpreisPerson', 'svMusikpreisId', {label: 'Zu den Musikern'})
 }
 export default config;

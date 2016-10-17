@@ -23,7 +23,7 @@ function config($cp) {
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
 		.hasManyLink('EbMedia', 'ebContentId', {label: 'Zu den Medien'})
-		.hasManyLink('EbContent', 'ebContentId', {label: 'Zu den Unterbeiträge'});
+		.hasManyLink('EbContent', 'ebContentId', {label: 'Zu den Unterbeiträgen'});
 
 
 	aebContent.createView()

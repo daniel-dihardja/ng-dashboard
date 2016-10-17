@@ -2,21 +2,29 @@
  * Created by danieldihardja on 27/09/16.
  */
 
-import settings from '../../app.settings';
+import settings from '../../../app/app.settings';
 
 function config($crudProvider) {
+
+	var imgOptions = {
+		container: 'assets',
+		prefWidth: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxHeight,
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
 
 	var kultur = $crudProvider.model('SvKultur');
 
 	kultur.listView()
 		.title('Kultur')
 		.field('title')
-		.field('publish')
+		.field('publish');
 
 	kultur.createView()
 		.field('title')
 		.field('description', 'text')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('introText', 'text')
 		.field('introLeft')
 		.field('introTop')
@@ -25,13 +33,13 @@ function config($crudProvider) {
 		.field('slug')
 		.field('left')
 		.field('top')
-		.field('component')
+		.field('component');
 
 	kultur.editView()
 		.title('Kultur')
 		.field('title')
 		.field('description', 'text')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('introText', 'text')
 		.field('introLeft')
 		.field('introTop')
@@ -45,8 +53,8 @@ function config($crudProvider) {
 		.translationKey('svKulturId')
 		.translationField('title')
 		.translationField('description', 'text')
-		.translationField('image', 'file', {container: 'assets'})
+		.translationField('image', 'file', imgOptions)
 		.translationField('introText', 'text')
-		.hasManyLink('SvKulturItem', 'svKulturId', {label: 'Zu den Einträge'})
+		.hasManyLink('SvKulturItem', 'svKulturId', {label: 'Zu den Einträgen'});
 }
 export default config;

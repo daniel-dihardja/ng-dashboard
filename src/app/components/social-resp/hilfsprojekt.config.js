@@ -35,6 +35,6 @@ function config($crudProvider) {
 		.translationField('date')
 		.translationField('introText', 'text')
 
-		.hasManyLink('SvZfhilftProjectMedia', 'svZfhilftProjectId', {label: 'Zu den Projekt Einträge'})
+		.hasManyLink('SvZfhilftProjectMedia', 'svZfhilftProjectId', {label: 'Zu den Projekt Einträgen'})
 }
 export default config;

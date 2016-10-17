@@ -11,6 +11,7 @@
       "angular-translate": "github:angular-translate/bower-angular-translate@^2.11.1",
       "angular-ui-router": "github:angular-ui/angular-ui-router-bower@^0.3.1",
       "css": "github:systemjs/plugin-css@^0.1.26",
+      "froala": "bower:froala@^2.3.4",
       "html": "github:Hypercubed/systemjs-plugin-html@^0.0.8",
       "material-design-icons": "github:google/material-design-icons@^2.2.3",
       "restangular": "github:mgonto/restangular@^1.5.2",

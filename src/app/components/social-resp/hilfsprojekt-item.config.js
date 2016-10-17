@@ -2,9 +2,17 @@
  * Created by danieldihardja on 27/09/16.
  */
 
-import settings from '../../app.settings';
+import settings from '../../../app/app.settings';
 
 function config($crudProvider) {
+
+	var imgOptions = {
+		container: 'assets',
+		prefWidth: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxHeight,
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
 
 	var item = $crudProvider.model('SvZfhilftProjectMedia');
 
@@ -18,8 +26,8 @@ function config($crudProvider) {
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString')
 		.field('info', 'text')
-		.field('src', 'file', {container: 'assets'})
-		.field('thumb', 'file', {container: 'assets'})
+		.field('src', 'file', imgOptions)
+		.field('thumb', 'file', imgOptions)
 
 
 
@@ -28,14 +36,14 @@ function config($crudProvider) {
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString')
 		.field('info', 'text')
-		.field('src', 'file', {container: 'assets'})
-		.field('thumb', 'file', {container: 'assets'})
+		.field('src', 'file', imgOptions)
+		.field('thumb', 'file', imgOptions)
 
 		.translationKey('svZfhilftProjectMediaId')
 		.translationField('dateString')
 		.translationField('info', 'text')
-		.translationField('src', 'file', {container: 'assets'})
-		.translationField('thumb', 'file', {container: 'assets'})
+		.translationField('src', 'file', imgOptions)
+		.translationField('thumb', 'file', imgOptions)
 
 }
 export default config;

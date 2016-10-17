@@ -42,20 +42,20 @@
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="watch" md-heading="Zukunft Projekte" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Work', prevTitle: null, filter: 'zpStationId=1'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Mobility', prevTitle: null, filter: 'zpStationId=2'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Mobility', prevTitle: null, filter: 'zpStationId=1'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Energy', prevTitle: null, filter: 'zpStationId=2'})"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Living', prevTitle: null, filter: 'zpStationId=3'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy and Ecology" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Energy and Ecology', prevTitle: null, filter: 'zpStationId=4'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-list({model: 'ZpArtikel', title: 'Work', prevTitle: null, filter: 'zpStationId=4'})"></md-sidemenu-button>
 
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
                         <md-sidemenu-content md-icon="personal_video" md-heading="Film Vertiefung" md-arrow="true" >
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', id: '1', title: 'Work', prevTitle: null})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', title: 'Mobility', prevTitle: null, filter: 'zpStationId=2'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', title: 'Living', prevTitle: null, filter: 'zpStationId=3'})"></md-sidemenu-button>
-                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', title: 'Energy', prevTitle: null, filter: 'zpStationId=4'})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Mobility" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', id: '1', title: 'Mobility', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Energy" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', id: '2', title: 'Energy', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Living" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', id: '3', title: 'Living', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Work" ui-sref="admin.crud-edit({model: 'ZpMediaWrapper', id: '4', title: 'Work', prevTitle: null})"></md-sidemenu-button>
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
@@ -64,12 +64,19 @@
                             <md-sidemenu-button md-icon="folder_open" md-heading="Dynamisch Wachsen" ui-sref="admin.crud-edit({model: 'EbCategory', id: '1', filter: null, title: 'Dynamisch Wachsen', prevTitle: null})"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="folder_open" md-heading="Konsequent Vordenken" ui-sref="admin.crud-edit({model: 'EbCategory', id:'2', filter: null, title: 'Konsequent Vordenken', prevTitle: null})"></md-sidemenu-button>
                             <md-sidemenu-button md-icon="folder_open" md-heading="Individuell Fördern" ui-sref="admin.crud-edit({model: 'EbCategory', id: '3', filter: null, title: 'Individuell Fördern', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Unabhängig Handeln" ui-sref="admin.crud-edit({model: 'EbCategory', id: '4', filter: null, title: 'Unabhängig Handeln', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Vielfältig Entwickeln" ui-sref="admin.crud-edit({model: 'EbCategory', id: '5', filter: null, title: 'Vielfältig Entwickeln', prevTitle: null})"></md-sidemenu-button>
+                            <md-sidemenu-button md-icon="folder_open" md-heading="Texte" ui-sref="admin.crud-list({model: 'EbText', filter: null, title: 'Texte', prevTitle: null})"></md-sidemenu-button>
 
                         </md-sidemenu-content>
                     </md-sidemenu-group>
 
                     <md-sidemenu-group>
                         <md-sidemenu-button md-icon="folder_open" md-heading="LED Ring" ui-sref="admin.crud-list({model: 'LedPool', filter: null, prevTitle: null, title: null})"></md-sidemenu-button>
+                    </md-sidemenu-group>
+
+                    <md-sidemenu-group>
+                        <md-sidemenu-button md-icon="backspace" md-heading="Froala Test" ng-click="vm.logout()"></md-sidemenu-button>
                     </md-sidemenu-group>
 
                    <md-sidemenu-group>

@@ -2,9 +2,17 @@
  * Created by danieldihardja on 27/09/16.
  */
 
-import settings from '../../app.settings';
+import settings from '../../../app/app.settings';
 
 function config($crudProvider) {
+
+	var imgOptions = {
+		container: 'assets',
+		prefWidth: 512,
+		prefHeight: 512,
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
 
 	var musikpreisItem = $crudProvider.model('SvMusikpreisPerson');
 
@@ -17,7 +25,7 @@ function config($crudProvider) {
 	musikpreisItem.createView()
 		.field('name')
 		.field('year')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('bio', 'text')
 		.field('slug')
 		.field('component');
@@ -27,7 +35,7 @@ function config($crudProvider) {
 		.field('publish', 'checkbox')
 		.field('name')
 		.field('year')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('bio', 'text')
 		.field('slug')
 		.field('component')
@@ -36,6 +44,6 @@ function config($crudProvider) {
 		.translationField('title')
 		.translationField('description', 'text')
 		.translationField('introText', 'text')
-		.translationField('image', 'file', {container: 'assets'});
+		.translationField('image', 'file', imgOptions);
 }
 export default config;

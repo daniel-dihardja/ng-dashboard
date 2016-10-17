@@ -35,7 +35,7 @@
         <!-- File -->
         <md-input-container class="md-block pd-left-0" flex-gt-sm ng-if="field.type == 'file'" >
             <label class="left-0">{{field.name}}</label>
-            <file-selector ng-model="vm.entity[field.name]" container="images" type="image"></file-selector>
+            <file-selector ng-model="vm.entity[field.name]" container="images" options="field.config" type="image"></file-selector>
         </md-input-container>
 
     </div>

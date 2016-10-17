@@ -15,8 +15,8 @@ var appSettings = {
 	zpImgMaxWidth: 1400,
 	zpImgMaxHeight: 930,
 
-	imgMaxWidth: 5000,
-	imgMaxHeight: 5000,
+	imgMaxWidth: 10000,
+	imgMaxHeight: 10000,
 
 	maxImageMBSize: 5,
 

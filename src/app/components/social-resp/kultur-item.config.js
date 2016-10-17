@@ -5,9 +5,17 @@
  * Created by danieldihardja on 27/09/16.
  */
 
-import settings from '../../app.settings';
+import settings from '../../../app/app.settings';
 
 function config($crudProvider) {
+
+	var imgOptions = {
+		container: 'assets',
+		prefWidth: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxHeight,
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
 
 	var kulturItem = $crudProvider.model('SvKulturItem');
 
@@ -20,8 +28,8 @@ function config($crudProvider) {
 		.field('dateString')
 		.field('info')
 		.field('content', 'text')
-		.field('image', 'file', {container: 'assets'})
-		.field('video', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
+		.field('video', 'file', imgOptions)
 		.field('slug')
 		.field('component');
 
@@ -30,8 +38,8 @@ function config($crudProvider) {
 		.field('dateString')
 		.field('info')
 		.field('content', 'text')
-		.field('image', 'file', {container: 'assets'})
-		.field('video', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
+		.field('video', 'file', imgOptions)
 		.field('slug')
 		.field('component')
 
@@ -39,8 +47,8 @@ function config($crudProvider) {
 		.translationField('dateString')
 		.translationField('info', 'text')
 		.translationField('content', 'text')
-		.translationField('image', 'file', {container: 'assets'})
-		.translationField('video', 'file', {container: 'assets'})
+		.translationField('image', 'file', imgOptions)
+		.translationField('video', 'file', imgOptions)
 
 }
 export default config;

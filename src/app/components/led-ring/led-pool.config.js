@@ -22,7 +22,7 @@ function config($crudProvider) {
 		.field('title')
 		.translationKey('ledPoolId')
 		.translationField('title')
-		.hasManyLink('LedContent', 'ledPoolId', {label: 'Zu den Beiträge'})
+		.hasManyLink('LedContent', 'ledPoolId', {label: 'Zu den Beiträgen'})
 }
 export default config;
 

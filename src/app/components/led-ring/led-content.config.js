@@ -17,7 +17,7 @@ function config($crudProvider) {
 		.field('lowerLeft')
 		.field('center')
 		.field('upperRight')
-		.field('lowerRight')
+		.field('lowerRight');
 
 	ledContet.editView()
 		.field('publish', 'checkbox')
@@ -28,6 +28,7 @@ function config($crudProvider) {
 		.field('center')
 		.field('upperRight')
 		.field('lowerRight')
+		.field('ledPreview', 'ledpreview')
 		.translationKey('ledContentId')
 		.translationField('title')
 		.translationField('upperLeft')
@@ -35,6 +36,6 @@ function config($crudProvider) {
 		.translationField('center')
 		.translationField('upperRight')
 		.translationField('lowerRight')
-		.field('ledPreview', 'ledpreview')
+	
 }
 export default config;

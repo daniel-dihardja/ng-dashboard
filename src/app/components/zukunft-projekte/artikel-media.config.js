@@ -8,7 +8,7 @@ function config($crudProvider) {
 	var imgConfig = {
 		container: 'assets',
 		prefWidth: settings.zpImgMaxWidth,
-		prefHeight: settings.zpImgMaxWidth,
+		prefHeight: settings.zpImgMaxHeight,
 		maxWidth: settings.imgMaxWidth,
 		maxHeight: settings.imgMaxHeight
 	};
@@ -34,8 +34,8 @@ function config($crudProvider) {
 		.field('caption')
 
 		.translationKey('zpArtikelMediaId')
-		.translationField('src')
-		.translationField('thumb')
+		.translationField('src', 'file', imgConfig)
+		.translationField('thumb', 'file', imgConfig)
 		.translationField('caption')
 }
 export default config;
