@@ -26221,7 +26221,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       'LoopBackResource', 'LoopBackAuth', '$injector',
       function(Resource, LoopBackAuth, $injector) {
         var R = Resource(
-        urlBase + "/SvStiftung/:id",
+        urlBase + "/SvStiftungs/:id",
           { 'id': '@id' },
           {
 
@@ -26230,7 +26230,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStiftung/:id/translations/:fk",
+              url: urlBase + "/SvStiftungs/:id/translations/:fk",
               method: "GET",
             },
 
@@ -26239,7 +26239,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStiftung/:id/translations/:fk",
+              url: urlBase + "/SvStiftungs/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -26248,32 +26248,32 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStiftung/:id/translations/:fk",
+              url: urlBase + "/SvStiftungs/:id/translations/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvStiftung.translations() instead.
             "prototype$__get__translations": {
               isArray: true,
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvStiftung.translations.create() instead.
             "prototype$__create__translations": {
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvStiftung.translations.destroyAll() instead.
             "prototype$__delete__translations": {
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvStiftung.translations.count() instead.
             "prototype$__count__translations": {
-              url: urlBase + "/SvStiftung/:id/translations/count",
+              url: urlBase + "/SvStiftungs/:id/translations/count",
               method: "GET",
             },
 
@@ -26311,7 +26311,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "create": {
-              url: urlBase + "/SvStiftung",
+              url: urlBase + "/SvStiftungs",
               method: "POST",
             },
 
@@ -26350,7 +26350,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/SvStiftung",
+              url: urlBase + "/SvStiftungs",
               method: "POST",
             },
 
@@ -26388,7 +26388,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "upsert": {
-              url: urlBase + "/SvStiftung",
+              url: urlBase + "/SvStiftungs",
               method: "PUT",
             },
 
@@ -26420,7 +26420,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/SvStiftung/:id/exists",
+              url: urlBase + "/SvStiftungs/:id/exists",
               method: "GET",
             },
 
@@ -26455,7 +26455,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findById": {
-              url: urlBase + "/SvStiftung/:id",
+              url: urlBase + "/SvStiftungs/:id",
               method: "GET",
             },
 
@@ -26489,7 +26489,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "find": {
               isArray: true,
-              url: urlBase + "/SvStiftung",
+              url: urlBase + "/SvStiftungs",
               method: "GET",
             },
 
@@ -26522,7 +26522,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findOne": {
-              url: urlBase + "/SvStiftung/findOne",
+              url: urlBase + "/SvStiftungs/findOne",
               method: "GET",
             },
 
@@ -26556,7 +26556,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * The number of instances updated
              */
             "updateAll": {
-              url: urlBase + "/SvStiftung/update",
+              url: urlBase + "/SvStiftungs/update",
               method: "POST",
             },
 
@@ -26589,7 +26589,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/SvStiftung/:id",
+              url: urlBase + "/SvStiftungs/:id",
               method: "DELETE",
             },
 
@@ -26621,7 +26621,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/SvStiftung/count",
+              url: urlBase + "/SvStiftungs/count",
               method: "GET",
             },
 
@@ -26658,7 +26658,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "prototype$updateAttributes": {
-              url: urlBase + "/SvStiftung/:id",
+              url: urlBase + "/SvStiftungs/:id",
               method: "PUT",
             },
 
@@ -26695,7 +26695,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/SvStiftung/change-stream",
+              url: urlBase + "/SvStiftungs/change-stream",
               method: "POST",
             },
 
@@ -26731,7 +26731,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "getContentData": {
-              url: urlBase + "/SvStiftung/contentData",
+              url: urlBase + "/SvStiftungs/contentData",
               method: "GET",
             },
           }
@@ -27636,7 +27636,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStiftung/:id/translations/:fk",
+              url: urlBase + "/SvStiftungs/:id/translations/:fk",
               method: "GET",
             },
 
@@ -27645,7 +27645,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStiftung/:id/translations/:fk",
+              url: urlBase + "/SvStiftungs/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -27654,39 +27654,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvStiftung/:id/translations/:fk",
+              url: urlBase + "/SvStiftungs/:id/translations/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvStiftung.translations() instead.
             "::get::SvStiftung::translations": {
               isArray: true,
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvStiftung.translations.create() instead.
             "::create::SvStiftung::translations": {
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvStiftung.translations.createMany() instead.
             "::createMany::SvStiftung::translations": {
               isArray: true,
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvStiftung.translations.destroyAll() instead.
             "::delete::SvStiftung::translations": {
-              url: urlBase + "/SvStiftung/:id/translations",
+              url: urlBase + "/SvStiftungs/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvStiftung.translations.count() instead.
             "::count::SvStiftung::translations": {
-              url: urlBase + "/SvStiftung/:id/translations/count",
+              url: urlBase + "/SvStiftungs/:id/translations/count",
               method: "GET",
             },
           }
@@ -32165,7 +32165,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       'LoopBackResource', 'LoopBackAuth', '$injector',
       function(Resource, LoopBackAuth, $injector) {
         var R = Resource(
-        urlBase + "/SvKultur/:id",
+        urlBase + "/SvKulturs/:id",
           { 'id': '@id' },
           {
 
@@ -32174,7 +32174,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/translations/:fk",
+              url: urlBase + "/SvKulturs/:id/translations/:fk",
               method: "GET",
             },
 
@@ -32183,7 +32183,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/translations/:fk",
+              url: urlBase + "/SvKulturs/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -32192,7 +32192,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/translations/:fk",
+              url: urlBase + "/SvKulturs/:id/translations/:fk",
               method: "PUT",
             },
 
@@ -32201,7 +32201,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/items/:fk",
+              url: urlBase + "/SvKulturs/:id/items/:fk",
               method: "GET",
             },
 
@@ -32210,7 +32210,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/items/:fk",
+              url: urlBase + "/SvKulturs/:id/items/:fk",
               method: "DELETE",
             },
 
@@ -32219,57 +32219,57 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/items/:fk",
+              url: urlBase + "/SvKulturs/:id/items/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvKultur.translations() instead.
             "prototype$__get__translations": {
               isArray: true,
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvKultur.translations.create() instead.
             "prototype$__create__translations": {
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvKultur.translations.destroyAll() instead.
             "prototype$__delete__translations": {
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvKultur.translations.count() instead.
             "prototype$__count__translations": {
-              url: urlBase + "/SvKultur/:id/translations/count",
+              url: urlBase + "/SvKulturs/:id/translations/count",
               method: "GET",
             },
 
             // INTERNAL. Use SvKultur.items() instead.
             "prototype$__get__items": {
               isArray: true,
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "GET",
             },
 
             // INTERNAL. Use SvKultur.items.create() instead.
             "prototype$__create__items": {
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "POST",
             },
 
             // INTERNAL. Use SvKultur.items.destroyAll() instead.
             "prototype$__delete__items": {
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvKultur.items.count() instead.
             "prototype$__count__items": {
-              url: urlBase + "/SvKultur/:id/items/count",
+              url: urlBase + "/SvKulturs/:id/items/count",
               method: "GET",
             },
 
@@ -32307,7 +32307,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "create": {
-              url: urlBase + "/SvKultur",
+              url: urlBase + "/SvKulturs",
               method: "POST",
             },
 
@@ -32346,7 +32346,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/SvKultur",
+              url: urlBase + "/SvKulturs",
               method: "POST",
             },
 
@@ -32384,7 +32384,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "upsert": {
-              url: urlBase + "/SvKultur",
+              url: urlBase + "/SvKulturs",
               method: "PUT",
             },
 
@@ -32416,7 +32416,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/SvKultur/:id/exists",
+              url: urlBase + "/SvKulturs/:id/exists",
               method: "GET",
             },
 
@@ -32451,7 +32451,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findById": {
-              url: urlBase + "/SvKultur/:id",
+              url: urlBase + "/SvKulturs/:id",
               method: "GET",
             },
 
@@ -32485,7 +32485,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "find": {
               isArray: true,
-              url: urlBase + "/SvKultur",
+              url: urlBase + "/SvKulturs",
               method: "GET",
             },
 
@@ -32518,7 +32518,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findOne": {
-              url: urlBase + "/SvKultur/findOne",
+              url: urlBase + "/SvKulturs/findOne",
               method: "GET",
             },
 
@@ -32552,7 +32552,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * The number of instances updated
              */
             "updateAll": {
-              url: urlBase + "/SvKultur/update",
+              url: urlBase + "/SvKulturs/update",
               method: "POST",
             },
 
@@ -32585,7 +32585,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/SvKultur/:id",
+              url: urlBase + "/SvKulturs/:id",
               method: "DELETE",
             },
 
@@ -32617,7 +32617,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/SvKultur/count",
+              url: urlBase + "/SvKulturs/count",
               method: "GET",
             },
 
@@ -32654,7 +32654,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "prototype$updateAttributes": {
-              url: urlBase + "/SvKultur/:id",
+              url: urlBase + "/SvKulturs/:id",
               method: "PUT",
             },
 
@@ -32691,7 +32691,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/SvKultur/change-stream",
+              url: urlBase + "/SvKulturs/change-stream",
               method: "POST",
             },
 
@@ -32727,7 +32727,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "getContentData": {
-              url: urlBase + "/SvKultur/contentData",
+              url: urlBase + "/SvKulturs/contentData",
               method: "GET",
             },
           }
@@ -33933,7 +33933,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/translations/:fk",
+              url: urlBase + "/SvKulturs/:id/translations/:fk",
               method: "GET",
             },
 
@@ -33942,7 +33942,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/translations/:fk",
+              url: urlBase + "/SvKulturs/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -33951,39 +33951,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/translations/:fk",
+              url: urlBase + "/SvKulturs/:id/translations/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvKultur.translations() instead.
             "::get::SvKultur::translations": {
               isArray: true,
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SvKultur.translations.create() instead.
             "::create::SvKultur::translations": {
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvKultur.translations.createMany() instead.
             "::createMany::SvKultur::translations": {
               isArray: true,
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SvKultur.translations.destroyAll() instead.
             "::delete::SvKultur::translations": {
-              url: urlBase + "/SvKultur/:id/translations",
+              url: urlBase + "/SvKulturs/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvKultur.translations.count() instead.
             "::count::SvKultur::translations": {
-              url: urlBase + "/SvKultur/:id/translations/count",
+              url: urlBase + "/SvKulturs/:id/translations/count",
               method: "GET",
             },
           }
@@ -34639,7 +34639,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/items/:fk",
+              url: urlBase + "/SvKulturs/:id/items/:fk",
               method: "GET",
             },
 
@@ -34648,7 +34648,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/items/:fk",
+              url: urlBase + "/SvKulturs/:id/items/:fk",
               method: "DELETE",
             },
 
@@ -34657,39 +34657,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SvKultur/:id/items/:fk",
+              url: urlBase + "/SvKulturs/:id/items/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SvKultur.items() instead.
             "::get::SvKultur::items": {
               isArray: true,
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "GET",
             },
 
             // INTERNAL. Use SvKultur.items.create() instead.
             "::create::SvKultur::items": {
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "POST",
             },
 
             // INTERNAL. Use SvKultur.items.createMany() instead.
             "::createMany::SvKultur::items": {
               isArray: true,
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "POST",
             },
 
             // INTERNAL. Use SvKultur.items.destroyAll() instead.
             "::delete::SvKultur::items": {
-              url: urlBase + "/SvKultur/:id/items",
+              url: urlBase + "/SvKulturs/:id/items",
               method: "DELETE",
             },
 
             // INTERNAL. Use SvKultur.items.count() instead.
             "::count::SvKultur::items": {
-              url: urlBase + "/SvKultur/:id/items/count",
+              url: urlBase + "/SvKulturs/:id/items/count",
               method: "GET",
             },
           }
@@ -39469,7 +39469,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       'LoopBackResource', 'LoopBackAuth', '$injector',
       function(Resource, LoopBackAuth, $injector) {
         var R = Resource(
-        urlBase + "/SozialeVerantwortung/:id",
+        urlBase + "/SozialeVerantwortungs/:id",
           { 'id': '@id' },
           {
 
@@ -39478,7 +39478,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/translations/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/:fk",
               method: "GET",
             },
 
@@ -39487,7 +39487,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/translations/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -39496,7 +39496,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/translations/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/:fk",
               method: "PUT",
             },
 
@@ -39505,7 +39505,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/:fk",
               method: "GET",
             },
 
@@ -39514,7 +39514,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/:fk",
               method: "DELETE",
             },
 
@@ -39523,57 +39523,57 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations() instead.
             "prototype$__get__translations": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.create() instead.
             "prototype$__create__translations": {
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.destroyAll() instead.
             "prototype$__delete__translations": {
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.count() instead.
             "prototype$__count__translations": {
-              url: urlBase + "/SozialeVerantwortung/:id/translations/count",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/count",
               method: "GET",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops() instead.
             "prototype$__get__backdrops": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "GET",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.create() instead.
             "prototype$__create__backdrops": {
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "POST",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.destroyAll() instead.
             "prototype$__delete__backdrops": {
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "DELETE",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.count() instead.
             "prototype$__count__backdrops": {
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/count",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/count",
               method: "GET",
             },
 
@@ -39611,7 +39611,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "create": {
-              url: urlBase + "/SozialeVerantwortung",
+              url: urlBase + "/SozialeVerantwortungs",
               method: "POST",
             },
 
@@ -39650,7 +39650,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung",
+              url: urlBase + "/SozialeVerantwortungs",
               method: "POST",
             },
 
@@ -39688,7 +39688,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "upsert": {
-              url: urlBase + "/SozialeVerantwortung",
+              url: urlBase + "/SozialeVerantwortungs",
               method: "PUT",
             },
 
@@ -39720,7 +39720,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/SozialeVerantwortung/:id/exists",
+              url: urlBase + "/SozialeVerantwortungs/:id/exists",
               method: "GET",
             },
 
@@ -39755,7 +39755,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findById": {
-              url: urlBase + "/SozialeVerantwortung/:id",
+              url: urlBase + "/SozialeVerantwortungs/:id",
               method: "GET",
             },
 
@@ -39789,7 +39789,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
             "find": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung",
+              url: urlBase + "/SozialeVerantwortungs",
               method: "GET",
             },
 
@@ -39822,7 +39822,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "findOne": {
-              url: urlBase + "/SozialeVerantwortung/findOne",
+              url: urlBase + "/SozialeVerantwortungs/findOne",
               method: "GET",
             },
 
@@ -39856,7 +39856,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * The number of instances updated
              */
             "updateAll": {
-              url: urlBase + "/SozialeVerantwortung/update",
+              url: urlBase + "/SozialeVerantwortungs/update",
               method: "POST",
             },
 
@@ -39889,7 +39889,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/SozialeVerantwortung/:id",
+              url: urlBase + "/SozialeVerantwortungs/:id",
               method: "DELETE",
             },
 
@@ -39921,7 +39921,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/SozialeVerantwortung/count",
+              url: urlBase + "/SozialeVerantwortungs/count",
               method: "GET",
             },
 
@@ -39958,7 +39958,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "prototype$updateAttributes": {
-              url: urlBase + "/SozialeVerantwortung/:id",
+              url: urlBase + "/SozialeVerantwortungs/:id",
               method: "PUT",
             },
 
@@ -39995,7 +39995,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/SozialeVerantwortung/change-stream",
+              url: urlBase + "/SozialeVerantwortungs/change-stream",
               method: "POST",
             },
 
@@ -40031,7 +40031,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * </em>
              */
             "getContentData": {
-              url: urlBase + "/SozialeVerantwortung/contentData",
+              url: urlBase + "/SozialeVerantwortungs/contentData",
               method: "GET",
             },
           }
@@ -41237,7 +41237,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/translations/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/:fk",
               method: "GET",
             },
 
@@ -41246,7 +41246,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/translations/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/:fk",
               method: "DELETE",
             },
 
@@ -41255,39 +41255,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/translations/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations() instead.
             "::get::SozialeVerantwortung::translations": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "GET",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.create() instead.
             "::create::SozialeVerantwortung::translations": {
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.createMany() instead.
             "::createMany::SozialeVerantwortung::translations": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "POST",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.destroyAll() instead.
             "::delete::SozialeVerantwortung::translations": {
-              url: urlBase + "/SozialeVerantwortung/:id/translations",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations",
               method: "DELETE",
             },
 
             // INTERNAL. Use SozialeVerantwortung.translations.count() instead.
             "::count::SozialeVerantwortung::translations": {
-              url: urlBase + "/SozialeVerantwortung/:id/translations/count",
+              url: urlBase + "/SozialeVerantwortungs/:id/translations/count",
               method: "GET",
             },
           }
@@ -41943,7 +41943,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/:fk",
               method: "GET",
             },
 
@@ -41952,7 +41952,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/:fk",
               method: "DELETE",
             },
 
@@ -41961,39 +41961,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/:fk",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/:fk",
               method: "PUT",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops() instead.
             "::get::SozialeVerantwortung::backdrops": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "GET",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.create() instead.
             "::create::SozialeVerantwortung::backdrops": {
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "POST",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.createMany() instead.
             "::createMany::SozialeVerantwortung::backdrops": {
               isArray: true,
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "POST",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.destroyAll() instead.
             "::delete::SozialeVerantwortung::backdrops": {
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops",
               method: "DELETE",
             },
 
             // INTERNAL. Use SozialeVerantwortung.backdrops.count() instead.
             "::count::SozialeVerantwortung::backdrops": {
-              url: urlBase + "/SozialeVerantwortung/:id/backdrops/count",
+              url: urlBase + "/SozialeVerantwortungs/:id/backdrops/count",
               method: "GET",
             },
           }

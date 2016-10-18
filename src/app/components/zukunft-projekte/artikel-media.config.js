@@ -24,7 +24,8 @@ function config($crudProvider) {
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('src', 'file', imgConfig)
 		.field('thumb', 'file', imgConfig)
-		.field('caption');
+		.field('caption')
+		.field('copyright');
 
 	zpArtikelMedia.editView()
 		.field('publish', 'checkbox')
@@ -32,10 +33,12 @@ function config($crudProvider) {
 		.field('src', 'file', imgConfig)
 		.field('thumb', 'file', imgConfig)
 		.field('caption')
+		.field('copyright')
 
 		.translationKey('zpArtikelMediaId')
 		.translationField('src', 'file', imgConfig)
 		.translationField('thumb', 'file', imgConfig)
 		.translationField('caption')
+		.translationField('copyright')
 }
 export default config;

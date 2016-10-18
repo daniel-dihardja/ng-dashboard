@@ -27,7 +27,6 @@ class DialogUploadController {
 		setTimeout(function() {
 			var file = this.$scope.fileToUpload;
 
-
 			if(file.type == 'image/jpeg' || file.type == 'image/png' || file.type == 'image/gif') {
 				this.previewImage(file);
 			}

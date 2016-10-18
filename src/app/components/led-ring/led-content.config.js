@@ -4,9 +4,8 @@
 function config($crudProvider) {
 
 
-	var inputConfig = {
-		blockRegex: new RegExp("[äöüÄÜÖ]", "g")
-	};
+	var blockRegex = new RegExp("[äöüÄÜÖ]", "g");
+
 
 	var ledContet = $crudProvider.model('LedContent');
 
@@ -17,29 +16,30 @@ function config($crudProvider) {
 		.field('publish');
 
 	ledContet.createView()
-		.field('title', null, inputConfig)
-		.field('upperLeft', null, inputConfig)
-		.field('lowerLeft', null, inputConfig)
-		.field('center', null, inputConfig)
-		.field('upperRight', null, inputConfig)
-		.field('lowerRight', null, inputConfig);
+		.field('title', null, {label: 'Title'})
+		.field('upperLeft', null, {label: 'Upper Left', blockRegex: blockRegex})
+		.field('lowerLeft', null, {label: 'Lower Left', blockRegex: blockRegex})
+		.field('center', null, {label: 'Center', blockRegex: blockRegex})
+		.field('upperRight', null, {label: 'Upper Right', blockRegex: blockRegex})
+		.field('lowerRight', null, {label: 'Lower Right', blockRegex: blockRegex})
+		.field('ledPreview', 'ledpreview')
 
 	ledContet.editView()
 		.field('publish', 'checkbox')
 		.field('title')
 
-		.field('upperLeft', null, inputConfig)
-		.field('lowerLeft', null, inputConfig)
-		.field('center', null, inputConfig)
-		.field('upperRight', null, inputConfig)
-		.field('lowerRight', null, inputConfig)
-		.field('ledPreview', 'ledpreview', null, inputConfig)
+		.field('upperLeft', null, {label: 'Upper Left', blockRegex: blockRegex})
+		.field('lowerLeft', null, {label: 'Lower Left', blockRegex: blockRegex})
+		.field('center', null, {label: 'Center', blockRegex: blockRegex})
+		.field('upperRight', null, {label: 'Upper Right', blockRegex: blockRegex})
+		.field('lowerRight', null, {label: 'Lower Right', blockRegex: blockRegex})
+		.field('ledPreview', 'ledpreview')
 		.translationKey('ledContentId')
 		.translationField('title')
-		.translationField('upperLeft', null, inputConfig)
-		.translationField('lowerLeft', null, inputConfig)
-		.translationField('center', null, inputConfig)
-		.translationField('upperRight', null, inputConfig)
-		.translationField('lowerRight', null, inputConfig)
+		.translationField('upperLeft', null, {label: 'Upper Left'})
+		.translationField('lowerLeft', null, {label: 'Lower Left', blockRegex: blockRegex})
+		.translationField('center', null, {label: 'Center', blockRegex: blockRegex})
+		.translationField('upperRight', null, {label: 'Upper Right', blockRegex: blockRegex})
+		.translationField('lowerRight', null, {label: 'Lower Right', blockRegex: blockRegex})
 }
 export default config;

@@ -5,12 +5,12 @@
         <md-tab label="DE">
             <md-content class="pd-top-20">
                 <div ng-repeat="field in vm.fields">
-                    <crud-input ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == undefined" options="field.config"></crud-input>
-                    <crud-text ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == 'text'" options="field.config"></crud-text>
-                    <crud-checkbox ng-model="vm.entity[field.name]" label="{{field.name}}" ng-if="field.type == 'checkbox'" options="field.config"></crud-checkbox>
-                    <crud-select ng-model="vm.entity[field.name]" label="{{field.name}}" values="field.config.values" ng-if="field.type == 'select'" options="field.config"></crud-select>
-                    <crud-file ng-model="vm.entity[field.name]" label="{{field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'"></crud-file>
-                    <led-preview  label="{{field.name}}" entity="vm.entity" ng-if="field.type == 'ledpreview'" options="field.config"></led-preview>
+                    <crud-input ng-model="vm.entity[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == undefined" options="field.config"></crud-input>
+                    <crud-text ng-model="vm.entity[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == 'text'" options="field.config"></crud-text>
+                    <crud-checkbox ng-model="vm.entity[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == 'checkbox'" options="field.config"></crud-checkbox>
+                    <crud-select ng-model="vm.entity[field.name]" label="{{field.config.label || field.name}}" values="field.config.values" ng-if="field.type == 'select'" options="field.config"></crud-select>
+                    <crud-file ng-model="vm.entity[field.name]" label="{{field.config.label || field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'"></crud-file>
+                    <led-preview  label="{{field.config.label || field.name}}" entity="vm.entity" ng-if="field.type == 'ledpreview'" options="field.config"></led-preview>
                 </div>
             </md-content>
         </md-tab>
@@ -19,11 +19,11 @@
         <md-tab label="EN">
             <md-content class="pd-top-20">
                 <div ng-repeat="field in vm.translationFields">
-                    <crud-input ng-model="vm.translation[field.name]" label="{{field.name}}" ng-if="field.type == undefined" options="field.config"></crud-input>
-                    <crud-text ng-model="vm.translation[field.name]" label="{{field.name}}" ng-if="field.type == 'text'" options="field.config"></crud-text>
-                    <crud-checkbox ng-model="vm.translation[field.name]" label="{{field.name}}" ng-if="field.type == 'checkbox'" options="field.config"></crud-checkbox>
-                    <crud-select ng-model="vm.translation[field.name]" label="{{field.name}}" values="field.config.values" ng-if="field.type == 'select'" options="field.config"></crud-select>
-                    <crud-file ng-model="vm.translation[field.name]" label="{{field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'" ></crud-file>
+                    <crud-input ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == undefined" options="field.config"></crud-input>
+                    <crud-text ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == 'text'" options="field.config"></crud-text>
+                    <crud-checkbox ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == 'checkbox'" options="field.config"></crud-checkbox>
+                    <crud-select ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" values="field.config.values" ng-if="field.type == 'select'" options="field.config"></crud-select>
+                    <crud-file ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'" ></crud-file>
                 </div>
             </md-content>
         </md-tab>

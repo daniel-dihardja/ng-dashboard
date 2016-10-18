@@ -13,13 +13,13 @@ function config($crudProvider) {
 	zpArtikel.editView()
 		.title('#ENTITY_HEADLINE#')
 		.field('publish', 'checkbox')
-		.field('headline')
-		.field('teaserText', 'text')
-		.field('mainText', 'text')
+		.field('headline', null, {label: 'Headline'})
+		.field('teaserText', 'text', {label: 'Teaser Text'})
+		.field('mainText', 'text', {label: 'Main Text'})
 		.translationKey('zpArtikelId')
-		.translationField('headline')
-		.translationField('teaserText', 'text')
-		.translationField('mainText', 'text')
+		.translationField('headline', null, {label: 'Headline'})
+		.translationField('teaserText', 'text', {label: 'Teasert Text'})
+		.translationField('mainText', 'text', {label: 'Main Text'})
 
 		.hasManyLink('ZpArtikelMedia', 'zpArtikelId', {label: 'Zu den Medien'});
 
