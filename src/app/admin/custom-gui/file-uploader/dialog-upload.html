@@ -13,10 +13,17 @@
             <div class="md-dialog-content">
                 <md-progress-linear md-mode="indeterminate" ng-show="vm.uploading"></md-progress-linear>
                 <div class="previewContainer" ng-show="vm.showPreviewImage"><img id="imagePreview" src=""></div>
-                <div class="warningMessage" ng-show="vm.showWarning">
+
+                <div class="warningMessage" ng-show="vm.showWarningImageSize">
                     <h3>Die grösse des Bildes von {{vm.imgWidth}} x {{vm.imgHeight}} px ist leider zu gross.</h3>
                     Bitte beachten Sie dass die maximale Grösse von {{vm.maxWidth}} x {{vm.maxHeight}} px nicht überschritten wird.
                 </div>
+
+                <div class="warningMessage" ng-show="vm.showWarningFileTypes">
+                    <h3>Ungültiger Datei. Es können nur folgende Dateitypen hochgeladen werden</h3>
+                    jpg, png, gif, mp3, mp4
+                </div>
+
                 <div class="pd-50">
                     <input type="file" file-model="fileToUpload" onchange="angular.element(this).scope().onFileChanged()"/>
                 </div>

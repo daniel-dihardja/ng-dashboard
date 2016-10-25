@@ -3,7 +3,7 @@
  */
 class DialogUploadController {
 
-	constructor($scope, $mdDialog, $files, container, options) {
+	constructor($scope, $mdDialog, $files, container, options, $filter) {
 		this.$mdDialog = $mdDialog;
 		this.$files = $files;
 
@@ -13,27 +13,39 @@ class DialogUploadController {
 		this.$scope = $scope;
 		this.$scope.onFileChanged = this.onFileChanged.bind(this);
 
+		this.resetWarnings.bind(this);
+		this.previewImage.bind(this);
 
+		this.resetWarnings();
+	}
+
+	resetWarnings() {
 		this.showPreviewImage = false;
-		this.showWarning = false;
-
+		this.showWarningImageSize = false;
+		this.showWarningFileTypes = false;
 		this.blockSubmit = true;
 		this.uploading = false;
-
-		this.previewImage.bind(this);
 	}
 
 	onFileChanged() {
 		setTimeout(function() {
 			var file = this.$scope.fileToUpload;
 
+			this.resetWarnings();
+
 			if(file.type == 'image/jpeg' || file.type == 'image/png' || file.type == 'image/gif') {
 				this.previewImage(file);
 			}
-			else {
+			else if(file.type == 'audio/mp3' || file.type == 'video/mp4') {
 				this.$scope.$apply(function() {
 					this.blockSubmit = false;
 					this.showPreviewImage = false;
+					this.showWarningImageSize = false;
+				}.bind(this));
+			}
+			else {
+				this.$scope.$apply(function() {
+					this.showWarningFileTypes = true;
 				}.bind(this));
 			}
 		}.bind(this), 100);
@@ -50,13 +62,12 @@ class DialogUploadController {
 				var maxWidth = this.options.maxWidth || 9999;
 				var maxHeight = this.options.maxHeight || 9999;
 
-
 				if(img.width > maxWidth || img.height > maxHeight) {
 					this.imgWidth = img.width;
 					this.imgHeight = img.height;
 					this.maxWidth = maxWidth;
 					this.maxHeight = maxHeight;
-					this.showWarning = true;
+					this.showWarningImageSize = true;
 					this.showPreviewImage = false;
 					this.blockSubmit = true;
 				}
@@ -88,5 +99,5 @@ class DialogUploadController {
 		this.$mdDialog.hide();
 	}
 }
-DialogUploadController.$inject = ['$scope', '$mdDialog', '$files', 'container', 'options'];
+DialogUploadController.$inject = ['$scope', '$mdDialog', '$files', 'container', 'options', '$filter'];
 export default DialogUploadController;
