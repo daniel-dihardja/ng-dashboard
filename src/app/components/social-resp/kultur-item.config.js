@@ -13,8 +13,8 @@ function config($crudProvider) {
 		container: 'assets',
 		prefWidth: settings.zpImgMaxWidth,
 		prefHeight: settings.zpImgMaxHeight,
-		maxWidth: settings.imgMaxWidth,
-		maxHeight: settings.imgMaxHeight
+		maxWidth: settings.surfaceWidth,
+		maxHeight: settings.surfaceHeight
 	};
 
 	var kulturItem = $crudProvider.model('SvKulturItem');

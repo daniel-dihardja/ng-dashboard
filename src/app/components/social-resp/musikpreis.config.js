@@ -6,6 +6,12 @@ import settings from '../../app.settings';
 
 function config($crudProvider) {
 
+	var imgOptions = {
+		container: 'assets',
+		maxWidth: settings.surfaceWidth,
+		maxHeight: settings.surfaceHeight
+	};
+
 	var musikpreis = $crudProvider.model('SvMusikpreis');
 
 	musikpreis.listView()
@@ -29,7 +35,7 @@ function config($crudProvider) {
 		.field('slug')
 		.field('description', 'text')
 		.field('introText', 'text')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('left')
 		.field('top')
 		.field('component')
@@ -38,7 +44,7 @@ function config($crudProvider) {
 		.translationField('title')
 		.translationField('description', 'text')
 		.translationField('introText', 'text')
-		.translationField('image', 'file', {container: 'assets'})
+		.translationField('image', 'file', imgOptions)
 
 
 		.hasManyLink('SvMusikpreisPerson', 'svMusikpreisId', {label: 'Zu den Musikern'})

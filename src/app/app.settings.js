@@ -20,6 +20,8 @@ var appSettings = {
 
 	maxImageMBSize: 5,
 
+	surfaceWidth: 2736,
+	surfaceHeight: 1824
 };
 
 export default appSettings;

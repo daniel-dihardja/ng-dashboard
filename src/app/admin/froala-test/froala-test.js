@@ -7,7 +7,6 @@ import uiRouter from 'angular-ui-router';
 import controller from './froala-test.controller';
 import template from './froala-test.html!text';
 
-
 let froala = angular.module('admin.froalatest', [uiRouter])
 
 	.config(['$stateProvider', ($stateProvider) => {

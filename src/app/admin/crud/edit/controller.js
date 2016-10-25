@@ -49,9 +49,7 @@ class EditController {
 		};
 		this.model.findOne(q).$promise
 			.then(function(res) {
-				console.log('entity', res);
 				this.entity = res;
-				//this.entity.publish = (this.entity.publish == 1);
 				this.translation = this.entity.translations[0] || {};
 			}.bind(this))
 	}
@@ -60,7 +58,6 @@ class EditController {
 		this.saveTranslation();
 		if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src;
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
-			console.log('toast');
 			this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'))
 		}.bind(this))
 	}

@@ -25,6 +25,8 @@ import fileSelector from './custom-gui/file-selector/file-selector.directive';
 import fileUploader from './custom-gui/file-uploader/file-upload.directive';
 import stateHistory from './state-history/state-history.service';
 
+// froala test
+import froala from './froala-test/froala-test';
 
 let adminModule = angular.module('admin', [
 		uiRouter,
@@ -34,7 +36,8 @@ let adminModule = angular.module('admin', [
 		profil.name,
 		files.name,
 		crud.name,
-		components.name
+		components.name,
+		froala.name
 	])
 	.config(['$stateProvider', '$crudProvider', ($stateProvider, $crudProvider)=> {
 

@@ -30,7 +30,6 @@ function config($crudProvider) {
 		.field('slug')
 		.field('component');
 
-
 	musikpreisItem.editView()
 		.field('publish', 'checkbox')
 		.field('name')

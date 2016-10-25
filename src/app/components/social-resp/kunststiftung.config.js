@@ -6,6 +6,12 @@ import settings from '../../app.settings';
 
 function config($crudProvider) {
 
+	var imgOptions = {
+		container: 'assets',
+		maxWidth: settings.surfaceWidth,
+		maxHeight: settings.surfaceHeight
+	};
+
 	var kunstStiftung = $crudProvider.model('SvKunststiftung');
 
 	kunstStiftung.listView()

@@ -8,6 +8,12 @@ import settings from '../../app.settings';
 
 function config($crudProvider) {
 
+	var imgOptions = {
+		container: 'assets',
+		maxWidth: settings.imgMaxWidth,
+		maxHeight: settings.imgMaxHeight
+	};
+
 	var stipendiaten = $crudProvider.model('SvStipendiaten');
 
 	stipendiaten.listView()
@@ -19,7 +25,7 @@ function config($crudProvider) {
 		.field('title')
 		.field('slug')
 		.field('description', 'text')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('left')
 		.field('top')
 		.field('introText')
@@ -30,7 +36,7 @@ function config($crudProvider) {
 		.field('title')
 		.field('slug')
 		.field('description', 'text')
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', imgOptions)
 		.field('left')
 		.field('top')
 		.field('introText')
@@ -39,7 +45,7 @@ function config($crudProvider) {
 		.translationField('title')
 		.translationField('slug')
 		.translationField('description', 'text')
-		.translationField('image', 'file', {container: 'assets'})
+		.translationField('image', 'file', imgOptions)
 		.translationField('introText')
 
 		.hasManyLink('SvStipendiat', 'svStipendiatenId', {label: 'Zu den Stipendiaten'})
