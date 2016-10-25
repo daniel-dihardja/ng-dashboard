@@ -1,6 +1,9 @@
 /**
  * Created by danieldihardja on 25/09/16.
  */
+
+import settings from '../../app.settings';
+
 function config($cp) {
 
 	var aebMedia = $cp.model('EbMedia');
@@ -15,7 +18,11 @@ function config($cp) {
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')
-		.field('src', 'file', {container: 'aeb'})
+		.field('src', 'file', {
+			container: 'aeb',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight
+		})
 		.field('thumb', 'file', {container: 'aeb'});
 
 	aebMedia.editView()
@@ -23,13 +30,29 @@ function config($cp) {
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')
-		.field('src', 'file', {container: 'aeb'})
-		.field('thumb', 'file', {container: 'aeb'})
+		.field('src', 'file', {
+			container: 'aeb',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight
+		})
+		.field('thumb', 'file', {
+			container: 'aeb',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight
+		})
 		.translationKey('ebMediaId')
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
-		.translationField('src', 'file', {container: 'aeb'})
-		.translationField('thumb', 'file', {container: 'aeb'});
+		.translationField('src', 'file', {
+			container: 'aeb',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight
+		})
+		.translationField('thumb', 'file', {
+			container: 'aeb',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight
+		});
 }
 export default config;

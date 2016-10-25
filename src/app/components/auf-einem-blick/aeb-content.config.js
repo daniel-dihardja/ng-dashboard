@@ -1,6 +1,9 @@
 /**
  * Created by danieldihardja on 25/09/16.
  */
+
+import settings from '../../app.settings';
+
 function config($cp) {
 	var aebContent = $cp.model('EbContent');
 
@@ -18,6 +21,11 @@ function config($cp) {
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')
+		.field('thumb', 'file', {
+			container: 'aeb',
+			maxWidth: settings.ipadProMaxWidth,
+			maxHeight: settings.ipadProMaxHeight
+		})
 		.translationKey('ebContentId')
 		.translationField('title')
 		.translationField('text', 'text')
