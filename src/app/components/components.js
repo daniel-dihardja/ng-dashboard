@@ -15,6 +15,9 @@ import  aebMedia from './auf-einem-blick/aeb-media.config';
 import  aebText from './auf-einem-blick/aeb-text.config';
 
 // social resp
+import socialresp from './social-resp/social-responsibility';
+import socialRespMedia from './social-resp/social-responsibility-media';
+
 import stiftung from './social-resp/stiftung.config';
 import stipendiaten from './social-resp/stipendiaten.config';
 import stipendiat from './social-resp/stipendiat.config';
@@ -44,6 +47,9 @@ let componentsModule = angular.module('admin.components', [crud.name])
 		aebContent($crudProvider);
 		aebMedia($crudProvider);
 		aebText($crudProvider);
+
+		socialresp($crudProvider);
+		socialRespMedia($crudProvider);
 
 		stiftung($crudProvider);
 		stipendiaten($crudProvider);

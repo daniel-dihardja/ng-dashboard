@@ -47,9 +47,13 @@ class FileUploader {
 			this.openUploadDialog(evt, this.$mdDialog, scope)
 		}.bind(this);
 
-		scope.reload = function(evt) {
-			scope.selectedFileUrl = scope.selectedFileUrl;
+		scope.delete = function() {
+			scope.modelValue = null;
+			scope.selectedFile = null;
+			scope.selectedFileUrl = null;
 		};
+
+
 
 		scope.selectedFile = "";
 		scope.selectedFileUrl = "";
