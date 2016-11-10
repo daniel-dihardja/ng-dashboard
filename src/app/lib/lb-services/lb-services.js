@@ -51361,6 +51361,89 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         return R;
       }]);
 
+/**
+ * @ngdoc object
+ * @name lbServices.FileUtil
+ * @header lbServices.FileUtil
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `FileUtil` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+  module.factory(
+    "FileUtil",
+    [
+      'LoopBackResource', 'LoopBackAuth', '$injector',
+      function(Resource, LoopBackAuth, $injector) {
+        var R = Resource(
+        urlBase + "/FileUtils/:id",
+          { 'id': '@id' },
+          {
+
+            /**
+             * @ngdoc method
+             * @name lbServices.FileUtil#cleanAebFiles
+             * @methodOf lbServices.FileUtil
+             *
+             * @description
+             *
+             * <em>
+             * (The remote method definition does not provide any description.)
+             * </em>
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *   This method does not accept any parameters.
+             *   Supply an empty object or omit this argument altogether.
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `FileUtil` object.)
+             * </em>
+             */
+            "cleanAebFiles": {
+              url: urlBase + "/FileUtils/cleanAebFiles",
+              method: "GET",
+            },
+          }
+        );
+
+
+
+
+        /**
+        * @ngdoc property
+        * @name lbServices.FileUtil#modelName
+        * @propertyOf lbServices.FileUtil
+        * @description
+        * The name of the model represented by this $resource,
+        * i.e. `FileUtil`.
+        */
+        R.modelName = "FileUtil";
+
+
+
+        return R;
+      }]);
+
 
   module
   .factory('LoopBackAuth', function() {

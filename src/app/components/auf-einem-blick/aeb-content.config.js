@@ -7,6 +7,14 @@ import settings from '../../app.settings';
 function config($cp) {
 	var aebContent = $cp.model('EbContent');
 
+	var imgConfig = {
+		container: 'aeb',
+		maxWidth: settings.ipadProMaxWidth,
+		maxHeight: settings.ipadProMaxHeight,
+		prefWidth: [784, 1568, 2352],
+		prefHeight: 1364
+	};
+
 	aebContent.listView()
 		.title('/ Beiträge')
 		.field('title')
@@ -21,11 +29,8 @@ function config($cp) {
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')
-		.field('thumb', 'file', {
-			container: 'aeb',
-			maxWidth: settings.ipadProMaxWidth,
-			maxHeight: settings.ipadProMaxHeight
-		})
+		.field('src', 'file', imgConfig)
+		.field('thumb', 'file', imgConfig)
 		.translationKey('ebContentId')
 		.translationField('title')
 		.translationField('text', 'text')
