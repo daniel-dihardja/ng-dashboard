@@ -36,6 +36,8 @@ function config($cp) {
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
+		.translationField('src', 'file', imgConfig)
+		.translationField('thumb', 'file', imgConfig)
 		.hasManyLink('EbMedia', 'ebContentId', {label: 'Zu den Medien'})
 		.hasManyLink('EbContent', 'ebContentId', {label: 'Zu den Unterbeiträgen'});
 
