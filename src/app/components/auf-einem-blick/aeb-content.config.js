@@ -5,6 +5,7 @@
 import settings from '../../app.settings';
 
 function config($cp) {
+
 	var aebContent = $cp.model('EbContent');
 
 	var imgConfig = {
