@@ -36,8 +36,8 @@ function config($crudProvider) {
 		.field('year')
 		.field('image', 'file', imgOptions)
 		.field('bio', 'text')
-		.field('slug')
-		.field('component')
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svMusikpreisPersonId')
 		.translationField('bio', 'text')

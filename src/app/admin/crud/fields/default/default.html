@@ -1,5 +1,5 @@
 <!-- default input text -->
-<md-input-container class="md-block" flex-gt-sm>
+<md-input-container class="md-block" flex-gt-sm ng-show="visibleForUser">
     <label>{{label}}</label>
     <input ng-model="modelValue" ng-keyup="onKeyUp()">
 </md-input-container>

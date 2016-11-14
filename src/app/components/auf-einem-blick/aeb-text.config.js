@@ -10,14 +10,13 @@ function config($cp) {
 		.field('key')
 		.field('value');
 
-
 	aebText.createView()
 		.field('key')
 		.field('value');
 
 	aebText.editView()
 		.field('publish')
-		.field('key')
+		.field('key', null, {showOnly: 'admin'})
 		.field('value')
 		.translationKey('ebTextId')
 		.translationField('value')

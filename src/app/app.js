@@ -27,7 +27,7 @@ import zfAdmin from './admin/admin';
 
 import appText from './app.text';
 import appSettings from './app.settings';
-
+import appService from './app.service';
 
 import '../../jspm_packages/bower/jquery@3.1.1';
 import '../../jspm_packages/bower/froala@2.3.4/js/froala_editor.min';
@@ -80,6 +80,7 @@ let appModule = angular.module('app', [
 	$urlRouterProvider.otherwise('/login');
 }])
 
-.config(appText);
+.config(appText)
+.service('$app', appService)
 
 export default appModule;

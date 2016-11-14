@@ -53,7 +53,16 @@ let adminModule = angular.module('admin', [
 				template: adminView,
 				url: '/admin',
 				resolve: {
-					auth: ['AppUser', function(AppUser) {return AppUser.ping()}]
+					auth: ['AppUser', '$q', '$app', function(AppUser, $q, $app) {
+						var defer = $q.defer();
+						AppUser.ping().$promise.then(function(res) {
+							if(res.user) {
+								$app.username(res.user.username);
+							}
+							defer.resolve();
+						});
+						return defer.promise;
+					}]
 				}
 			});
 	}])

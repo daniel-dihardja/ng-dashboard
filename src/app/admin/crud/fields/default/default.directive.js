@@ -5,7 +5,10 @@ import template from './default.html!text';
 
 class DefaultField {
 
-	constructor() {
+	constructor($app) {
+
+		this.$app = $app;
+
 		this.restrict = 'E';
 		this.require = 'ngModel';
 		this.template = template;
@@ -18,7 +21,14 @@ class DefaultField {
 
 	link(scope, element, attrs, ngModel) {
 		var options = scope.options || {};
-		var blockRegex = options.blockRegex;
+
+		var showOnly = options.showOnly ? options.showOnly : null;
+		var username = this.$app.username();
+
+		if(! showOnly) scope.visibleForUser = true;
+		else if(showOnly && showOnly == username) scope.visibleForUser = true;
+		else if(showOnly && showOnly != username) scope.visibleForUser = false;
+
 		scope.onKeyUp = function() {
 			if(! blockRegex) return;
 			var value = ngModel.$viewValue;
@@ -28,9 +38,9 @@ class DefaultField {
 		}
 	}
 
-	static createInstance() {
-		return new DefaultField();
+	static createInstance($app) {
+		return new DefaultField($app);
 	}
 }
-
+DefaultField.createInstance.$inject = ['$app'];
 export default DefaultField.createInstance;

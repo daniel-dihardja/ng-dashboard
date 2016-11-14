@@ -8,12 +8,20 @@ function config($cp) {
 
 	var aebCat = $cp.model('EbCategory');
 
+	/*
 	var imgConfig = {
 		container: 'aeb',
 		maxWidth: settings.ipadProMaxWidth,
 		maxHeight: settings.ipadProMaxHeight,
 		prefWidth: 2732,
 		prefHeight: 1364
+	};
+	*/
+
+	var imgConfig = {
+		container: 'aeb',
+		maxWidth: settings.ipadProMaxWidth,
+		maxHeight: settings.ipadProMaxHeight
 	};
 
 	aebCat.listView()

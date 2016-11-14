@@ -8,12 +8,20 @@ function config($cp) {
 
 	var aebContent = $cp.model('EbContent');
 
+	/*
 	var imgConfig = {
 		container: 'aeb',
 		maxWidth: settings.ipadProMaxWidth,
 		maxHeight: settings.ipadProMaxHeight,
 		prefWidth: [784, 1568, 2352],
 		prefHeight: 1364
+	};
+	*/
+
+	var imgConfig = {
+		container: 'aeb',
+		maxWidth: settings.ipadProMaxWidth,
+		maxHeight: settings.ipadProMaxHeight
 	};
 
 	aebContent.listView()
@@ -26,7 +34,7 @@ function config($cp) {
 	aebContent.editView()
 		.title('#ENTITY_TITLE#')
 		.field('publish', 'checkbox')
-		.field('nameId')
+		.field('nameId', null, {showOnly: 'admin'})
 		.field('title')
 		.field('text', 'text')
 		.field('longText', 'text')

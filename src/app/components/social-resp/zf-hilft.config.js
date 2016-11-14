@@ -34,8 +34,8 @@ function config($crudProvider) {
 		.field('introTextTop')
 		.field('introTextWidth')
 		.field('introTextHeight')
-		.field('slug')
-		.field('component')
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svZfhilftId')
 		.translationField('title')

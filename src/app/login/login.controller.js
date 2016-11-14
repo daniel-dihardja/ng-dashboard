@@ -3,16 +3,15 @@
  */
 class LoginController {
 
-	constructor($q, $auth, $state, AppUser) {
+	constructor($q, $auth, $state, AppUser, $app) {
 		this.$q = $q;
 		this.$auth = $auth;
 		this.$state = $state;
 		this.AppUser = AppUser;
-		console.log('Login ...');
+		this.$app = $app;
 	}
 
 	login() {
-		console.log('submit ...', this.username, this.password);
 
 		var defer = this.$q.defer();
 		var _this = this;
@@ -24,27 +23,17 @@ class LoginController {
 
 		this.AppUser.login(creds,
 			function() {
+				_this.$app.username(creds.username);
 				_this.$state.go('admin');
 			},
 			function(err) {
 				throw err;
 			});
 
-		/*
-		this.$auth.login(this.username, this.password)
-			.then(function(res) {
-				defer.resolve();
-				_this.$state.go('admin');
-			})
-			.catch(function(err) {
-				throw err
-			});
-		*/
-
 
 		return defer.promise;
 	}
 }
 
-LoginController.$inject = ['$q', '$auth', '$state', 'AppUser'];
+LoginController.$inject = ['$q', '$auth', '$state', 'AppUser', '$app'];
 export default LoginController;

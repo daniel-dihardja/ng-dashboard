@@ -4,6 +4,7 @@
 class EditController {
 
 	constructor($rootScope, $scope, $state, $stateParams, $injector, $crud, $stateHistory, $filter) {
+
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;

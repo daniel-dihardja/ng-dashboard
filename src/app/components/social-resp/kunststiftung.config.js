@@ -31,8 +31,8 @@ function config($crudProvider) {
 		.field('title')
 		.field('description', 'text')
 		.field('image', 'file', {container: 'assets'})
-		.field('slug')
-		.field('component')
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svKunststiftungId')
 		.translationField('title')

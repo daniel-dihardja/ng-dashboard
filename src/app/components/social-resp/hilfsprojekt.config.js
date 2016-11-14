@@ -27,8 +27,8 @@ function config($crudProvider) {
 		.field('title')
 		.field('date')
 		.field('introText')
-		.field('slug')
-		.field('component')
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svZfhilftProjectId')
 		.translationField('title')

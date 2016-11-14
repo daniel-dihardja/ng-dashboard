@@ -40,8 +40,8 @@ function config($crudProvider) {
 		.field('content', 'text')
 		.field('image', 'file', imgOptions)
 		.field('video', 'file', imgOptions)
-		.field('slug')
-		.field('component')
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svKulturItemId')
 		.translationField('dateString')
