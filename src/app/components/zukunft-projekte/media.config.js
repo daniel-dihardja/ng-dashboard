@@ -25,8 +25,8 @@ function config($crudProvider) {
 		.field('type', 'select', {values: ['audio', 'video']})
 		.field('title')
 		.field('description', 'text')
-		.field('src', 'file')
-		.field('thumb', 'file');
+		.field('src', 'file', imgConfig)
+		.field('thumb', 'file', imgConfig);
 
 	zpMedia.editView()
 		.field('publish', 'checkbox')
