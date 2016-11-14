@@ -33,7 +33,7 @@
                         <md-button ng-disabled="$first" class="md-icon-button" ng-click="vm.rankUp(entity)"><md-icon>expand_less</md-icon></md-button>
                         <md-button ng-disabled="$last" class="md-icon-button" ng-click="vm.rankDown(entity)"><md-icon>expand_more</md-icon></md-button>
                         <md-button class="md-icon-button" ng-click="vm.editItem(entity)"><md-icon>edit</md-icon></md-button>
-                        <md-button class="md-icon-button" ng-click="vm.deleteItem(entity)"><md-icon>delete</md-icon></md-button>
+                        <md-button class="md-icon-button" ng-click="vm.deleteItem(entity)" ng-show="vm.isAdmin"><md-icon>delete</md-icon></md-button>
                     </td>
                 </tr>
             </trbody>
@@ -44,7 +44,7 @@
     <md-card-actions layout="row" class="pdt-30">
         <span flex></span>
         <md-button class="md-raised" ng-click="vm.back()" ng-if="vm.useBackButton">Zurück</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.newEntity()">Neu</md-button>
+        <md-button class="md-primary md-raised" ng-click="vm.newEntity()" ng-show="vm.isAdmin">Neu</md-button>
     </md-card-actions>
 
 </md-content>

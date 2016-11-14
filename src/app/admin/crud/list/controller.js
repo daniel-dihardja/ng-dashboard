@@ -3,7 +3,7 @@
  */
 class ListController {
 
-	constructor($state, $stateParams, $injector, $crud, $mdDialog, $stateHistory) {
+	constructor($state, $stateParams, $injector, $crud, $mdDialog, $stateHistory, $app) {
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
@@ -11,6 +11,10 @@ class ListController {
 		this.$mdDialog = $mdDialog;
 		this.$stateHistory = $stateHistory;
 
+		this.isAdmin = false;
+		if($app.username() == 'admin') {
+			this.isAdmin = true;
+		}
 
 		this.model = $injector.get($stateParams.model);
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
@@ -165,5 +169,5 @@ class ListController {
 	}
 }
 
-ListController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$mdDialog', '$stateHistory'];
+ListController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$mdDialog', '$stateHistory', '$app'];
 export default ListController;
