@@ -20,14 +20,15 @@ class DefaultField {
 	}
 
 	link(scope, element, attrs, ngModel) {
+
 		var options = scope.options || {};
-
-		var showOnly = options.showOnly ? options.showOnly : null;
-		var username = this.$app.username();
-
-		if(! showOnly) scope.visibleForUser = true;
-		else if(showOnly && showOnly == username) scope.visibleForUser = true;
-		else if(showOnly && showOnly != username) scope.visibleForUser = false;
+		scope.visibleForUser = true;
+		if(options.showOnly) {
+			var showOnly = options.showOnly;
+			var username = this.$app.username();
+			if(showOnly == username) scope.visibleForUser = true;
+			else scope.visibleForUser = false;
+		}
 
 		scope.onKeyUp = function() {
 			if(! blockRegex) return;

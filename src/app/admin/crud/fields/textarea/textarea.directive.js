@@ -16,9 +16,20 @@ class TextareaField {
 		};
 	}
 
-	static createInstance() {
-		return new TextareaField();
+	link(scope, element, attrs, ngModel) {
+		var options = scope.options || {};
+		scope.visibleForUser = true;
+		if(options.showOnly) {
+			var showOnly = options.showOnly;
+			var username = this.$app.username();
+			if(showOnly == username) scope.visibleForUser = true;
+			else scope.visibleForUser = false;
+		}
+	}
+
+	static createInstance($app) {
+		return new TextareaField($app);
 	}
 }
-
+TextareaField.createInstance.$inject = ['$app'];
 export default TextareaField.createInstance;

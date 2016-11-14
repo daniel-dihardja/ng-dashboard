@@ -1,4 +1,4 @@
-<md-input-container class="" flex-gt-sm>
+<md-input-container class="" flex-gt-sm ng-show="visibleForUser">
     <label>{{label}}</label>
     <md-select ng-model="modelValue">
         <md-option ng-value="value" ng-repeat="value in values">{{value}}</md-option>
