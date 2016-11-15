@@ -20,14 +20,14 @@ function config($crudProvider) {
 		.title('/ Einträge')
 		.backButton(true)
 		.field('id')
-		.field('publish')
+		.field('publish');
 
 	item.createView()
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString')
 		.field('info', 'text')
 		.field('src', 'file', imgOptions)
-		.field('thumb', 'file', imgOptions)
+		.field('thumb', 'file', imgOptions);
 
 
 

@@ -2,6 +2,22 @@
  * Created by danieldihardja on 18/08/16.
  */
 
+// froala editor
+import '../../jspm_packages/bower/font-awesome@4.6.3/css/font-awesome.css!'
+import '../../jspm_packages/bower/froala@2.3.4/css/froala_editor.css!'
+import '../../jspm_packages/bower/froala@2.3.4/css/froala_style.css!'
+import '../../jspm_packages/bower/froala@2.3.4/css/plugins/code_view.css!'
+import '../../jspm_packages/bower/froala@2.3.4/css/plugins/colors.css!'
+
+import '../../jspm_packages/bower/jquery@3.1.1';
+import '../../jspm_packages/bower/froala@2.3.4/js/froala_editor.min';
+
+import '../../jspm_packages/bower/froala@2.3.4/js/plugins/lists.min';
+import '../../jspm_packages/bower/froala@2.3.4/js/plugins/paragraph_format.min';
+import '../../jspm_packages/bower/froala@2.3.4/js/plugins/code_view.min';
+
+
+
 import 'angular-material/angular-material.css!'
 import 'angular-material-data-table/dist/md-data-table.css!';
 
@@ -29,8 +45,6 @@ import appText from './app.text';
 import appSettings from './app.settings';
 import appService from './app.service';
 
-import '../../jspm_packages/bower/jquery@3.1.1';
-import '../../jspm_packages/bower/froala@2.3.4/js/froala_editor.min';
 
 
 let appModule = angular.module('app', [

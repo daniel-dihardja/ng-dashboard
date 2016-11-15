@@ -30,7 +30,6 @@ function config($cp) {
 		.field('publish')
 		.backButton(true);
 
-
 	aebContent.editView()
 		.title('#ENTITY_TITLE#')
 		.field('publish', 'checkbox')

@@ -109,7 +109,6 @@ class Model {
 
 
 
-
 class CrudProvider {
 
 	constructor() {

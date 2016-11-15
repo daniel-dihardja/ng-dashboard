@@ -18,6 +18,7 @@ import crudProvider from './crud-provider';
 
 import defaultField from './fields/default/default.directive';
 import textareaField from './fields/textarea/textarea.directive';
+import wysiwygField from './fields/wysiwyg/wysiwyg.directive';
 import checkboxField from './fields/checkbox/checkbox.directive';
 import selectField from './fields/select/select.directive';
 import fileField from './fields/file/file.directive';
@@ -74,9 +75,10 @@ let crudModule = angular.module('crud', [uiRouter])
 	.provider('$crud', crudProvider)
 	.directive('crudInput', defaultField)
 	.directive('crudText', textareaField)
+	.directive('crudWysiwyg', wysiwygField)
 	.directive('crudCheckbox', checkboxField)
 	.directive('crudSelect', selectField)
 	.directive('crudFile', fileField)
-	.directive('ledPreview', ledPreviewField)
+	.directive('ledPreview', ledPreviewField);
 
 export default crudModule;

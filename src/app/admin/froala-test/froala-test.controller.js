@@ -3,7 +3,9 @@
  */
 class FroalaTestController {
 	constructor() {
-
+		$('#froala-edit').froalaEditor({
+			toolbarButtons: ['paragraphFormat', 'bold', 'italic', 'formatUL', 'html']
+		});
 	}
 }
 export default FroalaTestController;
