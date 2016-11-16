@@ -25,6 +25,21 @@ class WysiwygField {
 			if(showOnly == username) scope.visibleForUser = true;
 			else scope.visibleForUser = false;
 		}
+
+		ngModel.$render = function() {
+			var textarea = element.find('textarea');
+			textarea.froalaEditor({toolbarButtons: ['paragraphFormat', 'bold', 'italic', 'formatUL', 'html']})
+				.froalaEditor('html.set', ngModel.$viewValue);
+
+			textarea.on('froalaEditor.contentChanged', function(e, editor){
+				var html = textarea.froalaEditor('html.get');
+				if(angular.isString(html)) {
+					scope.$apply(function() {
+						ngModel.$setViewValue(html);
+					})
+				}
+			})
+		}
 	}
 
 	static createInstance($app) {

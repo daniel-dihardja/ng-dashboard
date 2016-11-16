@@ -32,7 +32,7 @@ function config($cp) {
 		.field('publish', 'checkbox')
 		.field('title')
 		.field('text', 'text')
-		.field('longText', 'text')
+		.field('longText', 'wysiwyg')
 		.field('thumb', 'file', imgConfig)
 		.translationKey('ebCategoryId')
 		.translationField('title')
