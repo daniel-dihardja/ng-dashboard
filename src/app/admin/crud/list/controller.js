@@ -156,6 +156,12 @@ class ListController {
 		}.bind(this))
 	}
 
+	rankingChange(entity) {
+		entity.$save(function() {
+			this.init();
+		}.bind(this))
+	}
+
 	newEntity() {
 		this.$state.go('admin.crud-create', {
 			model: this.$stateParams.model,
