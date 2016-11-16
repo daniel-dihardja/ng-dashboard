@@ -26,7 +26,7 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bio', 'wysiwyg')
 		.field('slug')
 		.field('component');
 
@@ -35,12 +35,12 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bio', 'wysiwyg')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svMusikpreisPersonId')
-		.translationField('bio', 'text')
+		.translationField('bio', 'wysiwyg')
 		.translationField('image', 'file', imgOptions)
 }
 export default config;

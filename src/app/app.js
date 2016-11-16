@@ -3,7 +3,7 @@
  */
 
 // froala editor
-import '../../jspm_packages/bower/font-awesome@4.6.3/css/font-awesome.css!'
+import '../assets/font-awesome/font-awesome.css!'
 import '../../jspm_packages/bower/froala@2.3.4/css/froala_editor.css!'
 import '../../jspm_packages/bower/froala@2.3.4/css/froala_style.css!'
 import '../../jspm_packages/bower/froala@2.3.4/css/plugins/code_view.css!'

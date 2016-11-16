@@ -24,22 +24,24 @@ function config($crudProvider) {
 		.field('publish');
 
 	stipendiat.createView()
+		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bio', 'wysiwyg')
 		.field('slug')
 		.field('component');
 
 	stipendiat.editView()
 		.field('publish', 'checkbox')
+		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bio', 'wysiwyg')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 		.translationKey('svStipendiatId')
 		.translationField('year')
 		.translationField('image', 'file', imgOptions)
-		.translationField('bio', 'text')
+		.translationField('bio', 'wysiwyg')
 }
 export default config;
