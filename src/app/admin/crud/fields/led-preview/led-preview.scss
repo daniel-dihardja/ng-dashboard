@@ -3,25 +3,62 @@
   src: url("/assets/fonts/ZFSans-Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: ZFSansLight;
+  src: url("/assets/fonts/ZFSans-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: ZFSansMedium;
+  src: url("/assets/fonts/ZFSans-Medium.otf") format("opentype");
+}
+
 .led-preview {
-  font-family: ZFSansBold;
-  width: 0px;
-  height: 57px;
-  display: flex;
-  background-color:#000;
+
+  overflow: hidden;
 
   .textbox{
-    color: #FFFFFF;
-    background-color: #000000;
-    height: 57px;
+    color: white;
+    background-color: black;
+    height: 28.5px;
     padding-left: 10px;
     font-size: 23px;
-    white-space: nowrap;
-    &.center {
-      font-size: 46px;
-    }
   }
-  .right {
+
+  #center{
+    height: 57px;
+    font-size: 64px;
+    line-height: 59px;
+  }
+
+  #container{
+    width: 0px;
+    height: 57px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  #upperLeft{
+
+  }
+
+  #lowerRight{
     padding-right: 10px;
   }
+
+  #upperRight{
+    padding-right: 10px;
+  }
+
+  .ruler {
+    position: absolute;
+    width: 100%;
+    top: 2px;
+    left: 448px;
+    height: 57px;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+  }
+
+
 }

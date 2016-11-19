@@ -1,15 +1,14 @@
 <!-- File -->
-<md-input-container class="md-block pd-left-0" flex-gt-sm  >
-    <label class="left-0">{{label}}</label>
-    <div class="led-preview" layout="row">
-        <div class="textbox">
-            <div>{{entity.upperLeft}}</div>
-            <div>{{entity.lowerLeft}}</div>
-        </div>
-        <div class="textbox center">{{entity.center}}</div>
-        <div class="textbox">
-            <div class="right">{{entity.upperRight}}</div>
-            <div class="right">{{entity.lowerRight}}</div>
-        </div>
+<md-input-container class="md-block pd-left-0 led-preview" flex-gt-sm  >
+    <div id="container">
+        <div class="textbox" id="upperLeft">{{entity.upperLeft}}</div>
+        <div class="textbox" id="lowerLeft">{{entity.lowerLeft}}</div>
+        <div class="textbox" id="center">{{entity.center}}</div>
+        <div class="textbox" id="upperRight">{{entity.upperRight}}</div>
+        <div class="textbox" id="lowerRight">{{entity.lowerRight}}</div>
     </div>
+
+    <div class="ruler"></div>
+
+
 </md-input-container>
