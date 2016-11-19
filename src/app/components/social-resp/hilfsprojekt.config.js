@@ -18,8 +18,8 @@ function config($crudProvider) {
 		.field('title')
 		.field('date')
 		.field('introText', 'text')
-		.field('slug')
-		.field('component')
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'})
 
 
 	project.editView()

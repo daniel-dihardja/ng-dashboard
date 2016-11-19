@@ -23,11 +23,11 @@ function config($crudProvider) {
 
 	stipendiaten.createView()
 		.field('title')
-		.field('slug')
+		.field('slug', null, {showOnly: 'admin'})
 		.field('description', 'text')
 		.field('image', 'file', imgOptions)
-		.field('left')
-		.field('top')
+		.field('left', null, {showOnly: 'admin'})
+		.field('top', null, {showOnly: 'admin'})
 		.field('introText')
 
 

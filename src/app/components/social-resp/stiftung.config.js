@@ -20,17 +20,17 @@ function config($crudProvider) {
 
 	stiftung.createView()
 		.field('title')
-		.field('slug')
+		.field('slug', null, {showOnly: 'admin'})
 		.field('description', 'text')
 		.field('image', 'file', imgOptions)
-		.field('left')
-		.field('top')
+		.field('left', null, {showOnly: 'admin'})
+		.field('top', null, {showOnly: 'admin'})
 		.field('subText')
 		.field('content')
 		.field('thumbnail', 'file', imgOptions)
 		.field('videoSource', 'file', imgOptions)
-		.field('videoSlug')
-		.field('videoComponent')
+		.field('videoSlug', null, {showOnly: 'admin'})
+		.field('videoComponent', null, {showOnly: 'admin'})
 		.field('videoTitle');
 
 	stiftung.editView()

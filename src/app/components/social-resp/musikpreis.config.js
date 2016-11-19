@@ -21,13 +21,13 @@ function config($crudProvider) {
 
 	musikpreis.createView()
 		.field('title')
-		.field('slug')
+		.field('slug', null, {showOnly: 'admin'})
 		.field('description', 'text')
 		.field('introText', 'text')
 		.field('image')
-		.field('left')
-		.field('top')
-		.field('component');
+		.field('left', null, {showOnly: 'admin'})
+		.field('top', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'});
 
 	musikpreis.editView()
 		.title('Musikpreis')

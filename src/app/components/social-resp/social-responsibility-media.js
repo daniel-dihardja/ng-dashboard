@@ -23,7 +23,7 @@ function config($crudProvider) {
 
 	socialResp.createView()
 		.field('image', 'file', imgOption)
-		.field('component');
+		.field('component', null, {showOnly: 'admin'});
 
 
 	socialResp.editView()

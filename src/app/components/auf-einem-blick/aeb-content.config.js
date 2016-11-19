@@ -8,7 +8,7 @@ function config($cp) {
 
 	var aebContent = $cp.model('EbContent');
 
-	/*
+
 	var imgConfig = {
 		container: 'aeb',
 		maxWidth: settings.ipadProMaxWidth,
@@ -16,7 +16,6 @@ function config($cp) {
 		prefWidth: [784, 1568, 2352],
 		prefHeight: 1364
 	};
-	*/
 
 	var imgConfig = {
 		container: 'aeb',

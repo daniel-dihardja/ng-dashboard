@@ -27,8 +27,8 @@ function config($crudProvider) {
 		.field('year')
 		.field('image', 'file', imgOptions)
 		.field('bio', 'wysiwyg')
-		.field('slug')
-		.field('component');
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'});
 
 	musikpreisItem.editView()
 		.field('publish', 'checkbox')

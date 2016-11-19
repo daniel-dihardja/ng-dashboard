@@ -23,13 +23,14 @@ function config($crudProvider) {
 		.field('year')
 		.field('publish');
 
+
 	stipendiat.createView()
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
 		.field('bio', 'wysiwyg')
-		.field('slug')
-		.field('component');
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'});
 
 	stipendiat.editView()
 		.field('publish', 'checkbox')

@@ -31,7 +31,7 @@ class ListController {
 		this.fields = crudView.fields();
 		this.useBackButton = crudView.useBackButton();
 
-		this.filterKey
+		this.filterKey;
 		this.filterValue;
 		var filterPair;
 

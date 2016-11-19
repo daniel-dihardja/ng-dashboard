@@ -20,7 +20,7 @@ function config($crudProvider) {
 	socialResp.editView()
 		.title('Soziale Verantwortung')
 		.field('title')
-		.field('component')
+		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('sozialeVerantwortungId')
 		.translationField('title')

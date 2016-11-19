@@ -18,12 +18,12 @@ function config($crudProvider) {
 		.field('title')
 		.field('description', 'text')
 		.field('introText', 'text')
-		.field('introTextLeft')
-		.field('introTextTop')
-		.field('introTextWidth')
-		.field('introTextHeight')
-		.field('slug')
-		.field('component');
+		.field('introTextLeft', null, {showOnly: 'admin'})
+		.field('introTextTop', null, {showOnly: 'admin'})
+		.field('introTextWidth', null, {showOnly: 'admin'})
+		.field('introTextHeight', null, {showOnly: 'admin'})
+		.field('slug', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'});
 
 	zfHilft.editView()
 		.title('ZF Hilft')
