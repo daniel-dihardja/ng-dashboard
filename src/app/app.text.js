@@ -18,7 +18,7 @@ function appText($translateProvider) {
 		TO_MEDIA:	'zu den Medien',
 		LED_RING:	'LED Ring',
 
-		SAVE_SUCCESS: 'Successfully Gespeichert'
+		SAVE_SUCCESS: 'Änderungen wurden Gespeichert'
 	});
 
 	$translateProvider.preferredLanguage('de');
