@@ -20,11 +20,13 @@ function config($crudProvider) {
 	var kulturItem = $crudProvider.model('SvKulturItem');
 
 	kulturItem.listView()
+		.backButton(true)
 		.title('/ Einträge')
 		.field('dateString')
 		.field('publish');
 
 	kulturItem.createView()
+		.backButton(true)
 		.field('dateString')
 		.field('info')
 		.field('content', 'text')
@@ -35,6 +37,7 @@ function config($crudProvider) {
 
 
 	kulturItem.editView()
+		.backButton(true)
 		.field('dateString')
 		.field('info')
 		.field('content', 'text')

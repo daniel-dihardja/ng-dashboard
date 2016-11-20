@@ -15,12 +15,14 @@ function config($crudProvider) {
 
 	var zpArtikelMedia = $crudProvider.model('ZpArtikelMedia');
 	zpArtikelMedia.listView()
+		.backButton(true)
 		.title('/ Medien')
 		.field('id')
 		.field('publish')
 		.backButton(true);
 
 	zpArtikelMedia.createView()
+		.backButton(true)
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('src', 'file', imgConfig)
 		.field('thumb', 'file', imgConfig)
@@ -28,6 +30,7 @@ function config($crudProvider) {
 		.field('copyright');
 
 	zpArtikelMedia.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('src', 'file', imgConfig)

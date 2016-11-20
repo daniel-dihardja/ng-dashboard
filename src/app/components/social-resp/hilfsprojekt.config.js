@@ -23,6 +23,7 @@ function config($crudProvider) {
 
 
 	project.editView()
+		.backButton(true)
 		.title('#ENTITY_TITLE#')
 		.field('title')
 		.field('date')

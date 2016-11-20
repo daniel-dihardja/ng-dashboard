@@ -26,6 +26,7 @@ function config($cp) {
 		.field('thumb', 'file', {container: 'aeb'});
 
 	aebMedia.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('title')
 		.field('text', 'text')

@@ -16,6 +16,7 @@ function config($crudProvider) {
 		.field('publish');
 
 	ledContet.createView()
+		.backButton(true)
 		.field('title', null, {label: 'Title'})
 		.field('upperLeft', null, {label: 'Upper Left', blockRegex: blockRegex})
 		.field('lowerLeft', null, {label: 'Lower Left', blockRegex: blockRegex})
@@ -25,15 +26,16 @@ function config($crudProvider) {
 		.field('ledPreview', 'ledpreview')
 
 	ledContet.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('title')
-
+		.field('ledPreview', 'ledpreview')
 		.field('upperLeft', null, {label: 'Upper Left', blockRegex: blockRegex})
 		.field('lowerLeft', null, {label: 'Lower Left', blockRegex: blockRegex})
 		.field('center', null, {label: 'Center', blockRegex: blockRegex})
 		.field('upperRight', null, {label: 'Upper Right', blockRegex: blockRegex})
 		.field('lowerRight', null, {label: 'Lower Right', blockRegex: blockRegex})
-		.field('ledPreview', 'ledpreview')
+
 		.translationKey('ledContentId')
 		.translationField('title')
 		.translationField('upperLeft', null, {label: 'Upper Left'})

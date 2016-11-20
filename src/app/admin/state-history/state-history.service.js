@@ -9,6 +9,7 @@ class StateHistory {
 		this.history = [];
 		this.addToHistory = true;
 		$rootScope.$on('$stateChangeSuccess', this.onStateChangeSuccess.bind(this));
+		console.log('init');
 	}
 
 	onStateChangeSuccess(event, toState, toParams, fromState, fromParams, error) {
@@ -17,19 +18,32 @@ class StateHistory {
 			return;
 		}
 
-		this.history.push({
+		var history = localStorage.getItem('stateHistory');
+		if(history) history = JSON.parse(history);
+		else history = [];
+
+		history.push({
 			state: toState,
 			params: toParams
 		});
+
+		console.log('history', history);
+		localStorage.setItem('stateHistory', JSON.stringify(history));
 	}
 
 	back() {
-		this.history.pop();
-		var last = this.history[this.history.length - 1];
+		var history = JSON.parse(localStorage.getItem('stateHistory'));
+
+		history.pop();
+
+		console.log('history', history);
+		var last = history[history.length - 1];
 
 		// do not track states from history
 		this.addToHistory = false;
 		this.$state.go(last.state.name, last.params);
+
+		localStorage.setItem('stateHistory', JSON.stringify(history));
 	}
 }
 StateHistory.$inject = [];

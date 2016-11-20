@@ -11,6 +11,7 @@ function config($crudProvider) {
 		.field('publish');
 
 	zpArtikel.editView()
+		.backButton(true)
 		.title('#ENTITY_HEADLINE#')
 		.field('publish', 'checkbox')
 		.field('headline', null, {label: 'Headline'})
@@ -24,6 +25,7 @@ function config($crudProvider) {
 		.hasManyLink('ZpArtikelMedia', 'zpArtikelId', {label: 'Zu den Medien'});
 
 	zpArtikel.createView()
+		.backButton(true)
 		.field('headline')
 		.field('teaserText', 'text')
 		.field('mainText', 'text');

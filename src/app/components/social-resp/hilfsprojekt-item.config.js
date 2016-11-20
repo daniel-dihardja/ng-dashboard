@@ -23,6 +23,7 @@ function config($crudProvider) {
 		.field('publish');
 
 	item.createView()
+		.backButton(true)
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString')
 		.field('info', 'text')
@@ -32,6 +33,7 @@ function config($crudProvider) {
 
 
 	item.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString')

@@ -24,6 +24,7 @@ class EditController {
 		this.translationKey = editView.translationKey();
 		this.translationFields = editView.translationFields();
 		this.hasManyLinks = editView.hasManyLinks();
+		this.useBackButton = editView.useBackButton();
 
 		var title = editView.title() || $stateParams.title || 'Bearbeiten';
 

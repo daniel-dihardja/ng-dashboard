@@ -23,24 +23,26 @@ function config($crudProvider) {
 		.field('publish');
 
 	musikpreisItem.createView()
+		.backButton(true)
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'wysiwyg')
+		.field('bio', 'text')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'});
 
 	musikpreisItem.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'wysiwyg')
+		.field('bio', 'text')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svMusikpreisPersonId')
-		.translationField('bio', 'wysiwyg')
+		.translationField('bio', 'text')
 		.translationField('image', 'file', imgOptions)
 }
 export default config;

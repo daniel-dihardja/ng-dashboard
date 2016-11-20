@@ -18,6 +18,7 @@ function config($crudProvider) {
 
 
 	socialResp.editView()
+		.backButton(false)
 		.title('Soziale Verantwortung')
 		.field('title')
 		.field('component', null, {showOnly: 'admin'})

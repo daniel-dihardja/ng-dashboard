@@ -18,15 +18,18 @@ function config($crudProvider) {
 	var socialResp = $crudProvider.model('SozialeVerantwortungMedia');
 
 	socialResp.listView()
+		.backButton(true)
 		.title('/ Medien')
 		.field('image');
 
 	socialResp.createView()
+		.backButton(true)
 		.field('image', 'file', imgOption)
 		.field('component', null, {showOnly: 'admin'});
 
 
 	socialResp.editView()
+		.backButton(true)
 		.title('Soziale Verantwortung')
 		.field('image', 'file', imgOption)
 

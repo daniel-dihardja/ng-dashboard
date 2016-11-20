@@ -16,12 +16,14 @@ function config($crudProvider) {
 	var zpMedia = $crudProvider.model('ZpMedia');
 
 	zpMedia.listView()
+		.backButton(true)
 		.title('/ Medien')
 		.field('title')
 		.field('publish')
 		.backButton(true)
 
 	zpMedia.createView()
+		.backButton(true)
 		.field('type', 'select', {values: ['audio', 'video']})
 		.field('title')
 		.field('description', 'text')
@@ -29,6 +31,7 @@ function config($crudProvider) {
 		.field('thumb', 'file', imgConfig);
 
 	zpMedia.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('type', 'select', {values: ['audio', 'video']})
 		.field('title')

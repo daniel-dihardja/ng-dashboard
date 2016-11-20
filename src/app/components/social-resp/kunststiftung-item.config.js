@@ -21,11 +21,13 @@ function config($crudProvider) {
 		.field('publish');
 
 	item.createView()
+		.backButton(true)
 		.field('isLogo', 'checkbox')
 		.field('image', 'file', imgOptions);
 
 
 	item.editView()
+		.backButton(true)
 		.field('publish', 'checkbox')
 		.field('isLogo', 'checkbox')
 		.field('image', 'file', imgOptions)

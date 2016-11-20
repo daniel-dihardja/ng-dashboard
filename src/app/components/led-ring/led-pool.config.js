@@ -14,9 +14,11 @@ function config($crudProvider) {
 		.field('publish');
 
 	ledPool.createView()
+		.backButton(true)
 		.field('title');
 
 	ledPool.editView()
+		.backButton(true)
 		.title('#ENTITY_TITLE#')
 		.field('publish', 'checkbox')
 		.field('title')
