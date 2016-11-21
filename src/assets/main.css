@@ -199,13 +199,15 @@ md-sidemenu-button {
   src: url("/assets/fonts/ZFSans-Medium.otf") format("opentype"); }
 
 .led-preview {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 50px; }
   .led-preview .textbox {
     color: white;
     background-color: black;
     height: 28.5px;
     padding-left: 10px;
-    font-size: 23px; }
+    font-size: 23px;
+    white-space: pre; }
   .led-preview #center {
     height: 57px;
     font-size: 64px;

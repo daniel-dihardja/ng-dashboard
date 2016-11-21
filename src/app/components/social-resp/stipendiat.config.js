@@ -29,7 +29,7 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bio', 'wysiwyg')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'});
 
@@ -39,12 +39,12 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bio', 'wysiwyg')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 		.translationKey('svStipendiatId')
 		.translationField('year')
 		.translationField('image', 'file', imgOptions)
-		.translationField('bio', 'text')
+		.translationField('bio', 'wysiwyg')
 }
 export default config;

@@ -23,7 +23,7 @@ class LoginController {
 
 		this.AppUser.login(creds,
 			function() {
-				localStorage.setItem('stateHistory', []);
+				localStorage.setItem('stateHistory', JSON.stringify([]));
 				_this.$app.username(creds.username);
 				_this.$state.go('admin');
 			},

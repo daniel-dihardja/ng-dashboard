@@ -21,7 +21,7 @@ class AppController {
 	};
 
 	logout() {
-		localStorage.setItem('stateHistory', []);
+		localStorage.setItem('stateHistory', JSON.stringify([]));
 		this.AppUser.logout();
 		this.$state.go('login');
 	}

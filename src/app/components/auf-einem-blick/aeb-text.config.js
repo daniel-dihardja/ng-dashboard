@@ -11,10 +11,12 @@ function config($cp) {
 		.field('value');
 
 	aebText.createView()
+		.backButton(true)
 		.field('key')
 		.field('value');
 
 	aebText.editView()
+		.backButton(true)
 		.field('publish')
 		.field('key', null, {showOnly: 'admin'})
 		.field('value')

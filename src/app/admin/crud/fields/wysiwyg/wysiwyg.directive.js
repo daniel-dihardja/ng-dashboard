@@ -32,7 +32,10 @@ class WysiwygField {
 				.froalaEditor('html.set', ngModel.$viewValue);
 
 			textarea.on('froalaEditor.contentChanged', function(e, editor){
+				var regex = /(?:^<p[^>]*>)|(?:<\/p>$)/g;
 				var html = textarea.froalaEditor('html.get');
+				html = html.replace(regex, '');
+
 				if(angular.isString(html)) {
 					scope.$apply(function() {
 						ngModel.$setViewValue(html);
