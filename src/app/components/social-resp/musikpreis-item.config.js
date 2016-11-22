@@ -42,7 +42,7 @@ function config($crudProvider) {
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svMusikpreisPersonId')
-		.translationField('bio', 'wysiwyg')
+		.translationField('bio', 'text')
 		.translationField('image', 'file', imgOptions)
 }
 export default config;
