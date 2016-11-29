@@ -1,4 +1,11 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
+
+    <md-card-actions layout="row">
+        <span flex></span>
+        <md-button class="md-raised" ng-click="vm.back()" ng-if="vm.useBackButton">Zurück</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.save()">Speichern</md-button>
+    </md-card-actions>
+
     <h1>{{vm.title}}</h1>
     <md-tabs md-dynamic-height md-border-bottom>
 

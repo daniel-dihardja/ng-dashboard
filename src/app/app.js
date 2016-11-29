@@ -77,6 +77,7 @@ let appModule = angular.module('app', [
 		return  {
 			responseError: function(res) {
 				if(res.status == 401) {
+					console.log('login fail');
 					var $state = $injector.get('$state');
 					$state.go('login');
 				}

@@ -9,6 +9,7 @@ class LoginController {
 		this.$state = $state;
 		this.AppUser = AppUser;
 		this.$app = $app;
+		this.loginFail = false;
 	}
 
 	login() {
@@ -22,16 +23,18 @@ class LoginController {
 		};
 
 		this.AppUser.login(creds,
-			function() {
-				localStorage.setItem('stateHistory', JSON.stringify([]));
-				_this.$app.username(creds.username);
-				_this.$state.go('admin');
-			},
-			function(err) {
-				throw err;
+			function(res) {
+				if(res.error) {
+					var status = res.error.status;
+					if(status == 401) _this.loginFail = true;
+				}
+				else {
+					_this.loginFail = false;
+					localStorage.setItem('stateHistory', JSON.stringify([]));
+					_this.$app.username(creds.username);
+					_this.$state.go('admin');
+				}
 			});
-
-
 		return defer.promise;
 	}
 }

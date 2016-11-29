@@ -54,6 +54,8 @@ a {
   .login .login-card {
     width: 50%;
     margin: 0 auto; }
+  .login .error-msg {
+    color: #FF0000; }
 
 .app {
   position: absolute;
@@ -199,6 +201,7 @@ md-sidemenu-button {
   src: url("/assets/fonts/ZFSans-Medium.otf") format("opentype"); }
 
 .led-preview {
+  font-family: ZFSansBold;
   overflow: hidden;
   margin-bottom: 50px; }
   .led-preview .textbox {

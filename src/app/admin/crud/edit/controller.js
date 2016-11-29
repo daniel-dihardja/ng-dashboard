@@ -58,6 +58,9 @@ class EditController {
 
 	save() {
 		this.saveTranslation();
+		if(! this.entity.thumb) {
+			this.entity.thumb = 'thumb-' + this.entity.src;
+		}
 		//if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src;
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'))

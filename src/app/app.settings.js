@@ -1,5 +1,5 @@
 /**
- * Created by danieldihardja on 19/08/16.
+ * Created by danieldihardja on 19/08/16.+
  */
 
 var appSettings = {

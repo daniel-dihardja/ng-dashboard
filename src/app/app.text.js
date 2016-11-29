@@ -18,7 +18,8 @@ function appText($translateProvider) {
 		TO_MEDIA:	'zu den Medien',
 		LED_RING:	'LED Ring',
 
-		SAVE_SUCCESS: 'Erfolgreich Gespeichert'
+		SAVE_SUCCESS: 'Erfolgreich gespeichert',
+		LOGIN_FAIL: 'Login Fehlgeschlagen!'
 	});
 
 	$translateProvider.preferredLanguage('de');

@@ -8,16 +8,15 @@ function config($cp) {
 
 	var aebContent = $cp.model('EbContent');
 
-
 	var imgConfig = {
 		container: 'aeb',
 		maxWidth: settings.ipadProMaxWidth,
 		maxHeight: settings.ipadProMaxHeight,
-		prefWidth: [784, 1568, 2352],
-		prefHeight: 1364
+		thumbWidth: [784, 1568, 2352],
+		thumbHeight: 1364
 	};
 
-	var imgConfig = {
+	var thumbConfig = {
 		container: 'aeb',
 		maxWidth: settings.ipadProMaxWidth,
 		maxHeight: settings.ipadProMaxHeight
@@ -36,15 +35,14 @@ function config($cp) {
 		.field('nameId', null, {showOnly: 'admin'})
 		.field('title')
 		.field('text', 'text')
-		.field('longText', 'text')
 		.field('src', 'file', imgConfig)
-		.field('thumb', 'file', imgConfig)
+		.field('thumb', 'file', thumbConfig)
 		.translationKey('ebContentId')
 		.translationField('title')
 		.translationField('text', 'text')
 		.translationField('longText', 'text')
 		.translationField('src', 'file', imgConfig)
-		.translationField('thumb', 'file', imgConfig)
+		.translationField('thumb', 'file', thumbConfig)
 		.hasManyLink('EbMedia', 'ebContentId', {label: 'Zu den Medien'})
 		.hasManyLink('EbContent', 'ebContentId', {label: 'Zu den Unterbeiträgen'});
 
@@ -52,6 +50,7 @@ function config($cp) {
 	aebContent.createView()
 		.field('title')
 		.field('text', 'text')
-		.field('longText', 'text');
+		.field('src', 'file', imgConfig)
+		.field('thumb', 'file', thumbConfig)
 }
 export default config;

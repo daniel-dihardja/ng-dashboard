@@ -39,9 +39,7 @@ class CreateController {
 				this.entity[filterKey] = filterValue;
 			}
 		}
-
 		this.init();
-
 	}
 
 	init() {
@@ -56,6 +54,7 @@ class CreateController {
 		this.model.create(this.entity).$promise
 			.then(function() {
 				this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'));
+				this.back();
 			}.bind(this))
 	}
 
