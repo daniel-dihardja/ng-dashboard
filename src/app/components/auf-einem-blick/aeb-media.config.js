@@ -17,7 +17,6 @@ function config($cp) {
 	aebMedia.createView()
 		.field('title')
 		.field('text', 'text')
-		.field('longText', 'text')
 		.field('src', 'file', {
 			container: 'aeb',
 			maxWidth: settings.ipadProMaxWidth,
@@ -30,7 +29,6 @@ function config($cp) {
 		.field('publish', 'checkbox')
 		.field('title')
 		.field('text', 'text')
-		.field('longText', 'text')
 		.field('src', 'file', {
 			container: 'aeb',
 			maxWidth: settings.ipadProMaxWidth,
@@ -44,7 +42,6 @@ function config($cp) {
 		.translationKey('ebMediaId')
 		.translationField('title')
 		.translationField('text', 'text')
-		.translationField('longText', 'text')
 		.translationField('src', 'file', {
 			container: 'aeb',
 			maxWidth: settings.ipadProMaxWidth,

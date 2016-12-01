@@ -27,9 +27,8 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'wysiwyg')
-		.field('slug', null, {showOnly: 'admin'})
-		.field('component', null, {showOnly: 'admin'});
+		.field('bio', 'text')
+
 
 	musikpreisItem.editView()
 		.backButton(true)
@@ -37,8 +36,7 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'wysiwyg')
-		.field('slug', null, {showOnly: 'admin'})
+		.field('bio', 'text')
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svMusikpreisPersonId')

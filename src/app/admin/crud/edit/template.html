@@ -1,5 +1,9 @@
 <md-content layout="column" class="pdl-60 pdr-60 pdt-30">
 
+    <md-input-container class="md-block" ng-repeat="link in vm.hasManyLinks">
+        <md-button class="md-raised md-primary" ng-click="vm.gotoHasManyRelation(link)">{{link.config.label || link.model}}</md-button>
+    </md-input-container>
+
     <md-card-actions layout="row">
         <span flex></span>
         <md-button class="md-raised" ng-click="vm.back()" ng-if="vm.useBackButton">Zurück</md-button>

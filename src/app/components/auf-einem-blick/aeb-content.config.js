@@ -40,7 +40,6 @@ function config($cp) {
 		.translationKey('ebContentId')
 		.translationField('title')
 		.translationField('text', 'text')
-		.translationField('longText', 'text')
 		.translationField('src', 'file', imgConfig)
 		.translationField('thumb', 'file', thumbConfig)
 		.hasManyLink('EbMedia', 'ebContentId', {label: 'Zu den Medien'})
@@ -48,6 +47,7 @@ function config($cp) {
 
 
 	aebContent.createView()
+		.field('nameId', null, {showOnly: 'admin'})
 		.field('title')
 		.field('text', 'text')
 		.field('src', 'file', imgConfig)
