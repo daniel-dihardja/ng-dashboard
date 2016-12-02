@@ -25,7 +25,7 @@ import fileField from './fields/file/file.directive';
 
 
 import ledPreviewField from './fields/led-preview/led-preview.directive';
-
+import bioPreviewField from './fields/bio-preview/bio-preview.directive';
 
 
 let crudModule = angular.module('crud', [uiRouter])
@@ -79,6 +79,7 @@ let crudModule = angular.module('crud', [uiRouter])
 	.directive('crudCheckbox', checkboxField)
 	.directive('crudSelect', selectField)
 	.directive('crudFile', fileField)
-	.directive('ledPreview', ledPreviewField);
+	.directive('ledPreview', ledPreviewField)
+	.directive('bioPreview', bioPreviewField);
 
 export default crudModule;

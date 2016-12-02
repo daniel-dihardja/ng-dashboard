@@ -232,3 +232,8 @@ md-sidemenu-button {
     height: 57px;
     background-color: #FFFFFF;
     opacity: 0.8; }
+
+.bio-preview {
+  width: 800px;
+  height: 400px;
+  background-color: #c0c0c0; }
