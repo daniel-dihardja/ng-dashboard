@@ -3,7 +3,8 @@
  */
 class ListController {
 
-	constructor($state, $stateParams, $injector, $crud, $mdDialog, $stateHistory, $app) {
+	constructor($scope, $state, $stateParams, $injector, $crud, $mdDialog, $stateHistory, $app) {
+		this.$scope = $scope;
 		this.$state = $state;
 		this.$stateParams = $stateParams;
 		this.$injector = $injector;
@@ -63,6 +64,13 @@ class ListController {
 		};
 		this.model.find(q).$promise
 			.then(function(res) {
+				var firstElem = res[0];
+				if(! firstElem.ranking) {
+					firstElem.ranking = res.length;
+					firstElem.$save();
+					res.shift();
+					res.push(firstElem);
+				}
 				this.entities = res;
 			}.bind(this));
 	}
@@ -175,5 +183,5 @@ class ListController {
 	}
 }
 
-ListController.$inject = ['$state', '$stateParams', '$injector', '$crud', '$mdDialog', '$stateHistory', '$app'];
+ListController.$inject = ['$scope', '$state', '$stateParams', '$injector', '$crud', '$mdDialog', '$stateHistory', '$app'];
 export default ListController;

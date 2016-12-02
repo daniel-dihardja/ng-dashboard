@@ -43,10 +43,7 @@ class CreateController {
 	}
 
 	init() {
-		this.model.count().$promise
-			.then(function(res) {
-				this.entity.ranking = res.count + 1;
-			}.bind(this))
+		
 	}
 
 	save() {

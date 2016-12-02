@@ -17,9 +17,11 @@ class BioPreview {
 	}
 
 	link(scope, element, attrs) {
+
+		// wait a tick. somehow the data is not instantly available
 		setTimeout(function() {
 			scope.bioHtml = this.$sce.trustAsHtml(scope.entity.bio);
-		}.bind(this), 100);
+		}.bind(this), 1);
 
 		scope.$watch('entity.bio', function(newValue, oldValue) {
 			scope.bioHtml = this.$sce.trustAsHtml(scope.entity.bio);
