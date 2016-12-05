@@ -26,7 +26,6 @@ function config($cp) {
 		.translationField('title')
 		.translationField('text', 'text')
 		.hasManyLink('EbContent', 'ebCategoryId', {label: 'Zu den Beiträgen'})
-		.hasManyLink('EbMedia', 'ebCategoryId', {label: 'Zu den Medien'});
 
 	aebCat.createView()
 		.field('title')

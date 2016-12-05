@@ -13,6 +13,8 @@ class CreateController {
 		this.$rootScope = $rootScope;
 		this.$filter = $filter;
 
+
+
 		this.model = $injector.get($stateParams.model);
 
 
@@ -43,7 +45,7 @@ class CreateController {
 	}
 
 	init() {
-		
+
 	}
 
 	save() {
