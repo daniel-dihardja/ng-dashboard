@@ -44,6 +44,18 @@ a {
 .wd-30 {
   width: 30px; }
 
+@font-face {
+  font-family: ZFSansBold;
+  src: url("/assets/fonts/ZFSans-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: ZFSansLight;
+  src: url("/assets/fonts/ZFSans-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: ZFSansMedium;
+  src: url("/assets/fonts/ZFSans-Medium.otf") format("opentype"); }
+
 .login {
   position: absolute;
   top: 0;
@@ -188,18 +200,6 @@ md-sidemenu-button {
 .file-uploader .warning {
   color: #FF0000; }
 
-@font-face {
-  font-family: ZFSansBold;
-  src: url("/assets/fonts/ZFSans-Bold.otf") format("opentype"); }
-
-@font-face {
-  font-family: ZFSansLight;
-  src: url("/assets/fonts/ZFSans-Light.otf") format("opentype"); }
-
-@font-face {
-  font-family: ZFSansMedium;
-  src: url("/assets/fonts/ZFSans-Medium.otf") format("opentype"); }
-
 .led-preview {
   font-family: ZFSansBold;
   overflow: hidden;
@@ -234,6 +234,33 @@ md-sidemenu-button {
     opacity: 0.8; }
 
 .bio-preview {
-  width: 800px;
-  height: 400px;
-  background-color: #c0c0c0; }
+  font-size: 52.61538461538462px; }
+  .bio-preview #Personen-Wrapper {
+    padding: 25px;
+    background-color: #242424;
+    width: auto;
+    overflow-x: scroll; }
+  .bio-preview #PersonenDetailContainer {
+    background-color: #242424;
+    width: 1260px;
+    height: auto;
+    color: white;
+    transform-origin: left top;
+    font-family: ZFSansMedium; }
+  .bio-preview #personen-text {
+    columns: 2;
+    column-gap: 1rem;
+    column-fill: auto;
+    font-size: 0.351rem;
+    line-height: 0.494rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.025em; }
+  .bio-preview #personen-text h3 {
+    font-size: 0.494rem;
+    line-height: 0.741rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.025em; }

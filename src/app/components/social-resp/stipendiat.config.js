@@ -29,6 +29,7 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
+		.field('bioPreview', 'biopreview')
 		.field('bio', 'text')
 
 

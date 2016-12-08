@@ -1,5 +1,41 @@
 .bio-preview {
-  width: 800px;
-  height: 400px;
-  background-color: #c0c0c0;
+
+  font-size: 52.61538461538462px;
+
+  #Personen-Wrapper{
+    padding: 25px;
+    background-color: rgb(36, 36, 36);
+    width: auto;
+    overflow-x: scroll;
+  }
+
+  #PersonenDetailContainer{
+    background-color: rgb(36, 36, 36);
+    width: 1260px;
+    height: auto;
+    color: white;
+    transform-origin: left top;
+    font-family: ZFSansMedium;
+  }
+
+  #personen-text{
+    columns: 2;
+    column-gap: 1rem;
+    column-fill: auto;
+    font-size: 0.351rem;
+    line-height: 0.494rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.025em;
+  }
+
+  #personen-text h3{
+    font-size: 0.494rem;
+    line-height: 0.741rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.025em;
+  }
 }

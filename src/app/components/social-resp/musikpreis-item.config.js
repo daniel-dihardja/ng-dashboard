@@ -27,7 +27,8 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
-		.field('bio', 'text')
+		.field('bioPreview', 'biopreview')
+		.field('bio', 'text');
 
 
 	musikpreisItem.editView()
@@ -36,6 +37,7 @@ function config($crudProvider) {
 		.field('name')
 		.field('year')
 		.field('image', 'file', imgOptions)
+		.field('bioPreview', 'biopreview')
 		.field('bio', 'text')
 		.field('component', null, {showOnly: 'admin'})
 
