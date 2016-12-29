@@ -23,7 +23,7 @@ function config($crudProvider) {
 
 	kultur.createView()
 		.field('title')
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('image', 'file', imgOptions)
 		.field('introText', 'text')
 		.field('introLeft', null, {showOnly: 'admin'})
@@ -38,7 +38,7 @@ function config($crudProvider) {
 	kultur.editView()
 		.title('Kultur')
 		.field('title')
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('image', 'file', imgOptions)
 		.field('introText', 'text')
 		.field('introLeft', null, {showOnly: 'admin'})
@@ -52,7 +52,7 @@ function config($crudProvider) {
 
 		.translationKey('svKulturId')
 		.translationField('title')
-		.translationField('description', 'text')
+		.translationField('description', 'text', {showOnly: 'admin'})
 		.translationField('image', 'file', imgOptions)
 		.translationField('introText', 'text')
 		.hasManyLink('SvKulturItem', 'svKulturId', {label: 'Zu den Einträgen'});

@@ -17,26 +17,26 @@ function config($crudProvider) {
 	kunstStiftung.listView()
 		.title('Kunststiftung')
 		.field('title')
-		.field('publish')
+		.field('publish');
 
 	kunstStiftung.createView()
 		.field('title')
-		.field('description', 'text')
+		.field('description', 'text' ,{showOnly: 'admin'})
 		.field('image', 'file', {container: 'assets'})
 		.field('slug', null, {showOnly: 'admin'})
-		.field('component', null, {showOnly: 'admin'})
+		.field('component', null, {showOnly: 'admin'});
 
 	kunstStiftung.editView()
 		.title('Kunststiftung')
 		.field('title')
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('image', 'file', {container: 'assets'})
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svKunststiftungId')
 		.translationField('title')
-		.translationField('description', 'text')
+		.translationField('description', 'text', {showOnly: 'admin'})
 		.translationField('image', 'file', {container: 'assets'})
 
 		.hasManyLink('SvKunststiftungMedia', 'svKunststiftungId', {label: 'Zu den Medien'})

@@ -16,7 +16,7 @@ function config($crudProvider) {
 	zfHilft.createView()
 		.title('ZF Hilft')
 		.field('title')
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('introText', 'text')
 		.field('introTextLeft', null, {showOnly: 'admin'})
 		.field('introTextTop', null, {showOnly: 'admin'})
@@ -28,7 +28,7 @@ function config($crudProvider) {
 	zfHilft.editView()
 		.title('ZF Hilft')
 		.field('title')
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('introText', 'text')
 		.field('introTextLeft',  null, {showOnly: 'admin'})
 		.field('introTextTop',  null, {showOnly: 'admin'})
@@ -39,7 +39,7 @@ function config($crudProvider) {
 
 		.translationKey('svZfhilftId')
 		.translationField('title')
-		.translationField('description', 'text')
+		.translationField('description', 'text', {showOnly: 'admin'})
 		.translationField('introText', 'text')
 
 		.hasManyLink('SvZfhilftMedia', 'svZfhilftId', {label: 'Zu den Medien'});

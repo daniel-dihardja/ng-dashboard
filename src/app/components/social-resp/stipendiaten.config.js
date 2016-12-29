@@ -24,7 +24,7 @@ function config($crudProvider) {
 	stipendiaten.createView()
 		.field('title')
 		.field('slug', null, {showOnly: 'admin'})
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('image', 'file', imgOptions)
 		.field('left', null, {showOnly: 'admin'})
 		.field('top', null, {showOnly: 'admin'})
@@ -35,7 +35,7 @@ function config($crudProvider) {
 		.title('Stipendiaten')
 		.field('title')
 		.field('slug', null, {showOnly: 'admin'})
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('image', 'file', imgOptions)
 		.field('left', null, {showOnly: 'admin'})
 		.field('top', null, {showOnly: 'admin'})
@@ -43,7 +43,7 @@ function config($crudProvider) {
 
 		.translationKey('svStpendiatenId')
 		.translationField('title')
-		.translationField('description', 'text')
+		.translationField('description', 'text', {showOnly: 'admin'})
 		.translationField('image', 'file', imgOptions)
 		.translationField('introText')
 

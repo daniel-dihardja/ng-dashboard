@@ -13,12 +13,12 @@ function config($crudProvider) {
 
 	zpMediaWrapper.createView()
 		.field('title')
-		.field('upperCard')
+		.field('upperCard', null, {showOnly: 'admin'});
 
 	zpMediaWrapper.editView()
 		.field('publish', 'checkbox')
 		.field('title')
-		.field('upperCard')
+		.field('upperCard', null, {showOnly: 'admin'})
 
 		.translationKey('zpMediaWrapperId')
 		.translationField('title')

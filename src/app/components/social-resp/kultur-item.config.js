@@ -22,12 +22,12 @@ function config($crudProvider) {
 	kulturItem.listView()
 		.backButton(true)
 		.title('/ Einträge')
-		.field('dateString')
+		.field('info')
 		.field('publish');
 
 	kulturItem.createView()
 		.backButton(true)
-		.field('dateString')
+		.field('dateString', null, {showOnly: 'admin'})
 		.field('info')
 		.field('content', 'text')
 		.field('image', 'file', imgOptions)
@@ -38,7 +38,7 @@ function config($crudProvider) {
 
 	kulturItem.editView()
 		.backButton(true)
-		.field('dateString')
+		.field('dateString', null, {showOnly: 'admin'})
 		.field('info')
 		.field('content', 'text')
 		.field('image', 'file', imgOptions)
@@ -47,7 +47,7 @@ function config($crudProvider) {
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svKulturItemId')
-		.translationField('dateString')
+		.translationField('dateString', null, {showOnly: 'admin'})
 		.translationField('info', 'text')
 		.translationField('content', 'text')
 		.translationField('image', 'file', imgOptions)

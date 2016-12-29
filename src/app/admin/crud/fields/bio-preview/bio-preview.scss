@@ -1,6 +1,8 @@
+
 .bio-preview {
 
   font-size: 52.61538461538462px;
+
 
   #Personen-Wrapper{
     padding: 25px;
@@ -18,24 +20,25 @@
     font-family: ZFSansMedium;
   }
 
+
   #personen-text{
     columns: 2;
-    column-gap: 1rem;
+    column-gap: 52.61538461538462px;
     column-fill: auto;
-    font-size: 0.351rem;
-    line-height: 0.494rem;
+    font-size: 18.468px;
+    line-height: 25.992px;
     font-weight: normal;
     margin: 0;
     padding: 0;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.4617px;
   }
 
   #personen-text h3{
-    font-size: 0.494rem;
-    line-height: 0.741rem;
+    font-size: 25.992px;
+    line-height: 38.98800000000001px;
     font-weight: normal;
     margin: 0;
     padding: 0;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.6498px;
   }
 }

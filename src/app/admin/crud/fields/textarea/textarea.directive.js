@@ -6,13 +6,15 @@ import template from './textarea.html!text';
 
 class TextareaField {
 
-	constructor() {
+	constructor($app) {
+		this.$app = $app;
 		this.restrict = 'E';
 		this.require = 'ngModel';
 		this.template = template;
 		this.scope = {
 			label: '@',
-			modelValue: '=ngModel'
+			modelValue: '=ngModel',
+			options: '='
 		};
 	}
 

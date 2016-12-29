@@ -22,14 +22,14 @@ function config($crudProvider) {
 
 	item.createView()
 		.backButton(true)
-		.field('isLogo', 'checkbox')
+		.field('isLogo', 'checkbox', {showOnly: 'admin'})
 		.field('image', 'file', imgOptions);
 
 
 	item.editView()
 		.backButton(true)
 		.field('publish', 'checkbox')
-		.field('isLogo', 'checkbox')
+		.field('isLogo', 'checkbox', {showOnly: 'admin'})
 		.field('image', 'file', imgOptions)
 
 		.translationKey('svKunststiftungMediaId')

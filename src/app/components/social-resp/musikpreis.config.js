@@ -22,7 +22,7 @@ function config($crudProvider) {
 	musikpreis.createView()
 		.field('title')
 		.field('slug', null, {showOnly: 'admin'})
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('introText', 'text')
 		.field('image')
 		.field('left', null, {showOnly: 'admin'})
@@ -33,7 +33,7 @@ function config($crudProvider) {
 		.title('Musikpreis')
 		.field('title')
 		.field('slug', null, {showOnly: 'admin'})
-		.field('description', 'text')
+		.field('description', 'text', {showOnly: 'admin'})
 		.field('introText', 'text')
 		.field('image', 'file', imgOptions)
 		.field('left', null, {showOnly: 'admin'})
@@ -42,7 +42,7 @@ function config($crudProvider) {
 
 		.translationKey('svMusikpreisId')
 		.translationField('title')
-		.translationField('description', 'text')
+		.translationField('description', 'text', {showOnly: 'admin'})
 		.translationField('introText', 'text')
 		.translationField('image', 'file', imgOptions)
 
