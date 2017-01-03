@@ -39,6 +39,7 @@
                     <crud-checkbox ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" ng-if="field.type == 'checkbox'" options="field.config"></crud-checkbox>
                     <crud-select ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" values="field.config.values" ng-if="field.type == 'select'" options="field.config"></crud-select>
                     <crud-file ng-model="vm.translation[field.name]" label="{{field.config.label || field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'" ></crud-file>
+                    <bio-preview  label="{{field.config.label || field.name}}" entity="vm.translation" ng-if="field.type == 'biopreview'" options="field.config"></bio-preview>
                 </div>
             </md-content>
         </md-tab>

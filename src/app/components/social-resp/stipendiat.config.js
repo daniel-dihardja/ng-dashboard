@@ -30,7 +30,7 @@ function config($crudProvider) {
 		.field('year')
 		.field('image', 'file', imgOptions)
 		.field('bioPreview', 'biopreview')
-		.field('bio', 'text')
+		.field('bio', 'text');
 
 
 	stipendiat.editView()
@@ -45,6 +45,7 @@ function config($crudProvider) {
 		.translationKey('svStipendiatId')
 		.translationField('year')
 		.translationField('image', 'file', imgOptions)
-		.translationField('bio', 'wysiwyg')
+		.translationField('bioPreview', 'biopreview')
+		.translationField('bio', 'text')
 }
 export default config;
