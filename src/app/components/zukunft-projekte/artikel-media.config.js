@@ -23,6 +23,7 @@ function config($crudProvider) {
 
 	zpArtikelMedia.createView()
 		.backButton(true)
+		.config({ignoreThumb: true})
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('src', 'file', imgConfig)
 		.field('thumb', 'file', imgConfig)
@@ -31,6 +32,7 @@ function config($crudProvider) {
 
 	zpArtikelMedia.editView()
 		.backButton(true)
+		.config({ignoreThumb: true})
 		.field('publish', 'checkbox')
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('src', 'file', imgConfig)

@@ -24,16 +24,16 @@ function config($crudProvider) {
 
 	item.createView()
 		.backButton(true)
+		.config({ignoreThumb: true})
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString', null, {showOnly: 'admin'})
 		.field('info', 'text')
 		.field('src', 'file', imgOptions)
 		.field('thumb', 'file', imgOptions);
 
-
-
 	item.editView()
 		.backButton(true)
+		.config({ignoreThumb: true})
 		.field('publish', 'checkbox')
 		.field('type', 'select', {values: ['image', 'video']})
 		.field('dateString', null, {showOnly: 'admin'})
