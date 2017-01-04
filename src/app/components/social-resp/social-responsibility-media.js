@@ -19,7 +19,7 @@ function config($crudProvider) {
 
 	socialResp.listView()
 		.backButton(true)
-		.title('/ Medien')
+		.title('Soziale Verantwortung')
 		.field('image');
 
 	socialResp.createView()
@@ -30,7 +30,7 @@ function config($crudProvider) {
 
 	socialResp.editView()
 		.backButton(true)
-		.title('Soziale Verantwortung')
+		.title('#ENTITY_IMAGE#')
 		.field('image', 'file', imgOption)
 
 		.translationKey('sozialeVerantwortungMediaId')

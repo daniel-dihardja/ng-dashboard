@@ -33,6 +33,7 @@ class EditController {
 		if(title == '#ENTITY_ID#') title = $stateParams.entity.id;
 		if(title == '#ENTITY_TITLE#') title = $stateParams.entity.title;
 		if(title == '#ENTITY_HEADLINE#') title = $stateParams.entity.headline;
+		if(title == '#ENTITY_IMAGE#') title = $stateParams.entity.image;
 
 		if($stateParams.prevTitle) {
 			title = $stateParams.prevTitle + ' / ' + title;
@@ -58,9 +59,15 @@ class EditController {
 
 	save() {
 		this.saveTranslation();
+
+		// TODO:
+		// why was this implemented ?
+		/*
 		if(! this.entity.thumb) {
 			this.entity.thumb = 'thumb-' + this.entity.src;
 		}
+		*/
+
 		//if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src;
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'))

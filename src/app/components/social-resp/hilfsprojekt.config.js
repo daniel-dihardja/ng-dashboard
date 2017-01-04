@@ -17,14 +17,14 @@ function config($crudProvider) {
 		.title('Hilfsprojekte / *')
 		.field('title')
 		.field('date')
-		.field('introText', 'text')
+		.field('introText', 'text');
 
 	project.editView()
 		.backButton(true)
 		.title('#ENTITY_TITLE#')
 		.field('title')
 		.field('date')
-		.field('introText')
+		.field('introText', 'text')
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 

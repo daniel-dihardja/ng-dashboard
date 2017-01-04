@@ -13,7 +13,7 @@ class FileUploader {
 	 * init file selector
 	 * @param $mdDialog
 	 */
-	constructor($mdDialog, $files) {
+	constructor($mdDialog, $files, $app) {
 
 		this.restrict = 'E';
 		this.template = template;
@@ -30,6 +30,7 @@ class FileUploader {
 
 		this.$mdDialog = $mdDialog;
 		this.$files = $files;
+		this.$app = $app;
 		this.ngModelCtrl = null;
 	}
 
@@ -53,7 +54,7 @@ class FileUploader {
 			scope.selectedFileUrl = null;
 		};
 
-
+		scope.user = this.$app.username();
 
 		scope.selectedFile = "";
 		scope.selectedFileUrl = "";
@@ -111,10 +112,10 @@ class FileUploader {
 		}.bind(this))
 	}
 
-	static directiveFactory($mdDialog, $files) {
-		return new FileUploader($mdDialog, $files);
+	static directiveFactory($mdDialog, $files, $app) {
+		return new FileUploader($mdDialog, $files, $app);
 	}
 }
 
-FileUploader.directiveFactory.$inject = ['$mdDialog', '$files'];
+FileUploader.directiveFactory.$inject = ['$mdDialog', '$files', '$app'];
 export default FileUploader.directiveFactory;

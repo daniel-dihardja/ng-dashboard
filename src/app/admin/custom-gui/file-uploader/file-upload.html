@@ -18,6 +18,6 @@
 
     <div layout="row">
         <md-button class="md-fab md-mini" ng-click="openUploadDialog($event)"><md-icon>file_upload</md-icon></md-button>
-        <md-button class="md-fab md-mini" ng-click="delete()"><md-icon>delete</md-icon></md-button>
+        <md-button class="md-fab md-mini" ng-click="delete()" ng-if="user == 'admin'"><md-icon>delete</md-icon></md-button>
     </div>
 </div>
