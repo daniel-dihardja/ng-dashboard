@@ -19,6 +19,8 @@ class CreateController {
 
 
 		var crudView = $crud.model($stateParams.model).createView();
+		this.viewConfig = crudView.config();
+
 		this.fields = crudView.fields();
 		var title = crudView.title() || $stateParams.title  || 'Neu';
 		if($stateParams.prevTitle) {
@@ -50,6 +52,9 @@ class CreateController {
 
 	save() {
 		this.entity.publish = 0;
+		if(! this.entity.thumb && this.entity.src && ! this.viewConfig.ignoreThumb) {
+			this.entity.thumb = 'thumb-' + this.entity.src;
+		}
 		this.model.create(this.entity).$promise
 			.then(function() {
 				this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'));

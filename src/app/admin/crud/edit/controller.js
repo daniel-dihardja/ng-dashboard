@@ -20,6 +20,9 @@ class EditController {
 		this.modelTranslation = $injector.get($stateParams.model + 'Translation');
 
 		var editView = $crud.model($stateParams.model).editView();
+
+		this.viewConfig = editView.config();
+
 		this.fields = editView.fields();
 		this.translationKey = editView.translationKey();
 		this.translationFields = editView.translationFields();
@@ -52,23 +55,16 @@ class EditController {
 		};
 		this.model.findOne(q).$promise
 			.then(function(res) {
-				this.entity = res;
+				this.entity = res.toJSON();
 				this.translation = this.entity.translations[0] || {};
 			}.bind(this))
 	}
 
 	save() {
 		this.saveTranslation();
-
-		// TODO:
-		// why was this implemented ?
-		/*
-		if(! this.entity.thumb) {
+		if(! this.entity.thumb && this.entity.src && ! this.viewConfig.ignoreThumb) {
 			this.entity.thumb = 'thumb-' + this.entity.src;
 		}
-		*/
-
-		//if(this.entity.src && this.entity.type == 'image') this.entity.thumb = 'thumb-' + this.entity.src;
 		this.model.prototype$updateAttributes({id: this.entity.id}, this.entity, function(res) {
 			this.$rootScope.$emit('toast', this.$filter('translate')('SAVE_SUCCESS'))
 		}.bind(this))
@@ -82,12 +78,22 @@ class EditController {
 	createTranslation() {
 		this.translation[this.translationKey] = this.entity.id;
 		this.translation.appLanguageId = 1; //  hardcode id for EN
+
+		// check if the thumb should automaticly be saved
+		if(! this.translation.thumb && this.translation.src && ! this.viewConfig.ignoreThumb) {
+			this.translation.thumb = 'thumb-' + this.translation.src;
+		}
+
 		this.modelTranslation.create(this.translation, function(res) {
 			console.log(res);
 		}.bind(this));
 	}
 
 	updateTranslation() {
+		// check if the thumb should automaticly be saved
+		if(! this.translation.thumb && this.translation.src && ! this.viewConfig.ignoreThumb) {
+			this.translation.thumb = 'thumb-' + this.translation.src;
+		}
 		this.modelTranslation.prototype$updateAttributes({id: this.translation.id}, this.translation, function(res) {
 			console.log(res);
 		}.bind(this))

@@ -13,6 +13,13 @@ class ViewConfig {
 		this._hasManyLinks = [];
 		this._backButton = false;
 		this._title;
+		this._config = {};
+	}
+
+	config(cfg) {
+		if(! cfg) return this._config;
+		this._config = cfg;
+		return this;
 	}
 
 	fields(fields) {
