@@ -45,7 +45,6 @@ class ListController {
 				this.filterValue = filterPair[1];
 			}
 		}
-
 		this.init();
 	}
 
@@ -58,7 +57,6 @@ class ListController {
 		var q = {
 			filter: {
 				where: w,
-				include: 'translations',
 				order: 'ranking ASC'
 			}
 		};

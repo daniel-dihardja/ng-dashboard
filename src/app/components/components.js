@@ -33,6 +33,8 @@ import zfHilft from './social-resp/zf-hilft.config';
 import zfHilftItem from './social-resp/zf-hilft-item.config';
 import ledPool from './led-ring/led-pool.config';
 import ledContent from './led-ring/led-content.config';
+import motorspprtStory from './motorsport/story';
+import motorspprtFact from './motorsport/fact';
 
 
 let componentsModule = angular.module('admin.components', [crud.name])
@@ -69,6 +71,10 @@ let componentsModule = angular.module('admin.components', [crud.name])
 
 		ledPool($crudProvider);
 		ledContent($crudProvider);
+
+
+		motorspprtStory($crudProvider);
+		motorspprtFact($crudProvider);
 
 	}]);
 export default componentsModule;

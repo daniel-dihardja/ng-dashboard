@@ -99,7 +99,9 @@ class FileUploader {
 			}
 		})
 		.then(function(file) {
-			if(! file.name) return;
+			if(! file) {
+				return;
+			}
 
 			scope.modelValue = scope.selectedFile = file.name;
 			scope.selectedFileUrl = scope.baseUrl + '/' + file.name;
