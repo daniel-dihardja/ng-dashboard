@@ -57,17 +57,20 @@ class ListController {
 		var q = {
 			filter: {
 				where: w,
-				order: 'ranking ASC'
+				order: 'ranking ASC',
+				include: 'translations'
 			}
 		};
 		this.model.find(q).$promise
 			.then(function(res) {
-				var firstElem = res[0];
-				if(! firstElem.ranking) {
-					firstElem.ranking = res.length;
-					firstElem.$save();
-					res.shift();
-					res.push(firstElem);
+				if(res.length > 0) {
+					var firstElem = res[0];
+					if(! firstElem.ranking) {
+						firstElem.ranking = res.length;
+						firstElem.$save();
+						res.shift();
+						res.push(firstElem);
+					}
 				}
 				this.entities = res;
 			}.bind(this));
