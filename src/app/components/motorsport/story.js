@@ -20,6 +20,7 @@ function config($crudProvider) {
         .backButton(true)
         .title('#ENTITY_HEADLINE#')
         .field('publish', 'checkbox')
+        .field('preview', 'mspreview')
         .field('headline')
         .field('content', 'text')
         .field('image', 'file', imgConfig)

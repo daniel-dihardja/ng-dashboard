@@ -5,7 +5,6 @@ function config($crudProvider) {
 
 	var zpArtikel = $crudProvider.model('ZpArtikel');
 
-
 	zpArtikel.listView()
 		.field('headline')
 		.field('publish');

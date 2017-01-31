@@ -26,6 +26,7 @@ import fileField from './fields/file/file.directive';
 
 import ledPreviewField from './fields/led-preview/led-preview.directive';
 import bioPreviewField from './fields/bio-preview/bio-preview.directive';
+import msPreviewField from './fields/motorsport-preview/ms-preview.directive';
 
 
 let crudModule = angular.module('crud', [uiRouter])
@@ -80,6 +81,7 @@ let crudModule = angular.module('crud', [uiRouter])
 	.directive('crudSelect', selectField)
 	.directive('crudFile', fileField)
 	.directive('ledPreview', ledPreviewField)
-	.directive('bioPreview', bioPreviewField);
+	.directive('bioPreview', bioPreviewField)
+	.directive('msPreview', msPreviewField);
 
 export default crudModule;

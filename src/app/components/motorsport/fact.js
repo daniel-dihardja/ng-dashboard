@@ -16,10 +16,10 @@ function config($crudProvider) {
         .backButton(true)
         .title('#ENTITY_HEADLINE#')
         .field('publish', 'checkbox')
-        .field('headline')
+        .field('headline', 'text')
 
         .translationKey('motorsportFactId')
-        .translationField('headline');
+        .translationField('headline', 'text');
 
     fact.createView()
         .backButton(true)

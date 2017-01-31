@@ -33,10 +33,16 @@ class EditController {
 
 		// TODO:
 		// refactore this
-		if(title == '#ENTITY_ID#') title = $stateParams.entity.id;
-		if(title == '#ENTITY_TITLE#') title = $stateParams.entity.title;
-		if(title == '#ENTITY_HEADLINE#') title = $stateParams.entity.headline;
-		if(title == '#ENTITY_IMAGE#') title = $stateParams.entity.image;
+		if($stateParams.entity) {
+			if(title == '#ENTITY_ID#') title = $stateParams.entity.id;
+			if(title == '#ENTITY_TITLE#') title = $stateParams.entity.title;
+			if(title == '#ENTITY_HEADLINE#') title = $stateParams.entity.headline;
+			if(title == '#ENTITY_IMAGE#') title = $stateParams.entity.image;
+		}
+		else {
+			title = 'Title';
+		}
+
 
 		if($stateParams.prevTitle) {
 			title = $stateParams.prevTitle + ' / ' + title;

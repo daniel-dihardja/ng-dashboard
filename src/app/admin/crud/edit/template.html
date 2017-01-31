@@ -25,6 +25,7 @@
                     <crud-file ng-model="vm.entity[field.name]" label="{{field.config.label || field.name}}" container="{{field.config.container}}" options="field.config" ng-if="field.type == 'file'"></crud-file>
                     <led-preview  label="{{field.config.label || field.name}}" entity="vm.entity" ng-if="field.type == 'ledpreview'" options="field.config"></led-preview>
                     <bio-preview  label="{{field.config.label || field.name}}" entity="vm.entity" ng-if="field.type == 'biopreview'" options="field.config"></bio-preview>
+                    <ms-preview  label="{{field.config.label || field.name}}" entity="vm.entity" ng-if="field.type == 'mspreview'" options="field.config"></ms-preview>
 
                 </div>
             </md-content>
