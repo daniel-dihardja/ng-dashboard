@@ -30,14 +30,14 @@ function config($crudProvider) {
 		.title('Kunststiftung')
 		.field('title')
 		.field('description', 'text', {showOnly: 'admin'})
-		.field('image', 'file', {container: 'assets'})
+		.field('image', 'file', {container: 'assets', showOnly: 'admin'})
 		.field('slug', null, {showOnly: 'admin'})
 		.field('component', null, {showOnly: 'admin'})
 
 		.translationKey('svKunststiftungId')
 		.translationField('title')
 		.translationField('description', 'text', {showOnly: 'admin'})
-		.translationField('image', 'file', {container: 'assets'})
+		.translationField('image', 'file', {container: 'assets', showOnly: 'admin'})
 
 		.hasManyLink('SvKunststiftungMedia', 'svKunststiftungId', {label: 'Zu den Medien'})
 }
