@@ -7,7 +7,7 @@ function config($crudProvider) {
     var fact = $crudProvider.model('MotorsportFact');
 
     fact.listView()
-        .title('/fakten')
+        .title('/Fakten')
         .backButton(true)
         .field('headline')
         .field('publish');

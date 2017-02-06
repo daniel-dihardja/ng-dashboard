@@ -21,7 +21,7 @@ function config($crudProvider) {
         .title('#ENTITY_HEADLINE#')
         .field('publish', 'checkbox')
         .field('preview', 'mspreview')
-        .field('headline')
+        .field('headline', 'text')
         .field('content', 'text')
         .field('image', 'file', imgConfig)
 

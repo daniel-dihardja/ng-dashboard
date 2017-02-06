@@ -15,27 +15,36 @@ class MsPreview {
         this.template = template;
         this.scope = {
             label: '@',
-            entity: '='
+            entity: '=',
+            type: '@'
         };
     }
 
     link(scope, element, attrs) {
 
-        // wait a tick. somehow the data is not instantly available
-        setTimeout(function() {
-            scope.headline = this.$sce.trustAsHtml(scope.entity.headline);
-            scope.content = this.$sce.trustAsHtml(scope.entity.content);
 
-        }.bind(this), 1);
+        scope.type = scope.type || 'story';
 
-        scope.$watch('entity.headline', function(newValue, oldValue) {
-            scope.headline = this.$sce.trustAsHtml(scope.entity.headline);
-        }.bind(this), true);
 
-        scope.$watch('entity.content', function(newValue, oldValue) {
-            scope.content = this.$sce.trustAsHtml(scope.entity.content);
-        }.bind(this), true);
+        if(scope.type == 'story') {
+            // wait a tick. somehow the data is not instantly available
+            setTimeout(function() {
+                scope.headline = this.$sce.trustAsHtml(scope.entity.headline);
+                scope.content = this.$sce.trustAsHtml(scope.entity.content);
 
+            }.bind(this), 1);
+
+            scope.$watch('entity.headline', function(newValue, oldValue) {
+                scope.headline = this.$sce.trustAsHtml(scope.entity.headline);
+            }.bind(this), true);
+
+            scope.$watch('entity.content', function(newValue, oldValue) {
+                scope.content = this.$sce.trustAsHtml(scope.entity.content);
+            }.bind(this), true);
+        }
+        else if(scope.type == 'fact') {
+
+        }
     }
 
     static createInstance($sce) {

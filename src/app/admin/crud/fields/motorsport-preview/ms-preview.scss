@@ -24,6 +24,8 @@
     font-size: 100px;
     line-height: 105px;
     letter-spacing: .02em;
+    width: 1610px;
+    word-break: break-all;
   }
 
   .content {
@@ -35,7 +37,8 @@
     line-height: 50px;
     letter-spacing: .025em;
     font-size: 35px;
-    overflow: hidden;
+    overflow: visible;
+    word-break: break-all;
 
   }
 }
