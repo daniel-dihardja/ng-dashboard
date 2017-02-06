@@ -39,6 +39,18 @@
     font-size: 35px;
     overflow: visible;
     word-break: break-all;
+  }
+
+  p.fact {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    font-family: ZFSansBold;
+    font-size: 35px;
+    line-height: 50px;
+    letter-spacing: 1.05px;
+    width: 1080px;
+    word-break: break-all;
 
   }
 }

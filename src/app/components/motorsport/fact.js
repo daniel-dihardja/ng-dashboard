@@ -16,9 +16,11 @@ function config($crudProvider) {
         .backButton(true)
         .title('#ENTITY_HEADLINE#')
         .field('publish', 'checkbox')
+        .field('preview', 'mspreview', {type: 'fact'})
         .field('headline', 'text')
 
         .translationKey('motorsportFactId')
+        .translationField('preview', 'mspreview', {type: 'fact'})
         .translationField('headline', 'text');
 
     fact.createView()

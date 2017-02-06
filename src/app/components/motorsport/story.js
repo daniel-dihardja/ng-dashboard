@@ -26,6 +26,7 @@ function config($crudProvider) {
         .field('image', 'file', imgConfig)
 
         .translationKey('motorsportStoryId')
+        .translationField('preview', 'mspreview')
         .translationField('headline')
         .translationField('content', 'text')
         .translationField('image', 'file', imgConfig)
